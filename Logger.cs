@@ -11,9 +11,9 @@ namespace PatchMyPath
             Console.WriteLine(TextToLog);
 
             string TimeAndDate = DateTime.Now.ToString();
-            string LogFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string LogFile = AppDomain.CurrentDomain.FriendlyName + ".log";
-            string FileName = LogFolder + LogFile;
+            string LogFolder = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            string LogFile = Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly().Location) + ".log";
+            string FileName = LogFolder + "\\" + LogFile;
 
             if (!File.Exists(FileName))
                 File.Create(FileName).Close();
