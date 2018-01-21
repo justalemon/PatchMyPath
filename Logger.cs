@@ -6,8 +6,10 @@ namespace PatchMyPath
 {
     static class Logger
     {
-        public static void LogToFile(string TextToLog)
+        public static void Write(string TextToLog)
         {
+            Console.WriteLine(TextToLog);
+
             string TimeAndDate = DateTime.Now.ToString();
             string LogFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             string LogFile = AppDomain.CurrentDomain.FriendlyName + ".log";
