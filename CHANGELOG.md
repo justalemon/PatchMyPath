@@ -6,7 +6,7 @@ Latest commit: [b6102464c8b1170cc619bb4a236f344339a0760a](https://github.com/jus
 ## 0.1.1
 Latest commit: [eca569ea2e5079444191a25886f0b0e00ae332a6](https://github.com/justalemon/PatchMyPath/commit/eca569ea2e5079444191a25886f0b0e00ae332a6)
 
-* The directory will not be set if the same is already there
+* The directory will be not set if is already the same
 
 ## 1.0
 Latest commit: [e9fa4f856ef2f50342fc510a8f7001f3c740f207](https://github.com/justalemon/PatchMyPath/commit/e9fa4f856ef2f50342fc510a8f7001f3c740f207)
