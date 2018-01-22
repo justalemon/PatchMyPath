@@ -45,7 +45,7 @@ namespace PatchMyPath
                 }
             }
 
-            if (Checks.CheckGameFile(LocalDir + "\\" + Properties.Resources.FastLaunchMod) == FileType.FoundNotGame)
+            if (Checks.CheckGameFile(LocalDir + "\\" + Properties.Resources.FastLaunchMod) == FileType.FoundIsModASI)
             {
                 FastInstall = true;
                 Logger.Write("Unknown Modder's Launcher Bypass Detected");

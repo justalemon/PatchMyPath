@@ -20,6 +20,8 @@ namespace PatchMyPath
 
             if (Exists && Product == "Grand Theft Auto V")
                 return FileType.FoundIsGame;
+            else if (Exists && FileLocation.EndsWith(".asi"))
+                return FileType.FoundIsModASI;
             else if (Exists)
                 return FileType.FoundNotGame;
             else
