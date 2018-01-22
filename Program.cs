@@ -35,11 +35,17 @@ namespace PatchMyPath
                 FileType FileStatus = Checks.CheckGameFile(LocalDir + "\\" + Executable);
 
                 if (FileStatus == FileType.FoundIsGame)
+                {
                     Logger.Write(Executable + " was found and is a GTA V executable.");
+                }
                 else if (FileStatus == FileType.FoundNotGame)
+                {
                     Logger.Write(Executable + " was found and is NOT a GTA V executable.");
+                }
                 else if (FileStatus == FileType.NotFound)
+                {
                     Logger.Write(Executable + " was NOT found.");
+                }
             }
 
             Checks.Exit(0);
