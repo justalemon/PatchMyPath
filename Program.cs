@@ -11,57 +11,40 @@ namespace PatchMyPath
     {
         static void Main(string[] args)
         {
+            string AppVersion = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion;
+
+            Logger.Write(string.Format("PatchMyPath {0} is Launching...", AppVersion));
 
             string LocalDir = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-            string SavedDir = (string)Registry.GetValue(RegKey, RegValue, string.Empty);
+            string SavedDir = (string)Registry.GetValue(Properties.Resources.RegKey, Properties.Resources.RegValue, string.Empty);
 
-            bool ValidDir = true;
-            int ExitCode = 0;
+            List<string> Executables = new List<string>() { Properties.Resources.GameMainExe, Properties.Resources.GameLauncherExe, Properties.Resources.GamePlayExe };
 
-            List<string> Executables = new List<string>() {"GTA5.exe", "GTAVLauncher.exe", "PlayGTAV.exe"};
-
-            Console.WriteLine("Local Path is " + LocalDir);
-            Console.WriteLine("Saved Path is " + LocalDir);
-            Console.WriteLine("Registry Key is " + RegKey);
-            Console.WriteLine();
-            
-                foreach (var Executable in Executables)
-                {
-                    if (!File.Exists(LocalDir + "\\" + Executable))
-                    {
-                        Console.WriteLine(Executable + " was not found.");
-                        ValidDir = false;
-                    }
-                    else
-                    {
-                        Console.WriteLine(Executable + " was found.");
-                    }
-                }
-
-            Console.WriteLine();
+            Logger.Write("Local Path is " + LocalDir);
+            Logger.Write("Saved Path is " + SavedDir);
+            Logger.Write("Registry Key is " + Properties.Resources.RegKey);
             
             if (LocalDir == SavedDir)
             {
-                Console.WriteLine("The directory is the same.");
-                ExitCode = 0;
+                Logger.Write("The Local directory is the same that is saved");
+                Environment.Exit(0);
             }
-            else if (ValidDir)
+
+            foreach (var Executable in Executables)
             {
-                Registry.SetValue(RegKey, RegValue, LocalDir);
-                Console.WriteLine("GTA V Dir was set to: " + LocalDir);
-                Console.WriteLine();
-                Console.WriteLine("Starting Grand Theft Auto V...");
-                Process.Start(LocalDir + "\\PlayGTAV.exe");
+                FileType FileStatus = Checks.CheckGameFile(LocalDir + "\\" + Executable);
+
+                if (FileStatus == FileType.FoundIsGame)
+                    Logger.Write(Executable + " was found and is a GTA V executable.");
+                else if (FileStatus == FileType.FoundNotGame)
+                    Logger.Write(Executable + " was found and is NOT a GTA V executable.");
+                else if (FileStatus == FileType.NotFound)
+                    Logger.Write(Executable + " was NOT found.");
             }
-            else
-            {
-                Console.WriteLine("The Directory is not valid and cannot be set.");
-            }
+            
             #if DEBUG
                 Console.ReadLine();
             #endif
-
-            Environment.Exit(ExitCode);
         }
     }
 }
