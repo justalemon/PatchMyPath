@@ -61,38 +61,38 @@ namespace PatchMyPath.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to GTA5.exe.
-        /// </summary>
-        internal static string GameExeName {
-            get {
-                return ResourceManager.GetString("GameExeName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to GTAVLauncherBypass.asi.
         /// </summary>
-        internal static string GameFastLaunchMod {
+        internal static string FastLaunchMod {
             get {
-                return ResourceManager.GetString("GameFastLaunchMod", resourceCulture);
+                return ResourceManager.GetString("FastLaunchMod", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to GTAVLauncher.exe.
         /// </summary>
-        internal static string GameLauncherName {
+        internal static string GameLauncherExe {
             get {
-                return ResourceManager.GetString("GameLauncherName", resourceCulture);
+                return ResourceManager.GetString("GameLauncherExe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GTA5.exe.
+        /// </summary>
+        internal static string GameMainExe {
+            get {
+                return ResourceManager.GetString("GameMainExe", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to PlayGTAV.exe.
         /// </summary>
-        internal static string GamePlayName {
+        internal static string GamePlayExe {
             get {
-                return ResourceManager.GetString("GamePlayName", resourceCulture);
+                return ResourceManager.GetString("GamePlayExe", resourceCulture);
             }
         }
         

@@ -117,19 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="GameExeName" xml:space="preserve">
-    <value>GTA5.exe</value>
-    <comment>The main game executable</comment>
-  </data>
-  <data name="GameFastLaunchMod" xml:space="preserve">
+  <data name="FastLaunchMod" xml:space="preserve">
     <value>GTAVLauncherBypass.asi</value>
     <comment>The ASI mod used to launch the game fast</comment>
   </data>
-  <data name="GameLauncherName" xml:space="preserve">
+  <data name="GameLauncherExe" xml:space="preserve">
     <value>GTAVLauncher.exe</value>
     <comment>The game launcher executable</comment>
   </data>
-  <data name="GamePlayName" xml:space="preserve">
+  <data name="GameMainExe" xml:space="preserve">
+    <value>GTA5.exe</value>
+    <comment>The main game executable</comment>
+  </data>
+  <data name="GamePlayExe" xml:space="preserve">
     <value>PlayGTAV.exe</value>
     <comment>The game play executable</comment>
   </data>
