@@ -68,10 +68,12 @@ namespace PatchMyPath
             if (ValidInstall && FastInstall)
             {
                 Process.Start(LocalDir + "\\" + Properties.Resources.GameMainExe);
+                Logger.Write("Executing the game using the Launcher Bypass");
             }
             else if (ValidInstall && FastInstall == false)
             {
                 Process.Start(LocalDir + "\\" + Properties.Resources.GamePlayExe);
+                Logger.Write("Executing the game normally");
             }
 
             Checks.Exit(0);
