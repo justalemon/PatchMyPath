@@ -1,5 +1,4 @@
 ﻿using Microsoft.Win32;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -11,8 +10,9 @@ namespace PatchMyPath
     {
         static void Main(string[] args)
         {
-            string AppVersion = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion;
+            bool ValidInstall = true;
 
+            string AppVersion = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion;
             Logger.Write(string.Format("----- PatchMyPath {0} is Launching... -----", AppVersion));
 
             string LocalDir = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
@@ -23,12 +23,6 @@ namespace PatchMyPath
             Logger.Write("Local Path is " + LocalDir);
             Logger.Write("Saved Path is " + SavedDir);
             Logger.Write("Registry Key is " + Properties.Resources.RegKey);
-            
-            if (LocalDir == SavedDir)
-            {
-                Logger.Write("The Local directory is the same that is saved");
-                Checks.Exit(0);
-            }
 
             foreach (var Executable in Executables)
             {
@@ -36,16 +30,32 @@ namespace PatchMyPath
 
                 if (FileStatus == FileType.FoundIsGame)
                 {
-                    Logger.Write(Executable + " was found and is a GTA V executable.");
+                    Logger.Write(Executable + " was found and is a GTA V executable");
                 }
                 else if (FileStatus == FileType.FoundNotGame)
                 {
-                    Logger.Write(Executable + " was found and is NOT a GTA V executable.");
+                    Logger.Write(Executable + " was found and is NOT a GTA V executable");
+                    ValidInstall = false;
                 }
                 else if (FileStatus == FileType.NotFound)
                 {
-                    Logger.Write(Executable + " was NOT found.");
+                    Logger.Write(Executable + " was NOT found");
+                    ValidInstall = false;
                 }
+            }
+
+            if (LocalDir == SavedDir)
+            {
+                Logger.Write("The Local directory is the same that is saved");
+            }
+            else if (ValidInstall)
+            {
+                Registry.SetValue(Properties.Resources.RegKey, Properties.Resources.RegValue, LocalDir);
+                Logger.Write("The local directory was set to " + LocalDir);
+            }
+            else
+            {
+                Logger.Write("This is not a valid GTA V install");
             }
 
             Checks.Exit(0);
