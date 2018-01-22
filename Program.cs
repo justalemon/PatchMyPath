@@ -11,6 +11,7 @@ namespace PatchMyPath
         static void Main(string[] args)
         {
             bool ValidInstall = true;
+            bool FastInstall = false;
 
             string AppVersion = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion;
             Logger.Write(string.Format("----- PatchMyPath {0} is Launching... -----", AppVersion));
@@ -44,6 +45,12 @@ namespace PatchMyPath
                 }
             }
 
+            if (Checks.CheckGameFile(LocalDir + "\\" + Properties.Resources.FastLaunchMod) == FileType.FoundNotGame)
+            {
+                FastInstall = true;
+                Logger.Write("Unknown Modder's Launcher Bypass Detected");
+            }
+
             if (LocalDir == SavedDir && ValidInstall)
             {
                 Logger.Write("The Local directory is the same that is saved");
@@ -58,7 +65,11 @@ namespace PatchMyPath
                 Logger.Write("This is not a valid GTA V install");
             }
 
-            if (ValidInstall)
+            if (ValidInstall && FastInstall)
+            {
+                Process.Start(LocalDir + "\\GTA5.exe");
+            }
+            else if (ValidInstall && FastInstall == false)
             {
                 Process.Start(LocalDir + "\\PlayGTAV.exe");
             }
