@@ -13,7 +13,7 @@ namespace PatchMyPath
         {
             string AppVersion = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion;
 
-            Logger.Write(string.Format("PatchMyPath {0} is Launching...", AppVersion));
+            Logger.Write(string.Format("----- PatchMyPath {0} is Launching... -----", AppVersion));
 
             string LocalDir = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
             string SavedDir = (string)Registry.GetValue(Properties.Resources.RegKey, Properties.Resources.RegValue, string.Empty);
