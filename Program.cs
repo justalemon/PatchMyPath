@@ -27,7 +27,6 @@ namespace PatchMyPath
             if (LocalDir == SavedDir)
             {
                 Logger.Write("The Local directory is the same that is saved");
-                Environment.Exit(0);
             }
 
             foreach (var Executable in Executables)
@@ -41,10 +40,8 @@ namespace PatchMyPath
                 else if (FileStatus == FileType.NotFound)
                     Logger.Write(Executable + " was NOT found.");
             }
-            
-            #if DEBUG
-                Console.ReadLine();
-            #endif
+
+            Checks.Exit(0);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Diagnostics;
+using System;
 
 namespace PatchMyPath
 {
@@ -23,6 +24,15 @@ namespace PatchMyPath
                 return FileType.FoundNotGame;
             else
                 return FileType.NotFound;
+        }
+
+        public static void Exit(int ExitCode)
+        {
+            #if DEBUG
+                Console.ReadLine();
+            #endif
+
+            Environment.Exit(ExitCode);
         }
     }
 }
