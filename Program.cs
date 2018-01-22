@@ -44,7 +44,7 @@ namespace PatchMyPath
                 }
             }
 
-            if (LocalDir == SavedDir)
+            if (LocalDir == SavedDir && ValidInstall)
             {
                 Logger.Write("The Local directory is the same that is saved");
             }
