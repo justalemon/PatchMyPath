@@ -58,6 +58,11 @@ namespace PatchMyPath
                 Logger.Write("This is not a valid GTA V install");
             }
 
+            if (ValidInstall)
+            {
+                Process.Start(LocalDir + "\\PlayGTAV.exe");
+            }
+
             Checks.Exit(0);
         }
     }
