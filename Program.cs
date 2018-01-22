@@ -67,11 +67,11 @@ namespace PatchMyPath
 
             if (ValidInstall && FastInstall)
             {
-                Process.Start(LocalDir + "\\GTA5.exe");
+                Process.Start(LocalDir + "\\" + Properties.Resources.GameMainExe);
             }
             else if (ValidInstall && FastInstall == false)
             {
-                Process.Start(LocalDir + "\\PlayGTAV.exe");
+                Process.Start(LocalDir + "\\" + Properties.Resources.GamePlayExe);
             }
 
             Checks.Exit(0);
