@@ -83,6 +83,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Checks.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="States.cs" />
     <Compile Include="Program.cs" />
