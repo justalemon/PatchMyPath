@@ -11,8 +11,6 @@ namespace PatchMyPath
     {
         static void Main(string[] args)
         {
-            string RegKey = "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Rockstar Games\\Grand Theft Auto V";
-            string RegValue = "InstallFolder";
 
             string LocalDir = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
             string SavedDir = (string)Registry.GetValue(RegKey, RegValue, string.Empty);
