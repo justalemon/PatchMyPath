@@ -27,6 +27,7 @@ namespace PatchMyPath
             if (LocalDir == SavedDir)
             {
                 Logger.Write("The Local directory is the same that is saved");
+                Checks.Exit(0);
             }
 
             foreach (var Executable in Executables)
