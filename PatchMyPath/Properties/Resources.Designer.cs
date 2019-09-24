@@ -61,6 +61,24 @@ namespace PatchMyPath.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Rockstar Games\Grand Theft Auto V.
+        /// </summary>
+        internal static string InstallKey {
+            get {
+                return ResourceManager.GetString("InstallKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to InstallFolder.
+        /// </summary>
+        internal static string InstallValue {
+            get {
+                return ResourceManager.GetString("InstallValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to HKEY_CURRENT_USER\Software\NewTechnologyStudio\OpenIV.exe\BrowseForFolder.
         /// </summary>
         internal static string OpenIVKey {
