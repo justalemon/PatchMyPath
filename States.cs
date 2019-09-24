@@ -4,6 +4,7 @@
     {
         FoundNotGame = 1,
         FoundIsGame = 2,
-        NotFound = 3
+        NotFound = 3,
+        FoundIsModASI = 4
     }
 }
