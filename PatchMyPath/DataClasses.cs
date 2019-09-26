@@ -54,6 +54,11 @@ namespace PatchMyPath
         [JsonProperty("steam")]
         public bool Steam { get; set; }
         /// <summary>
+        /// The destination folder for the game files.
+        /// </summary>
+        [JsonProperty("destination")]
+        public string Destination { get; set; }
+        /// <summary>
         /// The game installs available to the user.
         /// </summary>
         [JsonProperty("installs")]
