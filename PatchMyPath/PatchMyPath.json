@@ -3,7 +3,8 @@
     "destination": "E:\\Grand Theft Auto V",
     "installs": [
         {
-            "path": "E:\\Grand Theft Auto V - Clean"
+            "path": "E:\\Grand Theft Auto V - Clean",
+            "type": 0
         }
     ]
 }
