@@ -51,8 +51,8 @@ namespace PatchMyPath
         /// <summary>
         /// If the game should be started from Steam instead of the executable.
         /// </summary>
-        [JsonProperty("steam")]
-        public bool Steam { get; set; }
+        [JsonProperty("use_steam")]
+        public bool UseSteam { get; set; }
         /// <summary>
         /// The destination folder for the game files.
         /// </summary>

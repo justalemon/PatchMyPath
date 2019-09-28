@@ -1,5 +1,5 @@
 {
-    "steam": false,
+    "use_steam": false,
     "destination": "E:\\Grand Theft Auto V",
     "installs": [
         {
