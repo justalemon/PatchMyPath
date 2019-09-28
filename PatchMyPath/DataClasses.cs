@@ -36,10 +36,12 @@ namespace PatchMyPath
         /// <summary>
         /// The path of the new game install.
         /// </summary>
+        [JsonProperty("path")]
         public string Path { get; set; }
         /// <summary>
         /// The type of game installation.
         /// </summary>
+        [JsonProperty("type")]
         public InstallType Type { get; set; }
     }
 
