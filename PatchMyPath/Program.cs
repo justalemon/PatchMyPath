@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+using Microsoft.Win32;
+using Newtonsoft.Json;
+using PatchMyPath.Properties;
 using System;
 using System.IO;
 using System.Runtime.InteropServices;
@@ -47,6 +49,26 @@ namespace PatchMyPath
 
             Console.WriteLine("Hello World!");
             return 0;
+        }
+
+        public static bool IsDevModeEnabled()
+        {
+            // Open the registry key for reading
+            using (RegistryKey key = Registry.LocalMachine.OpenSubKey(Resources.DeveloperKey))
+            {
+                // If the key exists
+                if (key != null)
+                {
+                    // Read the value of AllowDevelopmentWithoutDevLicense
+                    int output = (int)key.GetValue(Resources.DeveloperValue);
+
+                    // Then, convert the boolean to zero
+                    return Convert.ToBoolean(output);
+                }
+            }
+
+            // If we got here, the dev mode is not enabled
+            return false;
         }
     }
 }
