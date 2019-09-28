@@ -54,7 +54,7 @@ namespace PatchMyPath
             // Print all of the available installs
             for (int i = 0; i < Config.GameInstalls.Count; i++)
             {
-                Console.WriteLine($"{i}: {Config.GameInstalls[i].Path}");
+                Console.WriteLine($"{i}: {Config.GameInstalls[i].GamePath}");
             }
 
             // And request the user to input a number
