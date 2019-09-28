@@ -11,6 +11,10 @@ namespace PatchMyPath
     public enum InstallType
     {
         /// <summary>
+        /// This installation is invalid and can't be used.
+        /// </summary>
+        Invalid = -1,
+        /// <summary>
         /// Detect the type of executable to launch.
         /// </summary>
         AutoDetect = 0,
