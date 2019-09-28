@@ -47,7 +47,30 @@ namespace PatchMyPath
                 return 2;
             }
 
-            Console.WriteLine("Hello World!");
+            // Now, tell the user to select a GTA V install
+            Console.WriteLine("The following game installs are available:");
+            Console.WriteLine();
+
+            // Print all of the available installs
+            for (int i = 0; i < Config.GameInstalls.Count; i++)
+            {
+                Console.WriteLine($"{i}: {Config.GameInstalls[i].Path}");
+            }
+
+            // And request the user to input a number
+            Console.WriteLine();
+            Console.Write("What install do you want to use? ");
+            string input = Console.ReadLine();
+            Console.WriteLine();
+
+            // If we were unable to parse the user input
+            if (!int.TryParse(input, out int output))
+            {
+                Console.WriteLine($"'{input}' is not a valid number! Exiting...");
+                return 3;
+            }
+
+            // If we got here, success!
             return 0;
         }
 
