@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -37,7 +37,7 @@ namespace PatchMyPath
         /// The path of the new game install.
         /// </summary>
         [JsonProperty("path")]
-        public string Path { get; set; }
+        public string GamePath { get; set; }
         /// <summary>
         /// The type of game installation.
         /// </summary>
