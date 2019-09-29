@@ -47,6 +47,33 @@ namespace PatchMyPath
         /// </summary>
         [JsonProperty("type")]
         public InstallType Type { get; set; }
+
+        /// <summary>
+        /// Updates the Install.Type based on the contents of the game install.
+        /// </summary>
+        public void UpdateType(bool isSteamLaunched)
+        {
+            // If there is a RagePluginHook.exe on the folder, this is RPH
+            if (File.Exists(Path.Combine(GamePath, "RAGEPluginHook.exe")))
+            {
+                Type = InstallType.RagePluginHook;
+            }
+            // If there is a GTA5.exe and GTAVLauncherBypass.asi but is not from Steam, let the user start via Unknown's Magic Tool
+            else if (File.Exists(Path.Combine(GamePath, "GTA5.exe")) && File.Exists(Path.Combine(GamePath, "GTAVLauncherBypass.asi")) && !isSteamLaunched)
+            {
+                Type = InstallType.LauncherBypass;
+            }
+            // If we got here, there is no alternative way to launch the game other than 
+            else if (File.Exists(Path.Combine(GamePath, "GTAVLauncher.exe")))
+            {
+                Type = InstallType.Normal;
+            }
+            // Also, if there is no executable just mark the install as invalid
+            else
+            {
+                Type = InstallType.Invalid;
+            }
+        }
     }
 
     /// <summary>
