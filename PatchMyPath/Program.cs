@@ -106,7 +106,7 @@ namespace PatchMyPath
                 CloseProcess("SocialClubHelper");
             }
             // And if the user uses Steam, also kill that
-            if (Config.UseSteam)
+            if (Config.UseSteam && Config.AppID == 271590)
             {
                 CloseProcess("Steam");
             }
