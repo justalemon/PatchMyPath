@@ -92,6 +92,14 @@ namespace PatchMyPath
             // So save it here for later
             Install install = Config.GameInstalls[output];
 
+            // If the install is invalid, notify the user and return
+            if (install.Type == InstallType.Invalid)
+            {
+                Console.WriteLine($"This game install is not valid.{Environment.NewLine}Please ensure that the game executables are in the right place and try again.");
+                Console.ReadKey();
+                return 6;
+            }
+
             // At this point, kill the Rockstar Games Launcher
             while (Process.GetProcessesByName("SocialClubHelper").Length != 0)
             {
