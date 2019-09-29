@@ -62,7 +62,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="PatchMyPath.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
