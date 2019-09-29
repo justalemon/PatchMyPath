@@ -1,6 +1,9 @@
 using Newtonsoft.Json;
 using System;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices;
 
 namespace PatchMyPath
@@ -89,6 +92,17 @@ namespace PatchMyPath
             // So save it here for later
             Install install = Config.GameInstalls[output];
 
+            // At this point, kill the Rockstar Games Launcher
+            while (Process.GetProcessesByName("SocialClubHelper").Length != 0)
+            {
+                CloseProcess("SocialClubHelper");
+            }
+            // And if the user uses Steam, also kill that
+            if (Config.UseSteam)
+            {
+                CloseProcess("Steam");
+            }
+
             // Now, destroy the original game folder if is present
             if (Directory.Exists(Config.Destination))
             {
@@ -117,6 +131,18 @@ namespace PatchMyPath
 
             // If we got here, success!
             return 0;
+        }
+
+        public static void CloseProcess(string name)
+        {
+            // We can't use C# functions for this because of access limitations
+            // So start a taskkill process
+            Process process = new Process();
+            process.StartInfo.FileName = "taskkill.exe";
+            process.StartInfo.Arguments = $"/f /im {name}.exe";
+            process.StartInfo.UseShellExecute = false;
+            process.Start();
+            process.WaitForExit();
         }
     }
 }
