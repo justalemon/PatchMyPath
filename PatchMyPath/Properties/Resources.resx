@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="DeveloperKey" xml:space="preserve">
-    <value>SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock</value>
-  </data>
-  <data name="DeveloperValue" xml:space="preserve">
-    <value>AllowDevelopmentWithoutDevLicense</value>
-  </data>
   <data name="InstallKey" xml:space="preserve">
     <value>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Rockstar Games\Grand Theft Auto V</value>
   </data>

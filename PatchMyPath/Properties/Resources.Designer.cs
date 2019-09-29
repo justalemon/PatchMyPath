@@ -61,24 +61,6 @@ namespace PatchMyPath.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock.
-        /// </summary>
-        internal static string DeveloperKey {
-            get {
-                return ResourceManager.GetString("DeveloperKey", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to AllowDevelopmentWithoutDevLicense.
-        /// </summary>
-        internal static string DeveloperValue {
-            get {
-                return ResourceManager.GetString("DeveloperValue", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Rockstar Games\Grand Theft Auto V.
         /// </summary>
         internal static string InstallKey {
