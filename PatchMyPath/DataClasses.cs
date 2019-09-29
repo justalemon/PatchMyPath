@@ -1,7 +1,7 @@
-using Newtonsoft.Json;
-using System;
+﻿using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.Text;
+using System.IO;
+using System.Security.Cryptography.X509Certificates;
 
 namespace PatchMyPath
 {
@@ -47,6 +47,37 @@ namespace PatchMyPath
         /// </summary>
         [JsonProperty("type")]
         public InstallType Type { get; set; }
+        /// <summary>
+        /// If the files are legal (aka signed by Rockstar Games).
+        /// </summary>
+        public bool IsLegal
+        {
+            get
+            {
+                // Get the certificate that signed both of them
+                X509Certificate2 launcher = Authenticode.GetCertificate(Path.Combine(GamePath, "GTAVLauncher.exe"));
+                X509Certificate2 executable = Authenticode.GetCertificate(Path.Combine(GamePath, "GTA5.exe"));
+
+                // If one of those don't have a valid signature, return false
+                if (launcher == null || executable == null)
+                {
+                    return false;
+                }
+
+                // If the signature is by Rockstar Games
+                // (This is done to avoid self-signed files)
+                if (launcher.Thumbprint == "AA0D31A9C8C1EBD9E18EC1D8D3F98B3523178AD8" &&
+                    executable.Thumbprint == "AA0D31A9C8C1EBD9E18EC1D8D3F98B3523178AD8")
+                {
+                    return true;
+                }
+                // Otherwise, return false
+                else
+                {
+                    return false;
+                }
+            }
+        }
 
         /// <summary>
         /// Updates the Install.Type based on the contents of the game install.
