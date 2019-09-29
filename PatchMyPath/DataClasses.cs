@@ -121,7 +121,7 @@ namespace PatchMyPath
         /// The Steam AppID used to launch the game.
         /// </summary>
         [JsonProperty("appid")]
-        public string AppID { get; set; }
+        public int AppID { get; set; }
         /// <summary>
         /// The destination folder for the game files.
         /// </summary>
