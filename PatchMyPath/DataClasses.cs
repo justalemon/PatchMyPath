@@ -1,5 +1,7 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
 
@@ -132,5 +134,40 @@ namespace PatchMyPath
         /// </summary>
         [JsonProperty("installs")]
         public List<Install> GameInstalls { get; set; }
+
+        /// <summary>
+        /// Starts the game from the Destination folder.
+        /// </summary>
+        public bool Start(InstallType type)
+        {
+            // At this point launch the game
+            if (type == InstallType.RagePluginHook)
+            {
+                Process.Start(Path.Combine(Destination, "RAGEPluginHook.exe"));
+            }
+            else if (type == InstallType.LauncherBypass && !UseSteam)
+            {
+                Process.Start(Path.Combine(Destination, "GTA5.exe"));
+            }
+            else if (type == InstallType.Normal || (type == InstallType.LauncherBypass && UseSteam))
+            {
+                if (UseSteam)
+                {
+                    Process.Start($"steam://rungameid/{AppID}");
+                }
+                else
+                {
+                    Process.Start(Path.Combine(Destination, "GTAVLauncher.exe"));
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid game type, please check your configuration and try again.");
+                return false;
+            }
+
+            // If we got here, success!
+            return true;
+        }
     }
 }

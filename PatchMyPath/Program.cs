@@ -1,9 +1,7 @@
 using Newtonsoft.Json;
 using System;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Runtime.InteropServices;
 
 namespace PatchMyPath
@@ -140,31 +138,8 @@ namespace PatchMyPath
                 return 5;
             }
 
-            // At this point launch the game
-            if (install.Type == InstallType.RagePluginHook)
-            {
-                Process.Start(Path.Combine(Config.Destination, "RAGEPluginHook.exe"));
-            }
-            else if (install.Type == InstallType.LauncherBypass && !Config.UseSteam)
-            {
-                Process.Start(Path.Combine(Config.Destination, "GTA5.exe"));
-            }
-            else if (install.Type == InstallType.Normal || (install.Type == InstallType.LauncherBypass && Config.UseSteam))
-            {
-                if (Config.UseSteam)
-                {
-                    Process.Start($"steam://rungameid/{Config.AppID}");
-                }
-                else
-                {
-                    Process.Start(Path.Combine(Config.Destination, "GTAVLauncher.exe"));
-                }
-            }
-            else
-            {
-                Console.WriteLine("Invalid game type, please check your configuration and try again.");
-                return 7;
-            }
+            // Launch the game
+            Config.Start(install.Type);
 
             // If we got here, success!
             return 0;
