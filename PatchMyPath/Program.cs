@@ -27,6 +27,9 @@ namespace PatchMyPath
 
         public static int Main(string[] args)
         {
+            // Print the program information
+            PrintHeader();
+
             // Try to parse the configuration
             try
             {
@@ -165,6 +168,17 @@ namespace PatchMyPath
 
             // If we got here, success!
             return 0;
+        }
+
+        /// <summary>
+        /// Prints the information header for the program
+        /// </summary>
+        public static void PrintHeader()
+        {
+            Console.WriteLine("=======================================================");
+            Console.WriteLine("====================  PatchMyPath  ====================");
+            Console.WriteLine("=======================================================");
+            Console.WriteLine();
         }
 
         public static void CloseProcess(string name)
