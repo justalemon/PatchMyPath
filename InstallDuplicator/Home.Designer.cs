@@ -1,6 +1,6 @@
-﻿namespace InstallDuplicator
+namespace InstallDuplicator
 {
-    partial class Form1
+    partial class Home
     {
         /// <summary>
         /// Required designer variable.
