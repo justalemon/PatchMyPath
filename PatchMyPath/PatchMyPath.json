@@ -1,6 +1,7 @@
 {
     "use_steam": false,
     "appid": 271590,
+    "check_sig": false,
     "destination": "E:\\Grand Theft Auto V",
     "installs": [
         {

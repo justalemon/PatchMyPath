@@ -56,20 +56,30 @@ namespace PatchMyPath
         {
             get
             {
+                // Create the path of the 
+                string launcherPath = Path.Combine(GamePath, "GTAVLauncher.exe");
+                string executablePath = Path.Combine(GamePath, "GTA5.exe");
+
+                // If the signature check is disabled, just check if the files exist
+                if (!Program.Config.CheckSignature)
+                {
+                    return File.Exists(launcherPath) && File.Exists(executablePath);
+                }
+
                 // Get the certificate that signed both of them
-                X509Certificate2 launcher = Authenticode.GetCertificate(Path.Combine(GamePath, "GTAVLauncher.exe"));
-                X509Certificate2 executable = Authenticode.GetCertificate(Path.Combine(GamePath, "GTA5.exe"));
+                X509Certificate2 launcherCert = Authenticode.GetCertificate(launcherPath);
+                X509Certificate2 executableCert = Authenticode.GetCertificate(executablePath);
 
                 // If one of those don't have a valid signature, return false
-                if (launcher == null || executable == null)
+                if (launcherCert == null || executableCert == null)
                 {
                     return false;
                 }
 
                 // If the signature is by Rockstar Games
                 // (This is done to avoid self-signed files)
-                if (launcher.Thumbprint == "AA0D31A9C8C1EBD9E18EC1D8D3F98B3523178AD8" &&
-                    executable.Thumbprint == "AA0D31A9C8C1EBD9E18EC1D8D3F98B3523178AD8")
+                if (launcherCert.Thumbprint == "AA0D31A9C8C1EBD9E18EC1D8D3F98B3523178AD8" &&
+                    executableCert.Thumbprint == "AA0D31A9C8C1EBD9E18EC1D8D3F98B3523178AD8")
                 {
                     return true;
                 }
@@ -124,6 +134,11 @@ namespace PatchMyPath
         /// </summary>
         [JsonProperty("appid")]
         public uint AppID { get; set; }
+        /// <summary>
+        /// Checks the signature of the executable to make sure that is valid.
+        /// </summary>
+        [JsonProperty("check_sig")]
+        public bool CheckSignature { get; set; }
         /// <summary>
         /// The destination folder for the game files.
         /// </summary>
