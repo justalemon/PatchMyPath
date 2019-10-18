@@ -1,8 +1,9 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -108,6 +109,16 @@ namespace InstallDuplicator
             if (result == DialogResult.OK)
             {
                 DestinationTextBox.Text = SelectFolderBrowserDialog.SelectedPath;
+            }
+        }
+
+        private void DuplicateButton_Click(object sender, EventArgs e)
+        {
+            // If the origin folder does not exists, return
+            if (!Directory.Exists(OriginTextBox.Text))
+            {
+                LogTextBox.AppendText($"ERROR: The Origin folder does not exists!{Environment.NewLine}");
+                return;
             }
         }
     }
