@@ -1,4 +1,4 @@
-namespace InstallDuplicator
+﻿namespace InstallDuplicator
 {
     partial class Home
     {
@@ -29,11 +29,12 @@ namespace InstallDuplicator
         private void InitializeComponent()
         {
             this.OriginGroupBox = new System.Windows.Forms.GroupBox();
-            this.OriginTextBox = new System.Windows.Forms.TextBox();
             this.OriginButton = new System.Windows.Forms.Button();
+            this.OriginTextBox = new System.Windows.Forms.TextBox();
             this.DestinationGroupBox = new System.Windows.Forms.GroupBox();
-            this.DestinationTextBox = new System.Windows.Forms.TextBox();
             this.DestinationButton = new System.Windows.Forms.Button();
+            this.DestinationTextBox = new System.Windows.Forms.TextBox();
+            this.DuplicateButton = new System.Windows.Forms.Button();
             this.OriginGroupBox.SuspendLayout();
             this.DestinationGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -51,16 +52,6 @@ namespace InstallDuplicator
             this.OriginGroupBox.TabStop = false;
             this.OriginGroupBox.Text = "Origin";
             // 
-            // OriginTextBox
-            // 
-            this.OriginTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OriginTextBox.Location = new System.Drawing.Point(6, 19);
-            this.OriginTextBox.Name = "OriginTextBox";
-            this.OriginTextBox.ReadOnly = true;
-            this.OriginTextBox.Size = new System.Drawing.Size(367, 20);
-            this.OriginTextBox.TabIndex = 0;
-            // 
             // OriginButton
             // 
             this.OriginButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -70,6 +61,16 @@ namespace InstallDuplicator
             this.OriginButton.TabIndex = 1;
             this.OriginButton.Text = "Select";
             this.OriginButton.UseVisualStyleBackColor = true;
+            // 
+            // OriginTextBox
+            // 
+            this.OriginTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OriginTextBox.Location = new System.Drawing.Point(6, 19);
+            this.OriginTextBox.Name = "OriginTextBox";
+            this.OriginTextBox.ReadOnly = true;
+            this.OriginTextBox.Size = new System.Drawing.Size(367, 20);
+            this.OriginTextBox.TabIndex = 0;
             // 
             // DestinationGroupBox
             // 
@@ -82,6 +83,15 @@ namespace InstallDuplicator
             this.DestinationGroupBox.TabStop = false;
             this.DestinationGroupBox.Text = "Destination";
             // 
+            // DestinationButton
+            // 
+            this.DestinationButton.Location = new System.Drawing.Point(379, 17);
+            this.DestinationButton.Name = "DestinationButton";
+            this.DestinationButton.Size = new System.Drawing.Size(75, 23);
+            this.DestinationButton.TabIndex = 1;
+            this.DestinationButton.Text = "Select";
+            this.DestinationButton.UseVisualStyleBackColor = true;
+            // 
             // DestinationTextBox
             // 
             this.DestinationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -92,20 +102,23 @@ namespace InstallDuplicator
             this.DestinationTextBox.Size = new System.Drawing.Size(367, 20);
             this.DestinationTextBox.TabIndex = 0;
             // 
-            // DestinationButton
+            // DuplicateButton
             // 
-            this.DestinationButton.Location = new System.Drawing.Point(379, 17);
-            this.DestinationButton.Name = "DestinationButton";
-            this.DestinationButton.Size = new System.Drawing.Size(75, 23);
-            this.DestinationButton.TabIndex = 1;
-            this.DestinationButton.Text = "Select";
-            this.DestinationButton.UseVisualStyleBackColor = true;
+            this.DuplicateButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DuplicateButton.Location = new System.Drawing.Point(12, 426);
+            this.DuplicateButton.Name = "DuplicateButton";
+            this.DuplicateButton.Size = new System.Drawing.Size(460, 23);
+            this.DuplicateButton.TabIndex = 2;
+            this.DuplicateButton.Text = "Duplicate GTA V Folder";
+            this.DuplicateButton.UseVisualStyleBackColor = true;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.DuplicateButton);
             this.Controls.Add(this.DestinationGroupBox);
             this.Controls.Add(this.OriginGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -130,6 +143,7 @@ namespace InstallDuplicator
         private System.Windows.Forms.GroupBox DestinationGroupBox;
         private System.Windows.Forms.TextBox DestinationTextBox;
         private System.Windows.Forms.Button DestinationButton;
+        private System.Windows.Forms.Button DuplicateButton;
     }
 }
 
