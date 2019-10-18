@@ -113,17 +113,8 @@ namespace PatchMyPath
             // If we didn't succeeded, notify the user and exit
             if (!SymbolicLink.Create(Config.Destination, install.GamePath, 3)) // 3 means Directory (0x1) and Unprivileged/Dev Mode (0x2)
             {
-                // Check the error code that we got
-                switch (Marshal.GetLastWin32Error())
-                {
-                    case 2:
-                        Console.WriteLine($"We don't have access to create the symbolic link!{Environment.NewLine}Please run the program as administrator or enable the Windows 10 Developer Mode.");
-                        break;
-                    default:
-                        Console.WriteLine($"Error while creating the Symbolic Link! Got code {Marshal.GetLastWin32Error()}!");
-                        break;
-                }
-
+                // Print the respective error message
+                Console.WriteLine(SymbolicLink.GetLastErrorMessage());
                 // Wait for a key press and exit with a code 5
                 Console.ReadKey();
                 return 5;

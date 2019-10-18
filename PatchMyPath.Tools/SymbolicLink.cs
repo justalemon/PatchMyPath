@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using System;
+using System.Runtime.InteropServices;
 
 namespace PatchMyPath.Tools
 {
@@ -16,5 +17,20 @@ namespace PatchMyPath.Tools
         /// <returns>If the function succeeds, the return value is nonzero. If the function fails, the return value is zero.</returns>
         [DllImport("kernel32.dll")]
         public static extern bool Create(string lpSymlinkFileName, string lpTargetFileName, uint dwFlags);
+
+        public static string GetLastErrorMessage()
+        {
+            // Get the last error code
+            int code = Marshal.GetLastWin32Error();
+
+            // Check it and return the correct error message
+            switch (code)
+            {
+                case 2:
+                    return $"We don't have access to create the symbolic link!{Environment.NewLine}Please run the program as administrator or enable the Windows 10 Developer Mode.";
+                default:
+                    return $"Error while creating the Symbolic Link! Got code {code}!";
+            }
+        }
     }
 }
