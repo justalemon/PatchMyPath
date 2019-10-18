@@ -138,29 +138,40 @@ namespace InstallDuplicator
                 // Format the origin and destination
                 string origin = Path.Combine(OriginTextBox.Text, file.Key);
                 string destination = Path.Combine(DestinationTextBox.Text, file.Key);
+                // Check if it exists as a directory or file
+                bool fileExists = File.Exists(origin);
+                bool directoryExists = Directory.Exists(origin);
 
-                // If it does not exists and is required
-                if ((!File.Exists(origin) && file.Value == Type.FileRequired) || (!Directory.Exists(origin) && file.Value == Type.FolderRequired))
+                // If the file or directory does not exists
+                if ((!fileExists && file.Value == Type.FileRequired) || (!directoryExists && file.Value == Type.FolderRequired))
                 {
                     // Notify the user and return
                     LogTextBox.AppendText($"ERROR: The file or folder {file.Key} does not exists and is required!{Environment.NewLine}");
                     return;
+                }
+                // If it does not exists but is not required
+                else if ((!fileExists && file.Value == Type.FileOptional) || (!directoryExists && file.Value == Type.FolderOptional))
+                {
+                    // Notify and continue
+                    LogTextBox.AppendText($"{file.Key} does not exists but is not required, skipping...{Environment.NewLine}");
+                    continue;
                 }
 
                 // Set the correct flag for the symbolic link
                 uint flag = (file.Value == Type.FileOptional || file.Value == Type.FileRequired) ? 2u : 3u;
                 // Otherwise, create the symbolic link
                 bool success = SymbolicLink.CreateSymbolicLink(destination, origin, flag);
-                // If we didn't succeeded, show the error message to the user and return
-                if (!success)
+
+                // If we succeeded, notify the user and continue
+                if (success)
                 {
-                    LogTextBox.AppendText($"ERROR: {SymbolicLink.GetLastErrorMessage()}{Environment.NewLine}");
-                    return;
+                    LogTextBox.AppendText($"Successfully linked {file.Key}!{Environment.NewLine}");
                 }
                 // Otherwise
                 else
                 {
-                    LogTextBox.AppendText($"Successfully linked {file.Key}!{Environment.NewLine}");
+                    LogTextBox.AppendText($"ERROR: {SymbolicLink.GetLastErrorMessage()}{Environment.NewLine}");
+                    return;
                 }
             }
         }
