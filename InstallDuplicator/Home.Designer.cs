@@ -138,6 +138,7 @@
             this.LogTextBox.Location = new System.Drawing.Point(3, 16);
             this.LogTextBox.Multiline = true;
             this.LogTextBox.Name = "LogTextBox";
+            this.LogTextBox.ReadOnly = true;
             this.LogTextBox.Size = new System.Drawing.Size(454, 287);
             this.LogTextBox.TabIndex = 0;
             // 
