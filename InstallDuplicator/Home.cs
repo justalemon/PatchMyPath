@@ -1,3 +1,4 @@
+﻿using PatchMyPath.Tools;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,60 +7,63 @@ using System.Windows.Forms;
 
 namespace InstallDuplicator
 {
+    public enum Type
+    {
+        FileRequired = 0,
+        FileOptional = 1,
+        FolderRequired = 2,
+        FolderOptional = 3,
+    }
+
     public partial class Home : Form
     {
         /// <summary>
-        /// The folders that are part of the game.
-        /// </summary>
-        public static Dictionary<string, bool> Folders = new Dictionary<string, bool>()
-        {
-            { "ReadMe", false },
-            { "Redistributables", false },
-            { "update", true },
-            { "x64", true },
-        };
-        /// <summary>
         /// The files that are part of the game.
         /// </summary>
-        public static Dictionary<string, bool> Files = new Dictionary<string, bool>()
+        public static Dictionary<string, Type> FilesFolders = new Dictionary<string, Type>()
         {
-            { "GTA5.exe", true },
-            { "GTAVLauncher.exe", true },
-            { "PlayGTAV.exe", false },
-            { "bink2w64.dll", true },
-            { "d3dcompiler_46.dll", true },
-            { "d3dcsx_46.dll", true },
-            { "GFSDK_ShadowLib.win64.dll", true },
-            { "GFSDK_TXAA.win64.dll", true },
-            { "GFSDK_TXAA_AlphaResolve.win64.dll", true },
-            { "GPUPerfAPIDX11-x64.dll", true },
-            { "NvPmApi.Core.win64.dll", true },
-            { "index.bin", false },
-            { "common.rpf", true },
-            { "x64a.rpf", true },
-            { "x64b.rpf", true },
-            { "x64c.rpf", true },
-            { "x64d.rpf", true },
-            { "x64e.rpf", true },
-            { "x64f.rpf", true },
-            { "x64g.rpf", true },
-            { "x64h.rpf", true },
-            { "x64i.rpf", true },
-            { "x64j.rpf", true },
-            { "x64k.rpf", true },
-            { "x64l.rpf", true },
-            { "x64m.rpf", true },
-            { "x64n.rpf", true },
-            { "x64o.rpf", true },
-            { "x64p.rpf", true },
-            { "x64q.rpf", true },
-            { "x64r.rpf", true },
-            { "x64s.rpf", true },
-            { "x64t.rpf", true },
-            { "x64u.rpf", true },
-            { "x64v.rpf", true },
-            { "x64w.rpf", true },
-            { "version.txt", false },
+            { "ReadMe", Type.FolderOptional },
+            { "Redistributables", Type.FolderOptional },
+            { "update", Type.FolderRequired },
+            { "x64", Type.FolderRequired },
+
+            { "GTA5.exe", Type.FileRequired },
+            { "GTAVLauncher.exe", Type.FileRequired },
+            { "PlayGTAV.exe", Type.FileOptional },
+            { "bink2w64.dll", Type.FileRequired },
+            { "d3dcompiler_46.dll", Type.FileRequired },
+            { "d3dcsx_46.dll", Type.FileRequired },
+            { "GFSDK_ShadowLib.win64.dll", Type.FileRequired },
+            { "GFSDK_TXAA.win64.dll", Type.FileRequired },
+            { "GFSDK_TXAA_AlphaResolve.win64.dll", Type.FileRequired },
+            { "GPUPerfAPIDX11-x64.dll", Type.FileRequired },
+            { "NvPmApi.Core.win64.dll", Type.FileRequired },
+            { "index.bin", Type.FileOptional },
+            { "common.rpf", Type.FileRequired },
+            { "x64a.rpf", Type.FileRequired },
+            { "x64b.rpf", Type.FileRequired },
+            { "x64c.rpf", Type.FileRequired },
+            { "x64d.rpf", Type.FileRequired },
+            { "x64e.rpf", Type.FileRequired },
+            { "x64f.rpf", Type.FileRequired },
+            { "x64g.rpf", Type.FileRequired },
+            { "x64h.rpf", Type.FileRequired },
+            { "x64i.rpf", Type.FileRequired },
+            { "x64j.rpf", Type.FileRequired },
+            { "x64k.rpf", Type.FileRequired },
+            { "x64l.rpf", Type.FileRequired },
+            { "x64m.rpf", Type.FileRequired },
+            { "x64n.rpf", Type.FileRequired },
+            { "x64o.rpf", Type.FileRequired },
+            { "x64p.rpf", Type.FileRequired },
+            { "x64q.rpf", Type.FileRequired },
+            { "x64r.rpf", Type.FileRequired },
+            { "x64s.rpf", Type.FileRequired },
+            { "x64t.rpf", Type.FileRequired },
+            { "x64u.rpf", Type.FileRequired },
+            { "x64v.rpf", Type.FileRequired },
+            { "x64w.rpf", Type.FileRequired },
+            { "version.txt", Type.FileOptional },
         };
 
         public Home()
@@ -121,39 +125,42 @@ namespace InstallDuplicator
                 Directory.Delete(DestinationTextBox.Text, true);
             }
 
-            // Check if the destination folder exists
-            bool exists = Directory.Exists(DestinationTextBox.Text);
-            // If it does not
-            if (!exists)
+            // If the destination folder does not exists
+            if (!Directory.Exists(DestinationTextBox.Text))
             {
                 // Create it
                 Directory.CreateDirectory(DestinationTextBox.Text);
             }
 
             // Iterate over the required files
-            foreach (KeyValuePair<string, bool> file in Files)
+            foreach (KeyValuePair<string, Type> file in FilesFolders)
             {
-                // Format the path
-                string path = Path.Combine(OriginTextBox.Text, file.Key);
-                // If it does not exists
-                if (!File.Exists(path) && file.Value)
+                // Format the origin and destination
+                string origin = Path.Combine(OriginTextBox.Text, file.Key);
+                string destination = Path.Combine(DestinationTextBox.Text, file.Key);
+
+                // If it does not exists and is required
+                if ((!File.Exists(origin) && file.Value == Type.FileRequired) || (!Directory.Exists(origin) && file.Value == Type.FolderRequired))
                 {
                     // Notify the user and return
-                    LogTextBox.AppendText($"ERROR: The required file {path} does not exists!{Environment.NewLine}");
+                    LogTextBox.AppendText($"ERROR: The file or folder {file.Key} does not exists and is required!{Environment.NewLine}");
                     return;
                 }
-            }
-            // Iterate over the required directories
-            foreach (KeyValuePair<string, bool> folder in Folders)
-            {
-                // Format it
-                string path = Path.Combine(OriginTextBox.Text, folder.Key);
-                // If it does not exists
-                if (!Directory.Exists(path) && folder.Value)
+
+                // Set the correct flag for the symbolic link
+                uint flag = (file.Value == Type.FileOptional || file.Value == Type.FileRequired) ? 2u : 3u;
+                // Otherwise, create the symbolic link
+                bool success = SymbolicLink.CreateSymbolicLink(destination, origin, flag);
+                // If we didn't succeeded, show the error message to the user and return
+                if (!success)
                 {
-                    // Notify the user and return
-                    LogTextBox.AppendText($"ERROR: The required folder {path} does not exists!{Environment.NewLine}");
+                    LogTextBox.AppendText($"ERROR: {SymbolicLink.GetLastErrorMessage()}{Environment.NewLine}");
                     return;
+                }
+                // Otherwise
+                else
+                {
+                    LogTextBox.AppendText($"Successfully linked {file.Key}!{Environment.NewLine}");
                 }
             }
         }
