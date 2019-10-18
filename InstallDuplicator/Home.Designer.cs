@@ -35,8 +35,11 @@
             this.DestinationButton = new System.Windows.Forms.Button();
             this.DestinationTextBox = new System.Windows.Forms.TextBox();
             this.DuplicateButton = new System.Windows.Forms.Button();
+            this.LogGroupBox = new System.Windows.Forms.GroupBox();
+            this.LogTextBox = new System.Windows.Forms.TextBox();
             this.OriginGroupBox.SuspendLayout();
             this.DestinationGroupBox.SuspendLayout();
+            this.LogGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // OriginGroupBox
@@ -113,11 +116,34 @@
             this.DuplicateButton.Text = "Duplicate GTA V Folder";
             this.DuplicateButton.UseVisualStyleBackColor = true;
             // 
+            // LogGroupBox
+            // 
+            this.LogGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LogGroupBox.Controls.Add(this.LogTextBox);
+            this.LogGroupBox.Location = new System.Drawing.Point(12, 114);
+            this.LogGroupBox.Name = "LogGroupBox";
+            this.LogGroupBox.Size = new System.Drawing.Size(460, 306);
+            this.LogGroupBox.TabIndex = 3;
+            this.LogGroupBox.TabStop = false;
+            this.LogGroupBox.Text = "Logging";
+            // 
+            // LogTextBox
+            // 
+            this.LogTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LogTextBox.Location = new System.Drawing.Point(3, 16);
+            this.LogTextBox.Multiline = true;
+            this.LogTextBox.Name = "LogTextBox";
+            this.LogTextBox.Size = new System.Drawing.Size(454, 287);
+            this.LogTextBox.TabIndex = 0;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.LogGroupBox);
             this.Controls.Add(this.DuplicateButton);
             this.Controls.Add(this.DestinationGroupBox);
             this.Controls.Add(this.OriginGroupBox);
@@ -131,6 +157,8 @@
             this.OriginGroupBox.PerformLayout();
             this.DestinationGroupBox.ResumeLayout(false);
             this.DestinationGroupBox.PerformLayout();
+            this.LogGroupBox.ResumeLayout(false);
+            this.LogGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -144,6 +172,8 @@
         private System.Windows.Forms.TextBox DestinationTextBox;
         private System.Windows.Forms.Button DestinationButton;
         private System.Windows.Forms.Button DuplicateButton;
+        private System.Windows.Forms.GroupBox LogGroupBox;
+        private System.Windows.Forms.TextBox LogTextBox;
     }
 }
 
