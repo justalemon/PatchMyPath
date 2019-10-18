@@ -111,7 +111,7 @@ namespace PatchMyPath
 
             // Then, create a symbolic link between the game and the executable
             // If we didn't succeeded, notify the user and exit
-            if (!SymbolicLink.Create(Config.Destination, install.GamePath, 3)) // 3 means Directory (0x1) and Unprivileged/Dev Mode (0x2)
+            if (!SymbolicLink.CreateSymbolicLink(Config.Destination, install.GamePath, 3)) // 3 means Directory (0x1) and Unprivileged/Dev Mode (0x2)
             {
                 // Print the respective error message
                 Console.WriteLine(SymbolicLink.GetLastErrorMessage());

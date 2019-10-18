@@ -16,7 +16,7 @@ namespace PatchMyPath.Tools
         /// <param name="dwFlags">Indicates whether the link target, lpTargetFileName, is a directory.</param>
         /// <returns>If the function succeeds, the return value is nonzero. If the function fails, the return value is zero.</returns>
         [DllImport("kernel32.dll")]
-        public static extern bool Create(string lpSymlinkFileName, string lpTargetFileName, uint dwFlags);
+        public static extern bool CreateSymbolicLink(string lpSymlinkFileName, string lpTargetFileName, uint dwFlags);
 
         public static string GetLastErrorMessage()
         {
