@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
 
-namespace PatchMyPath.Tools
+namespace PatchMyPath
 {
     /// <summary>
     /// The type of game installation.
