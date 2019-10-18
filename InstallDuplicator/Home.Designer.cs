@@ -1,4 +1,4 @@
-﻿namespace InstallDuplicator
+namespace InstallDuplicator
 {
     partial class Home
     {
@@ -105,7 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 161);
+            this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.DestinationGroupBox);
             this.Controls.Add(this.OriginGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
