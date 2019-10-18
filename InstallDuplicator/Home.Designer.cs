@@ -37,6 +37,7 @@
             this.DuplicateButton = new System.Windows.Forms.Button();
             this.LogGroupBox = new System.Windows.Forms.GroupBox();
             this.LogTextBox = new System.Windows.Forms.TextBox();
+            this.SelectFolderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.OriginGroupBox.SuspendLayout();
             this.DestinationGroupBox.SuspendLayout();
             this.LogGroupBox.SuspendLayout();
@@ -64,6 +65,7 @@
             this.OriginButton.TabIndex = 1;
             this.OriginButton.Text = "Select";
             this.OriginButton.UseVisualStyleBackColor = true;
+            this.OriginButton.Click += new System.EventHandler(this.OriginButton_Click);
             // 
             // OriginTextBox
             // 
@@ -94,6 +96,7 @@
             this.DestinationButton.TabIndex = 1;
             this.DestinationButton.Text = "Select";
             this.DestinationButton.UseVisualStyleBackColor = true;
+            this.DestinationButton.Click += new System.EventHandler(this.DestinationButton_Click);
             // 
             // DestinationTextBox
             // 
@@ -174,6 +177,7 @@
         private System.Windows.Forms.Button DuplicateButton;
         private System.Windows.Forms.GroupBox LogGroupBox;
         private System.Windows.Forms.TextBox LogTextBox;
+        private System.Windows.Forms.FolderBrowserDialog SelectFolderBrowserDialog;
     }
 }
 
