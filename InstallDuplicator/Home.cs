@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -119,6 +119,23 @@ namespace InstallDuplicator
             {
                 LogTextBox.AppendText($"ERROR: The Origin folder does not exists!{Environment.NewLine}");
                 return;
+            }
+
+            // If the destination folder exists and is not empty
+            if (Directory.Exists(DestinationTextBox.Text) && Directory.EnumerateFileSystemEntries(DestinationTextBox.Text).Any())
+            {
+                // Ask the user if he wants to wipe the folder
+                DialogResult result = MessageBox.Show("The Destination folder has files present, do you want to delete them?", "Destination Contains Files", MessageBoxButtons.YesNo);
+
+                // Return if the user said no
+                if (result == DialogResult.No)
+                {
+                    LogTextBox.AppendText($"ERROR: The Destination folder contains files and the user cancelled the removal of them{Environment.NewLine}");
+                    return;
+                }
+
+                // Delete the directory and wait for it to be created again
+                Directory.Delete(DestinationTextBox.Text, true);
             }
         }
     }
