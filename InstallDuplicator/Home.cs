@@ -144,6 +144,33 @@ namespace InstallDuplicator
                 // Create it
                 Directory.CreateDirectory(DestinationTextBox.Text);
             }
+
+            // Iterate over the required files
+            foreach (string file in RequiredFiles)
+            {
+                // Format the path
+                string path = Path.Combine(OriginTextBox.Text, file);
+                // If it does not exists
+                if (!File.Exists(path))
+                {
+                    // Notify the user and return
+                    LogTextBox.AppendText($"ERROR: The required file {path} does not exists!{Environment.NewLine}");
+                    return;
+                }
+            }
+            // Iterate over the required directories
+            foreach (string folder in RequiredFolders)
+            {
+                // Format it
+                string path = Path.Combine(OriginTextBox.Text, folder);
+                // If it does not exists
+                if (!Directory.Exists(path))
+                {
+                    // Notify the user and return
+                    LogTextBox.AppendText($"ERROR: The required folder {path} does not exists!{Environment.NewLine}");
+                    return;
+                }
+            }
         }
     }
 }
