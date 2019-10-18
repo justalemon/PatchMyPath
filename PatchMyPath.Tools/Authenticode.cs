@@ -2,7 +2,7 @@
 using System.Management.Automation;
 using System.Security.Cryptography.X509Certificates;
 
-namespace PatchMyPath
+namespace PatchMyPath.Tools
 {
     /// <summary>
     /// Reader for Authenticode signatures.
