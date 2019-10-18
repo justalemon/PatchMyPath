@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -136,6 +136,13 @@ namespace InstallDuplicator
 
                 // Delete the directory and wait for it to be created again
                 Directory.Delete(DestinationTextBox.Text, true);
+            }
+            
+            // If the destination directory does not exists
+            if (!Directory.Exists(DestinationTextBox.Text))
+            {
+                // Create it
+                Directory.CreateDirectory(DestinationTextBox.Text);
             }
         }
     }
