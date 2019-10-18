@@ -14,7 +14,11 @@ namespace InstallDuplicator
     {
         public Home()
         {
+            // Initialize the UI elements
             InitializeComponent();
+            // And add some logging text
+            LogTextBox.AppendText($"Welcome to the Install Duplicator of PatchMyPath!{Environment.NewLine}");
+            LogTextBox.AppendText($"This tool helps with the creation of multiple GTA V folders by reducing the storage space required for them.{Environment.NewLine}");
         }
 
         private void OriginButton_Click(object sender, EventArgs e)
