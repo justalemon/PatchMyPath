@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -8,69 +9,57 @@ namespace InstallDuplicator
     public partial class Home : Form
     {
         /// <summary>
-        /// The folders required for the game.
+        /// The folders that are part of the game.
         /// </summary>
-        public static string[] RequiredFolders = new string[]
+        public static Dictionary<string, bool> Folders = new Dictionary<string, bool>()
         {
-            "update",
-            "x64",
+            { "ReadMe", false },
+            { "Redistributables", false },
+            { "update", true },
+            { "x64", true },
         };
         /// <summary>
-        /// Files that are required for running the game.
+        /// The files that are part of the game.
         /// </summary>
-        public static string[] RequiredFiles = new string[]
+        public static Dictionary<string, bool> Files = new Dictionary<string, bool>()
         {
-            "GTA5.exe",
-            "GTAVLauncher.exe",
-            "bink2w64.dll",
-            "d3dcompiler_46.dll",
-            "d3dcsx_46.dll",
-            "GFSDK_ShadowLib.win64.dll",
-            "GFSDK_TXAA.win64.dll",
-            "GFSDK_TXAA_AlphaResolve.win64.dll",
-            "GPUPerfAPIDX11-x64.dll",
-            "NvPmApi.Core.win64.dll",
-            "common.rpf",
-            "x64a.rpf",
-            "x64b.rpf",
-            "x64c.rpf",
-            "x64d.rpf",
-            "x64e.rpf",
-            "x64f.rpf",
-            "x64g.rpf",
-            "x64h.rpf",
-            "x64i.rpf",
-            "x64j.rpf",
-            "x64k.rpf",
-            "x64l.rpf",
-            "x64m.rpf",
-            "x64n.rpf",
-            "x64o.rpf",
-            "x64p.rpf",
-            "x64q.rpf",
-            "x64r.rpf",
-            "x64s.rpf",
-            "x64t.rpf",
-            "x64u.rpf",
-            "x64v.rpf",
-            "x64w.rpf",
-        };
-        /// <summary>
-        /// Folders that contain files that are not required by the game.
-        /// </summary>
-        public static string[] OptionalFolders = new string[]
-        {
-            "ReadMe",
-            "Redistributables",
-        };
-        /// <summary>
-        /// Files that have been added on recent updates and are not mandatory.
-        /// </summary>
-        public static string[] OptionalFiles = new string[]
-        {
-            "PlayGTAV.exe",
-            "index.bin",
-            "version.txt",
+            { "GTA5.exe", true },
+            { "GTAVLauncher.exe", true },
+            { "PlayGTAV.exe", false },
+            { "bink2w64.dll", true },
+            { "d3dcompiler_46.dll", true },
+            { "d3dcsx_46.dll", true },
+            { "GFSDK_ShadowLib.win64.dll", true },
+            { "GFSDK_TXAA.win64.dll", true },
+            { "GFSDK_TXAA_AlphaResolve.win64.dll", true },
+            { "GPUPerfAPIDX11-x64.dll", true },
+            { "NvPmApi.Core.win64.dll", true },
+            { "index.bin", false },
+            { "common.rpf", true },
+            { "x64a.rpf", true },
+            { "x64b.rpf", true },
+            { "x64c.rpf", true },
+            { "x64d.rpf", true },
+            { "x64e.rpf", true },
+            { "x64f.rpf", true },
+            { "x64g.rpf", true },
+            { "x64h.rpf", true },
+            { "x64i.rpf", true },
+            { "x64j.rpf", true },
+            { "x64k.rpf", true },
+            { "x64l.rpf", true },
+            { "x64m.rpf", true },
+            { "x64n.rpf", true },
+            { "x64o.rpf", true },
+            { "x64p.rpf", true },
+            { "x64q.rpf", true },
+            { "x64r.rpf", true },
+            { "x64s.rpf", true },
+            { "x64t.rpf", true },
+            { "x64u.rpf", true },
+            { "x64v.rpf", true },
+            { "x64w.rpf", true },
+            { "version.txt", false },
         };
 
         public Home()
@@ -140,12 +129,12 @@ namespace InstallDuplicator
             }
 
             // Iterate over the required files
-            foreach (string file in RequiredFiles)
+            foreach (KeyValuePair<string, bool> file in Files)
             {
                 // Format the path
-                string path = Path.Combine(OriginTextBox.Text, file);
+                string path = Path.Combine(OriginTextBox.Text, file.Key);
                 // If it does not exists
-                if (!File.Exists(path))
+                if (!File.Exists(path) && file.Value)
                 {
                     // Notify the user and return
                     LogTextBox.AppendText($"ERROR: The required file {path} does not exists!{Environment.NewLine}");
@@ -153,12 +142,12 @@ namespace InstallDuplicator
                 }
             }
             // Iterate over the required directories
-            foreach (string folder in RequiredFolders)
+            foreach (KeyValuePair<string, bool> folder in Folders)
             {
                 // Format it
-                string path = Path.Combine(OriginTextBox.Text, folder);
+                string path = Path.Combine(OriginTextBox.Text, folder.Key);
                 // If it does not exists
-                if (!Directory.Exists(path))
+                if (!Directory.Exists(path) && folder.Value)
                 {
                     // Notify the user and return
                     LogTextBox.AppendText($"ERROR: The required folder {path} does not exists!{Environment.NewLine}");
