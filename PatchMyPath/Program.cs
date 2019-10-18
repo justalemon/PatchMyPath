@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using PatchMyPath.Tools;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -8,16 +9,6 @@ namespace PatchMyPath
 {
     public class Program
     {
-        /// <summary>
-        /// Creates a symbolic link. (https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-createsymboliclinka)
-        /// </summary>
-        /// <param name="lpSymlinkFileName">The symbolic link to be created.</param>
-        /// <param name="lpTargetFileName">The name of the target for the symbolic link to be created.</param>
-        /// <param name="dwFlags">Indicates whether the link target, lpTargetFileName, is a directory.</param>
-        /// <returns>If the function succeeds, the return value is nonzero. If the function fails, the return value is zero.</returns>
-        [DllImport("kernel32.dll")]
-        public static extern bool CreateSymbolicLink(string lpSymlinkFileName, string lpTargetFileName, uint dwFlags);
-
         /// <summary>
         /// The configuration of the program.
         /// </summary>
@@ -120,7 +111,7 @@ namespace PatchMyPath
 
             // Then, create a symbolic link between the game and the executable
             // If we didn't succeeded, notify the user and exit
-            if (!CreateSymbolicLink(Config.Destination, install.GamePath, 3)) // 3 means Directory (0x1) and Unprivileged/Dev Mode (0x2)
+            if (!SymbolicLink.Create(Config.Destination, install.GamePath, 3)) // 3 means Directory (0x1) and Unprivileged/Dev Mode (0x2)
             {
                 // Check the error code that we got
                 switch (Marshal.GetLastWin32Error())
