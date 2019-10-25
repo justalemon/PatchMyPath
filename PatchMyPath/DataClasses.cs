@@ -2,6 +2,7 @@
 using PatchMyPath.Tools;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
@@ -67,9 +68,21 @@ namespace PatchMyPath
                     return false;
                 }
 
-                // Get the real paths for the launcher and executable
-                string realLauncher = SymbolicLink.GetRealPath(launcherPath);
-                string realExecutable = SymbolicLink.GetRealPath(executablePath);
+                // Create some variables for storing the real locations
+                string realLauncher;
+                string realExecutable;
+                // Try to get the real paths for the launcher and executable
+                try
+                {
+                    realLauncher = SymbolicLink.GetRealPath(launcherPath);
+                    realExecutable = SymbolicLink.GetRealPath(executablePath);
+                }
+                // If we failed, the files are long gone so return
+                catch (Win32Exception)
+                {
+                    return false;
+                }
+
                 // Get the certificate that signed both of them
                 X509Certificate launcherCert = X509Certificate.CreateFromSignedFile(realLauncher);
                 X509Certificate executableCert = X509Certificate.CreateFromSignedFile(realExecutable);
