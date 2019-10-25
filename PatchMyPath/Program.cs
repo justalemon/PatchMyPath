@@ -1,6 +1,7 @@
 using Newtonsoft.Json;
 using PatchMyPath.Tools;
 using System;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
@@ -109,12 +110,15 @@ namespace PatchMyPath
                 Directory.Delete(Config.Destination);
             }
 
-            // Then, create a symbolic link between the game and the executable
-            // If we didn't succeeded, notify the user and exit
-            if (!SymbolicLink.CreateSymbolicLink(Config.Destination, install.GamePath, 3)) // 3 means Directory (0x1) and Unprivileged/Dev Mode (0x2)
+            // Try to create the symbolic link
+            try
+            {
+                SymbolicLink.Create(Config.Destination, install.GamePath, 3); // 3 means Directory (0x1) and Unprivileged/Dev Mode (0x2)
+            }
+            catch (Win32Exception er)
             {
                 // Print the respective error message
-                Console.WriteLine(SymbolicLink.GetLastErrorMessage());
+                Console.WriteLine(er.Message);
                 // Wait for a key press and exit with a code 5
                 Console.ReadKey();
                 return 5;

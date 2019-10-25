@@ -1,6 +1,7 @@
 ﻿using PatchMyPath.Tools;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -173,18 +174,16 @@ namespace InstallDuplicator
 
                 // Set the correct flag for the symbolic link
                 uint flag = (file.Value == Type.FileOptional || file.Value == Type.FileRequired) ? 2u : 3u;
-                // Otherwise, create the symbolic link
-                bool success = SymbolicLink.CreateSymbolicLink(destination, origin, flag);
-
-                // If we succeeded, notify the user and continue
-                if (success)
+                // Otherwise, try to create the symbolic link
+                try
                 {
+                    SymbolicLink.Create(destination, origin, flag);
                     LogTextBox.AppendText($"Successfully linked {file.Key}!{Environment.NewLine}");
                 }
-                // Otherwise
-                else
+                // If we failed with a windows native error, notify the user and return
+                catch (Win32Exception er)
                 {
-                    LogTextBox.AppendText($"ERROR: {SymbolicLink.GetLastErrorMessage()}{Environment.NewLine}");
+                    LogTextBox.AppendText($"ERROR: {er.Message}{Environment.NewLine}");
                     return;
                 }
             }
