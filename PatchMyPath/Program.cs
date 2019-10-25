@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.ServiceProcess;
 
 namespace PatchMyPath
 {
@@ -97,6 +98,13 @@ namespace PatchMyPath
             while (Process.GetProcessesByName("SocialClubHelper").Length != 0)
             {
                 CloseProcess("SocialClubHelper");
+            }
+            // And the respective service
+            while (Process.GetProcessesByName("RockstarService").Length != 0)
+            {
+                ServiceController controller = new ServiceController("Rockstar Game Library Service");
+                controller.Stop();
+                CloseProcess("RockstarService");
             }
             // And if the user uses Steam, also kill that
             if (Config.UseSteam && Config.AppID == 271590)
