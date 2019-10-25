@@ -18,6 +18,19 @@ namespace PatchMyPath.Tools
         [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
         private static extern bool CreateSymbolicLink(string lpSymlinkFileName, string lpTargetFileName, uint dwFlags);
 
+        /// <summary>
+        /// Creates a symbolic link.
+        /// </summary>
+        public static void Create(string symlink, string target, uint flag)
+        {
+            // Try to create a symbolic link
+            // If we failed, raise a native win32 exception with the current error code
+            if (!CreateSymbolicLink(symlink, target, flag))
+            {
+                throw new Win32Exception(Marshal.GetLastWin32Error());
+            }
+        }
+
         public static string GetLastErrorMessage()
         {
             // Get the last error code
