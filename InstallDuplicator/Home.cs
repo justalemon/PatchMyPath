@@ -121,8 +121,22 @@ namespace InstallDuplicator
                     return;
                 }
 
-                // Delete the directory and wait for it to be created again
-                Directory.Delete(DestinationTextBox.Text, true);
+                // Enumerate the files and folders
+                foreach (string entry in Directory.EnumerateFileSystemEntries(DestinationTextBox.Text, "*", SearchOption.TopDirectoryOnly))
+                {
+                    // If is a file
+                    if (File.Exists(entry))
+                    {
+                        File.Delete(entry);
+                        continue;
+                    }
+                    // If is a directory
+                    if (Directory.Exists(entry))
+                    {
+                        Directory.Delete(entry);
+                        continue;
+                    }
+                }
             }
 
             // If the destination folder does not exists
