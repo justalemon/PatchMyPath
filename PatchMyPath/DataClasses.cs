@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using PatchMyPath.Tools;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -66,9 +67,12 @@ namespace PatchMyPath
                     return false;
                 }
 
+                // Get the real paths for the launcher and executable
+                string realLauncher = SymbolicLink.GetRealPath(launcherPath);
+                string realExecutable = SymbolicLink.GetRealPath(executablePath);
                 // Get the certificate that signed both of them
-                X509Certificate launcherCert = X509Certificate.CreateFromSignedFile(launcherPath);
-                X509Certificate executableCert = X509Certificate.CreateFromSignedFile(executablePath);
+                X509Certificate launcherCert = X509Certificate.CreateFromSignedFile(realLauncher);
+                X509Certificate executableCert = X509Certificate.CreateFromSignedFile(realExecutable);
 
                 // If one of those don't have a valid signature, return false
                 if (launcherCert == null || executableCert == null)
