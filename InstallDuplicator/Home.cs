@@ -177,7 +177,7 @@ namespace InstallDuplicator
                 // Otherwise, try to create the symbolic link
                 try
                 {
-                    SymbolicLink.Create(destination, origin, flag);
+                    Links.Create(destination, origin, flag);
                     LogTextBox.AppendText($"Successfully linked {file.Key}!{Environment.NewLine}");
                 }
                 // If we failed with a windows native error, notify the user and return

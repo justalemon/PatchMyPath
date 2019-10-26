@@ -9,7 +9,7 @@ namespace PatchMyPath.Tools
     /// <summary>
     /// Functions used to Create symbolic links.
     /// </summary>
-    public static class SymbolicLink
+    public static class Links
     {
         /// <summary>
         /// Creates a symbolic link. (https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-createsymboliclinka)

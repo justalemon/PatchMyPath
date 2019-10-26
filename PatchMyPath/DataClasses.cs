@@ -74,8 +74,8 @@ namespace PatchMyPath
                 // Try to get the real paths for the launcher and executable
                 try
                 {
-                    realLauncher = SymbolicLink.GetRealPath(launcherPath);
-                    realExecutable = SymbolicLink.GetRealPath(executablePath);
+                    realLauncher = Links.GetRealPath(launcherPath);
+                    realExecutable = Links.GetRealPath(executablePath);
                 }
                 // If we failed, the files are long gone so return
                 catch (Win32Exception)
