@@ -179,7 +179,12 @@ namespace PatchMyPath
             // At this point launch the game
             if (type == InstallType.RagePluginHook)
             {
-                Process.Start(Path.Combine(Destination, "RAGEPluginHook.exe"));
+                using (Process rph = new Process())
+                {
+                    rph.StartInfo.FileName = Path.Combine(Destination, "RAGEPluginHook.exe");
+                    rph.StartInfo.WorkingDirectory = Destination;
+                    rph.Start();
+                }
             }
             else if (type == InstallType.LauncherBypass && !UseSteam)
             {
