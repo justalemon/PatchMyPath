@@ -21,6 +21,16 @@ namespace PatchMyPath.Tools
         [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
         private static extern bool CreateSymbolicLinkW(string lpSymlinkFileName, string lpTargetFileName, uint dwFlags);
         /// <summary>
+        /// Establishes a hard link between an existing file and a new file. (https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-createhardlinkw)
+        /// </summary>
+        /// <param name="lpFileName">The name of the new file.</param>
+        /// <param name="lpExistingFileName">The name of the existing file.</param>
+        /// <param name="lpSecurityAttributes">Reserved; must be NULL. (For C#, IntPtr.Zero)</param>
+        /// <returns></returns>
+        [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
+        private static extern bool CreateHardLinkW(string lpFileName, string lpExistingFileName, IntPtr lpSecurityAttributes);
+
+        /// <summary>
         /// Creates or opens a file or I/O device. (https://docs.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilew)
         /// </summary>
         /// <param name="lpFileName">The name of the file or device to be created or opened.</param>
@@ -52,6 +62,18 @@ namespace PatchMyPath.Tools
             // Try to create a symbolic link
             // If we failed, raise a native win32 exception with the current error code
             if (!CreateSymbolicLinkW(symlink, target, flag))
+            {
+                throw new Win32Exception(Marshal.GetLastWin32Error());
+            }
+        }
+        /// <summary>
+        /// Creates a hard link.
+        /// </summary>
+        public static void CreateHardLink(string original, string created)
+        {
+            // Try to create a hard link
+            // If we failed, raise a native win32 exception with the current error code
+            if (!CreateHardLinkW(created, original, IntPtr.Zero))
             {
                 throw new Win32Exception(Marshal.GetLastWin32Error());
             }
