@@ -47,7 +47,7 @@ namespace PatchMyPath.Tools
         /// <summary>
         /// Creates a symbolic link.
         /// </summary>
-        public static void Create(string symlink, string target, uint flag)
+        public static void CreateSymbolicLink(string symlink, string target, uint flag)
         {
             // Try to create a symbolic link
             // If we failed, raise a native win32 exception with the current error code

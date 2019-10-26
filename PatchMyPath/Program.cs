@@ -123,7 +123,7 @@ namespace PatchMyPath
             // Try to create the symbolic link
             try
             {
-                Links.Create(Config.Destination, install.GamePath, 3); // 3 means Directory (0x1) and Unprivileged/Dev Mode (0x2)
+                Links.CreateSymbolicLink(Config.Destination, install.GamePath, 3); // 3 means Directory (0x1) and Unprivileged/Dev Mode (0x2)
             }
             catch (Win32Exception er)
             {
