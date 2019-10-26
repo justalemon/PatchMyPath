@@ -1,4 +1,4 @@
-using PatchMyPath.Tools;
+﻿using PatchMyPath.Tools;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -175,11 +175,21 @@ namespace InstallDuplicator
 
                 // Set the correct flag for the symbolic link
                 uint flag = (file.Value == Type.FileOptional || file.Value == Type.FileRequired) ? 2u : 3u;
-                // Otherwise, try to create the symbolic link
+                // Otherwise, try to create the respective type
                 try
                 {
-                    Links.CreateSymbolicLink(destination, origin, flag);
-                    LogTextBox.AppendText($"Successfully linked {file.Key}!{Environment.NewLine}");
+                    // If the symbolic link option is selected or this is a directory
+                    if (SymbolicRadioButton.Checked || flag == 3u)
+                    {
+                        Links.CreateSymbolicLink(destination, origin, flag);
+                        LogTextBox.AppendText($"Successfully created symbolic link for {file.Key}!{Environment.NewLine}");
+                    }
+                    // Otherwise
+                    else
+                    {
+                        Links.CreateHardLink(origin, destination);
+                        LogTextBox.AppendText($"Successfully created hard link for {file.Key}!{Environment.NewLine}");
+                    }
                 }
                 // If we failed with a windows native error, notify the user and return
                 catch (Win32Exception er)
