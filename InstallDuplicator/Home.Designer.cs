@@ -166,10 +166,10 @@
             this.SymbolicRadioButton.AutoSize = true;
             this.SymbolicRadioButton.Location = new System.Drawing.Point(6, 42);
             this.SymbolicRadioButton.Name = "SymbolicRadioButton";
-            this.SymbolicRadioButton.Size = new System.Drawing.Size(323, 17);
+            this.SymbolicRadioButton.Size = new System.Drawing.Size(425, 17);
             this.SymbolicRadioButton.TabIndex = 0;
-            this.SymbolicRadioButton.TabStop = true;
-            this.SymbolicRadioButton.Text = "Symbolic Link (Steam and non Rockstar Games Launcher only)";
+            this.SymbolicRadioButton.Text = "Symbolic Links for Files and Folders (Steam and non Rockstar Games Launcher only)" +
+    "";
             this.SymbolicRadioButton.UseVisualStyleBackColor = true;
             // 
             // HardRadioButton
@@ -178,10 +178,10 @@
             this.HardRadioButton.Checked = true;
             this.HardRadioButton.Location = new System.Drawing.Point(6, 19);
             this.HardRadioButton.Name = "HardRadioButton";
-            this.HardRadioButton.Size = new System.Drawing.Size(217, 17);
+            this.HardRadioButton.Size = new System.Drawing.Size(350, 17);
             this.HardRadioButton.TabIndex = 1;
             this.HardRadioButton.TabStop = true;
-            this.HardRadioButton.Text = "Hard Link + Junction (All Game Versions)";
+            this.HardRadioButton.Text = "Hard Link for Files and Symbolic Links for Folders (All Game Versions)";
             this.HardRadioButton.UseVisualStyleBackColor = true;
             // 
             // Home
