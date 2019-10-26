@@ -38,9 +38,13 @@
             this.LogGroupBox = new System.Windows.Forms.GroupBox();
             this.LogTextBox = new System.Windows.Forms.TextBox();
             this.SelectFolderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.LinkTypeGroupBox = new System.Windows.Forms.GroupBox();
+            this.SymbolicRadioButton = new System.Windows.Forms.RadioButton();
+            this.HardRadioButton = new System.Windows.Forms.RadioButton();
             this.OriginGroupBox.SuspendLayout();
             this.DestinationGroupBox.SuspendLayout();
             this.LogGroupBox.SuspendLayout();
+            this.LinkTypeGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // OriginGroupBox
@@ -126,9 +130,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LogGroupBox.Controls.Add(this.LogTextBox);
-            this.LogGroupBox.Location = new System.Drawing.Point(12, 114);
+            this.LogGroupBox.Location = new System.Drawing.Point(12, 186);
             this.LogGroupBox.Name = "LogGroupBox";
-            this.LogGroupBox.Size = new System.Drawing.Size(460, 306);
+            this.LogGroupBox.Size = new System.Drawing.Size(460, 234);
             this.LogGroupBox.TabIndex = 3;
             this.LogGroupBox.TabStop = false;
             this.LogGroupBox.Text = "Logging";
@@ -141,14 +145,51 @@
             this.LogTextBox.Name = "LogTextBox";
             this.LogTextBox.ReadOnly = true;
             this.LogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LogTextBox.Size = new System.Drawing.Size(454, 287);
+            this.LogTextBox.Size = new System.Drawing.Size(454, 215);
             this.LogTextBox.TabIndex = 0;
+            // 
+            // LinkTypeGroupBox
+            // 
+            this.LinkTypeGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LinkTypeGroupBox.Controls.Add(this.HardRadioButton);
+            this.LinkTypeGroupBox.Controls.Add(this.SymbolicRadioButton);
+            this.LinkTypeGroupBox.Location = new System.Drawing.Point(12, 114);
+            this.LinkTypeGroupBox.Name = "LinkTypeGroupBox";
+            this.LinkTypeGroupBox.Size = new System.Drawing.Size(460, 66);
+            this.LinkTypeGroupBox.TabIndex = 4;
+            this.LinkTypeGroupBox.TabStop = false;
+            this.LinkTypeGroupBox.Text = "Link Type";
+            // 
+            // SymbolicRadioButton
+            // 
+            this.SymbolicRadioButton.AutoSize = true;
+            this.SymbolicRadioButton.Location = new System.Drawing.Point(6, 42);
+            this.SymbolicRadioButton.Name = "SymbolicRadioButton";
+            this.SymbolicRadioButton.Size = new System.Drawing.Size(323, 17);
+            this.SymbolicRadioButton.TabIndex = 0;
+            this.SymbolicRadioButton.TabStop = true;
+            this.SymbolicRadioButton.Text = "Symbolic Link (Steam and non Rockstar Games Launcher only)";
+            this.SymbolicRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // HardRadioButton
+            // 
+            this.HardRadioButton.AutoSize = true;
+            this.HardRadioButton.Checked = true;
+            this.HardRadioButton.Location = new System.Drawing.Point(6, 19);
+            this.HardRadioButton.Name = "HardRadioButton";
+            this.HardRadioButton.Size = new System.Drawing.Size(217, 17);
+            this.HardRadioButton.TabIndex = 1;
+            this.HardRadioButton.TabStop = true;
+            this.HardRadioButton.Text = "Hard Link + Junction (All Game Versions)";
+            this.HardRadioButton.UseVisualStyleBackColor = true;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.LinkTypeGroupBox);
             this.Controls.Add(this.LogGroupBox);
             this.Controls.Add(this.DuplicateButton);
             this.Controls.Add(this.DestinationGroupBox);
@@ -165,6 +206,8 @@
             this.DestinationGroupBox.PerformLayout();
             this.LogGroupBox.ResumeLayout(false);
             this.LogGroupBox.PerformLayout();
+            this.LinkTypeGroupBox.ResumeLayout(false);
+            this.LinkTypeGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -181,6 +224,9 @@
         private System.Windows.Forms.GroupBox LogGroupBox;
         private System.Windows.Forms.TextBox LogTextBox;
         private System.Windows.Forms.FolderBrowserDialog SelectFolderBrowserDialog;
+        private System.Windows.Forms.GroupBox LinkTypeGroupBox;
+        private System.Windows.Forms.RadioButton SymbolicRadioButton;
+        private System.Windows.Forms.RadioButton HardRadioButton;
     }
 }
 
