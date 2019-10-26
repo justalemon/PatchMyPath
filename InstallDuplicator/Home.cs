@@ -1,4 +1,4 @@
-﻿using PatchMyPath.Tools;
+using PatchMyPath.Tools;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +29,7 @@ namespace InstallDuplicator
             { "x64", Type.FolderRequired },
 
             { "GTA5.exe", Type.FileRequired },
+            { "GTAVLanguageSelect.exe", Type.FileOptional },
             { "GTAVLauncher.exe", Type.FileRequired },
             { "PlayGTAV.exe", Type.FileOptional },
             { "bink2w64.dll", Type.FileRequired },
