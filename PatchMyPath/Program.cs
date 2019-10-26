@@ -1,10 +1,10 @@
 using Newtonsoft.Json;
 using PatchMyPath.Tools;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
-using System.Runtime.InteropServices;
 using System.ServiceProcess;
 
 namespace PatchMyPath
@@ -94,19 +94,21 @@ namespace PatchMyPath
                 return 6;
             }
 
-            // At this point, kill the Rockstar Games Launcher
-            while (Process.GetProcessesByName("SocialClubHelper").Length != 0)
-            {
-                CloseProcess("SocialClubHelper");
-            }
-            // And the respective service
+            // Kill the RGL service for protecting games from modifications
             while (Process.GetProcessesByName("RockstarService").Length != 0)
             {
-                ServiceController controller = new ServiceController("Rockstar Game Library Service");
-                controller.Stop();
-                CloseProcess("RockstarService");
+                using (ServiceController controller = new ServiceController("Rockstar Game Library Service"))
+                {
+                    if (controller.Status == ServiceControllerStatus.Running)
+                    {
+                        controller.Stop();
+                    }
+                }
             }
-            // And if the user uses Steam, also kill that
+            // And all of the processes required by the RGL Launcher, in order
+            CloseProcesses(new string[] { "SocialClubHelper", "Launcher", "LauncherPatcher" });
+
+            // If the user uses the Steam version, also kill that
             if (Config.UseSteam && Config.AppID == 271590)
             {
                 CloseProcess("Steam");
@@ -160,6 +162,17 @@ namespace PatchMyPath
             process.StartInfo.UseShellExecute = false;
             process.Start();
             process.WaitForExit();
+        }
+
+        public static void CloseProcesses(IEnumerable<string> processes)
+        {
+            foreach (string process in processes)
+            {
+                if (Process.GetProcessesByName(process).Length != 0)
+                {
+                    CloseProcess(process);
+                }
+            }
         }
     }
 }
