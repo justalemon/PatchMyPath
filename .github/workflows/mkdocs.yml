@@ -13,4 +13,4 @@ jobs:
           BASE_BRANCH: master
           BRANCH: gh-pages
           FOLDER: site
-          BUILD_SCRIPT: python3.6 -m pip install -r requirements.txt && python -m mkdocs build --clean
+          BUILD_SCRIPT: python3.6 -m pip install -r requirements.txt && python3.6 -m mkdocs build --clean
