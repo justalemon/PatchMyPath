@@ -1,0 +1,30 @@
+site_name: PatchMyPath
+
+nav:
+  - Home: index.md
+
+repo_name: justalemon/PatchMyPath
+repo_url: https://github.com/justalemon/PatchMyPath
+
+theme:
+  name: material
+  palette:
+    primary: red
+    accent: red
+  feature:
+    tabs: true
+
+extra:
+  social:
+    - type: discord
+      link: https://discord.gg/Cf6sspj
+    - type: github
+      link: https://github.com/justalemon
+    - type: steam
+      link: https://steamcommunity.com/profiles/76561198118215221/
+    - type: twitter
+      link: https://twitter.com/justlemonades
+    - type: twitch
+      link: https://www.twitch.tv/justlemoncl
+    - type: gamepad
+      link: https://www.gta5-mods.com/users/justalemon
