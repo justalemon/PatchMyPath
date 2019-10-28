@@ -19,6 +19,8 @@ jobs:
         run: python -m mkdocs build --clean
       - name: Say that this is not Jekyll
         run: cat > site/.nojekyll
+      - name: Specify custom domain
+        run: echo "patchmypath.justalemon.ml" >> site/CNAME
       - name: Deploy to GitHub Pages
         uses: maxheld83/ghpages@v0.2.1
         env:
