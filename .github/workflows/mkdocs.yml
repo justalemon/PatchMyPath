@@ -1,0 +1,16 @@
+name: Documentation
+
+on: push
+
+jobs:
+  mkdocs:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@baec7a0796ddebd5b194153dee0d733350118095
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BASE_BRANCH: master
+          BRANCH: gh-pages
+          FOLDER: site
+          BUILD_SCRIPT: python3.6 -m pip install -r requirements.txt && python -m mkdocs build --clean
