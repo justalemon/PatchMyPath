@@ -9,7 +9,7 @@ jobs:
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@baec7a0796ddebd5b194153dee0d733350118095
         env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BASE_BRANCH: master
           BRANCH: gh-pages
           FOLDER: site
