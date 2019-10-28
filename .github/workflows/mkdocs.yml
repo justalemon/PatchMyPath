@@ -6,11 +6,14 @@ jobs:
   mkdocs:
     runs-on: ubuntu-18.04
     steps:
-      - name: Build and Deploy
-        uses: JamesIves/github-pages-deploy-action@baec7a0796ddebd5b194153dee0d733350118095
-        env:
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BASE_BRANCH: master
-          BRANCH: gh-pages
-          FOLDER: site
-          BUILD_SCRIPT: python3.6 -m pip install -r requirements.txt && python3.6 -m mkdocs build --clean
+      - name: Checkout on Current Commit
+        uses: actions/checkout@master
+      - name: Set up Python 3.6
+        uses: actions/setup-python@v1.1.0
+        with:
+          python-version: "3.7"
+          architecture: "x64"
+      - name: Install the requirements
+        run: python -m pip install -r requirements.txt
+      - name: Build with mkdocs
+        run: python -m mkdocs build --clean
