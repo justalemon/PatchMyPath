@@ -9,6 +9,10 @@ nav:
 repo_name: justalemon/PatchMyPath
 repo_url: https://github.com/justalemon/PatchMyPath
 
+markdown_extensions:
+  - markdown.extensions.admonition
+  - pymdownx.details
+
 theme:
   name: material
   palette:
