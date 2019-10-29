@@ -27,7 +27,8 @@ jobs:
       - name: Build with msbuild.exe
         run: msbuild PatchMyPath.sln /t:Build /p:Configuration=Release
       - name: Package Artifacts
-        run: 7z a PatchMyPath.7z bin\Release\*
+        working-directory: bin\Release
+        run: 7z a PatchMyPath.7z *
       - uses: actions/upload-artifact@v1
         with:
           name: PatchMyPath.7z
