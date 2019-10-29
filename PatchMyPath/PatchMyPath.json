@@ -5,7 +5,11 @@
     "destination": "C:\\Program Files\\Grand Theft Auto V",
     "installs": [
         {
-            "path": "E:\\Grand Theft Auto V - Clean",
+            "path": "C:\\Program Files\\Grand Theft Auto V - Clean",
+            "type": 0
+        },
+        {
+            "path": "C:\\Program Files\\Grand Theft Auto V - Mods",
             "type": 0
         }
     ]
