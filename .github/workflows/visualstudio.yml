@@ -1,4 +1,4 @@
-name: Visual Studio Build
+name: Visual Studio
 
 on:
   push:
@@ -10,10 +10,10 @@ on:
       - "**.settings"
       - "**.json"
       - "**.resx"
-      - ".github/workflows/vsbuild.yml"
+      - ".github/workflows/visualstudio.yml"
 
 jobs:
-  vs-build:
+  build:
     runs-on: windows-2019
     steps:
       - name: Checkout on Current Commit
