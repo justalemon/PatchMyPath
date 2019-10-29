@@ -1,6 +1,11 @@
 # PatchMyPath [![5mods][5mods-img]][5mods-url] [![AppVeyor][appveyor-img]][appveyor-url] [![CodeFactor][codefactor-img]][codefactor-url] [![Discord][discord-img]][discord-url]
 
-PatchMyPath is an application that allows you to run multiple Grand Theft Auto V Installs from either Steam or the Rockstar Games Launcher.
+PatchMyPath is a little application that allows you to have multiple Grand Theft Auto V installs without losing any hard drive space with duplicate files. Is compatible with all game versions from the day one release to the recent Rockstar Games Launcher update. You can even use [Unknown Modder's](https://www.gta5-mods.com/users/Unknown%20Modder) [Launcher Bypass](https://www.gta5-mods.com/tools/gtavlauncherbypass)!
+
+All of the following versions are guaranteed to work:
+
+* Rockstar Games Launcher
+    * 1.0.1737.6
 
 <div align="center">
     <img src="preview.png"/>
