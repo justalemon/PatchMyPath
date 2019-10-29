@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout on Current Commit
         uses: actions/checkout@master
+      - name: Setup Nuget.exe
+        uses: warrenbuckley/Setup-Nuget@v1
       - name: Install the NuGet packages
         run: nuget restore PatchMyPath.sln
       - name: Build with msbuild.exe
