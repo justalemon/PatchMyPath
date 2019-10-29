@@ -2,6 +2,9 @@ site_name: PatchMyPath
 
 nav:
   - Home: index.md
+  - Configuration:
+    - Base Configuration: config/root.md
+    - Install Objects: config/install.md
   - Tutorials:
     - Duplicating Vanilla Installs: tutorials/duplicating.md
 
