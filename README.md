@@ -17,7 +17,7 @@ All of the following versions are guaranteed to work:
 
 1. Download the compressed file from [GitHub Releases][releases-url] or [5mods][5mods-url]
 2. Extracts the contents of the compressed file somewhere on your PC
-3. Configure the settings inside of `PatchMyPath.json`
+3. Follow the [configuration instructions](config/index.md)
 4. Run `PatchMyPath.exe` and follow the instructions to launch one of your installs
 
 [5mods-img]: https://img.shields.io/badge/5mods-download-20BA4E.svg

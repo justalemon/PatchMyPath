@@ -2,6 +2,9 @@ site_name: PatchMyPath
 
 nav:
   - Home: index.md
+  - Configuration Instructions:
+    - List of Instructions: config/index.md
+    - Creation of New Game Installs: config/new-install.md
 
 repo_name: justalemon/PatchMyPath
 repo_url: https://github.com/justalemon/PatchMyPath
