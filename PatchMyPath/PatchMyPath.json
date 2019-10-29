@@ -1,8 +1,8 @@
 {
     "use_steam": false,
     "appid": 271590,
-    "check_sig": false,
-    "destination": "E:\\Grand Theft Auto V",
+    "check_sig": true,
+    "destination": "C:\\Program Files\\Grand Theft Auto V",
     "installs": [
         {
             "path": "E:\\Grand Theft Auto V - Clean",
