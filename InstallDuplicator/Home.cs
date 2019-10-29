@@ -115,28 +115,31 @@ namespace InstallDuplicator
             if (Directory.Exists(DestinationTextBox.Text) && Directory.EnumerateFileSystemEntries(DestinationTextBox.Text).Any())
             {
                 // Ask the user if he wants to wipe the folder
-                DialogResult result = MessageBox.Show("The Destination folder has files present, do you want to delete them?", "Destination Contains Files", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show("The Destination folder contains files and/or folders\nDo you want to search for game files and delete them if they are present?", "Destination Contains Files", MessageBoxButtons.YesNo);
 
                 // Return if the user said no
                 if (result == DialogResult.No)
                 {
-                    LogTextBox.AppendText($"ERROR: The Destination folder contains files and the user cancelled the removal of them{Environment.NewLine}");
+                    LogTextBox.AppendText($"ERROR: The Destination folder contains files and the user cancelled the removal of game files{Environment.NewLine}");
                     return;
                 }
 
                 // Enumerate the files and folders
-                foreach (string entry in Directory.EnumerateFileSystemEntries(DestinationTextBox.Text, "*", SearchOption.TopDirectoryOnly))
+                foreach (KeyValuePair<string, Type> entry in FilesFolders)
                 {
-                    // If is a file
-                    if (File.Exists(entry))
+                    // Combine them into a path
+                    string path = Path.Combine(DestinationTextBox.Text, entry.Key);
+
+                    // If is a file and exists
+                    if (File.Exists(path))
                     {
-                        File.Delete(entry);
+                        File.Delete(path);
                         continue;
                     }
-                    // If is a directory
-                    if (Directory.Exists(entry))
+                    // If is a directory and exists
+                    if (Directory.Exists(path))
                     {
-                        Directory.Delete(entry);
+                        Directory.Delete(path);
                         continue;
                     }
                 }
