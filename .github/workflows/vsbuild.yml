@@ -1,0 +1,30 @@
+name: Visual Studio Build
+
+on:
+  push:
+    paths:
+      - "**.cs"
+      - "**.sln"
+      - "**.config"
+      - "**.csproj"
+      - "**.settings"
+      - "**.json"
+      - "**.resx"
+      - ".github/workflows/vsbuild.yml"
+
+jobs:
+  vs-build:
+    runs-on: windows-2019
+    steps:
+      - name: Checkout on Current Commit
+        uses: actions/checkout@master
+      - name: Install the NuGet packages
+        run: nuget restore PatchMyPath.sln
+      - name: Build with msbuild.exe
+        run: msbuild PatchMyPath.sln /t:Build /p:Configuration=Release
+      - name: Package Artifacts
+        run: 7z a PatchMyPath.7z bin\Release\*
+      - uses: actions/upload-artifact@v1
+        with:
+          name: PatchMyPath.7z
+          path: PatchMyPath.7z
