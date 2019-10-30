@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -59,6 +60,27 @@ namespace PatchMyPath
                 MessageBox.Show("We did some preliminary checks and we found that this install is invalid. Please make sure that all of the game files are present and the executables have not been modified and try again.", "Invalid Install", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            // Now, destroy the original game folder if is present
+            if (Directory.Exists(Program.Config.Destination))
+            {
+                Directory.Delete(Program.Config.Destination);
+            }
+
+            // Try to create the symbolic link
+            try
+            {
+                Links.CreateSymbolicLink(Program.Config.Destination, install.GamePath, 3); // 3 means Directory (0x1) and Unprivileged/Dev Mode (0x2)
+            }
+            catch (Win32Exception er)
+            {
+                // Print the respective error message and return
+                MessageBox.Show($"An error has ocurred:\n{er.Message}", "Unable to create Symbolic Link", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Finally, launch the game
+            Program.Config.Start(install.Type);
         }
     }
 }
