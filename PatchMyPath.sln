@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatchMyPath.CLI", "PatchMyPath.CLI\PatchMyPath.CLI.csproj", "{88FC2E81-58BC-420C-9D04-F2EA93765D20}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstallDuplicator", "InstallDuplicator\InstallDuplicator.csproj", "{2BB2B8E9-7067-4147-BBB2-975F68DB489A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatchMyPath", "PatchMyPath\PatchMyPath.csproj", "{6BC02B82-4012-4991-90C4-3A11AE58C880}"
@@ -15,10 +13,6 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{88FC2E81-58BC-420C-9D04-F2EA93765D20}.Debug|x64.ActiveCfg = Debug|x64
-		{88FC2E81-58BC-420C-9D04-F2EA93765D20}.Debug|x64.Build.0 = Debug|x64
-		{88FC2E81-58BC-420C-9D04-F2EA93765D20}.Release|x64.ActiveCfg = Release|x64
-		{88FC2E81-58BC-420C-9D04-F2EA93765D20}.Release|x64.Build.0 = Release|x64
 		{2BB2B8E9-7067-4147-BBB2-975F68DB489A}.Debug|x64.ActiveCfg = Debug|x64
 		{2BB2B8E9-7067-4147-BBB2-975F68DB489A}.Debug|x64.Build.0 = Debug|x64
 		{2BB2B8E9-7067-4147-BBB2-975F68DB489A}.Release|x64.ActiveCfg = Release|x64
