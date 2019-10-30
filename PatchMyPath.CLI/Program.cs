@@ -13,74 +13,7 @@ namespace PatchMyPath
     {
         public static int Main(string[] args)
         {
-            // Print the program information
-            PrintHeader();
-
-            // Now, tell the user to select a GTA V install
-            Console.WriteLine("The following game installs are available:");
-            Console.WriteLine();
-
-            // Iterate over the number of game installs
-            for (int i = 0; i < Config.GameInstalls.Count; i++)
-            {
-                // Save the install
-                Install selected = Config.GameInstalls[i];
-
-                // If the install is set to auto detect, update the type
-                if (selected.Type == InstallType.AutoDetect)
-                {
-                    selected.UpdateType(Config.UseSteam);
-                }
-
-                // And print it on the console
-                Console.WriteLine($"{i}: {selected.GamePath} [Valid: {selected.IsLegal}] [Type: {selected.Type}]");
-            }
-
-            // And request the user to input a number
-            Console.WriteLine();
-            Console.Write("What install do you want to use? ");
-            string input = Console.ReadLine();
-            Console.WriteLine();
-
-            // If we were unable to parse the user input
-            if (!int.TryParse(input, out int output))
-            {
-                Console.WriteLine($"'{input}' is not a valid number! Exiting...");
-                return 3;
-            }
-
-            // If the index is over the limit
-            if (output > Config.GameInstalls.Count - 1)
-            {
-                Console.WriteLine($"'{output}' is outside of the range 0-{Config.GameInstalls.Count - 1}! Exiting...");
-                return 4;
-            }
-
-            // At this point we have a valid install number
-            // So save it here for later
-            Install install = Config.GameInstalls[output];
-
-            // If the install is invalid, notify the user and return
-            if (install.Type == InstallType.Invalid)
-            {
-                Console.WriteLine($"This game install is not valid.{Environment.NewLine}Please ensure that the game executables are in the right place and try again.");
-                Console.ReadKey();
-                return 6;
-            }
-
-            // Kill the RGL service for protecting games from modifications
-            while (Process.GetProcessesByName("RockstarService").Length != 0)
-            {
-                using (ServiceController controller = new ServiceController("Rockstar Game Library Service"))
-                {
-                    if (controller.Status == ServiceControllerStatus.Running)
-                    {
-                        controller.Stop();
-                    }
-                }
-            }
-            // And all of the processes required by the RGL Launcher, in order
-            CloseProcesses(new string[] { "SocialClubHelper", "Launcher", "LauncherPatcher" });
+            
 
             // If the user uses the Steam version, also kill that
             if (Config.UseSteam && Config.AppID == 271590)
@@ -124,29 +57,6 @@ namespace PatchMyPath
             Console.WriteLine("====================  PatchMyPath  ====================");
             Console.WriteLine("=======================================================");
             Console.WriteLine();
-        }
-
-        public static void CloseProcess(string name)
-        {
-            // We can't use C# functions for this because of access limitations
-            // So start a taskkill process
-            Process process = new Process();
-            process.StartInfo.FileName = "taskkill.exe";
-            process.StartInfo.Arguments = $"/f /im {name}.exe";
-            process.StartInfo.UseShellExecute = false;
-            process.Start();
-            process.WaitForExit();
-        }
-
-        public static void CloseProcesses(IEnumerable<string> processes)
-        {
-            foreach (string process in processes)
-            {
-                if (Process.GetProcessesByName(process).Length != 0)
-                {
-                    CloseProcess(process);
-                }
-            }
         }
     }
 }
