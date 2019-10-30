@@ -202,6 +202,7 @@
             this.DuplicateButton.TabIndex = 2;
             this.DuplicateButton.Text = "Duplicate GTA V Folder";
             this.DuplicateButton.UseVisualStyleBackColor = true;
+            this.DuplicateButton.Click += new System.EventHandler(this.DuplicateButton_Click);
             // 
             // OriginGroupBox
             // 
