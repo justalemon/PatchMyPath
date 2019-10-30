@@ -137,6 +137,11 @@ namespace PatchMyPath
                 Type = InstallType.Invalid;
             }
         }
+
+        public override string ToString()
+        {
+            return $"{GamePath} ({Type})";
+        }
     }
 
     /// <summary>

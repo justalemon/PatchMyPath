@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +14,22 @@ namespace PatchMyPath
     {
         public Home()
         {
+            // Initialize the UI components
             InitializeComponent();
+
+            // And reload the list of installs
+            RefreshInstalls();
+        }
+
+        public void RefreshInstalls()
+        {
+            // Clear the existing items
+            InstallsListBox.Items.Clear();
+            // Iterate over the installs
+            foreach (Install install in Program.Config.GameInstalls)
+            {
+                InstallsListBox.Items.Add(install);
+            }
         }
 
         private void AddButton_Click(object sender, EventArgs e)
