@@ -36,23 +36,27 @@
             this.InstallsGroupBox = new System.Windows.Forms.GroupBox();
             this.InstallsListBox = new System.Windows.Forms.ListBox();
             this.DuplicatorTabPage = new System.Windows.Forms.TabPage();
-            this.FolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
-            this.OriginSelectButton = new System.Windows.Forms.Button();
-            this.OriginTextBox = new System.Windows.Forms.TextBox();
-            this.OriginGroupBox = new System.Windows.Forms.GroupBox();
-            this.DestinationSelectButton = new System.Windows.Forms.Button();
-            this.DestinationTextBox = new System.Windows.Forms.TextBox();
-            this.DestinationGroupBox = new System.Windows.Forms.GroupBox();
             this.LinkTypeGroupBox = new System.Windows.Forms.GroupBox();
             this.HardRadioButton = new System.Windows.Forms.RadioButton();
             this.SymbolicRadioButton = new System.Windows.Forms.RadioButton();
+            this.DuplicateButton = new System.Windows.Forms.Button();
+            this.OriginGroupBox = new System.Windows.Forms.GroupBox();
+            this.OriginSelectButton = new System.Windows.Forms.Button();
+            this.OriginTextBox = new System.Windows.Forms.TextBox();
+            this.DestinationGroupBox = new System.Windows.Forms.GroupBox();
+            this.DestinationSelectButton = new System.Windows.Forms.Button();
+            this.DestinationTextBox = new System.Windows.Forms.TextBox();
+            this.FolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
+            this.LogGroupBox = new System.Windows.Forms.GroupBox();
+            this.LogTextBox = new System.Windows.Forms.TextBox();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.InstallsGroupBox.SuspendLayout();
             this.DuplicatorTabPage.SuspendLayout();
+            this.LinkTypeGroupBox.SuspendLayout();
             this.OriginGroupBox.SuspendLayout();
             this.DestinationGroupBox.SuspendLayout();
-            this.LinkTypeGroupBox.SuspendLayout();
+            this.LogGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // GeneralTabControl
@@ -137,7 +141,9 @@
             // 
             // DuplicatorTabPage
             // 
+            this.DuplicatorTabPage.Controls.Add(this.LogGroupBox);
             this.DuplicatorTabPage.Controls.Add(this.LinkTypeGroupBox);
+            this.DuplicatorTabPage.Controls.Add(this.DuplicateButton);
             this.DuplicatorTabPage.Controls.Add(this.OriginGroupBox);
             this.DuplicatorTabPage.Controls.Add(this.DestinationGroupBox);
             this.DuplicatorTabPage.Location = new System.Drawing.Point(4, 22);
@@ -147,74 +153,6 @@
             this.DuplicatorTabPage.TabIndex = 1;
             this.DuplicatorTabPage.Text = "Duplicator";
             this.DuplicatorTabPage.UseVisualStyleBackColor = true;
-            // 
-            // OriginSelectButton
-            // 
-            this.OriginSelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OriginSelectButton.Location = new System.Drawing.Point(231, 17);
-            this.OriginSelectButton.Name = "OriginSelectButton";
-            this.OriginSelectButton.Size = new System.Drawing.Size(75, 23);
-            this.OriginSelectButton.TabIndex = 1;
-            this.OriginSelectButton.Text = "Select";
-            this.OriginSelectButton.UseVisualStyleBackColor = true;
-            this.OriginSelectButton.Click += new System.EventHandler(this.OriginSelectButton_Click);
-            // 
-            // OriginTextBox
-            // 
-            this.OriginTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OriginTextBox.Location = new System.Drawing.Point(6, 19);
-            this.OriginTextBox.Name = "OriginTextBox";
-            this.OriginTextBox.ReadOnly = true;
-            this.OriginTextBox.Size = new System.Drawing.Size(219, 20);
-            this.OriginTextBox.TabIndex = 0;
-            // 
-            // OriginGroupBox
-            // 
-            this.OriginGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OriginGroupBox.Controls.Add(this.OriginSelectButton);
-            this.OriginGroupBox.Controls.Add(this.OriginTextBox);
-            this.OriginGroupBox.Location = new System.Drawing.Point(6, 6);
-            this.OriginGroupBox.Name = "OriginGroupBox";
-            this.OriginGroupBox.Size = new System.Drawing.Size(312, 45);
-            this.OriginGroupBox.TabIndex = 0;
-            this.OriginGroupBox.TabStop = false;
-            this.OriginGroupBox.Text = "Origin";
-            // 
-            // DestinationSelectButton
-            // 
-            this.DestinationSelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DestinationSelectButton.Location = new System.Drawing.Point(231, 17);
-            this.DestinationSelectButton.Name = "DestinationSelectButton";
-            this.DestinationSelectButton.Size = new System.Drawing.Size(75, 23);
-            this.DestinationSelectButton.TabIndex = 1;
-            this.DestinationSelectButton.Text = "Select";
-            this.DestinationSelectButton.UseVisualStyleBackColor = true;
-            this.DestinationSelectButton.Click += new System.EventHandler(this.DestinationSelectButton_Click);
-            // 
-            // DestinationTextBox
-            // 
-            this.DestinationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DestinationTextBox.Location = new System.Drawing.Point(6, 19);
-            this.DestinationTextBox.Name = "DestinationTextBox";
-            this.DestinationTextBox.ReadOnly = true;
-            this.DestinationTextBox.Size = new System.Drawing.Size(219, 20);
-            this.DestinationTextBox.TabIndex = 0;
-            // 
-            // DestinationGroupBox
-            // 
-            this.DestinationGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DestinationGroupBox.Controls.Add(this.DestinationSelectButton);
-            this.DestinationGroupBox.Controls.Add(this.DestinationTextBox);
-            this.DestinationGroupBox.Location = new System.Drawing.Point(6, 57);
-            this.DestinationGroupBox.Name = "DestinationGroupBox";
-            this.DestinationGroupBox.Size = new System.Drawing.Size(312, 45);
-            this.DestinationGroupBox.TabIndex = 1;
-            this.DestinationGroupBox.TabStop = false;
-            this.DestinationGroupBox.Text = "Destination";
             // 
             // LinkTypeGroupBox
             // 
@@ -254,6 +192,109 @@
     "";
             this.SymbolicRadioButton.UseVisualStyleBackColor = true;
             // 
+            // DuplicateButton
+            // 
+            this.DuplicateButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DuplicateButton.Location = new System.Drawing.Point(6, 406);
+            this.DuplicateButton.Name = "DuplicateButton";
+            this.DuplicateButton.Size = new System.Drawing.Size(314, 23);
+            this.DuplicateButton.TabIndex = 2;
+            this.DuplicateButton.Text = "Duplicate GTA V Folder";
+            this.DuplicateButton.UseVisualStyleBackColor = true;
+            // 
+            // OriginGroupBox
+            // 
+            this.OriginGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OriginGroupBox.Controls.Add(this.OriginSelectButton);
+            this.OriginGroupBox.Controls.Add(this.OriginTextBox);
+            this.OriginGroupBox.Location = new System.Drawing.Point(6, 6);
+            this.OriginGroupBox.Name = "OriginGroupBox";
+            this.OriginGroupBox.Size = new System.Drawing.Size(312, 45);
+            this.OriginGroupBox.TabIndex = 0;
+            this.OriginGroupBox.TabStop = false;
+            this.OriginGroupBox.Text = "Origin";
+            // 
+            // OriginSelectButton
+            // 
+            this.OriginSelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OriginSelectButton.Location = new System.Drawing.Point(231, 17);
+            this.OriginSelectButton.Name = "OriginSelectButton";
+            this.OriginSelectButton.Size = new System.Drawing.Size(75, 23);
+            this.OriginSelectButton.TabIndex = 1;
+            this.OriginSelectButton.Text = "Select";
+            this.OriginSelectButton.UseVisualStyleBackColor = true;
+            this.OriginSelectButton.Click += new System.EventHandler(this.OriginSelectButton_Click);
+            // 
+            // OriginTextBox
+            // 
+            this.OriginTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OriginTextBox.Location = new System.Drawing.Point(6, 19);
+            this.OriginTextBox.Name = "OriginTextBox";
+            this.OriginTextBox.ReadOnly = true;
+            this.OriginTextBox.Size = new System.Drawing.Size(219, 20);
+            this.OriginTextBox.TabIndex = 0;
+            // 
+            // DestinationGroupBox
+            // 
+            this.DestinationGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DestinationGroupBox.Controls.Add(this.DestinationSelectButton);
+            this.DestinationGroupBox.Controls.Add(this.DestinationTextBox);
+            this.DestinationGroupBox.Location = new System.Drawing.Point(6, 57);
+            this.DestinationGroupBox.Name = "DestinationGroupBox";
+            this.DestinationGroupBox.Size = new System.Drawing.Size(312, 45);
+            this.DestinationGroupBox.TabIndex = 1;
+            this.DestinationGroupBox.TabStop = false;
+            this.DestinationGroupBox.Text = "Destination";
+            // 
+            // DestinationSelectButton
+            // 
+            this.DestinationSelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DestinationSelectButton.Location = new System.Drawing.Point(231, 17);
+            this.DestinationSelectButton.Name = "DestinationSelectButton";
+            this.DestinationSelectButton.Size = new System.Drawing.Size(75, 23);
+            this.DestinationSelectButton.TabIndex = 1;
+            this.DestinationSelectButton.Text = "Select";
+            this.DestinationSelectButton.UseVisualStyleBackColor = true;
+            this.DestinationSelectButton.Click += new System.EventHandler(this.DestinationSelectButton_Click);
+            // 
+            // DestinationTextBox
+            // 
+            this.DestinationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DestinationTextBox.Location = new System.Drawing.Point(6, 19);
+            this.DestinationTextBox.Name = "DestinationTextBox";
+            this.DestinationTextBox.ReadOnly = true;
+            this.DestinationTextBox.Size = new System.Drawing.Size(219, 20);
+            this.DestinationTextBox.TabIndex = 0;
+            // 
+            // LogGroupBox
+            // 
+            this.LogGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LogGroupBox.Controls.Add(this.LogTextBox);
+            this.LogGroupBox.Location = new System.Drawing.Point(6, 215);
+            this.LogGroupBox.Name = "LogGroupBox";
+            this.LogGroupBox.Size = new System.Drawing.Size(312, 185);
+            this.LogGroupBox.TabIndex = 4;
+            this.LogGroupBox.TabStop = false;
+            this.LogGroupBox.Text = "Logging";
+            // 
+            // LogTextBox
+            // 
+            this.LogTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LogTextBox.Location = new System.Drawing.Point(3, 16);
+            this.LogTextBox.Multiline = true;
+            this.LogTextBox.Name = "LogTextBox";
+            this.LogTextBox.ReadOnly = true;
+            this.LogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.LogTextBox.Size = new System.Drawing.Size(306, 166);
+            this.LogTextBox.TabIndex = 0;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,11 +308,13 @@
             this.InstallsTabPage.ResumeLayout(false);
             this.InstallsGroupBox.ResumeLayout(false);
             this.DuplicatorTabPage.ResumeLayout(false);
+            this.LinkTypeGroupBox.ResumeLayout(false);
             this.OriginGroupBox.ResumeLayout(false);
             this.OriginGroupBox.PerformLayout();
             this.DestinationGroupBox.ResumeLayout(false);
             this.DestinationGroupBox.PerformLayout();
-            this.LinkTypeGroupBox.ResumeLayout(false);
+            this.LogGroupBox.ResumeLayout(false);
+            this.LogGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -296,6 +339,9 @@
         private System.Windows.Forms.GroupBox LinkTypeGroupBox;
         private System.Windows.Forms.RadioButton HardRadioButton;
         private System.Windows.Forms.RadioButton SymbolicRadioButton;
+        private System.Windows.Forms.Button DuplicateButton;
+        private System.Windows.Forms.GroupBox LogGroupBox;
+        private System.Windows.Forms.TextBox LogTextBox;
     }
 }
 
