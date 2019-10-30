@@ -80,11 +80,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PatchMyPath.Tools\PatchMyPath.Tools.csproj">
-      <Project>{b9df2de0-cc19-489b-b922-babceade94c6}</Project>
-      <Name>PatchMyPath.Tools</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

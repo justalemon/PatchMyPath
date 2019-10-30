@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace PatchMyPath.Tools
+namespace PatchMyPath
 {
     /// <summary>
     /// Functions used to Create symbolic links.

@@ -69,11 +69,5 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PatchMyPath.Tools\PatchMyPath.Tools.csproj">
-      <Project>{B9DF2DE0-CC19-489B-B922-BABCEADE94C6}</Project>
-      <Name>PatchMyPath.Tools</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
