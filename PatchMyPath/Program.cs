@@ -103,6 +103,19 @@ namespace PatchMyPath
                 return 2;
             }
 
+            // Refresh the types of installs
+            DetectTypes();
+            // And run the application with the form
+            Application.Run(new Home());
+            // Finally, return a status code of zero
+            return 0;
+        }
+
+        /// <summary>
+        /// Refreshes the types of installs if they are set to auto detect.
+        /// </summary>
+        public static void DetectTypes()
+        {
             // Iterate over the current set of game installs
             foreach (Install install in Config.GameInstalls)
             {
@@ -113,13 +126,7 @@ namespace PatchMyPath
                     install.UpdateType(Config.UseSteam);
                 }
             }
-
-            // And run the application with the form
-            Application.Run(new Home());
-            // Finally, return a status code of zero
-            return 0;
         }
-
         /// <summary>
         /// Saves the current configuration.
         /// </summary>
