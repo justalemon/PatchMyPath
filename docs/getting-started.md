@@ -12,7 +12,7 @@ Before installing PatchMyPath, make sure that [.NET Framework 4.5.2](https://dot
 
 1. Download the compressed file from [GitHub Releases][releases-url] or [5mods][5mods-url]
 2. Extracts the contents of the compressed file somewhere on your PC.
-3. Optional: Use the [Install Duplicator](tutorials/duplicating.md) to reduce the size of your existing installs or create new ones
+3. Optional: Use the [Install Duplicator](duplicator/getting-started.md) to reduce the size of your existing installs or create new ones
 4. Follow the instructions on the [Customization Page](customization.md) to change some of the required values.
 
 ## Usage

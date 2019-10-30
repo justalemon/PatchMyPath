@@ -2,14 +2,15 @@ site_name: PatchMyPath
 
 nav:
   - PatchMyPath:
-    - Welcome: index.md
+    - About: index.md
     - Getting started: getting-started.md
     - Customization: customization.md
+  - InstallDuplicator:
+    - About: duplicator/index.md
+    - Getting started: duplicator/getting-started.md
   - Configuration:
     - Base Configuration: config/root.md
     - Install Objects: config/install.md
-  - Tutorials:
-    - Duplicating Vanilla Installs: tutorials/duplicating.md
 
 repo_name: justalemon/PatchMyPath
 repo_url: https://github.com/justalemon/PatchMyPath
