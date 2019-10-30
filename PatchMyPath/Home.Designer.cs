@@ -36,6 +36,8 @@
             this.InstallsGroupBox = new System.Windows.Forms.GroupBox();
             this.InstallsListBox = new System.Windows.Forms.ListBox();
             this.DuplicatorTabPage = new System.Windows.Forms.TabPage();
+            this.LogGroupBox = new System.Windows.Forms.GroupBox();
+            this.LogTextBox = new System.Windows.Forms.TextBox();
             this.LinkTypeGroupBox = new System.Windows.Forms.GroupBox();
             this.HardRadioButton = new System.Windows.Forms.RadioButton();
             this.SymbolicRadioButton = new System.Windows.Forms.RadioButton();
@@ -47,16 +49,17 @@
             this.DestinationSelectButton = new System.Windows.Forms.Button();
             this.DestinationTextBox = new System.Windows.Forms.TextBox();
             this.FolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
-            this.LogGroupBox = new System.Windows.Forms.GroupBox();
-            this.LogTextBox = new System.Windows.Forms.TextBox();
+            this.AutoAddGroupBox = new System.Windows.Forms.GroupBox();
+            this.AutoAddCheckBox = new System.Windows.Forms.CheckBox();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.InstallsGroupBox.SuspendLayout();
             this.DuplicatorTabPage.SuspendLayout();
+            this.LogGroupBox.SuspendLayout();
             this.LinkTypeGroupBox.SuspendLayout();
             this.OriginGroupBox.SuspendLayout();
             this.DestinationGroupBox.SuspendLayout();
-            this.LogGroupBox.SuspendLayout();
+            this.AutoAddGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // GeneralTabControl
@@ -141,6 +144,7 @@
             // 
             // DuplicatorTabPage
             // 
+            this.DuplicatorTabPage.Controls.Add(this.AutoAddGroupBox);
             this.DuplicatorTabPage.Controls.Add(this.LogGroupBox);
             this.DuplicatorTabPage.Controls.Add(this.LinkTypeGroupBox);
             this.DuplicatorTabPage.Controls.Add(this.DuplicateButton);
@@ -154,6 +158,30 @@
             this.DuplicatorTabPage.Text = "Duplicator";
             this.DuplicatorTabPage.UseVisualStyleBackColor = true;
             // 
+            // LogGroupBox
+            // 
+            this.LogGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LogGroupBox.Controls.Add(this.LogTextBox);
+            this.LogGroupBox.Location = new System.Drawing.Point(6, 263);
+            this.LogGroupBox.Name = "LogGroupBox";
+            this.LogGroupBox.Size = new System.Drawing.Size(312, 137);
+            this.LogGroupBox.TabIndex = 4;
+            this.LogGroupBox.TabStop = false;
+            this.LogGroupBox.Text = "Logging";
+            // 
+            // LogTextBox
+            // 
+            this.LogTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LogTextBox.Location = new System.Drawing.Point(3, 16);
+            this.LogTextBox.Multiline = true;
+            this.LogTextBox.Name = "LogTextBox";
+            this.LogTextBox.ReadOnly = true;
+            this.LogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.LogTextBox.Size = new System.Drawing.Size(306, 118);
+            this.LogTextBox.TabIndex = 0;
+            // 
             // LinkTypeGroupBox
             // 
             this.LinkTypeGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -162,7 +190,7 @@
             this.LinkTypeGroupBox.Controls.Add(this.SymbolicRadioButton);
             this.LinkTypeGroupBox.Location = new System.Drawing.Point(6, 108);
             this.LinkTypeGroupBox.Name = "LinkTypeGroupBox";
-            this.LinkTypeGroupBox.Size = new System.Drawing.Size(312, 101);
+            this.LinkTypeGroupBox.Size = new System.Drawing.Size(314, 101);
             this.LinkTypeGroupBox.TabIndex = 5;
             this.LinkTypeGroupBox.TabStop = false;
             this.LinkTypeGroupBox.Text = "Link Type";
@@ -174,7 +202,7 @@
             this.HardRadioButton.Checked = true;
             this.HardRadioButton.Location = new System.Drawing.Point(6, 19);
             this.HardRadioButton.Name = "HardRadioButton";
-            this.HardRadioButton.Size = new System.Drawing.Size(300, 34);
+            this.HardRadioButton.Size = new System.Drawing.Size(302, 34);
             this.HardRadioButton.TabIndex = 1;
             this.HardRadioButton.TabStop = true;
             this.HardRadioButton.Text = "Hard Link for Files and Symbolic Links for Folders (All Game Versions)";
@@ -186,7 +214,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SymbolicRadioButton.Location = new System.Drawing.Point(6, 59);
             this.SymbolicRadioButton.Name = "SymbolicRadioButton";
-            this.SymbolicRadioButton.Size = new System.Drawing.Size(300, 34);
+            this.SymbolicRadioButton.Size = new System.Drawing.Size(302, 34);
             this.SymbolicRadioButton.TabIndex = 0;
             this.SymbolicRadioButton.Text = "Symbolic Links for Files and Folders (Steam and pre Rockstar Games Launcher only)" +
     "";
@@ -212,7 +240,7 @@
             this.OriginGroupBox.Controls.Add(this.OriginTextBox);
             this.OriginGroupBox.Location = new System.Drawing.Point(6, 6);
             this.OriginGroupBox.Name = "OriginGroupBox";
-            this.OriginGroupBox.Size = new System.Drawing.Size(312, 45);
+            this.OriginGroupBox.Size = new System.Drawing.Size(314, 45);
             this.OriginGroupBox.TabIndex = 0;
             this.OriginGroupBox.TabStop = false;
             this.OriginGroupBox.Text = "Origin";
@@ -220,7 +248,7 @@
             // OriginSelectButton
             // 
             this.OriginSelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OriginSelectButton.Location = new System.Drawing.Point(231, 17);
+            this.OriginSelectButton.Location = new System.Drawing.Point(233, 17);
             this.OriginSelectButton.Name = "OriginSelectButton";
             this.OriginSelectButton.Size = new System.Drawing.Size(75, 23);
             this.OriginSelectButton.TabIndex = 1;
@@ -235,7 +263,7 @@
             this.OriginTextBox.Location = new System.Drawing.Point(6, 19);
             this.OriginTextBox.Name = "OriginTextBox";
             this.OriginTextBox.ReadOnly = true;
-            this.OriginTextBox.Size = new System.Drawing.Size(219, 20);
+            this.OriginTextBox.Size = new System.Drawing.Size(221, 20);
             this.OriginTextBox.TabIndex = 0;
             // 
             // DestinationGroupBox
@@ -246,7 +274,7 @@
             this.DestinationGroupBox.Controls.Add(this.DestinationTextBox);
             this.DestinationGroupBox.Location = new System.Drawing.Point(6, 57);
             this.DestinationGroupBox.Name = "DestinationGroupBox";
-            this.DestinationGroupBox.Size = new System.Drawing.Size(312, 45);
+            this.DestinationGroupBox.Size = new System.Drawing.Size(314, 45);
             this.DestinationGroupBox.TabIndex = 1;
             this.DestinationGroupBox.TabStop = false;
             this.DestinationGroupBox.Text = "Destination";
@@ -254,7 +282,7 @@
             // DestinationSelectButton
             // 
             this.DestinationSelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DestinationSelectButton.Location = new System.Drawing.Point(231, 17);
+            this.DestinationSelectButton.Location = new System.Drawing.Point(233, 17);
             this.DestinationSelectButton.Name = "DestinationSelectButton";
             this.DestinationSelectButton.Size = new System.Drawing.Size(75, 23);
             this.DestinationSelectButton.TabIndex = 1;
@@ -269,32 +297,30 @@
             this.DestinationTextBox.Location = new System.Drawing.Point(6, 19);
             this.DestinationTextBox.Name = "DestinationTextBox";
             this.DestinationTextBox.ReadOnly = true;
-            this.DestinationTextBox.Size = new System.Drawing.Size(219, 20);
+            this.DestinationTextBox.Size = new System.Drawing.Size(221, 20);
             this.DestinationTextBox.TabIndex = 0;
             // 
-            // LogGroupBox
+            // AutoAddGroupBox
             // 
-            this.LogGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.AutoAddGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LogGroupBox.Controls.Add(this.LogTextBox);
-            this.LogGroupBox.Location = new System.Drawing.Point(6, 215);
-            this.LogGroupBox.Name = "LogGroupBox";
-            this.LogGroupBox.Size = new System.Drawing.Size(312, 185);
-            this.LogGroupBox.TabIndex = 4;
-            this.LogGroupBox.TabStop = false;
-            this.LogGroupBox.Text = "Logging";
+            this.AutoAddGroupBox.Controls.Add(this.AutoAddCheckBox);
+            this.AutoAddGroupBox.Location = new System.Drawing.Point(6, 215);
+            this.AutoAddGroupBox.Name = "AutoAddGroupBox";
+            this.AutoAddGroupBox.Size = new System.Drawing.Size(314, 42);
+            this.AutoAddGroupBox.TabIndex = 6;
+            this.AutoAddGroupBox.TabStop = false;
+            this.AutoAddGroupBox.Text = "Add to the Manager";
             // 
-            // LogTextBox
+            // AutoAddCheckBox
             // 
-            this.LogTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LogTextBox.Location = new System.Drawing.Point(3, 16);
-            this.LogTextBox.Multiline = true;
-            this.LogTextBox.Name = "LogTextBox";
-            this.LogTextBox.ReadOnly = true;
-            this.LogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LogTextBox.Size = new System.Drawing.Size(306, 166);
-            this.LogTextBox.TabIndex = 0;
+            this.AutoAddCheckBox.AutoSize = true;
+            this.AutoAddCheckBox.Location = new System.Drawing.Point(6, 19);
+            this.AutoAddCheckBox.Name = "AutoAddCheckBox";
+            this.AutoAddCheckBox.Size = new System.Drawing.Size(289, 17);
+            this.AutoAddCheckBox.TabIndex = 0;
+            this.AutoAddCheckBox.Text = "Add install to PatchMyPath after completing the process";
+            this.AutoAddCheckBox.UseVisualStyleBackColor = true;
             // 
             // Home
             // 
@@ -309,13 +335,15 @@
             this.InstallsTabPage.ResumeLayout(false);
             this.InstallsGroupBox.ResumeLayout(false);
             this.DuplicatorTabPage.ResumeLayout(false);
+            this.LogGroupBox.ResumeLayout(false);
+            this.LogGroupBox.PerformLayout();
             this.LinkTypeGroupBox.ResumeLayout(false);
             this.OriginGroupBox.ResumeLayout(false);
             this.OriginGroupBox.PerformLayout();
             this.DestinationGroupBox.ResumeLayout(false);
             this.DestinationGroupBox.PerformLayout();
-            this.LogGroupBox.ResumeLayout(false);
-            this.LogGroupBox.PerformLayout();
+            this.AutoAddGroupBox.ResumeLayout(false);
+            this.AutoAddGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -343,6 +371,8 @@
         private System.Windows.Forms.Button DuplicateButton;
         private System.Windows.Forms.GroupBox LogGroupBox;
         private System.Windows.Forms.TextBox LogTextBox;
+        private System.Windows.Forms.GroupBox AutoAddGroupBox;
+        private System.Windows.Forms.CheckBox AutoAddCheckBox;
     }
 }
 
