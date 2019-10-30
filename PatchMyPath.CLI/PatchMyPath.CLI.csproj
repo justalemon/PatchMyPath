@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{88FC2E81-58BC-420C-9D04-F2EA93765D20}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PatchMyPath</RootNamespace>
-    <AssemblyName>PatchMyPath</AssemblyName>
+    <RootNamespace>PatchMyPath.CLI</RootNamespace>
+    <AssemblyName>PatchMyPath.CLI</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

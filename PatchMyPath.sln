@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatchMyPath", "PatchMyPath\PatchMyPath.csproj", "{88FC2E81-58BC-420C-9D04-F2EA93765D20}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatchMyPath.CLI", "PatchMyPath.CLI\PatchMyPath.CLI.csproj", "{88FC2E81-58BC-420C-9D04-F2EA93765D20}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstallDuplicator", "InstallDuplicator\InstallDuplicator.csproj", "{2BB2B8E9-7067-4147-BBB2-975F68DB489A}"
 EndProject
