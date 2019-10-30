@@ -9,66 +9,8 @@ using System.Windows.Forms;
 
 namespace InstallDuplicator
 {
-    public enum Type
-    {
-        FileRequired = 0,
-        FileOptional = 1,
-        FolderRequired = 2,
-        FolderOptional = 3,
-    }
-
     public partial class Home : Form
     {
-        /// <summary>
-        /// The files that are part of the game.
-        /// </summary>
-        public static Dictionary<string, Type> FilesFolders = new Dictionary<string, Type>()
-        {
-            { "ReadMe", Type.FolderOptional },
-            { "Redistributables", Type.FolderOptional },
-            { "update", Type.FolderRequired },
-            { "x64", Type.FolderRequired },
-
-            { "GTA5.exe", Type.FileRequired },
-            { "GTAVLanguageSelect.exe", Type.FileOptional },
-            { "GTAVLauncher.exe", Type.FileRequired },
-            { "PlayGTAV.exe", Type.FileOptional },
-            { "bink2w64.dll", Type.FileRequired },
-            { "d3dcompiler_46.dll", Type.FileRequired },
-            { "d3dcsx_46.dll", Type.FileRequired },
-            { "GFSDK_ShadowLib.win64.dll", Type.FileRequired },
-            { "GFSDK_TXAA.win64.dll", Type.FileRequired },
-            { "GFSDK_TXAA_AlphaResolve.win64.dll", Type.FileRequired },
-            { "GPUPerfAPIDX11-x64.dll", Type.FileRequired },
-            { "NvPmApi.Core.win64.dll", Type.FileRequired },
-            { "index.bin", Type.FileOptional },
-            { "common.rpf", Type.FileRequired },
-            { "x64a.rpf", Type.FileRequired },
-            { "x64b.rpf", Type.FileRequired },
-            { "x64c.rpf", Type.FileRequired },
-            { "x64d.rpf", Type.FileRequired },
-            { "x64e.rpf", Type.FileRequired },
-            { "x64f.rpf", Type.FileRequired },
-            { "x64g.rpf", Type.FileRequired },
-            { "x64h.rpf", Type.FileRequired },
-            { "x64i.rpf", Type.FileRequired },
-            { "x64j.rpf", Type.FileRequired },
-            { "x64k.rpf", Type.FileRequired },
-            { "x64l.rpf", Type.FileRequired },
-            { "x64m.rpf", Type.FileRequired },
-            { "x64n.rpf", Type.FileRequired },
-            { "x64o.rpf", Type.FileRequired },
-            { "x64p.rpf", Type.FileRequired },
-            { "x64q.rpf", Type.FileRequired },
-            { "x64r.rpf", Type.FileRequired },
-            { "x64s.rpf", Type.FileRequired },
-            { "x64t.rpf", Type.FileRequired },
-            { "x64u.rpf", Type.FileRequired },
-            { "x64v.rpf", Type.FileRequired },
-            { "x64w.rpf", Type.FileRequired },
-            { "version.txt", Type.FileOptional },
-        };
-
         public Home()
         {
             // Initialize the UI elements
@@ -125,7 +67,7 @@ namespace InstallDuplicator
                 }
 
                 // Enumerate the files and folders
-                foreach (KeyValuePair<string, Type> entry in FilesFolders)
+                foreach (KeyValuePair<string, EntryType> entry in FilesFolders)
                 {
                     // Combine them into a path
                     string path = Path.Combine(DestinationTextBox.Text, entry.Key);
@@ -153,7 +95,7 @@ namespace InstallDuplicator
             }
 
             // Iterate over the required files
-            foreach (KeyValuePair<string, Type> file in FilesFolders)
+            foreach (KeyValuePair<string, EntryType> file in FilesFolders)
             {
                 // Format the origin and destination
                 string origin = Path.Combine(OriginTextBox.Text, file.Key);
@@ -163,14 +105,14 @@ namespace InstallDuplicator
                 bool directoryExists = Directory.Exists(origin);
 
                 // If the file or directory does not exists
-                if ((!fileExists && file.Value == Type.FileRequired) || (!directoryExists && file.Value == Type.FolderRequired))
+                if ((!fileExists && file.Value == EntryType.FileRequired) || (!directoryExists && file.Value == EntryType.FolderRequired))
                 {
                     // Notify the user and return
                     LogTextBox.AppendText($"ERROR: The file or folder {file.Key} does not exists and is required!{Environment.NewLine}");
                     return;
                 }
                 // If it does not exists but is not required
-                else if ((!fileExists && file.Value == Type.FileOptional) || (!directoryExists && file.Value == Type.FolderOptional))
+                else if ((!fileExists && file.Value == EntryType.FileOptional) || (!directoryExists && file.Value == EntryType.FolderOptional))
                 {
                     // Notify and continue
                     LogTextBox.AppendText($"{file.Key} does not exists but is not required, skipping...{Environment.NewLine}");
@@ -178,7 +120,7 @@ namespace InstallDuplicator
                 }
 
                 // Set the correct flag for the symbolic link
-                uint flag = (file.Value == Type.FileOptional || file.Value == Type.FileRequired) ? 2u : 3u;
+                uint flag = (file.Value == EntryType.FileOptional || file.Value == EntryType.FileRequired) ? 2u : 3u;
                 // Otherwise, try to create the respective type
                 try
                 {
