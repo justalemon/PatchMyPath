@@ -1,4 +1,4 @@
-namespace PatchMyPath
+﻿namespace PatchMyPath
 {
     partial class Home
     {
@@ -36,6 +36,7 @@ namespace PatchMyPath
             this.DeleteButton = new System.Windows.Forms.Button();
             this.LaunchButton = new System.Windows.Forms.Button();
             this.InstallsListBox = new System.Windows.Forms.ListBox();
+            this.FolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.InstallsGroupBox.SuspendLayout();
@@ -157,6 +158,7 @@ namespace PatchMyPath
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button LaunchButton;
         private System.Windows.Forms.ListBox InstallsListBox;
+        private System.Windows.Forms.FolderBrowserDialog FolderBrowser;
     }
 }
 
