@@ -152,6 +152,7 @@
             this.OriginSelectButton.TabIndex = 1;
             this.OriginSelectButton.Text = "Select";
             this.OriginSelectButton.UseVisualStyleBackColor = true;
+            this.OriginSelectButton.Click += new System.EventHandler(this.OriginSelectButton_Click);
             // 
             // OriginTextBox
             // 
@@ -185,6 +186,7 @@
             this.DestinationSelectButton.TabIndex = 1;
             this.DestinationSelectButton.Text = "Select";
             this.DestinationSelectButton.UseVisualStyleBackColor = true;
+            this.DestinationSelectButton.Click += new System.EventHandler(this.DestinationSelectButton_Click);
             // 
             // DestinationTextBox
             // 

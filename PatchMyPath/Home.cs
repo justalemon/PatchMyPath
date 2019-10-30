@@ -82,5 +82,29 @@ namespace PatchMyPath
             // Finally, launch the game
             Program.Config.Start(install.Type);
         }
+
+        private void OriginSelectButton_Click(object sender, EventArgs e)
+        {
+            // Show the folder browse dialog
+            DialogResult result = FolderBrowser.ShowDialog();
+
+            // If the user confirmed the folder selection, save it on the text field
+            if (result == DialogResult.OK)
+            {
+                OriginTextBox.Text = FolderBrowser.SelectedPath;
+            }
+        }
+
+        private void DestinationSelectButton_Click(object sender, EventArgs e)
+        {
+            // Show the folder browse dialog
+            DialogResult result = FolderBrowser.ShowDialog();
+
+            // If the user confirmed the folder selection, save it on the text field
+            if (result == DialogResult.OK)
+            {
+                DestinationTextBox.Text = FolderBrowser.SelectedPath;
+            }
+        }
     }
 }
