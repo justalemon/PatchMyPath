@@ -35,8 +35,10 @@
             this.AddButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.LaunchButton = new System.Windows.Forms.Button();
+            this.InstallsListBox = new System.Windows.Forms.ListBox();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
+            this.InstallsGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // GeneralTabControl
@@ -76,9 +78,13 @@
             // 
             // InstallsGroupBox
             // 
+            this.InstallsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.InstallsGroupBox.Controls.Add(this.InstallsListBox);
             this.InstallsGroupBox.Location = new System.Drawing.Point(8, 6);
             this.InstallsGroupBox.Name = "InstallsGroupBox";
-            this.InstallsGroupBox.Size = new System.Drawing.Size(310, 100);
+            this.InstallsGroupBox.Size = new System.Drawing.Size(310, 392);
             this.InstallsGroupBox.TabIndex = 0;
             this.InstallsGroupBox.TabStop = false;
             this.InstallsGroupBox.Text = "Available Installs";
@@ -113,6 +119,15 @@
             this.LaunchButton.Text = "Launch";
             this.LaunchButton.UseVisualStyleBackColor = true;
             // 
+            // InstallsListBox
+            // 
+            this.InstallsListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.InstallsListBox.FormattingEnabled = true;
+            this.InstallsListBox.Location = new System.Drawing.Point(3, 16);
+            this.InstallsListBox.Name = "InstallsListBox";
+            this.InstallsListBox.Size = new System.Drawing.Size(304, 373);
+            this.InstallsListBox.TabIndex = 0;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,6 +139,7 @@
             this.Text = "PatchMyPath";
             this.GeneralTabControl.ResumeLayout(false);
             this.InstallsTabPage.ResumeLayout(false);
+            this.InstallsGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -137,6 +153,7 @@
         private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button LaunchButton;
+        private System.Windows.Forms.ListBox InstallsListBox;
     }
 }
 
