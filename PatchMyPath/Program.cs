@@ -41,6 +41,17 @@ namespace PatchMyPath
                 return 2;
             }
 
+            // Iterate over the current set of game installs
+            foreach (Install install in Config.GameInstalls)
+            {
+                // If the installation type should be automatically detected
+                if (install.Type == InstallType.AutoDetect)
+                {
+                    // Force an update of the current install type
+                    install.UpdateType(Config.UseSteam);
+                }
+            }
+
             // And run the application with the form
             Application.Run(new Home());
             // Finally, return a status code of zero
