@@ -1,4 +1,4 @@
-﻿namespace PatchMyPath
+namespace PatchMyPath
 {
     partial class Home
     {
@@ -98,6 +98,7 @@
             this.AddButton.TabIndex = 1;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // DeleteButton
             // 
@@ -108,6 +109,7 @@
             this.DeleteButton.TabIndex = 2;
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // LaunchButton
             // 
@@ -118,6 +120,7 @@
             this.LaunchButton.TabIndex = 3;
             this.LaunchButton.Text = "Launch";
             this.LaunchButton.UseVisualStyleBackColor = true;
+            this.LaunchButton.Click += new System.EventHandler(this.LaunchButton_Click);
             // 
             // InstallsListBox
             // 
