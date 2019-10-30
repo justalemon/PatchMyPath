@@ -26,10 +26,8 @@ jobs:
         run: nuget restore PatchMyPath.sln
       - name: Build with msbuild.exe
         run: msbuild PatchMyPath.sln /t:Build /p:Configuration=Release
-      - name: Package Artifacts
-        working-directory: bin\Release
-        run: 7z a PatchMyPath.7z *
-      - uses: actions/upload-artifact@v1
+      - name: Package and Upload Artifacts
+        uses: actions/upload-artifact@v1
         with:
-          name: PatchMyPath.7z
-          path: bin\Release\PatchMyPath.7z
+          name: PatchMyPath
+          path: bin\Release
