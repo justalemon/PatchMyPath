@@ -53,6 +53,7 @@ namespace PatchMyPath
         /// <summary>
         /// If the files are legal (aka signed by Rockstar Games).
         /// </summary>
+        [JsonIgnore]
         public bool IsLegal
         {
             get
