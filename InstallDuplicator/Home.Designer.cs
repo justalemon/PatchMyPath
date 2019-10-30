@@ -28,89 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.OriginGroupBox = new System.Windows.Forms.GroupBox();
-            this.OriginButton = new System.Windows.Forms.Button();
-            this.OriginTextBox = new System.Windows.Forms.TextBox();
-            this.DestinationGroupBox = new System.Windows.Forms.GroupBox();
-            this.DestinationButton = new System.Windows.Forms.Button();
-            this.DestinationTextBox = new System.Windows.Forms.TextBox();
             this.DuplicateButton = new System.Windows.Forms.Button();
             this.LogGroupBox = new System.Windows.Forms.GroupBox();
             this.LogTextBox = new System.Windows.Forms.TextBox();
             this.SelectFolderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.LinkTypeGroupBox = new System.Windows.Forms.GroupBox();
-            this.SymbolicRadioButton = new System.Windows.Forms.RadioButton();
             this.HardRadioButton = new System.Windows.Forms.RadioButton();
-            this.OriginGroupBox.SuspendLayout();
-            this.DestinationGroupBox.SuspendLayout();
+            this.SymbolicRadioButton = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.LogGroupBox.SuspendLayout();
             this.LinkTypeGroupBox.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // OriginGroupBox
-            // 
-            this.OriginGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OriginGroupBox.Controls.Add(this.OriginButton);
-            this.OriginGroupBox.Controls.Add(this.OriginTextBox);
-            this.OriginGroupBox.Location = new System.Drawing.Point(12, 12);
-            this.OriginGroupBox.Name = "OriginGroupBox";
-            this.OriginGroupBox.Size = new System.Drawing.Size(460, 45);
-            this.OriginGroupBox.TabIndex = 0;
-            this.OriginGroupBox.TabStop = false;
-            this.OriginGroupBox.Text = "Origin";
-            // 
-            // OriginButton
-            // 
-            this.OriginButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OriginButton.Location = new System.Drawing.Point(379, 17);
-            this.OriginButton.Name = "OriginButton";
-            this.OriginButton.Size = new System.Drawing.Size(75, 23);
-            this.OriginButton.TabIndex = 1;
-            this.OriginButton.Text = "Select";
-            this.OriginButton.UseVisualStyleBackColor = true;
-            this.OriginButton.Click += new System.EventHandler(this.OriginButton_Click);
-            // 
-            // OriginTextBox
-            // 
-            this.OriginTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OriginTextBox.Location = new System.Drawing.Point(6, 19);
-            this.OriginTextBox.Name = "OriginTextBox";
-            this.OriginTextBox.ReadOnly = true;
-            this.OriginTextBox.Size = new System.Drawing.Size(367, 20);
-            this.OriginTextBox.TabIndex = 0;
-            // 
-            // DestinationGroupBox
-            // 
-            this.DestinationGroupBox.Controls.Add(this.DestinationButton);
-            this.DestinationGroupBox.Controls.Add(this.DestinationTextBox);
-            this.DestinationGroupBox.Location = new System.Drawing.Point(12, 63);
-            this.DestinationGroupBox.Name = "DestinationGroupBox";
-            this.DestinationGroupBox.Size = new System.Drawing.Size(460, 45);
-            this.DestinationGroupBox.TabIndex = 1;
-            this.DestinationGroupBox.TabStop = false;
-            this.DestinationGroupBox.Text = "Destination";
-            // 
-            // DestinationButton
-            // 
-            this.DestinationButton.Location = new System.Drawing.Point(379, 17);
-            this.DestinationButton.Name = "DestinationButton";
-            this.DestinationButton.Size = new System.Drawing.Size(75, 23);
-            this.DestinationButton.TabIndex = 1;
-            this.DestinationButton.Text = "Select";
-            this.DestinationButton.UseVisualStyleBackColor = true;
-            this.DestinationButton.Click += new System.EventHandler(this.DestinationButton_Click);
-            // 
-            // DestinationTextBox
-            // 
-            this.DestinationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DestinationTextBox.Location = new System.Drawing.Point(6, 19);
-            this.DestinationTextBox.Name = "DestinationTextBox";
-            this.DestinationTextBox.ReadOnly = true;
-            this.DestinationTextBox.Size = new System.Drawing.Size(367, 20);
-            this.DestinationTextBox.TabIndex = 0;
             // 
             // DuplicateButton
             // 
@@ -161,17 +90,6 @@
             this.LinkTypeGroupBox.TabStop = false;
             this.LinkTypeGroupBox.Text = "Link Type";
             // 
-            // SymbolicRadioButton
-            // 
-            this.SymbolicRadioButton.AutoSize = true;
-            this.SymbolicRadioButton.Location = new System.Drawing.Point(6, 42);
-            this.SymbolicRadioButton.Name = "SymbolicRadioButton";
-            this.SymbolicRadioButton.Size = new System.Drawing.Size(425, 17);
-            this.SymbolicRadioButton.TabIndex = 0;
-            this.SymbolicRadioButton.Text = "Symbolic Links for Files and Folders (Steam and non Rockstar Games Launcher only)" +
-    "";
-            this.SymbolicRadioButton.UseVisualStyleBackColor = true;
-            // 
             // HardRadioButton
             // 
             this.HardRadioButton.AutoSize = true;
@@ -184,6 +102,36 @@
             this.HardRadioButton.Text = "Hard Link for Files and Symbolic Links for Folders (All Game Versions)";
             this.HardRadioButton.UseVisualStyleBackColor = true;
             // 
+            // SymbolicRadioButton
+            // 
+            this.SymbolicRadioButton.AutoSize = true;
+            this.SymbolicRadioButton.Location = new System.Drawing.Point(6, 42);
+            this.SymbolicRadioButton.Name = "SymbolicRadioButton";
+            this.SymbolicRadioButton.Size = new System.Drawing.Size(425, 17);
+            this.SymbolicRadioButton.TabIndex = 0;
+            this.SymbolicRadioButton.Text = "Symbolic Links for Files and Folders (Steam and non Rockstar Games Launcher only)" +
+    "";
+            this.SymbolicRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(379, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Select";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(6, 19);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(367, 20);
+            this.textBox1.TabIndex = 0;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,18 +140,12 @@
             this.Controls.Add(this.LinkTypeGroupBox);
             this.Controls.Add(this.LogGroupBox);
             this.Controls.Add(this.DuplicateButton);
-            this.Controls.Add(this.DestinationGroupBox);
-            this.Controls.Add(this.OriginGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PatchMyPath Install Duplicator";
-            this.OriginGroupBox.ResumeLayout(false);
-            this.OriginGroupBox.PerformLayout();
-            this.DestinationGroupBox.ResumeLayout(false);
-            this.DestinationGroupBox.PerformLayout();
             this.LogGroupBox.ResumeLayout(false);
             this.LogGroupBox.PerformLayout();
             this.LinkTypeGroupBox.ResumeLayout(false);
@@ -213,13 +155,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox OriginGroupBox;
-        private System.Windows.Forms.TextBox OriginTextBox;
-        private System.Windows.Forms.Button OriginButton;
-        private System.Windows.Forms.GroupBox DestinationGroupBox;
-        private System.Windows.Forms.TextBox DestinationTextBox;
-        private System.Windows.Forms.Button DestinationButton;
         private System.Windows.Forms.Button DuplicateButton;
         private System.Windows.Forms.GroupBox LogGroupBox;
         private System.Windows.Forms.TextBox LogTextBox;
@@ -227,6 +162,8 @@
         private System.Windows.Forms.GroupBox LinkTypeGroupBox;
         private System.Windows.Forms.RadioButton SymbolicRadioButton;
         private System.Windows.Forms.RadioButton HardRadioButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
