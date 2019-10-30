@@ -11,15 +11,6 @@ The following versions have been extensively tested and are guaranteed to work:
     <img src="preview.png"/>
 </div>
 
-# Installation
-
-[.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452) is required.
-
-1. Download the compressed file from [GitHub Releases][releases-url] or [5mods][5mods-url]
-2. Extracts the contents of the compressed file somewhere on your PC
-3. Follow the [configuration instructions](config/index.md)
-4. Run `PatchMyPath.exe` and follow the instructions to launch one of your installs
-
 [5mods-img]: https://img.shields.io/badge/5mods-download-20BA4E.svg
 [5mods-url]: https://www.gta5-mods.com/tools/patchmypath
 [appveyor-img]: https://img.shields.io/appveyor/ci/justalemon/patchmypath.svg?label=appveyor

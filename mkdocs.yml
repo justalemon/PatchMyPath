@@ -1,9 +1,10 @@
 site_name: PatchMyPath
 
 nav:
-  - Home:
+  - PatchMyPath:
     - Welcome: index.md
-    - First Steps: first-steps.md
+    - Getting started: getting-started.md
+    - Customization: customization.md
   - Configuration:
     - Base Configuration: config/root.md
     - Install Objects: config/install.md
