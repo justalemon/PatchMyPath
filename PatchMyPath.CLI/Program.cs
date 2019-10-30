@@ -13,14 +13,6 @@ namespace PatchMyPath
     {
         public static int Main(string[] args)
         {
-            
-
-            // If the user uses the Steam version, also kill that
-            if (Config.UseSteam && Config.AppID == 271590)
-            {
-                CloseProcess("Steam");
-            }
-
             // Now, destroy the original game folder if is present
             if (Directory.Exists(Config.Destination))
             {

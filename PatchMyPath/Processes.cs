@@ -28,9 +28,14 @@ namespace PatchMyPath
                     }
                 }
             }
-
             // And all of the processes required by the RGL Launcher, in order
             TerminateProcesses(new string[] { "SocialClubHelper", "Launcher", "LauncherPatcher" });
+
+            // If the user uses the Steam version, also kill that
+            if (Program.Config.UseSteam)
+            {
+                TerminateProcess("Steam");
+            }
         }
 
         /// <summary>
