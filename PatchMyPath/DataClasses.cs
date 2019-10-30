@@ -54,63 +54,7 @@ namespace PatchMyPath
         /// If the files are legal (aka signed by Rockstar Games).
         /// </summary>
         [JsonIgnore]
-        public bool IsLegal
-        {
-            get
-            {
-                // Create the path of the 
-                string launcherPath = Path.Combine(GamePath, "GTAVLauncher.exe");
-                string executablePath = Path.Combine(GamePath, "GTA5.exe");
-
-                // If one of the files can't be found, is not valid
-                if (!File.Exists(launcherPath) || !File.Exists(executablePath))
-                {
-                    return false;
-                }
-
-                // Create some variables for storing the real locations
-                string realLauncher;
-                string realExecutable;
-                // Try to get the real paths for the launcher and executable
-                try
-                {
-                    realLauncher = Links.GetRealPath(launcherPath);
-                    realExecutable = Links.GetRealPath(executablePath);
-                }
-                // If we failed, the files are long gone so return
-                catch (Win32Exception)
-                {
-                    return false;
-                }
-
-                // Get the certificate that signed both of them
-                X509Certificate launcherCert = X509Certificate.CreateFromSignedFile(realLauncher);
-                X509Certificate executableCert = X509Certificate.CreateFromSignedFile(realExecutable);
-
-                // If one of those don't have a valid signature, return false
-                if (launcherCert == null || executableCert == null)
-                {
-                    return false;
-                }
-
-                // Get the hashes of both files
-                string launcherHash = launcherCert.GetCertHashString();
-                string executableHash = executableCert.GetCertHashString();
-
-                // If the signature is by Rockstar Games
-                // (This is done to avoid self-signed files)
-                if (launcherHash == "AA0D31A9C8C1EBD9E18EC1D8D3F98B3523178AD8" &&
-                    executableHash == "AA0D31A9C8C1EBD9E18EC1D8D3F98B3523178AD8")
-                {
-                    return true;
-                }
-                // Otherwise, return false
-                else
-                {
-                    return false;
-                }
-            }
-        }
+        public bool IsLegal => Checks.AreExecutablesSignedByRockstar(this);
 
         /// <summary>
         /// Updates the Install.Type based on the contents of the game install.

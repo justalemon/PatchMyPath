@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Checks.cs" />
     <Compile Include="DataClasses.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
