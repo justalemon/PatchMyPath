@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstallDuplicator", "Instal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatchMyPath.Tools", "PatchMyPath.Tools\PatchMyPath.Tools.csproj", "{B9DF2DE0-CC19-489B-B922-BABCEADE94C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatchMyPath", "PatchMyPath\PatchMyPath.csproj", "{6BC02B82-4012-4991-90C4-3A11AE58C880}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -27,6 +29,10 @@ Global
 		{B9DF2DE0-CC19-489B-B922-BABCEADE94C6}.Debug|x64.Build.0 = Debug|x64
 		{B9DF2DE0-CC19-489B-B922-BABCEADE94C6}.Release|x64.ActiveCfg = Release|x64
 		{B9DF2DE0-CC19-489B-B922-BABCEADE94C6}.Release|x64.Build.0 = Release|x64
+		{6BC02B82-4012-4991-90C4-3A11AE58C880}.Debug|x64.ActiveCfg = Debug|x64
+		{6BC02B82-4012-4991-90C4-3A11AE58C880}.Debug|x64.Build.0 = Debug|x64
+		{6BC02B82-4012-4991-90C4-3A11AE58C880}.Release|x64.ActiveCfg = Release|x64
+		{6BC02B82-4012-4991-90C4-3A11AE58C880}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
