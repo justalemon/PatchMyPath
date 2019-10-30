@@ -224,7 +224,7 @@
             this.LinkTypeGroupBox.Controls.Add(this.SymbolicRadioButton);
             this.LinkTypeGroupBox.Location = new System.Drawing.Point(6, 108);
             this.LinkTypeGroupBox.Name = "LinkTypeGroupBox";
-            this.LinkTypeGroupBox.Size = new System.Drawing.Size(312, 228);
+            this.LinkTypeGroupBox.Size = new System.Drawing.Size(312, 101);
             this.LinkTypeGroupBox.TabIndex = 5;
             this.LinkTypeGroupBox.TabStop = false;
             this.LinkTypeGroupBox.Text = "Link Type";
@@ -250,7 +250,7 @@
             this.SymbolicRadioButton.Name = "SymbolicRadioButton";
             this.SymbolicRadioButton.Size = new System.Drawing.Size(300, 34);
             this.SymbolicRadioButton.TabIndex = 0;
-            this.SymbolicRadioButton.Text = "Symbolic Links for Files and Folders (Steam and non Rockstar Games Launcher only)" +
+            this.SymbolicRadioButton.Text = "Symbolic Links for Files and Folders (Steam and pre Rockstar Games Launcher only)" +
     "";
             this.SymbolicRadioButton.UseVisualStyleBackColor = true;
             // 
