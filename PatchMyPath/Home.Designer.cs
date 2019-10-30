@@ -43,12 +43,16 @@
             this.DestinationSelectButton = new System.Windows.Forms.Button();
             this.DestinationTextBox = new System.Windows.Forms.TextBox();
             this.DestinationGroupBox = new System.Windows.Forms.GroupBox();
+            this.LinkTypeGroupBox = new System.Windows.Forms.GroupBox();
+            this.HardRadioButton = new System.Windows.Forms.RadioButton();
+            this.SymbolicRadioButton = new System.Windows.Forms.RadioButton();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.InstallsGroupBox.SuspendLayout();
             this.DuplicatorTabPage.SuspendLayout();
             this.OriginGroupBox.SuspendLayout();
             this.DestinationGroupBox.SuspendLayout();
+            this.LinkTypeGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // GeneralTabControl
@@ -133,6 +137,7 @@
             // 
             // DuplicatorTabPage
             // 
+            this.DuplicatorTabPage.Controls.Add(this.LinkTypeGroupBox);
             this.DuplicatorTabPage.Controls.Add(this.OriginGroupBox);
             this.DuplicatorTabPage.Controls.Add(this.DestinationGroupBox);
             this.DuplicatorTabPage.Location = new System.Drawing.Point(4, 22);
@@ -211,6 +216,44 @@
             this.DestinationGroupBox.TabStop = false;
             this.DestinationGroupBox.Text = "Destination";
             // 
+            // LinkTypeGroupBox
+            // 
+            this.LinkTypeGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LinkTypeGroupBox.Controls.Add(this.HardRadioButton);
+            this.LinkTypeGroupBox.Controls.Add(this.SymbolicRadioButton);
+            this.LinkTypeGroupBox.Location = new System.Drawing.Point(6, 108);
+            this.LinkTypeGroupBox.Name = "LinkTypeGroupBox";
+            this.LinkTypeGroupBox.Size = new System.Drawing.Size(312, 228);
+            this.LinkTypeGroupBox.TabIndex = 5;
+            this.LinkTypeGroupBox.TabStop = false;
+            this.LinkTypeGroupBox.Text = "Link Type";
+            // 
+            // HardRadioButton
+            // 
+            this.HardRadioButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.HardRadioButton.Checked = true;
+            this.HardRadioButton.Location = new System.Drawing.Point(6, 19);
+            this.HardRadioButton.Name = "HardRadioButton";
+            this.HardRadioButton.Size = new System.Drawing.Size(300, 34);
+            this.HardRadioButton.TabIndex = 1;
+            this.HardRadioButton.TabStop = true;
+            this.HardRadioButton.Text = "Hard Link for Files and Symbolic Links for Folders (All Game Versions)";
+            this.HardRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // SymbolicRadioButton
+            // 
+            this.SymbolicRadioButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SymbolicRadioButton.Location = new System.Drawing.Point(6, 59);
+            this.SymbolicRadioButton.Name = "SymbolicRadioButton";
+            this.SymbolicRadioButton.Size = new System.Drawing.Size(300, 34);
+            this.SymbolicRadioButton.TabIndex = 0;
+            this.SymbolicRadioButton.Text = "Symbolic Links for Files and Folders (Steam and non Rockstar Games Launcher only)" +
+    "";
+            this.SymbolicRadioButton.UseVisualStyleBackColor = true;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -228,6 +271,7 @@
             this.OriginGroupBox.PerformLayout();
             this.DestinationGroupBox.ResumeLayout(false);
             this.DestinationGroupBox.PerformLayout();
+            this.LinkTypeGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -249,6 +293,9 @@
         private System.Windows.Forms.GroupBox DestinationGroupBox;
         private System.Windows.Forms.Button DestinationSelectButton;
         private System.Windows.Forms.TextBox DestinationTextBox;
+        private System.Windows.Forms.GroupBox LinkTypeGroupBox;
+        private System.Windows.Forms.RadioButton HardRadioButton;
+        private System.Windows.Forms.RadioButton SymbolicRadioButton;
     }
 }
 
