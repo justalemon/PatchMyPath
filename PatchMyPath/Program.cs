@@ -17,7 +17,7 @@ namespace PatchMyPath
         FolderOptional = 3,
     }
 
-    static class Program
+    public static class Program
     {
         /// <summary>
         /// The filesystem entries that are part of the game.
@@ -118,6 +118,17 @@ namespace PatchMyPath
             Application.Run(new Home());
             // Finally, return a status code of zero
             return 0;
+        }
+
+        /// <summary>
+        /// Saves the current configuration.
+        /// </summary>
+        public static void SaveConfig()
+        {
+            // Serialize the configuration to a JSON string and add a new line at the end
+            string output = JsonConvert.SerializeObject(Config, Formatting.Indented) + Environment.NewLine;
+            // Then, save that string on PatchMyPath.json
+            File.WriteAllText("PatchMyPath.json", output);
         }
     }
 }
