@@ -123,7 +123,7 @@ namespace PatchMyPath
                 if (install.Type == InstallType.AutoDetect)
                 {
                     // Force an update of the current install type
-                    install.UpdateType(Config.UseSteam);
+                    install.UpdateType();
                 }
             }
         }
