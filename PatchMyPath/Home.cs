@@ -50,6 +50,8 @@ namespace PatchMyPath
                 GamePath = FolderBrowser.SelectedPath,
                 Type = InstallType.AutoDetect
             };
+            // Refresh the type of the install
+            install.UpdateType();
             // Add the new install and save it
             Program.Config.GameInstalls.Add(install);
             Program.SaveConfig();
