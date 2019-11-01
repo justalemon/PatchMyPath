@@ -36,6 +36,8 @@
             this.InstallsGroupBox = new System.Windows.Forms.GroupBox();
             this.InstallsListBox = new System.Windows.Forms.ListBox();
             this.DuplicatorTabPage = new System.Windows.Forms.TabPage();
+            this.AutoAddGroupBox = new System.Windows.Forms.GroupBox();
+            this.AutoAddCheckBox = new System.Windows.Forms.CheckBox();
             this.LogGroupBox = new System.Windows.Forms.GroupBox();
             this.LogTextBox = new System.Windows.Forms.TextBox();
             this.LinkTypeGroupBox = new System.Windows.Forms.GroupBox();
@@ -49,17 +51,15 @@
             this.DestinationSelectButton = new System.Windows.Forms.Button();
             this.DestinationTextBox = new System.Windows.Forms.TextBox();
             this.FolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
-            this.AutoAddGroupBox = new System.Windows.Forms.GroupBox();
-            this.AutoAddCheckBox = new System.Windows.Forms.CheckBox();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.InstallsGroupBox.SuspendLayout();
             this.DuplicatorTabPage.SuspendLayout();
+            this.AutoAddGroupBox.SuspendLayout();
             this.LogGroupBox.SuspendLayout();
             this.LinkTypeGroupBox.SuspendLayout();
             this.OriginGroupBox.SuspendLayout();
             this.DestinationGroupBox.SuspendLayout();
-            this.AutoAddGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // GeneralTabControl
@@ -90,7 +90,7 @@
             // LaunchButton
             // 
             this.LaunchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.LaunchButton.Location = new System.Drawing.Point(243, 404);
+            this.LaunchButton.Location = new System.Drawing.Point(8, 375);
             this.LaunchButton.Name = "LaunchButton";
             this.LaunchButton.Size = new System.Drawing.Size(75, 23);
             this.LaunchButton.TabIndex = 3;
@@ -128,7 +128,7 @@
             this.InstallsGroupBox.Controls.Add(this.InstallsListBox);
             this.InstallsGroupBox.Location = new System.Drawing.Point(8, 6);
             this.InstallsGroupBox.Name = "InstallsGroupBox";
-            this.InstallsGroupBox.Size = new System.Drawing.Size(310, 392);
+            this.InstallsGroupBox.Size = new System.Drawing.Size(310, 363);
             this.InstallsGroupBox.TabIndex = 0;
             this.InstallsGroupBox.TabStop = false;
             this.InstallsGroupBox.Text = "Available Installs";
@@ -139,7 +139,7 @@
             this.InstallsListBox.FormattingEnabled = true;
             this.InstallsListBox.Location = new System.Drawing.Point(3, 16);
             this.InstallsListBox.Name = "InstallsListBox";
-            this.InstallsListBox.Size = new System.Drawing.Size(304, 373);
+            this.InstallsListBox.Size = new System.Drawing.Size(304, 344);
             this.InstallsListBox.TabIndex = 0;
             // 
             // DuplicatorTabPage
@@ -157,6 +157,28 @@
             this.DuplicatorTabPage.TabIndex = 1;
             this.DuplicatorTabPage.Text = "Duplicator";
             this.DuplicatorTabPage.UseVisualStyleBackColor = true;
+            // 
+            // AutoAddGroupBox
+            // 
+            this.AutoAddGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.AutoAddGroupBox.Controls.Add(this.AutoAddCheckBox);
+            this.AutoAddGroupBox.Location = new System.Drawing.Point(6, 215);
+            this.AutoAddGroupBox.Name = "AutoAddGroupBox";
+            this.AutoAddGroupBox.Size = new System.Drawing.Size(314, 42);
+            this.AutoAddGroupBox.TabIndex = 6;
+            this.AutoAddGroupBox.TabStop = false;
+            this.AutoAddGroupBox.Text = "Add to the Manager";
+            // 
+            // AutoAddCheckBox
+            // 
+            this.AutoAddCheckBox.AutoSize = true;
+            this.AutoAddCheckBox.Location = new System.Drawing.Point(6, 19);
+            this.AutoAddCheckBox.Name = "AutoAddCheckBox";
+            this.AutoAddCheckBox.Size = new System.Drawing.Size(289, 17);
+            this.AutoAddCheckBox.TabIndex = 0;
+            this.AutoAddCheckBox.Text = "Add install to PatchMyPath after completing the process";
+            this.AutoAddCheckBox.UseVisualStyleBackColor = true;
             // 
             // LogGroupBox
             // 
@@ -300,28 +322,6 @@
             this.DestinationTextBox.Size = new System.Drawing.Size(221, 20);
             this.DestinationTextBox.TabIndex = 0;
             // 
-            // AutoAddGroupBox
-            // 
-            this.AutoAddGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.AutoAddGroupBox.Controls.Add(this.AutoAddCheckBox);
-            this.AutoAddGroupBox.Location = new System.Drawing.Point(6, 215);
-            this.AutoAddGroupBox.Name = "AutoAddGroupBox";
-            this.AutoAddGroupBox.Size = new System.Drawing.Size(314, 42);
-            this.AutoAddGroupBox.TabIndex = 6;
-            this.AutoAddGroupBox.TabStop = false;
-            this.AutoAddGroupBox.Text = "Add to the Manager";
-            // 
-            // AutoAddCheckBox
-            // 
-            this.AutoAddCheckBox.AutoSize = true;
-            this.AutoAddCheckBox.Location = new System.Drawing.Point(6, 19);
-            this.AutoAddCheckBox.Name = "AutoAddCheckBox";
-            this.AutoAddCheckBox.Size = new System.Drawing.Size(289, 17);
-            this.AutoAddCheckBox.TabIndex = 0;
-            this.AutoAddCheckBox.Text = "Add install to PatchMyPath after completing the process";
-            this.AutoAddCheckBox.UseVisualStyleBackColor = true;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,6 +335,8 @@
             this.InstallsTabPage.ResumeLayout(false);
             this.InstallsGroupBox.ResumeLayout(false);
             this.DuplicatorTabPage.ResumeLayout(false);
+            this.AutoAddGroupBox.ResumeLayout(false);
+            this.AutoAddGroupBox.PerformLayout();
             this.LogGroupBox.ResumeLayout(false);
             this.LogGroupBox.PerformLayout();
             this.LinkTypeGroupBox.ResumeLayout(false);
@@ -342,8 +344,6 @@
             this.OriginGroupBox.PerformLayout();
             this.DestinationGroupBox.ResumeLayout(false);
             this.DestinationGroupBox.PerformLayout();
-            this.AutoAddGroupBox.ResumeLayout(false);
-            this.AutoAddGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
