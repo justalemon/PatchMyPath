@@ -13,13 +13,27 @@ namespace PatchMyPath
 {
     public partial class Home : Form
     {
+        /// <summary>
+        /// Sets the locked status of some of the UI elements.
+        /// </summary>
+        public bool Locked
+        {
+            set
+            {
+                LaunchButton.Enabled = !value;
+
+                DeleteButton.Enabled = !value;
+            }
+        }
+
         public Home()
         {
             // Initialize the UI components
             InitializeComponent();
-
-            // And reload the list of installs
+            // Reload the list of installs
             RefreshInstalls();
+            // And lock the UI elements
+            Locked = true;
         }
 
         public void RefreshInstalls()
