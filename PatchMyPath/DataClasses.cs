@@ -56,6 +56,12 @@ namespace PatchMyPath
         [JsonIgnore]
         public bool IsLegal => Checks.AreExecutablesSignedByRockstar(this);
 
+        public Install(string path)
+        {
+            GamePath = path;
+            Type = InstallType.AutoDetect;
+        }
+
         /// <summary>
         /// Updates the Install.Type based on the contents of the game install.
         /// </summary>

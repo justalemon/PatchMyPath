@@ -45,11 +45,7 @@ namespace PatchMyPath
             }
 
             // Then, create a new install object with this and add it into the text box
-            Install install = new Install
-            {
-                GamePath = FolderBrowser.SelectedPath,
-                Type = InstallType.AutoDetect
-            };
+            Install install = new Install(FolderBrowser.SelectedPath);
             // Refresh the type of the install
             install.UpdateType();
             // Add the new install and save it
