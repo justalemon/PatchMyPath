@@ -114,6 +114,22 @@ namespace PatchMyPath
             Program.Config.Start(install.Type);
         }
 
+        private void UpdateButton_Click(object sender, EventArgs e)
+        {
+            // If there is no install selected, return
+            if (InstallsListBox.SelectedItem == null)
+            {
+                return;
+            }
+
+            // Then, cast the install to the proper object
+            Install install = (Install)InstallsListBox.SelectedItem;
+            // Force an update of the install type
+            install.UpdateType();
+            // And refresh the list
+            RefreshInstalls();
+        }
+
         private void OriginSelectButton_Click(object sender, EventArgs e)
         {
             // Show the folder browse dialog
