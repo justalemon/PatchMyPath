@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Checks.cs" />
+    <Compile Include="Converters.cs" />
     <Compile Include="DataClasses.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>

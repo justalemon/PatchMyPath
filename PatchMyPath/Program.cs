@@ -88,7 +88,7 @@ namespace PatchMyPath
             // Try to parse the configuration
             try
             {
-                Config = JsonConvert.DeserializeObject<Configuration>(File.ReadAllText("PatchMyPath.json"));
+                Config = JsonConvert.DeserializeObject<Configuration>(File.ReadAllText("PatchMyPath.json"), new InstallConverter());
             }
             // If the file was not found
             catch (FileNotFoundException)
@@ -133,7 +133,7 @@ namespace PatchMyPath
         public static void SaveConfig()
         {
             // Serialize the configuration to a JSON string and add a new line at the end
-            string output = JsonConvert.SerializeObject(Config, Formatting.Indented) + Environment.NewLine;
+            string output = JsonConvert.SerializeObject(Config, Formatting.Indented, new InstallConverter()) + Environment.NewLine;
             // Then, save that string on PatchMyPath.json
             File.WriteAllText("PatchMyPath.json", output);
         }
