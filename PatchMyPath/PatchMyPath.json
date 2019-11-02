@@ -3,10 +3,5 @@
     "appid": 271590,
     "check_sig": true,
     "destination": "C:\\Program Files\\Grand Theft Auto V",
-    "installs": [
-        {
-            "path": "C:\\Program Files\\Grand Theft Auto V - Clean",
-            "type": 0
-        }
-    ]
+    "installs": []
 }
