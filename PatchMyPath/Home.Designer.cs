@@ -154,6 +154,7 @@
             this.InstallsListBox.Name = "InstallsListBox";
             this.InstallsListBox.Size = new System.Drawing.Size(304, 344);
             this.InstallsListBox.TabIndex = 0;
+            this.InstallsListBox.SelectedIndexChanged += new System.EventHandler(this.InstallsListBox_SelectedIndexChanged);
             // 
             // DuplicatorTabPage
             // 

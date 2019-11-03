@@ -43,8 +43,11 @@ namespace PatchMyPath
             // Iterate over the installs
             foreach (Install install in Program.Config.GameInstalls)
             {
+                // And add them onto the ListBox
                 InstallsListBox.Items.Add(install);
             }
+            // Finally, update the locked status on the items
+            Locked = true;
         }
 
         private void AddButton_Click(object sender, EventArgs e)
@@ -252,6 +255,11 @@ namespace PatchMyPath
                     return;
                 }
             }
+        }
+
+        private void InstallsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Locked = InstallsListBox.SelectedItem == null;
         }
     }
 }
