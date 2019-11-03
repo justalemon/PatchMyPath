@@ -404,7 +404,6 @@ namespace PatchMyPath
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LocationTextBox.Location = new System.Drawing.Point(6, 19);
             this.LocationTextBox.Name = "LocationTextBox";
-            this.LocationTextBox.ReadOnly = true;
             this.LocationTextBox.Size = new System.Drawing.Size(302, 20);
             this.LocationTextBox.TabIndex = 0;
             // 
