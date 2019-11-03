@@ -13,6 +13,8 @@ namespace PatchMyPath
 {
     public partial class Home : Form
     {
+        #region Properties
+
         /// <summary>
         /// Sets the locked status of some of the UI elements.
         /// </summary>
@@ -26,6 +28,10 @@ namespace PatchMyPath
             }
         }
 
+        #endregion
+
+        #region Constructor
+
         public Home()
         {
             // Initialize the UI components
@@ -35,6 +41,10 @@ namespace PatchMyPath
             // And lock the UI elements
             Locked = true;
         }
+
+        #endregion
+
+        #region Tools
 
         public void RefreshInstalls()
         {
@@ -49,6 +59,10 @@ namespace PatchMyPath
             // Finally, update the locked status on the items
             Locked = true;
         }
+
+        #endregion
+
+        #region Strip Items
 
         private void LaunchToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -130,6 +144,10 @@ namespace PatchMyPath
             // Just refresh the list of installs
             RefreshInstalls();
         }
+
+        #endregion
+
+        #region Duplicator Tool
 
         private void OriginSelectButton_Click(object sender, EventArgs e)
         {
@@ -257,9 +275,16 @@ namespace PatchMyPath
             }
         }
 
+        #endregion
+
+        #region Other
+
         private void InstallsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // If there is no selected item, lock the UI elements
             Locked = InstallsListBox.SelectedItem == null;
         }
+
+        #endregion
     }
 }
