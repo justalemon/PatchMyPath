@@ -30,7 +30,7 @@
         {
             this.GeneralTabControl = new System.Windows.Forms.TabControl();
             this.InstallsTabPage = new System.Windows.Forms.TabPage();
-            this.UpdateButton = new System.Windows.Forms.Button();
+            this.RefreshButton = new System.Windows.Forms.Button();
             this.LaunchButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
@@ -76,7 +76,7 @@
             // 
             // InstallsTabPage
             // 
-            this.InstallsTabPage.Controls.Add(this.UpdateButton);
+            this.InstallsTabPage.Controls.Add(this.RefreshButton);
             this.InstallsTabPage.Controls.Add(this.LaunchButton);
             this.InstallsTabPage.Controls.Add(this.DeleteButton);
             this.InstallsTabPage.Controls.Add(this.AddButton);
@@ -89,16 +89,16 @@
             this.InstallsTabPage.Text = "Install Manager";
             this.InstallsTabPage.UseVisualStyleBackColor = true;
             // 
-            // UpdateButton
+            // RefreshButton
             // 
-            this.UpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.UpdateButton.Location = new System.Drawing.Point(89, 375);
-            this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(75, 23);
-            this.UpdateButton.TabIndex = 4;
-            this.UpdateButton.Text = "Upd. Type";
-            this.UpdateButton.UseVisualStyleBackColor = true;
-            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
+            this.RefreshButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.RefreshButton.Location = new System.Drawing.Point(89, 375);
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.Size = new System.Drawing.Size(75, 23);
+            this.RefreshButton.TabIndex = 4;
+            this.RefreshButton.Text = "Refresh";
+            this.RefreshButton.UseVisualStyleBackColor = true;
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
             // LaunchButton
             // 
@@ -386,7 +386,7 @@
         private System.Windows.Forms.TextBox LogTextBox;
         private System.Windows.Forms.GroupBox AutoAddGroupBox;
         private System.Windows.Forms.CheckBox AutoAddCheckBox;
-        private System.Windows.Forms.Button UpdateButton;
+        private System.Windows.Forms.Button RefreshButton;
     }
 }
 

@@ -122,7 +122,7 @@ namespace PatchMyPath
             Program.Config.Start(install.Type);
         }
 
-        private void UpdateButton_Click(object sender, EventArgs e)
+        private void RefreshButton_Click(object sender, EventArgs e)
         {
             // Just refresh the list of installs
             RefreshInstalls();
