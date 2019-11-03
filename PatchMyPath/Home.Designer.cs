@@ -1,4 +1,4 @@
-﻿namespace PatchMyPath
+namespace PatchMyPath
 {
     partial class Home
     {
@@ -73,10 +73,10 @@
             this.GeneralTabControl.Controls.Add(this.InstallsTabPage);
             this.GeneralTabControl.Controls.Add(this.DuplicatorTabPage);
             this.GeneralTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GeneralTabControl.Location = new System.Drawing.Point(0, 24);
+            this.GeneralTabControl.Location = new System.Drawing.Point(0, 33);
             this.GeneralTabControl.Name = "GeneralTabControl";
             this.GeneralTabControl.SelectedIndex = 0;
-            this.GeneralTabControl.Size = new System.Drawing.Size(334, 437);
+            this.GeneralTabControl.Size = new System.Drawing.Size(334, 428);
             this.GeneralTabControl.TabIndex = 0;
             // 
             // InstallsTabPage
@@ -89,7 +89,7 @@
             this.InstallsTabPage.Location = new System.Drawing.Point(4, 22);
             this.InstallsTabPage.Name = "InstallsTabPage";
             this.InstallsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.InstallsTabPage.Size = new System.Drawing.Size(326, 411);
+            this.InstallsTabPage.Size = new System.Drawing.Size(326, 402);
             this.InstallsTabPage.TabIndex = 0;
             this.InstallsTabPage.Text = "Install Manager";
             this.InstallsTabPage.UseVisualStyleBackColor = true;
@@ -97,7 +97,7 @@
             // RefreshButton
             // 
             this.RefreshButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.RefreshButton.Location = new System.Drawing.Point(89, 351);
+            this.RefreshButton.Location = new System.Drawing.Point(89, 342);
             this.RefreshButton.Name = "RefreshButton";
             this.RefreshButton.Size = new System.Drawing.Size(75, 23);
             this.RefreshButton.TabIndex = 4;
@@ -108,7 +108,7 @@
             // LaunchButton
             // 
             this.LaunchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.LaunchButton.Location = new System.Drawing.Point(8, 351);
+            this.LaunchButton.Location = new System.Drawing.Point(8, 342);
             this.LaunchButton.Name = "LaunchButton";
             this.LaunchButton.Size = new System.Drawing.Size(75, 23);
             this.LaunchButton.TabIndex = 3;
@@ -119,7 +119,7 @@
             // DeleteButton
             // 
             this.DeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DeleteButton.Location = new System.Drawing.Point(89, 380);
+            this.DeleteButton.Location = new System.Drawing.Point(89, 371);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(75, 23);
             this.DeleteButton.TabIndex = 2;
@@ -130,7 +130,7 @@
             // AddButton
             // 
             this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.AddButton.Location = new System.Drawing.Point(8, 380);
+            this.AddButton.Location = new System.Drawing.Point(8, 371);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(75, 23);
             this.AddButton.TabIndex = 1;
@@ -146,7 +146,7 @@
             this.InstallsGroupBox.Controls.Add(this.InstallsListBox);
             this.InstallsGroupBox.Location = new System.Drawing.Point(8, 6);
             this.InstallsGroupBox.Name = "InstallsGroupBox";
-            this.InstallsGroupBox.Size = new System.Drawing.Size(310, 339);
+            this.InstallsGroupBox.Size = new System.Drawing.Size(310, 330);
             this.InstallsGroupBox.TabIndex = 0;
             this.InstallsGroupBox.TabStop = false;
             this.InstallsGroupBox.Text = "Available Installs";
@@ -157,7 +157,7 @@
             this.InstallsListBox.FormattingEnabled = true;
             this.InstallsListBox.Location = new System.Drawing.Point(3, 16);
             this.InstallsListBox.Name = "InstallsListBox";
-            this.InstallsListBox.Size = new System.Drawing.Size(304, 320);
+            this.InstallsListBox.Size = new System.Drawing.Size(304, 311);
             this.InstallsListBox.TabIndex = 0;
             this.InstallsListBox.SelectedIndexChanged += new System.EventHandler(this.InstallsListBox_SelectedIndexChanged);
             // 
@@ -172,7 +172,7 @@
             this.DuplicatorTabPage.Location = new System.Drawing.Point(4, 22);
             this.DuplicatorTabPage.Name = "DuplicatorTabPage";
             this.DuplicatorTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.DuplicatorTabPage.Size = new System.Drawing.Size(326, 411);
+            this.DuplicatorTabPage.Size = new System.Drawing.Size(326, 402);
             this.DuplicatorTabPage.TabIndex = 1;
             this.DuplicatorTabPage.Text = "Duplicator";
             this.DuplicatorTabPage.UseVisualStyleBackColor = true;
@@ -207,7 +207,7 @@
             this.LogGroupBox.Controls.Add(this.LogTextBox);
             this.LogGroupBox.Location = new System.Drawing.Point(6, 263);
             this.LogGroupBox.Name = "LogGroupBox";
-            this.LogGroupBox.Size = new System.Drawing.Size(312, 137);
+            this.LogGroupBox.Size = new System.Drawing.Size(312, 128);
             this.LogGroupBox.TabIndex = 4;
             this.LogGroupBox.TabStop = false;
             this.LogGroupBox.Text = "Logging";
@@ -220,7 +220,7 @@
             this.LogTextBox.Name = "LogTextBox";
             this.LogTextBox.ReadOnly = true;
             this.LogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LogTextBox.Size = new System.Drawing.Size(306, 118);
+            this.LogTextBox.Size = new System.Drawing.Size(306, 109);
             this.LogTextBox.TabIndex = 0;
             // 
             // LinkTypeGroupBox
@@ -265,7 +265,7 @@
             // 
             this.DuplicateButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DuplicateButton.Location = new System.Drawing.Point(6, 406);
+            this.DuplicateButton.Location = new System.Drawing.Point(6, 397);
             this.DuplicateButton.Name = "DuplicateButton";
             this.DuplicateButton.Size = new System.Drawing.Size(314, 23);
             this.DuplicateButton.TabIndex = 2;
@@ -343,13 +343,14 @@
             // 
             // TopMenuStrip
             // 
+            this.TopMenuStrip.ImageScalingSize = new System.Drawing.Size(25, 25);
             this.TopMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddToolStripMenuItem,
             this.RemoveToolStripMenuItem,
             this.RefreshToolStripMenuItem});
             this.TopMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.TopMenuStrip.Name = "TopMenuStrip";
-            this.TopMenuStrip.Size = new System.Drawing.Size(334, 24);
+            this.TopMenuStrip.Size = new System.Drawing.Size(334, 33);
             this.TopMenuStrip.TabIndex = 1;
             // 
             // AddToolStripMenuItem
@@ -357,7 +358,7 @@
             this.AddToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.AddToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.Add;
             this.AddToolStripMenuItem.Name = "AddToolStripMenuItem";
-            this.AddToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
+            this.AddToolStripMenuItem.Size = new System.Drawing.Size(37, 29);
             this.AddToolStripMenuItem.Text = "Add";
             // 
             // RemoveToolStripMenuItem
@@ -365,7 +366,7 @@
             this.RemoveToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.RemoveToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.Remove;
             this.RemoveToolStripMenuItem.Name = "RemoveToolStripMenuItem";
-            this.RemoveToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
+            this.RemoveToolStripMenuItem.Size = new System.Drawing.Size(37, 29);
             this.RemoveToolStripMenuItem.Text = "Remove";
             // 
             // RefreshToolStripMenuItem
@@ -373,7 +374,7 @@
             this.RefreshToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.RefreshToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.Refresh;
             this.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem";
-            this.RefreshToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
+            this.RefreshToolStripMenuItem.Size = new System.Drawing.Size(37, 29);
             this.RefreshToolStripMenuItem.Text = "Refresh";
             // 
             // Home
