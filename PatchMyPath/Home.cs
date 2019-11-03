@@ -291,6 +291,13 @@ namespace PatchMyPath
             }
         }
 
+        private void LocationSaveButton_Click(object sender, EventArgs e)
+        {
+            // Just save the location, nothing more
+            Program.Config.Destination = LocationTextBox.Text;
+            Program.SaveConfig();
+        }
+
         #endregion
 
         #region Other

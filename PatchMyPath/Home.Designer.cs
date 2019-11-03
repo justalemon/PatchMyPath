@@ -378,6 +378,7 @@ namespace PatchMyPath
             this.LocationSaveButton.TabIndex = 3;
             this.LocationSaveButton.Text = "Save";
             this.LocationSaveButton.UseVisualStyleBackColor = true;
+            this.LocationSaveButton.Click += new System.EventHandler(this.LocationSaveButton_Click);
             // 
             // LocationDetectButton
             // 
