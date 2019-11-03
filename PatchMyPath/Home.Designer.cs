@@ -52,6 +52,7 @@
             this.DestinationSelectButton = new System.Windows.Forms.Button();
             this.DestinationTextBox = new System.Windows.Forms.TextBox();
             this.FolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
+            this.TopMenuStrip = new System.Windows.Forms.MenuStrip();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.InstallsGroupBox.SuspendLayout();
@@ -68,10 +69,10 @@
             this.GeneralTabControl.Controls.Add(this.InstallsTabPage);
             this.GeneralTabControl.Controls.Add(this.DuplicatorTabPage);
             this.GeneralTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GeneralTabControl.Location = new System.Drawing.Point(0, 0);
+            this.GeneralTabControl.Location = new System.Drawing.Point(0, 24);
             this.GeneralTabControl.Name = "GeneralTabControl";
             this.GeneralTabControl.SelectedIndex = 0;
-            this.GeneralTabControl.Size = new System.Drawing.Size(334, 461);
+            this.GeneralTabControl.Size = new System.Drawing.Size(334, 437);
             this.GeneralTabControl.TabIndex = 0;
             // 
             // InstallsTabPage
@@ -84,7 +85,7 @@
             this.InstallsTabPage.Location = new System.Drawing.Point(4, 22);
             this.InstallsTabPage.Name = "InstallsTabPage";
             this.InstallsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.InstallsTabPage.Size = new System.Drawing.Size(326, 435);
+            this.InstallsTabPage.Size = new System.Drawing.Size(326, 411);
             this.InstallsTabPage.TabIndex = 0;
             this.InstallsTabPage.Text = "Install Manager";
             this.InstallsTabPage.UseVisualStyleBackColor = true;
@@ -92,7 +93,7 @@
             // RefreshButton
             // 
             this.RefreshButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.RefreshButton.Location = new System.Drawing.Point(89, 375);
+            this.RefreshButton.Location = new System.Drawing.Point(89, 351);
             this.RefreshButton.Name = "RefreshButton";
             this.RefreshButton.Size = new System.Drawing.Size(75, 23);
             this.RefreshButton.TabIndex = 4;
@@ -103,7 +104,7 @@
             // LaunchButton
             // 
             this.LaunchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.LaunchButton.Location = new System.Drawing.Point(8, 375);
+            this.LaunchButton.Location = new System.Drawing.Point(8, 351);
             this.LaunchButton.Name = "LaunchButton";
             this.LaunchButton.Size = new System.Drawing.Size(75, 23);
             this.LaunchButton.TabIndex = 3;
@@ -114,7 +115,7 @@
             // DeleteButton
             // 
             this.DeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DeleteButton.Location = new System.Drawing.Point(89, 404);
+            this.DeleteButton.Location = new System.Drawing.Point(89, 380);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(75, 23);
             this.DeleteButton.TabIndex = 2;
@@ -125,7 +126,7 @@
             // AddButton
             // 
             this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.AddButton.Location = new System.Drawing.Point(8, 404);
+            this.AddButton.Location = new System.Drawing.Point(8, 380);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(75, 23);
             this.AddButton.TabIndex = 1;
@@ -141,7 +142,7 @@
             this.InstallsGroupBox.Controls.Add(this.InstallsListBox);
             this.InstallsGroupBox.Location = new System.Drawing.Point(8, 6);
             this.InstallsGroupBox.Name = "InstallsGroupBox";
-            this.InstallsGroupBox.Size = new System.Drawing.Size(310, 363);
+            this.InstallsGroupBox.Size = new System.Drawing.Size(310, 339);
             this.InstallsGroupBox.TabIndex = 0;
             this.InstallsGroupBox.TabStop = false;
             this.InstallsGroupBox.Text = "Available Installs";
@@ -152,7 +153,7 @@
             this.InstallsListBox.FormattingEnabled = true;
             this.InstallsListBox.Location = new System.Drawing.Point(3, 16);
             this.InstallsListBox.Name = "InstallsListBox";
-            this.InstallsListBox.Size = new System.Drawing.Size(304, 344);
+            this.InstallsListBox.Size = new System.Drawing.Size(304, 320);
             this.InstallsListBox.TabIndex = 0;
             this.InstallsListBox.SelectedIndexChanged += new System.EventHandler(this.InstallsListBox_SelectedIndexChanged);
             // 
@@ -336,12 +337,22 @@
             this.DestinationTextBox.Size = new System.Drawing.Size(221, 20);
             this.DestinationTextBox.TabIndex = 0;
             // 
+            // TopMenuStrip
+            // 
+            this.TopMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.TopMenuStrip.Name = "TopMenuStrip";
+            this.TopMenuStrip.Size = new System.Drawing.Size(334, 24);
+            this.TopMenuStrip.TabIndex = 1;
+            this.TopMenuStrip.Text = "menuStrip1";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(334, 461);
             this.Controls.Add(this.GeneralTabControl);
+            this.Controls.Add(this.TopMenuStrip);
+            this.MainMenuStrip = this.TopMenuStrip;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PatchMyPath";
@@ -359,6 +370,7 @@
             this.DestinationGroupBox.ResumeLayout(false);
             this.DestinationGroupBox.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -388,6 +400,7 @@
         private System.Windows.Forms.GroupBox AutoAddGroupBox;
         private System.Windows.Forms.CheckBox AutoAddCheckBox;
         private System.Windows.Forms.Button RefreshButton;
+        private System.Windows.Forms.MenuStrip TopMenuStrip;
     }
 }
 
