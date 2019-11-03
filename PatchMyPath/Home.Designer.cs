@@ -30,7 +30,6 @@ namespace PatchMyPath
         {
             this.GeneralTabControl = new System.Windows.Forms.TabControl();
             this.InstallsTabPage = new System.Windows.Forms.TabPage();
-            this.InstallsGroupBox = new System.Windows.Forms.GroupBox();
             this.InstallsListBox = new System.Windows.Forms.ListBox();
             this.DuplicatorTabPage = new System.Windows.Forms.TabPage();
             this.AutoAddGroupBox = new System.Windows.Forms.GroupBox();
@@ -55,7 +54,6 @@ namespace PatchMyPath
             this.RefreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
-            this.InstallsGroupBox.SuspendLayout();
             this.DuplicatorTabPage.SuspendLayout();
             this.AutoAddGroupBox.SuspendLayout();
             this.LogGroupBox.SuspendLayout();
@@ -78,35 +76,22 @@ namespace PatchMyPath
             // 
             // InstallsTabPage
             // 
-            this.InstallsTabPage.Controls.Add(this.InstallsGroupBox);
+            this.InstallsTabPage.Controls.Add(this.InstallsListBox);
             this.InstallsTabPage.Location = new System.Drawing.Point(4, 22);
             this.InstallsTabPage.Name = "InstallsTabPage";
             this.InstallsTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.InstallsTabPage.Size = new System.Drawing.Size(326, 398);
             this.InstallsTabPage.TabIndex = 0;
-            this.InstallsTabPage.Text = "Install Manager";
+            this.InstallsTabPage.Text = "Game Installs";
             this.InstallsTabPage.UseVisualStyleBackColor = true;
-            // 
-            // InstallsGroupBox
-            // 
-            this.InstallsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.InstallsGroupBox.Controls.Add(this.InstallsListBox);
-            this.InstallsGroupBox.Location = new System.Drawing.Point(8, 6);
-            this.InstallsGroupBox.Name = "InstallsGroupBox";
-            this.InstallsGroupBox.Size = new System.Drawing.Size(310, 326);
-            this.InstallsGroupBox.TabIndex = 0;
-            this.InstallsGroupBox.TabStop = false;
-            this.InstallsGroupBox.Text = "Available Installs";
             // 
             // InstallsListBox
             // 
             this.InstallsListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InstallsListBox.FormattingEnabled = true;
-            this.InstallsListBox.Location = new System.Drawing.Point(3, 16);
+            this.InstallsListBox.Location = new System.Drawing.Point(3, 3);
             this.InstallsListBox.Name = "InstallsListBox";
-            this.InstallsListBox.Size = new System.Drawing.Size(304, 307);
+            this.InstallsListBox.Size = new System.Drawing.Size(320, 392);
             this.InstallsListBox.TabIndex = 0;
             this.InstallsListBox.SelectedIndexChanged += new System.EventHandler(this.InstallsListBox_SelectedIndexChanged);
             // 
@@ -356,7 +341,6 @@ namespace PatchMyPath
             this.Text = "PatchMyPath";
             this.GeneralTabControl.ResumeLayout(false);
             this.InstallsTabPage.ResumeLayout(false);
-            this.InstallsGroupBox.ResumeLayout(false);
             this.DuplicatorTabPage.ResumeLayout(false);
             this.AutoAddGroupBox.ResumeLayout(false);
             this.AutoAddGroupBox.PerformLayout();
@@ -379,7 +363,6 @@ namespace PatchMyPath
         private System.Windows.Forms.TabControl GeneralTabControl;
         private System.Windows.Forms.TabPage InstallsTabPage;
         private System.Windows.Forms.TabPage DuplicatorTabPage;
-        private System.Windows.Forms.GroupBox InstallsGroupBox;
         private System.Windows.Forms.ListBox InstallsListBox;
         private System.Windows.Forms.FolderBrowserDialog FolderBrowser;
         private System.Windows.Forms.GroupBox OriginGroupBox;
