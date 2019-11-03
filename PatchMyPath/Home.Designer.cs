@@ -74,10 +74,10 @@ namespace PatchMyPath
             this.GeneralTabControl.Controls.Add(this.InstallsTabPage);
             this.GeneralTabControl.Controls.Add(this.DuplicatorTabPage);
             this.GeneralTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GeneralTabControl.Location = new System.Drawing.Point(0, 33);
+            this.GeneralTabControl.Location = new System.Drawing.Point(0, 37);
             this.GeneralTabControl.Name = "GeneralTabControl";
             this.GeneralTabControl.SelectedIndex = 0;
-            this.GeneralTabControl.Size = new System.Drawing.Size(334, 428);
+            this.GeneralTabControl.Size = new System.Drawing.Size(334, 424);
             this.GeneralTabControl.TabIndex = 0;
             // 
             // InstallsTabPage
@@ -90,7 +90,7 @@ namespace PatchMyPath
             this.InstallsTabPage.Location = new System.Drawing.Point(4, 22);
             this.InstallsTabPage.Name = "InstallsTabPage";
             this.InstallsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.InstallsTabPage.Size = new System.Drawing.Size(326, 402);
+            this.InstallsTabPage.Size = new System.Drawing.Size(326, 398);
             this.InstallsTabPage.TabIndex = 0;
             this.InstallsTabPage.Text = "Install Manager";
             this.InstallsTabPage.UseVisualStyleBackColor = true;
@@ -98,7 +98,7 @@ namespace PatchMyPath
             // RefreshButton
             // 
             this.RefreshButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.RefreshButton.Location = new System.Drawing.Point(89, 342);
+            this.RefreshButton.Location = new System.Drawing.Point(89, 338);
             this.RefreshButton.Name = "RefreshButton";
             this.RefreshButton.Size = new System.Drawing.Size(75, 23);
             this.RefreshButton.TabIndex = 4;
@@ -109,7 +109,7 @@ namespace PatchMyPath
             // LaunchButton
             // 
             this.LaunchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.LaunchButton.Location = new System.Drawing.Point(8, 342);
+            this.LaunchButton.Location = new System.Drawing.Point(8, 338);
             this.LaunchButton.Name = "LaunchButton";
             this.LaunchButton.Size = new System.Drawing.Size(75, 23);
             this.LaunchButton.TabIndex = 3;
@@ -120,7 +120,7 @@ namespace PatchMyPath
             // DeleteButton
             // 
             this.DeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DeleteButton.Location = new System.Drawing.Point(89, 371);
+            this.DeleteButton.Location = new System.Drawing.Point(89, 367);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(75, 23);
             this.DeleteButton.TabIndex = 2;
@@ -131,7 +131,7 @@ namespace PatchMyPath
             // AddButton
             // 
             this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.AddButton.Location = new System.Drawing.Point(8, 371);
+            this.AddButton.Location = new System.Drawing.Point(8, 367);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(75, 23);
             this.AddButton.TabIndex = 1;
@@ -147,7 +147,7 @@ namespace PatchMyPath
             this.InstallsGroupBox.Controls.Add(this.InstallsListBox);
             this.InstallsGroupBox.Location = new System.Drawing.Point(8, 6);
             this.InstallsGroupBox.Name = "InstallsGroupBox";
-            this.InstallsGroupBox.Size = new System.Drawing.Size(310, 330);
+            this.InstallsGroupBox.Size = new System.Drawing.Size(310, 326);
             this.InstallsGroupBox.TabIndex = 0;
             this.InstallsGroupBox.TabStop = false;
             this.InstallsGroupBox.Text = "Available Installs";
@@ -158,7 +158,7 @@ namespace PatchMyPath
             this.InstallsListBox.FormattingEnabled = true;
             this.InstallsListBox.Location = new System.Drawing.Point(3, 16);
             this.InstallsListBox.Name = "InstallsListBox";
-            this.InstallsListBox.Size = new System.Drawing.Size(304, 311);
+            this.InstallsListBox.Size = new System.Drawing.Size(304, 307);
             this.InstallsListBox.TabIndex = 0;
             this.InstallsListBox.SelectedIndexChanged += new System.EventHandler(this.InstallsListBox_SelectedIndexChanged);
             // 
@@ -352,7 +352,7 @@ namespace PatchMyPath
             this.RefreshToolStripMenuItem});
             this.TopMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.TopMenuStrip.Name = "TopMenuStrip";
-            this.TopMenuStrip.Size = new System.Drawing.Size(334, 33);
+            this.TopMenuStrip.Size = new System.Drawing.Size(334, 37);
             this.TopMenuStrip.TabIndex = 1;
             // 
             // LaunchToolStripMenuItem
@@ -360,7 +360,8 @@ namespace PatchMyPath
             this.LaunchToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.LaunchToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.Start;
             this.LaunchToolStripMenuItem.Name = "LaunchToolStripMenuItem";
-            this.LaunchToolStripMenuItem.Size = new System.Drawing.Size(35, 27);
+            this.LaunchToolStripMenuItem.Padding = new System.Windows.Forms.Padding(2);
+            this.LaunchToolStripMenuItem.Size = new System.Drawing.Size(33, 33);
             this.LaunchToolStripMenuItem.Text = "Launch";
             // 
             // AddToolStripMenuItem
@@ -368,7 +369,8 @@ namespace PatchMyPath
             this.AddToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.AddToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.Add;
             this.AddToolStripMenuItem.Name = "AddToolStripMenuItem";
-            this.AddToolStripMenuItem.Size = new System.Drawing.Size(37, 29);
+            this.AddToolStripMenuItem.Padding = new System.Windows.Forms.Padding(2);
+            this.AddToolStripMenuItem.Size = new System.Drawing.Size(33, 33);
             this.AddToolStripMenuItem.Text = "Add";
             // 
             // RemoveToolStripMenuItem
@@ -376,7 +378,8 @@ namespace PatchMyPath
             this.RemoveToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.RemoveToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.Remove;
             this.RemoveToolStripMenuItem.Name = "RemoveToolStripMenuItem";
-            this.RemoveToolStripMenuItem.Size = new System.Drawing.Size(37, 29);
+            this.RemoveToolStripMenuItem.Padding = new System.Windows.Forms.Padding(2);
+            this.RemoveToolStripMenuItem.Size = new System.Drawing.Size(33, 33);
             this.RemoveToolStripMenuItem.Text = "Remove";
             // 
             // RefreshToolStripMenuItem
@@ -384,7 +387,8 @@ namespace PatchMyPath
             this.RefreshToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.RefreshToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.Refresh;
             this.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem";
-            this.RefreshToolStripMenuItem.Size = new System.Drawing.Size(37, 29);
+            this.RefreshToolStripMenuItem.Padding = new System.Windows.Forms.Padding(2);
+            this.RefreshToolStripMenuItem.Size = new System.Drawing.Size(33, 33);
             this.RefreshToolStripMenuItem.Text = "Refresh";
             // 
             // Home
