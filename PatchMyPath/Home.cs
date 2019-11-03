@@ -277,6 +277,22 @@ namespace PatchMyPath
 
         #endregion
 
+        #region Settings
+
+        private void LocationSelectButton_Click(object sender, EventArgs e)
+        {
+            // Show the folder browse dialog
+            DialogResult result = FolderBrowser.ShowDialog();
+
+            // If the user confirmed the folder selection, save it on the text field
+            if (result == DialogResult.OK)
+            {
+                LocationTextBox.Text = FolderBrowser.SelectedPath;
+            }
+        }
+
+        #endregion
+
         #region Other
 
         private void InstallsListBox_SelectedIndexChanged(object sender, EventArgs e)
