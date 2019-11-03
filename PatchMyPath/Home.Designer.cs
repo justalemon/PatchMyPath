@@ -52,6 +52,17 @@ namespace PatchMyPath
             this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RefreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SettingsTabPage = new System.Windows.Forms.TabPage();
+            this.LocationGroupBox = new System.Windows.Forms.GroupBox();
+            this.LocationSelectButton = new System.Windows.Forms.Button();
+            this.LocationTextBox = new System.Windows.Forms.TextBox();
+            this.LocationDetectButton = new System.Windows.Forms.Button();
+            this.LocationSaveButton = new System.Windows.Forms.Button();
+            this.SteamGroupBox = new System.Windows.Forms.GroupBox();
+            this.UseSteamCheckBox = new System.Windows.Forms.CheckBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SteamSaveButton = new System.Windows.Forms.Button();
+            this.AppIdLabel = new System.Windows.Forms.Label();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.DuplicatorTabPage.SuspendLayout();
@@ -61,12 +72,16 @@ namespace PatchMyPath
             this.OriginGroupBox.SuspendLayout();
             this.DestinationGroupBox.SuspendLayout();
             this.TopMenuStrip.SuspendLayout();
+            this.SettingsTabPage.SuspendLayout();
+            this.LocationGroupBox.SuspendLayout();
+            this.SteamGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // GeneralTabControl
             // 
             this.GeneralTabControl.Controls.Add(this.InstallsTabPage);
             this.GeneralTabControl.Controls.Add(this.DuplicatorTabPage);
+            this.GeneralTabControl.Controls.Add(this.SettingsTabPage);
             this.GeneralTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GeneralTabControl.Location = new System.Drawing.Point(0, 37);
             this.GeneralTabControl.Name = "GeneralTabControl";
@@ -328,6 +343,123 @@ namespace PatchMyPath
             this.RefreshToolStripMenuItem.Text = "Refresh";
             this.RefreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
             // 
+            // SettingsTabPage
+            // 
+            this.SettingsTabPage.Controls.Add(this.SteamGroupBox);
+            this.SettingsTabPage.Controls.Add(this.LocationGroupBox);
+            this.SettingsTabPage.Location = new System.Drawing.Point(4, 22);
+            this.SettingsTabPage.Name = "SettingsTabPage";
+            this.SettingsTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.SettingsTabPage.Size = new System.Drawing.Size(326, 398);
+            this.SettingsTabPage.TabIndex = 2;
+            this.SettingsTabPage.Text = "Settings";
+            this.SettingsTabPage.UseVisualStyleBackColor = true;
+            // 
+            // LocationGroupBox
+            // 
+            this.LocationGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LocationGroupBox.Controls.Add(this.LocationSaveButton);
+            this.LocationGroupBox.Controls.Add(this.LocationDetectButton);
+            this.LocationGroupBox.Controls.Add(this.LocationSelectButton);
+            this.LocationGroupBox.Controls.Add(this.LocationTextBox);
+            this.LocationGroupBox.Location = new System.Drawing.Point(6, 6);
+            this.LocationGroupBox.Name = "LocationGroupBox";
+            this.LocationGroupBox.Size = new System.Drawing.Size(314, 74);
+            this.LocationGroupBox.TabIndex = 1;
+            this.LocationGroupBox.TabStop = false;
+            this.LocationGroupBox.Text = "Game Location";
+            // 
+            // LocationSelectButton
+            // 
+            this.LocationSelectButton.Location = new System.Drawing.Point(6, 45);
+            this.LocationSelectButton.Name = "LocationSelectButton";
+            this.LocationSelectButton.Size = new System.Drawing.Size(75, 23);
+            this.LocationSelectButton.TabIndex = 1;
+            this.LocationSelectButton.Text = "Select";
+            this.LocationSelectButton.UseVisualStyleBackColor = true;
+            // 
+            // LocationTextBox
+            // 
+            this.LocationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LocationTextBox.Location = new System.Drawing.Point(6, 19);
+            this.LocationTextBox.Name = "LocationTextBox";
+            this.LocationTextBox.ReadOnly = true;
+            this.LocationTextBox.Size = new System.Drawing.Size(302, 20);
+            this.LocationTextBox.TabIndex = 0;
+            // 
+            // LocationDetectButton
+            // 
+            this.LocationDetectButton.Location = new System.Drawing.Point(87, 45);
+            this.LocationDetectButton.Name = "LocationDetectButton";
+            this.LocationDetectButton.Size = new System.Drawing.Size(75, 23);
+            this.LocationDetectButton.TabIndex = 2;
+            this.LocationDetectButton.Text = "Detect";
+            this.LocationDetectButton.UseVisualStyleBackColor = true;
+            // 
+            // LocationSaveButton
+            // 
+            this.LocationSaveButton.Location = new System.Drawing.Point(168, 45);
+            this.LocationSaveButton.Name = "LocationSaveButton";
+            this.LocationSaveButton.Size = new System.Drawing.Size(75, 23);
+            this.LocationSaveButton.TabIndex = 3;
+            this.LocationSaveButton.Text = "Save";
+            this.LocationSaveButton.UseVisualStyleBackColor = true;
+            // 
+            // SteamGroupBox
+            // 
+            this.SteamGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SteamGroupBox.Controls.Add(this.AppIdLabel);
+            this.SteamGroupBox.Controls.Add(this.SteamSaveButton);
+            this.SteamGroupBox.Controls.Add(this.textBox1);
+            this.SteamGroupBox.Controls.Add(this.UseSteamCheckBox);
+            this.SteamGroupBox.Location = new System.Drawing.Point(8, 86);
+            this.SteamGroupBox.Name = "SteamGroupBox";
+            this.SteamGroupBox.Size = new System.Drawing.Size(312, 74);
+            this.SteamGroupBox.TabIndex = 2;
+            this.SteamGroupBox.TabStop = false;
+            this.SteamGroupBox.Text = "Steam";
+            // 
+            // UseSteamCheckBox
+            // 
+            this.UseSteamCheckBox.AutoSize = true;
+            this.UseSteamCheckBox.Location = new System.Drawing.Point(6, 19);
+            this.UseSteamCheckBox.Name = "UseSteamCheckBox";
+            this.UseSteamCheckBox.Size = new System.Drawing.Size(306, 17);
+            this.UseSteamCheckBox.TabIndex = 0;
+            this.UseSteamCheckBox.Text = "Use Steam to launch the game (Disables Launcher Bypass)";
+            this.UseSteamCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(52, 42);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(173, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // SteamSaveButton
+            // 
+            this.SteamSaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SteamSaveButton.Location = new System.Drawing.Point(231, 40);
+            this.SteamSaveButton.Name = "SteamSaveButton";
+            this.SteamSaveButton.Size = new System.Drawing.Size(75, 23);
+            this.SteamSaveButton.TabIndex = 2;
+            this.SteamSaveButton.Text = "Save";
+            this.SteamSaveButton.UseVisualStyleBackColor = true;
+            // 
+            // AppIdLabel
+            // 
+            this.AppIdLabel.AutoSize = true;
+            this.AppIdLabel.Location = new System.Drawing.Point(6, 45);
+            this.AppIdLabel.Name = "AppIdLabel";
+            this.AppIdLabel.Size = new System.Drawing.Size(40, 13);
+            this.AppIdLabel.TabIndex = 3;
+            this.AppIdLabel.Text = "App ID";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,6 +485,11 @@ namespace PatchMyPath
             this.DestinationGroupBox.PerformLayout();
             this.TopMenuStrip.ResumeLayout(false);
             this.TopMenuStrip.PerformLayout();
+            this.SettingsTabPage.ResumeLayout(false);
+            this.LocationGroupBox.ResumeLayout(false);
+            this.LocationGroupBox.PerformLayout();
+            this.SteamGroupBox.ResumeLayout(false);
+            this.SteamGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -384,6 +521,17 @@ namespace PatchMyPath
         private System.Windows.Forms.ToolStripMenuItem RemoveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RefreshToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem LaunchToolStripMenuItem;
+        private System.Windows.Forms.TabPage SettingsTabPage;
+        private System.Windows.Forms.GroupBox LocationGroupBox;
+        private System.Windows.Forms.Button LocationSelectButton;
+        private System.Windows.Forms.TextBox LocationTextBox;
+        private System.Windows.Forms.Button LocationDetectButton;
+        private System.Windows.Forms.Button LocationSaveButton;
+        private System.Windows.Forms.GroupBox SteamGroupBox;
+        private System.Windows.Forms.CheckBox UseSteamCheckBox;
+        private System.Windows.Forms.Button SteamSaveButton;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label AppIdLabel;
     }
 }
 
