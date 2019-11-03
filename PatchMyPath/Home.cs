@@ -20,9 +20,9 @@ namespace PatchMyPath
         {
             set
             {
-                LaunchButton.Enabled = !value;
+                LaunchToolStripMenuItem.Enabled = !value;
 
-                DeleteButton.Enabled = !value;
+                RemoveToolStripMenuItem.Enabled = !value;
             }
         }
 
@@ -50,42 +50,7 @@ namespace PatchMyPath
             Locked = true;
         }
 
-        private void AddButton_Click(object sender, EventArgs e)
-        {
-            // Open the folder browser dialog
-            DialogResult result = FolderBrowser.ShowDialog();
-
-            // If the user didn't confirmed the directory selection, return
-            if (result != DialogResult.OK)
-            {
-                return;
-            }
-
-            // Then, create a new install object with this and add it into the text box
-            Install install = new Install(FolderBrowser.SelectedPath);
-            // Add the new install and save it
-            Program.Config.GameInstalls.Add(install);
-            Program.SaveConfig();
-            // And refresh the ListBox
-            RefreshInstalls();
-        }
-
-        private void DeleteButton_Click(object sender, EventArgs e)
-        {
-            // If there is no item selected, return
-            if (InstallsListBox.SelectedItem == null)
-            {
-                return;
-            }
-
-            // Then, delete the item and save the configuration
-            Program.Config.GameInstalls.Remove((Install)InstallsListBox.SelectedItem);
-            Program.SaveConfig();
-            // And update the listbox
-            RefreshInstalls();
-        }
-
-        private void LaunchButton_Click(object sender, EventArgs e)
+        private void LaunchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // If there is no item selected, return
             if (InstallsListBox.SelectedItem == null)
@@ -125,7 +90,42 @@ namespace PatchMyPath
             Program.Config.Start(install.Type);
         }
 
-        private void RefreshButton_Click(object sender, EventArgs e)
+        private void AddToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Open the folder browser dialog
+            DialogResult result = FolderBrowser.ShowDialog();
+
+            // If the user didn't confirmed the directory selection, return
+            if (result != DialogResult.OK)
+            {
+                return;
+            }
+
+            // Then, create a new install object with this and add it into the text box
+            Install install = new Install(FolderBrowser.SelectedPath);
+            // Add the new install and save it
+            Program.Config.GameInstalls.Add(install);
+            Program.SaveConfig();
+            // And refresh the ListBox
+            RefreshInstalls();
+        }
+
+        private void RemoveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // If there is no item selected, return
+            if (InstallsListBox.SelectedItem == null)
+            {
+                return;
+            }
+
+            // Then, delete the item and save the configuration
+            Program.Config.GameInstalls.Remove((Install)InstallsListBox.SelectedItem);
+            Program.SaveConfig();
+            // And update the listbox
+            RefreshInstalls();
+        }
+
+        private void RefreshToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Just refresh the list of installs
             RefreshInstalls();
