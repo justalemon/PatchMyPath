@@ -53,6 +53,7 @@ namespace PatchMyPath
             this.DestinationTextBox = new System.Windows.Forms.TextBox();
             this.FolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.TopMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.LaunchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RefreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -345,6 +346,7 @@ namespace PatchMyPath
             // 
             this.TopMenuStrip.ImageScalingSize = new System.Drawing.Size(25, 25);
             this.TopMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.LaunchToolStripMenuItem,
             this.AddToolStripMenuItem,
             this.RemoveToolStripMenuItem,
             this.RefreshToolStripMenuItem});
@@ -352,6 +354,14 @@ namespace PatchMyPath
             this.TopMenuStrip.Name = "TopMenuStrip";
             this.TopMenuStrip.Size = new System.Drawing.Size(334, 33);
             this.TopMenuStrip.TabIndex = 1;
+            // 
+            // LaunchToolStripMenuItem
+            // 
+            this.LaunchToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.LaunchToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.Start;
+            this.LaunchToolStripMenuItem.Name = "LaunchToolStripMenuItem";
+            this.LaunchToolStripMenuItem.Size = new System.Drawing.Size(35, 27);
+            this.LaunchToolStripMenuItem.Text = "Launch";
             // 
             // AddToolStripMenuItem
             // 
@@ -438,6 +448,7 @@ namespace PatchMyPath
         private System.Windows.Forms.ToolStripMenuItem AddToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RemoveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RefreshToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem LaunchToolStripMenuItem;
     }
 }
 
