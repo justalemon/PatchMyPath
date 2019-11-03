@@ -60,8 +60,6 @@ namespace PatchMyPath
 
             // Then, create a new install object with this and add it into the text box
             Install install = new Install(FolderBrowser.SelectedPath);
-            // Refresh the type of the install
-            install.UpdateType();
             // Add the new install and save it
             Program.Config.GameInstalls.Add(install);
             Program.SaveConfig();
@@ -126,17 +124,7 @@ namespace PatchMyPath
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            // If there is no install selected, return
-            if (InstallsListBox.SelectedItem == null)
-            {
-                return;
-            }
-
-            // Then, cast the install to the proper object
-            Install install = (Install)InstallsListBox.SelectedItem;
-            // Force an update of the install type
-            install.UpdateType();
-            // And refresh the list
+            // Just refresh the list of installs
             RefreshInstalls();
         }
 
