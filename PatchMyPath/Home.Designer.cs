@@ -106,9 +106,9 @@ namespace PatchMyPath
             this.DuplicatorTabPage.Location = new System.Drawing.Point(4, 22);
             this.DuplicatorTabPage.Name = "DuplicatorTabPage";
             this.DuplicatorTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.DuplicatorTabPage.Size = new System.Drawing.Size(326, 402);
+            this.DuplicatorTabPage.Size = new System.Drawing.Size(326, 398);
             this.DuplicatorTabPage.TabIndex = 1;
-            this.DuplicatorTabPage.Text = "Duplicator";
+            this.DuplicatorTabPage.Text = "Duplicator Tool";
             this.DuplicatorTabPage.UseVisualStyleBackColor = true;
             // 
             // AutoAddGroupBox
@@ -141,7 +141,7 @@ namespace PatchMyPath
             this.LogGroupBox.Controls.Add(this.LogTextBox);
             this.LogGroupBox.Location = new System.Drawing.Point(6, 263);
             this.LogGroupBox.Name = "LogGroupBox";
-            this.LogGroupBox.Size = new System.Drawing.Size(312, 128);
+            this.LogGroupBox.Size = new System.Drawing.Size(312, 124);
             this.LogGroupBox.TabIndex = 4;
             this.LogGroupBox.TabStop = false;
             this.LogGroupBox.Text = "Logging";
@@ -154,7 +154,7 @@ namespace PatchMyPath
             this.LogTextBox.Name = "LogTextBox";
             this.LogTextBox.ReadOnly = true;
             this.LogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LogTextBox.Size = new System.Drawing.Size(306, 109);
+            this.LogTextBox.Size = new System.Drawing.Size(306, 105);
             this.LogTextBox.TabIndex = 0;
             // 
             // LinkTypeGroupBox
@@ -199,7 +199,7 @@ namespace PatchMyPath
             // 
             this.DuplicateButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DuplicateButton.Location = new System.Drawing.Point(6, 397);
+            this.DuplicateButton.Location = new System.Drawing.Point(6, 393);
             this.DuplicateButton.Name = "DuplicateButton";
             this.DuplicateButton.Size = new System.Drawing.Size(314, 23);
             this.DuplicateButton.TabIndex = 2;
