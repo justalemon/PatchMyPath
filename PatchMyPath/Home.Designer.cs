@@ -53,6 +53,9 @@
             this.DestinationTextBox = new System.Windows.Forms.TextBox();
             this.FolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.TopMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RefreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.InstallsGroupBox.SuspendLayout();
@@ -62,6 +65,7 @@
             this.LinkTypeGroupBox.SuspendLayout();
             this.OriginGroupBox.SuspendLayout();
             this.DestinationGroupBox.SuspendLayout();
+            this.TopMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // GeneralTabControl
@@ -168,7 +172,7 @@
             this.DuplicatorTabPage.Location = new System.Drawing.Point(4, 22);
             this.DuplicatorTabPage.Name = "DuplicatorTabPage";
             this.DuplicatorTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.DuplicatorTabPage.Size = new System.Drawing.Size(326, 435);
+            this.DuplicatorTabPage.Size = new System.Drawing.Size(326, 411);
             this.DuplicatorTabPage.TabIndex = 1;
             this.DuplicatorTabPage.Text = "Duplicator";
             this.DuplicatorTabPage.UseVisualStyleBackColor = true;
@@ -339,11 +343,38 @@
             // 
             // TopMenuStrip
             // 
+            this.TopMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddToolStripMenuItem,
+            this.RemoveToolStripMenuItem,
+            this.RefreshToolStripMenuItem});
             this.TopMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.TopMenuStrip.Name = "TopMenuStrip";
             this.TopMenuStrip.Size = new System.Drawing.Size(334, 24);
             this.TopMenuStrip.TabIndex = 1;
-            this.TopMenuStrip.Text = "menuStrip1";
+            // 
+            // AddToolStripMenuItem
+            // 
+            this.AddToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.AddToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.Add;
+            this.AddToolStripMenuItem.Name = "AddToolStripMenuItem";
+            this.AddToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
+            this.AddToolStripMenuItem.Text = "Add";
+            // 
+            // RemoveToolStripMenuItem
+            // 
+            this.RemoveToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.RemoveToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.Remove;
+            this.RemoveToolStripMenuItem.Name = "RemoveToolStripMenuItem";
+            this.RemoveToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
+            this.RemoveToolStripMenuItem.Text = "Remove";
+            // 
+            // RefreshToolStripMenuItem
+            // 
+            this.RefreshToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.RefreshToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.Refresh;
+            this.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem";
+            this.RefreshToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
+            this.RefreshToolStripMenuItem.Text = "Refresh";
             // 
             // Home
             // 
@@ -369,6 +400,8 @@
             this.OriginGroupBox.PerformLayout();
             this.DestinationGroupBox.ResumeLayout(false);
             this.DestinationGroupBox.PerformLayout();
+            this.TopMenuStrip.ResumeLayout(false);
+            this.TopMenuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,6 +434,9 @@
         private System.Windows.Forms.CheckBox AutoAddCheckBox;
         private System.Windows.Forms.Button RefreshButton;
         private System.Windows.Forms.MenuStrip TopMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem AddToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RemoveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RefreshToolStripMenuItem;
     }
 }
 
