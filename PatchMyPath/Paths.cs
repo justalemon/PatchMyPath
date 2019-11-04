@@ -1,4 +1,4 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using System.IO;
 using System.Text;
 
@@ -10,35 +10,45 @@ namespace PatchMyPath
     public static class Paths
     {
         /// <summary>
+        /// Gets a string from a Registry Key.
+        /// </summary>
+        private static string GetStringFromRegistry(string subkey, string value, bool removeQuotes = false)
+        {
+            // Start by trying to open the game uninstall information
+            RegistryKey openedKey = Registry.LocalMachine.OpenSubKey(subkey);
+            // If we failed to open the key, return
+            if (openedKey == null)
+            {
+                return null;
+            }
+
+            // Then, try to get the value requested
+            object returnedValue = openedKey.GetValue(value);
+            // Also here, if null return
+            if (returnedValue == null)
+            {
+                return null;
+            }
+
+            // Create a string builder to do some manipulations
+            StringBuilder builder = new StringBuilder(returnedValue.ToString());
+
+            // If the user wants to remove the double quotes, do it
+            if (removeQuotes)
+            {
+                builder.Replace("\"", "");
+            }
+
+            // Finally, return the string that we got
+            return builder.ToString();
+        }
+
+        /// <summary>
         /// Gets the GTA V install location from the InstallShield Uninstall information.
         /// </summary>
         public static string GetUninstallPath()
         {
-            // Start by trying to open the game uninstall information
-            RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{5EFC6C07-6B87-43FC-9524-F9E967241741}");
-            // If we failed to open the key, return
-            if (key == null)
-            {
-                return null;
-            }
-
-            // Then, try to get the DisplayIcon value
-            // We do this because GTA5.exe is used as the icon
-            object icon = key.GetValue("DisplayIcon");
-            // Also here, if null return
-            if (icon == null)
-            {
-                return null;
-            }
-
-            // Create a string builder to remove invalid characters
-            StringBuilder builder = new StringBuilder(icon.ToString());
-            // Remove the first and last character (Double Quotes)
-            builder.Remove(0, 1);
-            builder.Remove(builder.Length - 1, 1);
-            // If the path is valid, return it
-
-            return Path.GetDirectoryName(builder.ToString());
+            return Path.GetDirectoryName(GetStringFromRegistry(@"SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{5EFC6C07-6B87-43FC-9524-F9E967241741}", "DisplayIcon", true));
         }
     }
 }
