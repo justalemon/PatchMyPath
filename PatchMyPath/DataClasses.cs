@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
-using System.Security.Cryptography.X509Certificates;
 
 namespace PatchMyPath
 {
@@ -99,27 +98,27 @@ namespace PatchMyPath
         /// If the game should be started from Steam instead of the executable.
         /// </summary>
         [JsonProperty("use_steam")]
-        public bool UseSteam { get; set; }
+        public bool UseSteam { get; set; } = false;
         /// <summary>
         /// The Steam AppID used to launch the game.
         /// </summary>
         [JsonProperty("appid")]
-        public uint AppID { get; set; }
+        public uint AppID { get; set; } = 271590;
         /// <summary>
         /// Checks the signature of the executable to make sure that is valid.
         /// </summary>
         [JsonProperty("check_sig")]
-        public bool CheckSignature { get; set; }
+        public bool CheckSignature { get; set; } = true;
         /// <summary>
         /// The destination folder for the game files.
         /// </summary>
-        [JsonProperty("destination")]
-        public string Destination { get; set; }
+        [JsonProperty("destination", NullValueHandling = NullValueHandling.Ignore)]
+        public string Destination { get; set; } = "";
         /// <summary>
         /// The game installs available to the user.
         /// </summary>
-        [JsonProperty("installs")]
-        public List<Install> GameInstalls { get; set; }
+        [JsonProperty("installs", NullValueHandling = NullValueHandling.Ignore)]
+        public List<Install> GameInstalls { get; set; } = new List<Install>();
 
         /// <summary>
         /// Starts the game from the Destination folder.
