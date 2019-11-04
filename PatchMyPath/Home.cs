@@ -307,6 +307,19 @@ namespace PatchMyPath
                 // And return
                 return;
             }
+
+            // If we got here, try with the legacy Rockstar Warehouse location
+            string warehouse = Paths.GetRockstarLauncherPath();
+            // If is not null
+            if (warehouse != null)
+            {
+                // Set the text
+                LocationTextBox.Text = warehouse;
+                // Notify the user
+                MessageBox.Show("Found the Vanilla Location on the Legacy Rockstar Warehouse Information!", "Install Location Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // And return
+                return;
+            }
         }
 
         private void LocationSaveButton_Click(object sender, EventArgs e)
