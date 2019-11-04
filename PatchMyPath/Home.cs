@@ -1,3 +1,4 @@
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -5,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -288,6 +290,22 @@ namespace PatchMyPath
             if (result == DialogResult.OK)
             {
                 LocationTextBox.Text = FolderBrowser.SelectedPath;
+            }
+        }
+
+        private void LocationDetectButton_Click(object sender, EventArgs e)
+        {
+            // Try to get the path from the Uninstall Information
+            string uninstall = Paths.GetUninstallPath();
+            // If is not null
+            if (uninstall != null)
+            {
+                // Set the text
+                LocationTextBox.Text = uninstall;
+                // Notify the user
+                MessageBox.Show("Found the Install Location on the RGL Uninstall Information!", "Install Location Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // And return
+                return;
             }
         }
 

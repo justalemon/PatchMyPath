@@ -388,6 +388,7 @@ namespace PatchMyPath
             this.LocationDetectButton.TabIndex = 2;
             this.LocationDetectButton.Text = "Detect";
             this.LocationDetectButton.UseVisualStyleBackColor = true;
+            this.LocationDetectButton.Click += new System.EventHandler(this.LocationDetectButton_Click);
             // 
             // LocationSelectButton
             // 
