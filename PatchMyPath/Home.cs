@@ -303,7 +303,7 @@ namespace PatchMyPath
                 // Set the text
                 LocationTextBox.Text = uninstall;
                 // Notify the user
-                MessageBox.Show("Found the Install Location on the RGL Uninstall Information!", "Install Location Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Found the Vanilla Location on the Uninstall Information!", "Install Location Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // And return
                 return;
             }
