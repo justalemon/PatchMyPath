@@ -34,8 +34,6 @@ namespace PatchMyPath
             this.DuplicatorTabPage = new System.Windows.Forms.TabPage();
             this.AutoAddGroupBox = new System.Windows.Forms.GroupBox();
             this.AutoAddCheckBox = new System.Windows.Forms.CheckBox();
-            this.LogGroupBox = new System.Windows.Forms.GroupBox();
-            this.LogTextBox = new System.Windows.Forms.TextBox();
             this.LinkTypeGroupBox = new System.Windows.Forms.GroupBox();
             this.HardRadioButton = new System.Windows.Forms.RadioButton();
             this.SymbolicRadioButton = new System.Windows.Forms.RadioButton();
@@ -63,11 +61,12 @@ namespace PatchMyPath
             this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RefreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LoggingTabPage = new System.Windows.Forms.TabPage();
+            this.LogTextBox = new System.Windows.Forms.TextBox();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.DuplicatorTabPage.SuspendLayout();
             this.AutoAddGroupBox.SuspendLayout();
-            this.LogGroupBox.SuspendLayout();
             this.LinkTypeGroupBox.SuspendLayout();
             this.OriginGroupBox.SuspendLayout();
             this.DestinationGroupBox.SuspendLayout();
@@ -75,6 +74,7 @@ namespace PatchMyPath
             this.SteamGroupBox.SuspendLayout();
             this.LocationGroupBox.SuspendLayout();
             this.TopMenuStrip.SuspendLayout();
+            this.LoggingTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // GeneralTabControl
@@ -82,6 +82,7 @@ namespace PatchMyPath
             this.GeneralTabControl.Controls.Add(this.InstallsTabPage);
             this.GeneralTabControl.Controls.Add(this.DuplicatorTabPage);
             this.GeneralTabControl.Controls.Add(this.SettingsTabPage);
+            this.GeneralTabControl.Controls.Add(this.LoggingTabPage);
             this.GeneralTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GeneralTabControl.Location = new System.Drawing.Point(0, 37);
             this.GeneralTabControl.Name = "GeneralTabControl";
@@ -113,7 +114,6 @@ namespace PatchMyPath
             // DuplicatorTabPage
             // 
             this.DuplicatorTabPage.Controls.Add(this.AutoAddGroupBox);
-            this.DuplicatorTabPage.Controls.Add(this.LogGroupBox);
             this.DuplicatorTabPage.Controls.Add(this.LinkTypeGroupBox);
             this.DuplicatorTabPage.Controls.Add(this.DuplicateButton);
             this.DuplicatorTabPage.Controls.Add(this.OriginGroupBox);
@@ -147,30 +147,6 @@ namespace PatchMyPath
             this.AutoAddCheckBox.TabIndex = 0;
             this.AutoAddCheckBox.Text = "Add install to PatchMyPath after completing the process";
             this.AutoAddCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // LogGroupBox
-            // 
-            this.LogGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LogGroupBox.Controls.Add(this.LogTextBox);
-            this.LogGroupBox.Location = new System.Drawing.Point(6, 263);
-            this.LogGroupBox.Name = "LogGroupBox";
-            this.LogGroupBox.Size = new System.Drawing.Size(312, 124);
-            this.LogGroupBox.TabIndex = 4;
-            this.LogGroupBox.TabStop = false;
-            this.LogGroupBox.Text = "Logging";
-            // 
-            // LogTextBox
-            // 
-            this.LogTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LogTextBox.Location = new System.Drawing.Point(3, 16);
-            this.LogTextBox.Multiline = true;
-            this.LogTextBox.Name = "LogTextBox";
-            this.LogTextBox.ReadOnly = true;
-            this.LogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LogTextBox.Size = new System.Drawing.Size(306, 105);
-            this.LogTextBox.TabIndex = 0;
             // 
             // LinkTypeGroupBox
             // 
@@ -214,7 +190,7 @@ namespace PatchMyPath
             // 
             this.DuplicateButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DuplicateButton.Location = new System.Drawing.Point(6, 393);
+            this.DuplicateButton.Location = new System.Drawing.Point(6, 367);
             this.DuplicateButton.Name = "DuplicateButton";
             this.DuplicateButton.Size = new System.Drawing.Size(314, 23);
             this.DuplicateButton.TabIndex = 2;
@@ -462,6 +438,28 @@ namespace PatchMyPath
             this.RefreshToolStripMenuItem.Text = "Refresh";
             this.RefreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
             // 
+            // LoggingTabPage
+            // 
+            this.LoggingTabPage.Controls.Add(this.LogTextBox);
+            this.LoggingTabPage.Location = new System.Drawing.Point(4, 22);
+            this.LoggingTabPage.Name = "LoggingTabPage";
+            this.LoggingTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.LoggingTabPage.Size = new System.Drawing.Size(326, 398);
+            this.LoggingTabPage.TabIndex = 3;
+            this.LoggingTabPage.Text = "Logging";
+            this.LoggingTabPage.UseVisualStyleBackColor = true;
+            // 
+            // LogTextBox
+            // 
+            this.LogTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LogTextBox.Location = new System.Drawing.Point(3, 3);
+            this.LogTextBox.Multiline = true;
+            this.LogTextBox.Name = "LogTextBox";
+            this.LogTextBox.ReadOnly = true;
+            this.LogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.LogTextBox.Size = new System.Drawing.Size(320, 392);
+            this.LogTextBox.TabIndex = 0;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -478,8 +476,6 @@ namespace PatchMyPath
             this.DuplicatorTabPage.ResumeLayout(false);
             this.AutoAddGroupBox.ResumeLayout(false);
             this.AutoAddGroupBox.PerformLayout();
-            this.LogGroupBox.ResumeLayout(false);
-            this.LogGroupBox.PerformLayout();
             this.LinkTypeGroupBox.ResumeLayout(false);
             this.OriginGroupBox.ResumeLayout(false);
             this.OriginGroupBox.PerformLayout();
@@ -492,6 +488,8 @@ namespace PatchMyPath
             this.LocationGroupBox.PerformLayout();
             this.TopMenuStrip.ResumeLayout(false);
             this.TopMenuStrip.PerformLayout();
+            this.LoggingTabPage.ResumeLayout(false);
+            this.LoggingTabPage.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -514,8 +512,6 @@ namespace PatchMyPath
         private System.Windows.Forms.RadioButton HardRadioButton;
         private System.Windows.Forms.RadioButton SymbolicRadioButton;
         private System.Windows.Forms.Button DuplicateButton;
-        private System.Windows.Forms.GroupBox LogGroupBox;
-        private System.Windows.Forms.TextBox LogTextBox;
         private System.Windows.Forms.GroupBox AutoAddGroupBox;
         private System.Windows.Forms.CheckBox AutoAddCheckBox;
         private System.Windows.Forms.MenuStrip TopMenuStrip;
@@ -534,6 +530,8 @@ namespace PatchMyPath
         private System.Windows.Forms.Button SteamSaveButton;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label AppIdLabel;
+        private System.Windows.Forms.TabPage LoggingTabPage;
+        private System.Windows.Forms.TextBox LogTextBox;
     }
 }
 
