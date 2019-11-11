@@ -205,11 +205,34 @@ namespace PatchMyPath
                 return;
             }
 
+            // If the origin or destination text box is empty or white spaces, notify the user and return
+            if (string.IsNullOrWhiteSpace(OriginTextBox.Text) || string.IsNullOrWhiteSpace(DestinationTextBox.Text))
+            {
+                MessageBox.Show("Looks like one of the folders has not been selected.\nPlease check that there is an Origin and Destination folder selected and try again.", "Directory not Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             // If the origin folder does not exists, notify the user and return
             if (!Directory.Exists(OriginTextBox.Text))
             {
                 MessageBox.Show($"The Origin folder does not exists!\nPlease ensure that the selected folder is present and try again.", "Origin Folder is Missing", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+
+            // Cast the selected game
+            GameType game = (GameType)GameComboBox.SelectedIndex;
+            // And select the correct list of files
+            Dictionary<string, EntryType> entries;
+            switch (game)
+            {
+                case GameType.GrandTheftAutoV:
+                    entries = Files.GTAV;
+                    break;
+                case GameType.RedDeadRedemption2:
+                    entries = Files.RDR2;
+                    break;
+                default:
+                    return;
             }
 
             // If the destination folder exists and is not empty
@@ -226,7 +249,7 @@ namespace PatchMyPath
                 }
 
                 // Enumerate the files and folders
-                foreach (KeyValuePair<string, EntryType> entry in Files.GTAV)
+                foreach (KeyValuePair<string, EntryType> entry in entries)
                 {
                     // Combine them into a path
                     string path = Path.Combine(DestinationTextBox.Text, entry.Key);
@@ -253,7 +276,7 @@ namespace PatchMyPath
             }
 
             // Iterate over the dictionary of game files and folders
-            foreach (KeyValuePair<string, EntryType> entry in Files.GTAV)
+            foreach (KeyValuePair<string, EntryType> entry in entries)
             {
                 // Format the origin and destination
                 string origin = Path.Combine(OriginTextBox.Text, entry.Key);
