@@ -7,7 +7,7 @@ namespace PatchMyPath.Config
     /// <summary>
     /// The type of game installation.
     /// </summary>
-    public enum InstallType
+    public enum Launch
     {
         /// <summary>
         /// This installation is invalid and can't be used.
@@ -16,24 +16,20 @@ namespace PatchMyPath.Config
         /// <summary>
         /// Launch the game from GTAVLauncher.exe.
         /// </summary>
-        NormalGTAV = 0,
-        /// <summary>
-        /// Launch the game from GTAVLauncher.exe.
-        /// </summary>
-        NormalRDR2 = 1,
+        Normal = 0,
         /// <summary>
         /// Launch the game from GTA5.exe if GTAVLauncherBypass.asi exists.
         /// </summary>
-        LauncherBypass = 2,
+        LauncherBypass = 1,
         /// <summary>
         /// Launch the game from RAGEPluginHook.exe if present.
         /// </summary>
-        RagePluginHook = 3,
+        RagePluginHook = 2,
     }
     /// <summary>
     /// The type of game that this install contains.
     /// </summary>
-    public enum GameType
+    public enum Game
     {
         /// <summary>
         /// None of the game executables are present.
@@ -61,56 +57,51 @@ namespace PatchMyPath.Config
         /// <summary>
         /// The game that this install contains.
         /// </summary>
-        public GameType Game
+        public Game Game
         {
             get
             {
                 // If the respective game executables is present
                 if (File.Exists(Path.Combine(GamePath, "RDR2.exe")))
                 {
-                    return GameType.RedDeadRedemption2;
+                    return Game.RedDeadRedemption2;
                 }
                 else if (File.Exists(Path.Combine(GamePath, "GTA5.exe")))
                 {
-                    return GameType.GrandTheftAutoV;
+                    return Game.GrandTheftAutoV;
                 }
                 else
                 {
-                    return GameType.Invalid;
+                    return Game.Invalid;
                 }
             }
         }
         /// <summary>
         /// The type of game installation.
         /// </summary>
-        public InstallType Type
+        public Launch Type
         {
             get
             {
                 // If there is a RagePluginHook.exe on the folder, this is RPH
                 if (File.Exists(Path.Combine(GamePath, "RAGEPluginHook.exe")))
                 {
-                    return InstallType.RagePluginHook;
+                    return Launch.RagePluginHook;
                 }
                 // If there is a GTA5.exe and GTAVLauncherBypass.asi but is not from Steam, let the user start via Unknown's Magic Tool
                 else if (File.Exists(Path.Combine(GamePath, "GTA5.exe")) && File.Exists(Path.Combine(GamePath, "GTAVLauncherBypass.asi")) && !Program.Config.UseSteam)
                 {
-                    return InstallType.LauncherBypass;
+                    return Launch.LauncherBypass;
                 }
-                // If we got here, there is no alternative way to launch the game other than 
-                else if (File.Exists(Path.Combine(GamePath, "GTAVLauncher.exe")))
+                // If we got here, there is no alternative way to launch the game other than the main executabke
+                else if (File.Exists(Path.Combine(GamePath, "GTAVLauncher.exe")) || File.Exists(Path.Combine(GamePath, "RDR2.exe")))
                 {
-                    return InstallType.NormalGTAV;
-                }
-                // If there is no GTAVLauncher.exe, look for a RDR2.exe
-                else if (File.Exists(Path.Combine(GamePath, "RDR2.exe")))
-                {
-                    return InstallType.NormalRDR2;
+                    return Launch.Normal;
                 }
                 // Also, if there is no executable just mark the install as invalid
                 else
                 {
-                    return InstallType.Invalid;
+                    return Launch.Invalid;
                 }
             }
         }
@@ -127,7 +118,7 @@ namespace PatchMyPath.Config
 
         public override string ToString()
         {
-            return $"{GamePath} ({Game.ToString().SpaceOnUpperCase()})";
+            return $"{GamePath} [{Game.ToString().SpaceOnUpperCase()}] [{Type}]";
         }
     }
 }

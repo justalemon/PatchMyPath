@@ -47,10 +47,10 @@ namespace PatchMyPath
             LoadSettings();
 
             // Iterate over the games supported
-            foreach (string value in Enum.GetNames(typeof(GameType)))
+            foreach (string value in Enum.GetNames(typeof(Game)))
             {
                 // If the name is not invalid
-                if (value != GameType.Invalid.ToString())
+                if (value != Game.Invalid.ToString())
                 {
                     // Add the item into the combo box
                     GameComboBox.Items.Add(value.SpaceOnUpperCase());
@@ -99,7 +99,7 @@ namespace PatchMyPath
             Install install = (Install)InstallsListBox.SelectedItem;
 
             // If the install is invalid, notify the user and return
-            if (install.Type == InstallType.Invalid)
+            if (install.Type == Launch.Invalid)
             {
                 MessageBox.Show("We did some preliminary checks and we found that this install is invalid. Please make sure that all of the game files are present and the executables have not been modified and try again.", "Invalid Install", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -124,7 +124,7 @@ namespace PatchMyPath
             }
 
             // Finally, launch the game
-            Program.Config.Start(install.Type);
+            Program.Config.Start(install);
         }
 
         private void AddToolStripMenuItem_Click(object sender, EventArgs e)
@@ -220,15 +220,15 @@ namespace PatchMyPath
             }
 
             // Cast the selected game
-            GameType game = (GameType)GameComboBox.SelectedIndex;
+            Game game = (Game)GameComboBox.SelectedIndex;
             // And select the correct list of files
             Dictionary<string, EntryType> entries;
             switch (game)
             {
-                case GameType.GrandTheftAutoV:
+                case Game.GrandTheftAutoV:
                     entries = Files.GTAV;
                     break;
-                case GameType.RedDeadRedemption2:
+                case Game.RedDeadRedemption2:
                     entries = Files.RDR2;
                     break;
                 default:

@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Windows.Forms;
 
 namespace PatchMyPath.Config
 {
@@ -35,41 +35,55 @@ namespace PatchMyPath.Config
         /// <summary>
         /// Starts the game from the Destination folder.
         /// </summary>
-        public bool Start(InstallType type)
+        public void Start(Install install)
         {
-            // At this point launch the game
-            if (type == InstallType.RagePluginHook)
+            // Get the game and install type
+            Game game = install.Game;
+            Launch type = install.Type;
+
+            // If the game is RDR2, we can only launch the game directly from the exe
+            if (game == Game.RedDeadRedemption2)
             {
-                using (Process rph = new Process())
+                Process.Start(Path.Combine(Destination, "RDR2.exe"));
+            }
+            // GTA V on the other hand, has a lot
+            else if (game == Game.GrandTheftAutoV)
+            {
+                // If the launch type is set to RPH, launch RPH
+                if (type == Launch.RagePluginHook)
                 {
-                    rph.StartInfo.FileName = Path.Combine(Destination, "RAGEPluginHook.exe");
-                    rph.StartInfo.WorkingDirectory = Destination;
-                    rph.Start();
+                    using (Process rph = new Process())
+                    {
+                        rph.StartInfo.FileName = Path.Combine(Destination, "RAGEPluginHook.exe");
+                        rph.StartInfo.WorkingDirectory = Destination;
+                        rph.Start();
+                    }
+                }
+                // If Unknown's Launcher Bypass is enabled and we don't need to use Steam
+                else if (type == Launch.LauncherBypass && !UseSteam)
+                {
+                    Process.Start(Path.Combine(Destination, "GTA5.exe"));
+                }
+                // Otherwise, launch the game as normal
+                else if (type == Launch.Normal || (type == Launch.LauncherBypass && UseSteam))
+                {
+                    // If Steam is enabled, use the specified App ID
+                    if (UseSteam)
+                    {
+                        Process.Start($"steam://rungameid/{AppID}");
+                    }
+                    // If not, use the Launcher file
+                    else
+                    {
+                        Process.Start(Path.Combine(Destination, "GTAVLauncher.exe"));
+                    }
                 }
             }
-            else if (type == InstallType.LauncherBypass && !UseSteam)
-            {
-                Process.Start(Path.Combine(Destination, "GTA5.exe"));
-            }
-            else if (type == InstallType.NormalGTAV || (type == InstallType.LauncherBypass && UseSteam))
-            {
-                if (UseSteam)
-                {
-                    Process.Start($"steam://rungameid/{AppID}");
-                }
-                else
-                {
-                    Process.Start(Path.Combine(Destination, "GTAVLauncher.exe"));
-                }
-            }
+            // If we managed to get here, either the game or options are invalid
             else
             {
-                Console.WriteLine("Invalid game type, please check your configuration and try again.");
-                return false;
+                MessageBox.Show("We were unable to start the game.\nPlease check that the selected install is valid and try again.", "Invalid Install", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            // If we got here, success!
-            return true;
         }
     }
 }
