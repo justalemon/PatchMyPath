@@ -72,6 +72,7 @@ namespace PatchMyPath
         /// </summary>
         public static readonly Dictionary<string, EntryType> RDR2 = new Dictionary<string, EntryType>()
         {
+            { "12on7", EntryType.FolderRequired },
             { "Redistributables", EntryType.FolderOptional },
             { "x64", EntryType.FolderRequired },
 
