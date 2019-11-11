@@ -57,6 +57,7 @@
     <Compile Include="Config\Configuration.cs" />
     <Compile Include="Config\Install.cs" />
     <Compile Include="Converters.cs" />
+    <Compile Include="Files.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>

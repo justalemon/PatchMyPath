@@ -208,7 +208,7 @@ namespace PatchMyPath
                 }
 
                 // Enumerate the files and folders
-                foreach (KeyValuePair<string, EntryType> entry in Program.FilesFolders)
+                foreach (KeyValuePair<string, EntryType> entry in Files.GTAV)
                 {
                     // Combine them into a path
                     string path = Path.Combine(DestinationTextBox.Text, entry.Key);
@@ -235,7 +235,7 @@ namespace PatchMyPath
             }
 
             // Iterate over the dictionary of game files and folders
-            foreach (KeyValuePair<string, EntryType> entry in Program.FilesFolders)
+            foreach (KeyValuePair<string, EntryType> entry in Files.GTAV)
             {
                 // Format the origin and destination
                 string origin = Path.Combine(OriginTextBox.Text, entry.Key);
