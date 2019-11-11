@@ -64,7 +64,7 @@ namespace PatchMyPath
         /// <returns>true if the files are present and the signatures are valid, false otherwise.</returns>
         public static bool AreExecutablesSignedByRockstar(Install install)
         {
-            return IsFileSignedByRockstar(Path.Combine(install.GamePath, "GTAVLauncher.exe")) && IsFileSignedByRockstar(Path.Combine(install.GamePath, "GTA5.exe"));
+            return (IsFileSignedByRockstar(Path.Combine(install.GamePath, "GTAVLauncher.exe")) && IsFileSignedByRockstar(Path.Combine(install.GamePath, "GTA5.exe"))) || IsFileSignedByRockstar(Path.Combine(install.GamePath, "RDR2.exe"));
         }
     }
 }

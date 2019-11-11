@@ -13,13 +13,13 @@ namespace PatchMyPath.Config
         /// </summary>
         Invalid = -1,
         /// <summary>
-        /// Detect the type of executable to launch.
+        /// Launch the game from GTAVLauncher.exe.
         /// </summary>
-        AutoDetect = 0,
+        NormalGTAV = 0,
         /// <summary>
-        /// Launch the game from GTAVLauncher.exe
+        /// Launch the game from GTAVLauncher.exe.
         /// </summary>
-        Normal = 1,
+        NormalRDR2 = 1,
         /// <summary>
         /// Launch the game from GTA5.exe if GTAVLauncherBypass.asi exists.
         /// </summary>
@@ -59,7 +59,12 @@ namespace PatchMyPath.Config
                 // If we got here, there is no alternative way to launch the game other than 
                 else if (File.Exists(Path.Combine(GamePath, "GTAVLauncher.exe")))
                 {
-                    return InstallType.Normal;
+                    return InstallType.NormalGTAV;
+                }
+                // If there is no GTAVLauncher.exe, look for a RDR2.exe
+                else if (File.Exists(Path.Combine(GamePath, "RDR2.exe")))
+                {
+                    return InstallType.NormalRDR2;
                 }
                 // Also, if there is no executable just mark the install as invalid
                 else

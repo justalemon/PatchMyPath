@@ -51,7 +51,7 @@ namespace PatchMyPath.Config
             {
                 Process.Start(Path.Combine(Destination, "GTA5.exe"));
             }
-            else if (type == InstallType.Normal || (type == InstallType.LauncherBypass && UseSteam))
+            else if (type == InstallType.NormalGTAV || (type == InstallType.LauncherBypass && UseSteam))
             {
                 if (UseSteam)
                 {
