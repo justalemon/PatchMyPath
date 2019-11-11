@@ -56,15 +56,5 @@ namespace PatchMyPath
             // Then finally, check if the file is signed by Rockstar Games
             return certificate.GetCertHashString() == "AA0D31A9C8C1EBD9E18EC1D8D3F98B3523178AD8";
         }
-
-        /// <summary>
-        /// Checks that the game executables are signed by Rockstar Games to prevent piracy.
-        /// </summary>
-        /// <param name="install">The game install.</param>
-        /// <returns>true if the files are present and the signatures are valid, false otherwise.</returns>
-        public static bool AreExecutablesSignedByRockstar(Install install)
-        {
-            return (IsFileSignedByRockstar(Path.Combine(install.GamePath, "GTAVLauncher.exe")) && IsFileSignedByRockstar(Path.Combine(install.GamePath, "GTA5.exe"))) || IsFileSignedByRockstar(Path.Combine(install.GamePath, "RDR2.exe"));
-        }
     }
 }
