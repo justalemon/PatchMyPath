@@ -90,7 +90,7 @@ namespace PatchMyPath
             this.GeneralTabControl.Location = new System.Drawing.Point(0, 37);
             this.GeneralTabControl.Name = "GeneralTabControl";
             this.GeneralTabControl.SelectedIndex = 0;
-            this.GeneralTabControl.Size = new System.Drawing.Size(334, 424);
+            this.GeneralTabControl.Size = new System.Drawing.Size(484, 374);
             this.GeneralTabControl.TabIndex = 0;
             // 
             // InstallsTabPage
@@ -99,7 +99,7 @@ namespace PatchMyPath
             this.InstallsTabPage.Location = new System.Drawing.Point(4, 22);
             this.InstallsTabPage.Name = "InstallsTabPage";
             this.InstallsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.InstallsTabPage.Size = new System.Drawing.Size(326, 398);
+            this.InstallsTabPage.Size = new System.Drawing.Size(476, 348);
             this.InstallsTabPage.TabIndex = 0;
             this.InstallsTabPage.Text = "Game Installs";
             this.InstallsTabPage.UseVisualStyleBackColor = true;
@@ -110,7 +110,7 @@ namespace PatchMyPath
             this.InstallsListBox.FormattingEnabled = true;
             this.InstallsListBox.Location = new System.Drawing.Point(3, 3);
             this.InstallsListBox.Name = "InstallsListBox";
-            this.InstallsListBox.Size = new System.Drawing.Size(320, 392);
+            this.InstallsListBox.Size = new System.Drawing.Size(470, 342);
             this.InstallsListBox.TabIndex = 0;
             this.InstallsListBox.SelectedIndexChanged += new System.EventHandler(this.InstallsListBox_SelectedIndexChanged);
             // 
@@ -125,7 +125,7 @@ namespace PatchMyPath
             this.DuplicatorTabPage.Location = new System.Drawing.Point(4, 22);
             this.DuplicatorTabPage.Name = "DuplicatorTabPage";
             this.DuplicatorTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.DuplicatorTabPage.Size = new System.Drawing.Size(326, 398);
+            this.DuplicatorTabPage.Size = new System.Drawing.Size(476, 348);
             this.DuplicatorTabPage.TabIndex = 1;
             this.DuplicatorTabPage.Text = "Duplicator Tool";
             this.DuplicatorTabPage.UseVisualStyleBackColor = true;
@@ -137,7 +137,7 @@ namespace PatchMyPath
             this.GameGroupBox.Controls.Add(this.GameComboBox);
             this.GameGroupBox.Location = new System.Drawing.Point(8, 6);
             this.GameGroupBox.Name = "GameGroupBox";
-            this.GameGroupBox.Size = new System.Drawing.Size(312, 52);
+            this.GameGroupBox.Size = new System.Drawing.Size(462, 52);
             this.GameGroupBox.TabIndex = 7;
             this.GameGroupBox.TabStop = false;
             this.GameGroupBox.Text = "Game";
@@ -150,7 +150,7 @@ namespace PatchMyPath
             this.GameComboBox.FormattingEnabled = true;
             this.GameComboBox.Location = new System.Drawing.Point(6, 19);
             this.GameComboBox.Name = "GameComboBox";
-            this.GameComboBox.Size = new System.Drawing.Size(300, 21);
+            this.GameComboBox.Size = new System.Drawing.Size(450, 21);
             this.GameComboBox.TabIndex = 0;
             // 
             // AutoAddGroupBox
@@ -158,9 +158,9 @@ namespace PatchMyPath
             this.AutoAddGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AutoAddGroupBox.Controls.Add(this.AutoAddCheckBox);
-            this.AutoAddGroupBox.Location = new System.Drawing.Point(6, 273);
+            this.AutoAddGroupBox.Location = new System.Drawing.Point(6, 237);
             this.AutoAddGroupBox.Name = "AutoAddGroupBox";
-            this.AutoAddGroupBox.Size = new System.Drawing.Size(314, 42);
+            this.AutoAddGroupBox.Size = new System.Drawing.Size(464, 42);
             this.AutoAddGroupBox.TabIndex = 6;
             this.AutoAddGroupBox.TabStop = false;
             this.AutoAddGroupBox.Text = "Add to the Manager";
@@ -183,7 +183,7 @@ namespace PatchMyPath
             this.LinkTypeGroupBox.Controls.Add(this.SymbolicRadioButton);
             this.LinkTypeGroupBox.Location = new System.Drawing.Point(6, 166);
             this.LinkTypeGroupBox.Name = "LinkTypeGroupBox";
-            this.LinkTypeGroupBox.Size = new System.Drawing.Size(314, 101);
+            this.LinkTypeGroupBox.Size = new System.Drawing.Size(464, 65);
             this.LinkTypeGroupBox.TabIndex = 5;
             this.LinkTypeGroupBox.TabStop = false;
             this.LinkTypeGroupBox.Text = "Link Type";
@@ -192,10 +192,11 @@ namespace PatchMyPath
             // 
             this.HardRadioButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.HardRadioButton.AutoSize = true;
             this.HardRadioButton.Checked = true;
             this.HardRadioButton.Location = new System.Drawing.Point(6, 19);
             this.HardRadioButton.Name = "HardRadioButton";
-            this.HardRadioButton.Size = new System.Drawing.Size(302, 34);
+            this.HardRadioButton.Size = new System.Drawing.Size(350, 17);
             this.HardRadioButton.TabIndex = 1;
             this.HardRadioButton.TabStop = true;
             this.HardRadioButton.Text = "Hard Link for Files and Symbolic Links for Folders (All Game Versions)";
@@ -205,9 +206,10 @@ namespace PatchMyPath
             // 
             this.SymbolicRadioButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.SymbolicRadioButton.Location = new System.Drawing.Point(6, 59);
+            this.SymbolicRadioButton.AutoSize = true;
+            this.SymbolicRadioButton.Location = new System.Drawing.Point(6, 42);
             this.SymbolicRadioButton.Name = "SymbolicRadioButton";
-            this.SymbolicRadioButton.Size = new System.Drawing.Size(302, 34);
+            this.SymbolicRadioButton.Size = new System.Drawing.Size(422, 17);
             this.SymbolicRadioButton.TabIndex = 0;
             this.SymbolicRadioButton.Text = "Symbolic Links for Files and Folders (Steam and pre Rockstar Games Launcher only)" +
     "";
@@ -217,9 +219,9 @@ namespace PatchMyPath
             // 
             this.DuplicateButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DuplicateButton.Location = new System.Drawing.Point(6, 367);
+            this.DuplicateButton.Location = new System.Drawing.Point(6, 317);
             this.DuplicateButton.Name = "DuplicateButton";
-            this.DuplicateButton.Size = new System.Drawing.Size(314, 23);
+            this.DuplicateButton.Size = new System.Drawing.Size(464, 23);
             this.DuplicateButton.TabIndex = 2;
             this.DuplicateButton.Text = "Duplicate Game Folder";
             this.DuplicateButton.UseVisualStyleBackColor = true;
@@ -233,7 +235,7 @@ namespace PatchMyPath
             this.OriginGroupBox.Controls.Add(this.OriginTextBox);
             this.OriginGroupBox.Location = new System.Drawing.Point(6, 64);
             this.OriginGroupBox.Name = "OriginGroupBox";
-            this.OriginGroupBox.Size = new System.Drawing.Size(314, 45);
+            this.OriginGroupBox.Size = new System.Drawing.Size(464, 45);
             this.OriginGroupBox.TabIndex = 0;
             this.OriginGroupBox.TabStop = false;
             this.OriginGroupBox.Text = "Origin";
@@ -241,7 +243,7 @@ namespace PatchMyPath
             // OriginSelectButton
             // 
             this.OriginSelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OriginSelectButton.Location = new System.Drawing.Point(233, 17);
+            this.OriginSelectButton.Location = new System.Drawing.Point(383, 17);
             this.OriginSelectButton.Name = "OriginSelectButton";
             this.OriginSelectButton.Size = new System.Drawing.Size(75, 23);
             this.OriginSelectButton.TabIndex = 1;
@@ -256,7 +258,7 @@ namespace PatchMyPath
             this.OriginTextBox.Location = new System.Drawing.Point(6, 19);
             this.OriginTextBox.Name = "OriginTextBox";
             this.OriginTextBox.ReadOnly = true;
-            this.OriginTextBox.Size = new System.Drawing.Size(221, 20);
+            this.OriginTextBox.Size = new System.Drawing.Size(371, 20);
             this.OriginTextBox.TabIndex = 0;
             // 
             // DestinationGroupBox
@@ -267,7 +269,7 @@ namespace PatchMyPath
             this.DestinationGroupBox.Controls.Add(this.DestinationTextBox);
             this.DestinationGroupBox.Location = new System.Drawing.Point(6, 115);
             this.DestinationGroupBox.Name = "DestinationGroupBox";
-            this.DestinationGroupBox.Size = new System.Drawing.Size(314, 45);
+            this.DestinationGroupBox.Size = new System.Drawing.Size(464, 45);
             this.DestinationGroupBox.TabIndex = 1;
             this.DestinationGroupBox.TabStop = false;
             this.DestinationGroupBox.Text = "Destination";
@@ -275,7 +277,7 @@ namespace PatchMyPath
             // DestinationSelectButton
             // 
             this.DestinationSelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DestinationSelectButton.Location = new System.Drawing.Point(233, 17);
+            this.DestinationSelectButton.Location = new System.Drawing.Point(383, 17);
             this.DestinationSelectButton.Name = "DestinationSelectButton";
             this.DestinationSelectButton.Size = new System.Drawing.Size(75, 23);
             this.DestinationSelectButton.TabIndex = 1;
@@ -290,7 +292,7 @@ namespace PatchMyPath
             this.DestinationTextBox.Location = new System.Drawing.Point(6, 19);
             this.DestinationTextBox.Name = "DestinationTextBox";
             this.DestinationTextBox.ReadOnly = true;
-            this.DestinationTextBox.Size = new System.Drawing.Size(221, 20);
+            this.DestinationTextBox.Size = new System.Drawing.Size(371, 20);
             this.DestinationTextBox.TabIndex = 0;
             // 
             // SettingsTabPage
@@ -300,7 +302,7 @@ namespace PatchMyPath
             this.SettingsTabPage.Location = new System.Drawing.Point(4, 22);
             this.SettingsTabPage.Name = "SettingsTabPage";
             this.SettingsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.SettingsTabPage.Size = new System.Drawing.Size(326, 398);
+            this.SettingsTabPage.Size = new System.Drawing.Size(476, 348);
             this.SettingsTabPage.TabIndex = 2;
             this.SettingsTabPage.Text = "Settings";
             this.SettingsTabPage.UseVisualStyleBackColor = true;
@@ -315,7 +317,7 @@ namespace PatchMyPath
             this.SteamGroupBox.Controls.Add(this.UseSteamCheckBox);
             this.SteamGroupBox.Location = new System.Drawing.Point(8, 86);
             this.SteamGroupBox.Name = "SteamGroupBox";
-            this.SteamGroupBox.Size = new System.Drawing.Size(312, 74);
+            this.SteamGroupBox.Size = new System.Drawing.Size(462, 74);
             this.SteamGroupBox.TabIndex = 2;
             this.SteamGroupBox.TabStop = false;
             this.SteamGroupBox.Text = "Steam";
@@ -332,7 +334,7 @@ namespace PatchMyPath
             // SteamSaveButton
             // 
             this.SteamSaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SteamSaveButton.Location = new System.Drawing.Point(231, 40);
+            this.SteamSaveButton.Location = new System.Drawing.Point(381, 40);
             this.SteamSaveButton.Name = "SteamSaveButton";
             this.SteamSaveButton.Size = new System.Drawing.Size(75, 23);
             this.SteamSaveButton.TabIndex = 2;
@@ -345,7 +347,7 @@ namespace PatchMyPath
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AppIDTextBox.Location = new System.Drawing.Point(52, 42);
             this.AppIDTextBox.Name = "AppIDTextBox";
-            this.AppIDTextBox.Size = new System.Drawing.Size(173, 20);
+            this.AppIDTextBox.Size = new System.Drawing.Size(323, 20);
             this.AppIDTextBox.TabIndex = 1;
             // 
             // UseSteamCheckBox
@@ -368,7 +370,7 @@ namespace PatchMyPath
             this.LocationGroupBox.Controls.Add(this.LocationTextBox);
             this.LocationGroupBox.Location = new System.Drawing.Point(6, 6);
             this.LocationGroupBox.Name = "LocationGroupBox";
-            this.LocationGroupBox.Size = new System.Drawing.Size(314, 74);
+            this.LocationGroupBox.Size = new System.Drawing.Size(464, 74);
             this.LocationGroupBox.TabIndex = 1;
             this.LocationGroupBox.TabStop = false;
             this.LocationGroupBox.Text = "Game Location";
@@ -409,7 +411,7 @@ namespace PatchMyPath
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LocationTextBox.Location = new System.Drawing.Point(6, 19);
             this.LocationTextBox.Name = "LocationTextBox";
-            this.LocationTextBox.Size = new System.Drawing.Size(302, 20);
+            this.LocationTextBox.Size = new System.Drawing.Size(452, 20);
             this.LocationTextBox.TabIndex = 0;
             // 
             // LoggingTabPage
@@ -418,7 +420,7 @@ namespace PatchMyPath
             this.LoggingTabPage.Location = new System.Drawing.Point(4, 22);
             this.LoggingTabPage.Name = "LoggingTabPage";
             this.LoggingTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.LoggingTabPage.Size = new System.Drawing.Size(326, 398);
+            this.LoggingTabPage.Size = new System.Drawing.Size(476, 398);
             this.LoggingTabPage.TabIndex = 3;
             this.LoggingTabPage.Text = "Logging";
             this.LoggingTabPage.UseVisualStyleBackColor = true;
@@ -431,7 +433,7 @@ namespace PatchMyPath
             this.LogTextBox.Name = "LogTextBox";
             this.LogTextBox.ReadOnly = true;
             this.LogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LogTextBox.Size = new System.Drawing.Size(320, 392);
+            this.LogTextBox.Size = new System.Drawing.Size(470, 392);
             this.LogTextBox.TabIndex = 0;
             // 
             // TopMenuStrip
@@ -444,7 +446,7 @@ namespace PatchMyPath
             this.RefreshToolStripMenuItem});
             this.TopMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.TopMenuStrip.Name = "TopMenuStrip";
-            this.TopMenuStrip.Size = new System.Drawing.Size(334, 37);
+            this.TopMenuStrip.Size = new System.Drawing.Size(484, 37);
             this.TopMenuStrip.TabIndex = 1;
             // 
             // LaunchToolStripMenuItem
@@ -491,10 +493,11 @@ namespace PatchMyPath
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 461);
+            this.ClientSize = new System.Drawing.Size(484, 411);
             this.Controls.Add(this.GeneralTabControl);
             this.Controls.Add(this.TopMenuStrip);
             this.MainMenuStrip = this.TopMenuStrip;
+            this.MinimumSize = new System.Drawing.Size(500, 450);
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PatchMyPath";
@@ -505,6 +508,7 @@ namespace PatchMyPath
             this.AutoAddGroupBox.ResumeLayout(false);
             this.AutoAddGroupBox.PerformLayout();
             this.LinkTypeGroupBox.ResumeLayout(false);
+            this.LinkTypeGroupBox.PerformLayout();
             this.OriginGroupBox.ResumeLayout(false);
             this.OriginGroupBox.PerformLayout();
             this.DestinationGroupBox.ResumeLayout(false);
