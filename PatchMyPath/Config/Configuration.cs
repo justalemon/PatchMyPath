@@ -22,11 +22,6 @@ namespace PatchMyPath.Config
         [JsonProperty("app_id")]
         public uint AppID { get; set; } = 271590;
         /// <summary>
-        /// Checks the signature of the executable to make sure that is valid.
-        /// </summary>
-        [JsonProperty("check_sig")]
-        public bool CheckSignature { get; set; } = true;
-        /// <summary>
         /// The destination folder for the game files.
         /// </summary>
         [JsonProperty("destination", NullValueHandling = NullValueHandling.Ignore)]
