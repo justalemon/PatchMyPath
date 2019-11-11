@@ -1,5 +1,6 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System.IO;
+using System.Text;
 
 namespace PatchMyPath.Config
 {
@@ -29,6 +30,24 @@ namespace PatchMyPath.Config
         /// </summary>
         RagePluginHook = 3,
     }
+    /// <summary>
+    /// The type of game that this install contains.
+    /// </summary>
+    public enum GameType
+    {
+        /// <summary>
+        /// None of the game executables are present.
+        /// </summary>
+        Invalid = -1,
+        /// <summary>
+        /// Red Dead Redemption 2.
+        /// </summary>
+        RedDeadRedemption2 = 0,
+        /// <summary>
+        /// Grand Theft Auto V.
+        /// </summary>
+        GrandTheftAutoV = 1,
+    }
 
     /// <summary>
     /// Specifies the information for launching a GTA V install.
@@ -39,6 +58,28 @@ namespace PatchMyPath.Config
         /// The path of the new game install.
         /// </summary>
         public string GamePath { get; set; }
+        /// <summary>
+        /// The game that this install contains.
+        /// </summary>
+        public GameType Game
+        {
+            get
+            {
+                // If the respective game executables is present
+                if (File.Exists(Path.Combine(GamePath, "RDR2.exe")))
+                {
+                    return GameType.RedDeadRedemption2;
+                }
+                else if (File.Exists(Path.Combine(GamePath, "GTA5.exe")))
+                {
+                    return GameType.GrandTheftAutoV;
+                }
+                else
+                {
+                    return GameType.Invalid;
+                }
+            }
+        }
         /// <summary>
         /// The type of game installation.
         /// </summary>
