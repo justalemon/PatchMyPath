@@ -67,5 +67,42 @@ namespace PatchMyPath
             { "x64w.rpf", EntryType.FileRequired },
             { "version.txt", EntryType.FileOptional },
         };
+        /// <summary>
+        /// The filesystem entries for Red Dead Redemption 2.
+        /// </summary>
+        public static readonly Dictionary<string, EntryType> RDR2 = new Dictionary<string, EntryType>()
+        {
+            { "Redistributables", EntryType.FolderOptional },
+            { "x64", EntryType.FolderRequired },
+
+            { "RDR2.exe", EntryType.FileRequired },
+            { "amd_ags_x64.dll", EntryType.FileRequired },
+            { "bink2w64.dll", EntryType.FileRequired },
+            { "dxilconv7.dll", EntryType.FileRequired },
+            { "oo2core_5_win64.dll", EntryType.FileRequired },
+            { "vulkan-1.dll", EntryType.FileRequired },
+            { "index.bin", EntryType.FileOptional },
+            { "anim_0.rpf", EntryType.FileRequired },
+            { "appdata0_update.rpf", EntryType.FileRequired },
+            { "common_0.rpf", EntryType.FileRequired },
+            { "data_0.rpf", EntryType.FileRequired },
+            { "hd_0.rpf", EntryType.FileRequired },
+            { "levels_0.rpf", EntryType.FileRequired },
+            { "levels_1.rpf", EntryType.FileRequired },
+            { "levels_2.rpf", EntryType.FileRequired },
+            { "levels_3.rpf", EntryType.FileRequired },
+            { "levels_4.rpf", EntryType.FileRequired },
+            { "levels_5.rpf", EntryType.FileRequired },
+            { "levels_6.rpf", EntryType.FileRequired },
+            { "levels_7.rpf", EntryType.FileRequired },
+            { "movies_0.rpf", EntryType.FileRequired },
+            { "packs_0.rpf", EntryType.FileRequired },
+            { "packs_1.rpf", EntryType.FileRequired },
+            { "rowpack_0.rpf", EntryType.FileRequired },
+            { "shaders_x64.rpf", EntryType.FileRequired },
+            { "textures_0.rpf", EntryType.FileRequired },
+            { "textures_1.rpf", EntryType.FileRequired },
+            { "update.rpf", EntryType.FileRequired },
+        };
     }
 }
