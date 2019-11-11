@@ -48,7 +48,7 @@ namespace PatchMyPath
             this.SteamGroupBox = new System.Windows.Forms.GroupBox();
             this.AppIdLabel = new System.Windows.Forms.Label();
             this.SteamSaveButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.AppIDTextBox = new System.Windows.Forms.TextBox();
             this.UseSteamCheckBox = new System.Windows.Forms.CheckBox();
             this.LocationGroupBox = new System.Windows.Forms.GroupBox();
             this.LocationSaveButton = new System.Windows.Forms.Button();
@@ -284,7 +284,7 @@ namespace PatchMyPath
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SteamGroupBox.Controls.Add(this.AppIdLabel);
             this.SteamGroupBox.Controls.Add(this.SteamSaveButton);
-            this.SteamGroupBox.Controls.Add(this.textBox1);
+            this.SteamGroupBox.Controls.Add(this.AppIDTextBox);
             this.SteamGroupBox.Controls.Add(this.UseSteamCheckBox);
             this.SteamGroupBox.Location = new System.Drawing.Point(8, 86);
             this.SteamGroupBox.Name = "SteamGroupBox";
@@ -312,14 +312,14 @@ namespace PatchMyPath
             this.SteamSaveButton.Text = "Save";
             this.SteamSaveButton.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // AppIDTextBox
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.AppIDTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(52, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(173, 20);
-            this.textBox1.TabIndex = 1;
+            this.AppIDTextBox.Location = new System.Drawing.Point(52, 42);
+            this.AppIDTextBox.Name = "AppIDTextBox";
+            this.AppIDTextBox.Size = new System.Drawing.Size(173, 20);
+            this.AppIDTextBox.TabIndex = 1;
             // 
             // UseSteamCheckBox
             // 
@@ -528,7 +528,7 @@ namespace PatchMyPath
         private System.Windows.Forms.GroupBox SteamGroupBox;
         private System.Windows.Forms.CheckBox UseSteamCheckBox;
         private System.Windows.Forms.Button SteamSaveButton;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox AppIDTextBox;
         private System.Windows.Forms.Label AppIdLabel;
         private System.Windows.Forms.TabPage LoggingTabPage;
         private System.Windows.Forms.TextBox LogTextBox;

@@ -42,6 +42,8 @@ namespace PatchMyPath
             RefreshInstalls();
             // And lock the UI elements
             Locked = true;
+            // Load the settings
+            LoadSettings();
         }
 
         #endregion
@@ -60,6 +62,13 @@ namespace PatchMyPath
             }
             // Finally, update the locked status on the items
             Locked = true;
+        }
+        public void LoadSettings()
+        {
+            // Just load the settings from the program configuration
+            LocationTextBox.Text = Program.Config.Destination;
+            UseSteamCheckBox.Checked = Program.Config.UseSteam;
+            AppIDTextBox.Text = Program.Config.AppID.ToString();
         }
 
         #endregion
