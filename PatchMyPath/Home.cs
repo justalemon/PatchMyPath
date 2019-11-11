@@ -187,6 +187,13 @@ namespace PatchMyPath
 
         private void DuplicateButton_Click(object sender, EventArgs e)
         {
+            // If there is no game selected, notify the user and return
+            if (GameComboBox.SelectedItem == null)
+            {
+                MessageBox.Show($"There is no game selected.\nPlease select the type of game at the top and try again.", "No Game Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             // If the origin folder does not exists, notify the user and return
             if (!Directory.Exists(OriginTextBox.Text))
             {
