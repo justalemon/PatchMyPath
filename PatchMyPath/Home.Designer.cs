@@ -32,6 +32,8 @@ namespace PatchMyPath
             this.InstallsTabPage = new System.Windows.Forms.TabPage();
             this.InstallsListBox = new System.Windows.Forms.ListBox();
             this.DuplicatorTabPage = new System.Windows.Forms.TabPage();
+            this.GameGroupBox = new System.Windows.Forms.GroupBox();
+            this.GameComboBox = new System.Windows.Forms.ComboBox();
             this.AutoAddGroupBox = new System.Windows.Forms.GroupBox();
             this.AutoAddCheckBox = new System.Windows.Forms.CheckBox();
             this.LinkTypeGroupBox = new System.Windows.Forms.GroupBox();
@@ -55,17 +57,18 @@ namespace PatchMyPath
             this.LocationDetectButton = new System.Windows.Forms.Button();
             this.LocationSelectButton = new System.Windows.Forms.Button();
             this.LocationTextBox = new System.Windows.Forms.TextBox();
+            this.LoggingTabPage = new System.Windows.Forms.TabPage();
+            this.LogTextBox = new System.Windows.Forms.TextBox();
             this.FolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.TopMenuStrip = new System.Windows.Forms.MenuStrip();
             this.LaunchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RefreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.LoggingTabPage = new System.Windows.Forms.TabPage();
-            this.LogTextBox = new System.Windows.Forms.TextBox();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.DuplicatorTabPage.SuspendLayout();
+            this.GameGroupBox.SuspendLayout();
             this.AutoAddGroupBox.SuspendLayout();
             this.LinkTypeGroupBox.SuspendLayout();
             this.OriginGroupBox.SuspendLayout();
@@ -73,8 +76,8 @@ namespace PatchMyPath
             this.SettingsTabPage.SuspendLayout();
             this.SteamGroupBox.SuspendLayout();
             this.LocationGroupBox.SuspendLayout();
-            this.TopMenuStrip.SuspendLayout();
             this.LoggingTabPage.SuspendLayout();
+            this.TopMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // GeneralTabControl
@@ -113,6 +116,7 @@ namespace PatchMyPath
             // 
             // DuplicatorTabPage
             // 
+            this.DuplicatorTabPage.Controls.Add(this.GameGroupBox);
             this.DuplicatorTabPage.Controls.Add(this.AutoAddGroupBox);
             this.DuplicatorTabPage.Controls.Add(this.LinkTypeGroupBox);
             this.DuplicatorTabPage.Controls.Add(this.DuplicateButton);
@@ -126,12 +130,35 @@ namespace PatchMyPath
             this.DuplicatorTabPage.Text = "Duplicator Tool";
             this.DuplicatorTabPage.UseVisualStyleBackColor = true;
             // 
+            // GameGroupBox
+            // 
+            this.GameGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GameGroupBox.Controls.Add(this.GameComboBox);
+            this.GameGroupBox.Location = new System.Drawing.Point(8, 6);
+            this.GameGroupBox.Name = "GameGroupBox";
+            this.GameGroupBox.Size = new System.Drawing.Size(312, 52);
+            this.GameGroupBox.TabIndex = 7;
+            this.GameGroupBox.TabStop = false;
+            this.GameGroupBox.Text = "Game";
+            // 
+            // GameComboBox
+            // 
+            this.GameComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GameComboBox.FormattingEnabled = true;
+            this.GameComboBox.Location = new System.Drawing.Point(6, 19);
+            this.GameComboBox.Name = "GameComboBox";
+            this.GameComboBox.Size = new System.Drawing.Size(300, 21);
+            this.GameComboBox.TabIndex = 0;
+            // 
             // AutoAddGroupBox
             // 
             this.AutoAddGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AutoAddGroupBox.Controls.Add(this.AutoAddCheckBox);
-            this.AutoAddGroupBox.Location = new System.Drawing.Point(6, 215);
+            this.AutoAddGroupBox.Location = new System.Drawing.Point(6, 273);
             this.AutoAddGroupBox.Name = "AutoAddGroupBox";
             this.AutoAddGroupBox.Size = new System.Drawing.Size(314, 42);
             this.AutoAddGroupBox.TabIndex = 6;
@@ -154,7 +181,7 @@ namespace PatchMyPath
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LinkTypeGroupBox.Controls.Add(this.HardRadioButton);
             this.LinkTypeGroupBox.Controls.Add(this.SymbolicRadioButton);
-            this.LinkTypeGroupBox.Location = new System.Drawing.Point(6, 108);
+            this.LinkTypeGroupBox.Location = new System.Drawing.Point(6, 166);
             this.LinkTypeGroupBox.Name = "LinkTypeGroupBox";
             this.LinkTypeGroupBox.Size = new System.Drawing.Size(314, 101);
             this.LinkTypeGroupBox.TabIndex = 5;
@@ -194,7 +221,7 @@ namespace PatchMyPath
             this.DuplicateButton.Name = "DuplicateButton";
             this.DuplicateButton.Size = new System.Drawing.Size(314, 23);
             this.DuplicateButton.TabIndex = 2;
-            this.DuplicateButton.Text = "Duplicate GTA V Folder";
+            this.DuplicateButton.Text = "Duplicate Game Folder";
             this.DuplicateButton.UseVisualStyleBackColor = true;
             this.DuplicateButton.Click += new System.EventHandler(this.DuplicateButton_Click);
             // 
@@ -204,7 +231,7 @@ namespace PatchMyPath
             | System.Windows.Forms.AnchorStyles.Right)));
             this.OriginGroupBox.Controls.Add(this.OriginSelectButton);
             this.OriginGroupBox.Controls.Add(this.OriginTextBox);
-            this.OriginGroupBox.Location = new System.Drawing.Point(6, 6);
+            this.OriginGroupBox.Location = new System.Drawing.Point(6, 64);
             this.OriginGroupBox.Name = "OriginGroupBox";
             this.OriginGroupBox.Size = new System.Drawing.Size(314, 45);
             this.OriginGroupBox.TabIndex = 0;
@@ -238,7 +265,7 @@ namespace PatchMyPath
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DestinationGroupBox.Controls.Add(this.DestinationSelectButton);
             this.DestinationGroupBox.Controls.Add(this.DestinationTextBox);
-            this.DestinationGroupBox.Location = new System.Drawing.Point(6, 57);
+            this.DestinationGroupBox.Location = new System.Drawing.Point(6, 115);
             this.DestinationGroupBox.Name = "DestinationGroupBox";
             this.DestinationGroupBox.Size = new System.Drawing.Size(314, 45);
             this.DestinationGroupBox.TabIndex = 1;
@@ -385,6 +412,28 @@ namespace PatchMyPath
             this.LocationTextBox.Size = new System.Drawing.Size(302, 20);
             this.LocationTextBox.TabIndex = 0;
             // 
+            // LoggingTabPage
+            // 
+            this.LoggingTabPage.Controls.Add(this.LogTextBox);
+            this.LoggingTabPage.Location = new System.Drawing.Point(4, 22);
+            this.LoggingTabPage.Name = "LoggingTabPage";
+            this.LoggingTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.LoggingTabPage.Size = new System.Drawing.Size(326, 398);
+            this.LoggingTabPage.TabIndex = 3;
+            this.LoggingTabPage.Text = "Logging";
+            this.LoggingTabPage.UseVisualStyleBackColor = true;
+            // 
+            // LogTextBox
+            // 
+            this.LogTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LogTextBox.Location = new System.Drawing.Point(3, 3);
+            this.LogTextBox.Multiline = true;
+            this.LogTextBox.Name = "LogTextBox";
+            this.LogTextBox.ReadOnly = true;
+            this.LogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.LogTextBox.Size = new System.Drawing.Size(320, 392);
+            this.LogTextBox.TabIndex = 0;
+            // 
             // TopMenuStrip
             // 
             this.TopMenuStrip.ImageScalingSize = new System.Drawing.Size(25, 25);
@@ -438,28 +487,6 @@ namespace PatchMyPath
             this.RefreshToolStripMenuItem.Text = "Refresh";
             this.RefreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
             // 
-            // LoggingTabPage
-            // 
-            this.LoggingTabPage.Controls.Add(this.LogTextBox);
-            this.LoggingTabPage.Location = new System.Drawing.Point(4, 22);
-            this.LoggingTabPage.Name = "LoggingTabPage";
-            this.LoggingTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.LoggingTabPage.Size = new System.Drawing.Size(326, 398);
-            this.LoggingTabPage.TabIndex = 3;
-            this.LoggingTabPage.Text = "Logging";
-            this.LoggingTabPage.UseVisualStyleBackColor = true;
-            // 
-            // LogTextBox
-            // 
-            this.LogTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LogTextBox.Location = new System.Drawing.Point(3, 3);
-            this.LogTextBox.Multiline = true;
-            this.LogTextBox.Name = "LogTextBox";
-            this.LogTextBox.ReadOnly = true;
-            this.LogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LogTextBox.Size = new System.Drawing.Size(320, 392);
-            this.LogTextBox.TabIndex = 0;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -474,6 +501,7 @@ namespace PatchMyPath
             this.GeneralTabControl.ResumeLayout(false);
             this.InstallsTabPage.ResumeLayout(false);
             this.DuplicatorTabPage.ResumeLayout(false);
+            this.GameGroupBox.ResumeLayout(false);
             this.AutoAddGroupBox.ResumeLayout(false);
             this.AutoAddGroupBox.PerformLayout();
             this.LinkTypeGroupBox.ResumeLayout(false);
@@ -486,10 +514,10 @@ namespace PatchMyPath
             this.SteamGroupBox.PerformLayout();
             this.LocationGroupBox.ResumeLayout(false);
             this.LocationGroupBox.PerformLayout();
-            this.TopMenuStrip.ResumeLayout(false);
-            this.TopMenuStrip.PerformLayout();
             this.LoggingTabPage.ResumeLayout(false);
             this.LoggingTabPage.PerformLayout();
+            this.TopMenuStrip.ResumeLayout(false);
+            this.TopMenuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -532,6 +560,8 @@ namespace PatchMyPath
         private System.Windows.Forms.Label AppIdLabel;
         private System.Windows.Forms.TabPage LoggingTabPage;
         private System.Windows.Forms.TextBox LogTextBox;
+        private System.Windows.Forms.GroupBox GameGroupBox;
+        private System.Windows.Forms.ComboBox GameComboBox;
     }
 }
 
