@@ -45,6 +45,17 @@ namespace PatchMyPath
             Locked = true;
             // Load the settings
             LoadSettings();
+
+            // Iterate over the games supported
+            foreach (string value in Enum.GetNames(typeof(GameType)))
+            {
+                // If the name is not invalid
+                if (value != GameType.Invalid.ToString())
+                {
+                    // Add the item into the combo box
+                    GameComboBox.Items.Add(value.SpaceOnUpperCase());
+                }
+            }
         }
 
         #endregion
