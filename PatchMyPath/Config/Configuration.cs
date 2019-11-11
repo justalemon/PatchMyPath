@@ -19,7 +19,7 @@ namespace PatchMyPath.Config
         /// <summary>
         /// The Steam AppID used to launch the game.
         /// </summary>
-        [JsonProperty("appid")]
+        [JsonProperty("app_id")]
         public uint AppID { get; set; } = 271590;
         /// <summary>
         /// Checks the signature of the executable to make sure that is valid.
