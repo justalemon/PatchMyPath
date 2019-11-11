@@ -1,4 +1,5 @@
 using Microsoft.Win32;
+using PatchMyPath.Config;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
