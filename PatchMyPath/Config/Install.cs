@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System.IO;
 using System.Text;
 
@@ -127,7 +127,7 @@ namespace PatchMyPath.Config
 
         public override string ToString()
         {
-            return $"{GamePath} ({Type})";
+            return $"{GamePath} ({Game.ToString().SpaceOnUpperCase()})";
         }
     }
 }
