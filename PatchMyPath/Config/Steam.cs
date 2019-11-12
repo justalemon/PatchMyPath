@@ -21,7 +21,7 @@ namespace PatchMyPath.Config
         /// The Steam AppID to use for launching Red Dead Redemption 2.
         /// </summary>
         [JsonProperty("rdr2_appid")]
-        public uint RDR2AppID { get; set; } = 0;
+        public ulong RDR2AppID { get; set; } = 0;
         /// <summary>
         /// If Grand Theft Auto V should use Steam to launch the game.
         /// </summary>
@@ -31,6 +31,6 @@ namespace PatchMyPath.Config
         /// The Steam AppID to use for launching Grand Theft Auto V.
         /// </summary>
         [JsonProperty("gtav_appid")]
-        public uint GTAVAppID { get; set; } = 271590;
+        public ulong GTAVAppID { get; set; } = 271590;
     }
 }
