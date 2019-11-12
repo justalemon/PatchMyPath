@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Checks.cs" />
     <Compile Include="Config\Configuration.cs" />
+    <Compile Include="Config\Destinations.cs" />
     <Compile Include="Config\Install.cs" />
     <Compile Include="Converters.cs" />
     <Compile Include="Extensions.cs" />

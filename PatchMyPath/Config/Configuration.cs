@@ -24,8 +24,8 @@ namespace PatchMyPath.Config
         /// <summary>
         /// The destination folder for the game files.
         /// </summary>
-        [JsonProperty("destination", NullValueHandling = NullValueHandling.Ignore)]
-        public string Destination { get; set; } = "";
+        [JsonProperty("destination")]
+        public Destinations Destination { get; set; } = new Destinations();
         /// <summary>
         /// The game installs available to the user.
         /// </summary>
@@ -44,7 +44,7 @@ namespace PatchMyPath.Config
             // If the game is RDR2, we can only launch the game directly from the exe
             if (game == Game.RedDeadRedemption2)
             {
-                Process.Start(Path.Combine(Destination, "RDR2.exe"));
+                Process.Start(Path.Combine(Destination.RDR2, "RDR2.exe"));
             }
             // GTA V on the other hand, has a lot
             else if (game == Game.GrandTheftAutoV)
@@ -54,15 +54,15 @@ namespace PatchMyPath.Config
                 {
                     using (Process rph = new Process())
                     {
-                        rph.StartInfo.FileName = Path.Combine(Destination, "RAGEPluginHook.exe");
-                        rph.StartInfo.WorkingDirectory = Destination;
+                        rph.StartInfo.FileName = Path.Combine(Destination.GTAV, "RAGEPluginHook.exe");
+                        rph.StartInfo.WorkingDirectory = Destination.GTAV;
                         rph.Start();
                     }
                 }
                 // If Unknown's Launcher Bypass is enabled and we don't need to use Steam
                 else if (type == Launch.LauncherBypass && !UseSteam)
                 {
-                    Process.Start(Path.Combine(Destination, "GTA5.exe"));
+                    Process.Start(Path.Combine(Destination.GTAV, "GTA5.exe"));
                 }
                 // Otherwise, launch the game as normal
                 else if (type == Launch.Normal || (type == Launch.LauncherBypass && UseSteam))
@@ -75,7 +75,7 @@ namespace PatchMyPath.Config
                     // If not, use the Launcher file
                     else
                     {
-                        Process.Start(Path.Combine(Destination, "GTAVLauncher.exe"));
+                        Process.Start(Path.Combine(Destination.GTAV, "GTAVLauncher.exe"));
                     }
                 }
             }

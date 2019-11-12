@@ -78,7 +78,7 @@ namespace PatchMyPath
         public void LoadSettings()
         {
             // Just load the settings from the program configuration
-            LocationTextBox.Text = Program.Config.Destination;
+            LocationTextBox.Text = Program.Config.Destination.GTAV;
             UseSteamCheckBox.Checked = Program.Config.UseSteam;
             AppIDTextBox.Text = Program.Config.AppID.ToString();
         }
@@ -106,15 +106,15 @@ namespace PatchMyPath
             }
 
             // Now, destroy the original game folder if is present
-            if (Directory.Exists(Program.Config.Destination))
+            if (Directory.Exists(Program.Config.Destination.GTAV))
             {
-                Directory.Delete(Program.Config.Destination);
+                Directory.Delete(Program.Config.Destination.GTAV);
             }
 
             // Try to create the symbolic link
             try
             {
-                Links.CreateSymbolicLink(Program.Config.Destination, install.GamePath, 3); // 3 means Directory (0x1) and Unprivileged/Dev Mode (0x2)
+                Links.CreateSymbolicLink(Program.Config.Destination.GTAV, install.GamePath, 3); // 3 means Directory (0x1) and Unprivileged/Dev Mode (0x2)
             }
             catch (Win32Exception er)
             {
@@ -376,7 +376,7 @@ namespace PatchMyPath
         private void LocationSaveButton_Click(object sender, EventArgs e)
         {
             // Just save the location, nothing more
-            Program.Config.Destination = LocationTextBox.Text;
+            Program.Config.Destination.GTAV = LocationTextBox.Text;
             Program.SaveConfig();
         }
 
