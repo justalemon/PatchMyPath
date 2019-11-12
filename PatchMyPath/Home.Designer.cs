@@ -405,7 +405,7 @@ namespace PatchMyPath
             // IDGTAVLabel
             // 
             this.IDGTAVLabel.AutoSize = true;
-            this.IDGTAVLabel.Location = new System.Drawing.Point(223, 49);
+            this.IDGTAVLabel.Location = new System.Drawing.Point(160, 49);
             this.IDGTAVLabel.Name = "IDGTAVLabel";
             this.IDGTAVLabel.Size = new System.Drawing.Size(40, 13);
             this.IDGTAVLabel.TabIndex = 6;
@@ -415,9 +415,9 @@ namespace PatchMyPath
             // 
             this.IDGTAVTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.IDGTAVTextBox.Location = new System.Drawing.Point(269, 46);
+            this.IDGTAVTextBox.Location = new System.Drawing.Point(206, 46);
             this.IDGTAVTextBox.Name = "IDGTAVTextBox";
-            this.IDGTAVTextBox.Size = new System.Drawing.Size(108, 20);
+            this.IDGTAVTextBox.Size = new System.Drawing.Size(171, 20);
             this.IDGTAVTextBox.TabIndex = 5;
             // 
             // SteamGTAVButton
@@ -445,7 +445,7 @@ namespace PatchMyPath
             // IDRDR2Label
             // 
             this.IDRDR2Label.AutoSize = true;
-            this.IDRDR2Label.Location = new System.Drawing.Point(223, 20);
+            this.IDRDR2Label.Location = new System.Drawing.Point(160, 20);
             this.IDRDR2Label.Name = "IDRDR2Label";
             this.IDRDR2Label.Size = new System.Drawing.Size(40, 13);
             this.IDRDR2Label.TabIndex = 3;
@@ -455,9 +455,9 @@ namespace PatchMyPath
             // 
             this.IDRDR2TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.IDRDR2TextBox.Location = new System.Drawing.Point(269, 17);
+            this.IDRDR2TextBox.Location = new System.Drawing.Point(206, 17);
             this.IDRDR2TextBox.Name = "IDRDR2TextBox";
-            this.IDRDR2TextBox.Size = new System.Drawing.Size(108, 20);
+            this.IDRDR2TextBox.Size = new System.Drawing.Size(171, 20);
             this.IDRDR2TextBox.TabIndex = 1;
             // 
             // SteamRDR2CheckBox
