@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.ServiceProcess;
 
@@ -12,6 +13,7 @@ namespace PatchMyPath
         /// <summary>
         /// Terminates the Rockstar Games Launcher and Steam (if the user has a Steam copy).
         /// </summary>
+        [Obsolete("Not required since update 1.0.13.176 on 12/11/2019")]
         public static void TerminateLaunchers()
         {
             // If the Rockstar Games Launcher service is running
