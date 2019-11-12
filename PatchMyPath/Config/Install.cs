@@ -1,6 +1,8 @@
 ﻿using Newtonsoft.Json;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
-using System.Text;
+using System.Windows.Forms;
 
 namespace PatchMyPath.Config
 {
@@ -114,6 +116,104 @@ namespace PatchMyPath.Config
         public Install(string path)
         {
             GamePath = path;
+        }
+
+        public void Start()
+        {
+            // If the install is invalid, notify the user and return
+            if (Type == Launch.Invalid)
+            {
+                MessageBox.Show("We did some preliminary checks and we found that this install is invalid. Please make sure that all of the game files are present and the executables have not been modified and try again.", "Invalid Install", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Get the correct directory for the game
+            string directory;
+            if (Game == Game.RedDeadRedemption2)
+            {
+                directory = Program.Config.Destination.RDR2;
+            }
+            else if (Game == Game.GrandTheftAutoV)
+            {
+                directory = Program.Config.Destination.GTAV;
+            }
+            else
+            {
+                MessageBox.Show("The game version is invalid!\nPlease make sure that the folder contains a copy of RDR2 or GTAV and try again.", "Invalid Game", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Now, destroy the original game folder if is present
+            if (Directory.Exists(directory))
+            {
+                Directory.Delete(directory);
+            }
+
+            // Try to create the symbolic link
+            try
+            {
+                Links.CreateSymbolicLink(directory, GamePath, 3); // 3 means Directory (0x1) and Unprivileged/Dev Mode (0x2)
+            }
+            catch (Win32Exception er)
+            {
+                // Print the respective error message and return
+                MessageBox.Show($"An error has ocurred:\n{er.Message}", "Unable to create Symbolic Link", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Finally, launch the game
+            LaunchExecutable();
+        }
+
+        public void LaunchExecutable()
+        {
+            // Get the game and install type
+            Game game = Game;
+            Launch type = Type;
+
+            // If the game is RDR2, we can only launch the game directly from the exe
+            if (game == Game.RedDeadRedemption2)
+            {
+                Process.Start(Path.Combine(Program.Config.Destination.RDR2, "RDR2.exe"));
+            }
+            // GTA V on the other hand, has a lot
+            else if (game == Game.GrandTheftAutoV)
+            {
+                // If the launch type is set to RPH, launch RPH
+                if (type == Launch.RagePluginHook)
+                {
+                    using (Process rph = new Process())
+                    {
+                        rph.StartInfo.FileName = Path.Combine(Program.Config.Destination.GTAV, "RAGEPluginHook.exe");
+                        rph.StartInfo.WorkingDirectory = Program.Config.Destination.GTAV;
+                        rph.Start();
+                    }
+                }
+                // If Unknown's Launcher Bypass is enabled and we don't need to use Steam
+                else if (type == Launch.LauncherBypass && !Program.Config.Steam.GTAVUse)
+                {
+                    Process.Start(Path.Combine(Program.Config.Destination.GTAV, "GTA5.exe"));
+                }
+                // Otherwise, launch the game as normal
+                else if (type == Launch.Normal || (type == Launch.LauncherBypass && Program.Config.Steam.GTAVUse))
+                {
+                    // If Steam is enabled, use the specified App ID
+                    if (Program.Config.Steam.GTAVUse)
+                    {
+                        Process.Start($"steam://rungameid/{Program.Config.Steam.GTAVAppID}");
+                    }
+                    // If not, use the Launcher file
+                    else
+                    {
+                        Process.Start(Path.Combine(Program.Config.Destination.GTAV, "GTAVLauncher.exe"));
+                    }
+                }
+            }
+            // If we managed to get here, either the game or options are invalid
+            else
+            {
+                MessageBox.Show("We were unable to start the game.\nPlease check that the selected install is valid and try again.", "Invalid Install", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public override string ToString()
