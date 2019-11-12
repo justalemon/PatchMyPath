@@ -32,7 +32,7 @@ namespace PatchMyPath
             TerminateProcesses(new string[] { "SocialClubHelper", "Launcher", "LauncherPatcher" });
 
             // If the user uses the Steam version, also kill that
-            if (Program.Config.UseSteam)
+            if (Program.Config.Steam.GTAVUse)
             {
                 TerminateProcess("Steam");
             }

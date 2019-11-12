@@ -79,8 +79,8 @@ namespace PatchMyPath
         {
             // Just load the settings from the program configuration
             GTAVLocationTextBox.Text = Program.Config.Destination.GTAV;
-            SteamRDR2CheckBox.Checked = Program.Config.UseSteam;
-            IDRDR2TextBox.Text = Program.Config.AppID.ToString();
+            SteamGTAVCheckBox.Checked = Program.Config.Steam.GTAVUse;
+            IDGTAVTextBox.Text = Program.Config.Steam.GTAVAppID.ToString();
         }
 
         #endregion

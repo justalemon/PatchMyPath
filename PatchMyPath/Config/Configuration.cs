@@ -12,15 +12,10 @@ namespace PatchMyPath.Config
     public class Configuration
     {
         /// <summary>
-        /// If the game should be started from Steam instead of the executable.
+        /// The settings for the usage of Steam for launching the game..
         /// </summary>
-        [JsonProperty("use_steam")]
-        public bool UseSteam { get; set; } = false;
-        /// <summary>
-        /// The Steam AppID used to launch the game.
-        /// </summary>
-        [JsonProperty("app_id")]
-        public uint AppID { get; set; } = 271590;
+        [JsonProperty("steam")]
+        public Steam Steam { get; set; } = new Steam();
         /// <summary>
         /// The destination folder for the game files.
         /// </summary>
@@ -60,17 +55,17 @@ namespace PatchMyPath.Config
                     }
                 }
                 // If Unknown's Launcher Bypass is enabled and we don't need to use Steam
-                else if (type == Launch.LauncherBypass && !UseSteam)
+                else if (type == Launch.LauncherBypass && !Steam.GTAVUse)
                 {
                     Process.Start(Path.Combine(Destination.GTAV, "GTA5.exe"));
                 }
                 // Otherwise, launch the game as normal
-                else if (type == Launch.Normal || (type == Launch.LauncherBypass && UseSteam))
+                else if (type == Launch.Normal || (type == Launch.LauncherBypass && Steam.GTAVUse))
                 {
                     // If Steam is enabled, use the specified App ID
-                    if (UseSteam)
+                    if (Steam.GTAVUse)
                     {
-                        Process.Start($"steam://rungameid/{AppID}");
+                        Process.Start($"steam://rungameid/{Steam.GTAVAppID}");
                     }
                     // If not, use the Launcher file
                     else
