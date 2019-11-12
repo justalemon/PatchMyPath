@@ -171,12 +171,21 @@ namespace PatchMyPath.Config
             Game game = Game;
             Launch type = Type;
 
-            // If the game is RDR2, we can only launch the game directly from the exe
+            // If the game is RDR2
             if (game == Game.RedDeadRedemption2)
             {
-                Process.Start(Path.Combine(Program.Config.Destination.RDR2, "RDR2.exe"));
+                // If the user wants Steam and the App ID is not zero, use the Steam URL
+                if (Program.Config.Steam.RDR2Use && Program.Config.Steam.RDR2AppID != 0)
+                {
+                    Process.Start($"steam://rungameid/{Program.Config.Steam.RDR2AppID}");
+                }
+                // Otherwise, just launch the exe
+                else
+                {
+                    Process.Start(Path.Combine(Program.Config.Destination.RDR2, "RDR2.exe"));
+                }
             }
-            // GTA V on the other hand, has a lot
+            // If the game is GTA V
             else if (game == Game.GrandTheftAutoV)
             {
                 // If the launch type is set to RPH, launch RPH
@@ -190,12 +199,12 @@ namespace PatchMyPath.Config
                     }
                 }
                 // If Unknown's Launcher Bypass is enabled and we don't need to use Steam
-                else if (type == Launch.LauncherBypass && !Program.Config.Steam.GTAVUse)
+                else if (type == Launch.LauncherBypass)
                 {
                     Process.Start(Path.Combine(Program.Config.Destination.GTAV, "GTA5.exe"));
                 }
                 // Otherwise, launch the game as normal
-                else if (type == Launch.Normal || (type == Launch.LauncherBypass && Program.Config.Steam.GTAVUse))
+                else
                 {
                     // If Steam is enabled, use the specified App ID
                     if (Program.Config.Steam.GTAVUse)
