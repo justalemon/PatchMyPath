@@ -78,8 +78,11 @@ namespace PatchMyPath
         public void LoadSettings()
         {
             // Just load the settings from the program configuration
+            RDR2LocationTextBox.Text = Program.Config.Destination.RDR2;
             GTAVLocationTextBox.Text = Program.Config.Destination.GTAV;
+            SteamRDR2CheckBox.Checked = Program.Config.Steam.RDR2Use;
             SteamGTAVCheckBox.Checked = Program.Config.Steam.GTAVUse;
+            IDRDR2TextBox.Text = Program.Config.Steam.RDR2AppID.ToString();
             IDGTAVTextBox.Text = Program.Config.Steam.GTAVAppID.ToString();
         }
 
@@ -406,22 +409,30 @@ namespace PatchMyPath
 
         private void SteamRDR2CheckBox_CheckedChanged(object sender, EventArgs e)
         {
-
+            // Save the checkbox status
+            Program.Config.Steam.GTAVUse = SteamGTAVCheckBox.Checked;
+            Program.SaveConfig();
         }
 
         private void SteamRDR2Button_Click(object sender, EventArgs e)
         {
-
+            // Save the App ID as an uint
+            Program.Config.Steam.GTAVAppID = uint.Parse(IDGTAVTextBox.Text);
+            Program.SaveConfig();
         }
 
         private void SteamGTAVCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-
+            // Save the checkbox status
+            Program.Config.Steam.GTAVUse = SteamGTAVCheckBox.Checked;
+            Program.SaveConfig();
         }
 
         private void SteamGTAVButton_Click(object sender, EventArgs e)
         {
-
+            // Save the App ID as an uint
+            Program.Config.Steam.GTAVAppID = uint.Parse(IDGTAVTextBox.Text);
+            Program.SaveConfig();
         }
 
         #endregion
