@@ -65,6 +65,11 @@ namespace PatchMyPath
             this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RefreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RDR2LocationGroupBox = new System.Windows.Forms.GroupBox();
+            this.RDR2LocationSaveButton = new System.Windows.Forms.Button();
+            this.RDR2LocationDetectButton = new System.Windows.Forms.Button();
+            this.RDR2LocationSelectButton = new System.Windows.Forms.Button();
+            this.RDR2LocationTextBox = new System.Windows.Forms.TextBox();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.DuplicatorTabPage.SuspendLayout();
@@ -78,6 +83,7 @@ namespace PatchMyPath
             this.GTAVLocationGroupBox.SuspendLayout();
             this.LoggingTabPage.SuspendLayout();
             this.TopMenuStrip.SuspendLayout();
+            this.RDR2LocationGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // GeneralTabControl
@@ -297,6 +303,7 @@ namespace PatchMyPath
             // 
             // SettingsTabPage
             // 
+            this.SettingsTabPage.Controls.Add(this.RDR2LocationGroupBox);
             this.SettingsTabPage.Controls.Add(this.SteamGroupBox);
             this.SettingsTabPage.Controls.Add(this.GTAVLocationGroupBox);
             this.SettingsTabPage.Location = new System.Drawing.Point(4, 22);
@@ -315,9 +322,9 @@ namespace PatchMyPath
             this.SteamGroupBox.Controls.Add(this.SteamSaveButton);
             this.SteamGroupBox.Controls.Add(this.AppIDTextBox);
             this.SteamGroupBox.Controls.Add(this.UseSteamCheckBox);
-            this.SteamGroupBox.Location = new System.Drawing.Point(8, 86);
+            this.SteamGroupBox.Location = new System.Drawing.Point(6, 166);
             this.SteamGroupBox.Name = "SteamGroupBox";
-            this.SteamGroupBox.Size = new System.Drawing.Size(462, 74);
+            this.SteamGroupBox.Size = new System.Drawing.Size(464, 74);
             this.SteamGroupBox.TabIndex = 2;
             this.SteamGroupBox.TabStop = false;
             this.SteamGroupBox.Text = "Steam";
@@ -334,7 +341,7 @@ namespace PatchMyPath
             // SteamSaveButton
             // 
             this.SteamSaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SteamSaveButton.Location = new System.Drawing.Point(381, 40);
+            this.SteamSaveButton.Location = new System.Drawing.Point(383, 40);
             this.SteamSaveButton.Name = "SteamSaveButton";
             this.SteamSaveButton.Size = new System.Drawing.Size(75, 23);
             this.SteamSaveButton.TabIndex = 2;
@@ -347,7 +354,7 @@ namespace PatchMyPath
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AppIDTextBox.Location = new System.Drawing.Point(52, 42);
             this.AppIDTextBox.Name = "AppIDTextBox";
-            this.AppIDTextBox.Size = new System.Drawing.Size(323, 20);
+            this.AppIDTextBox.Size = new System.Drawing.Size(325, 20);
             this.AppIDTextBox.TabIndex = 1;
             // 
             // UseSteamCheckBox
@@ -489,6 +496,60 @@ namespace PatchMyPath
             this.RefreshToolStripMenuItem.Text = "Refresh";
             this.RefreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
             // 
+            // RDR2LocationGroupBox
+            // 
+            this.RDR2LocationGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RDR2LocationGroupBox.Controls.Add(this.RDR2LocationSaveButton);
+            this.RDR2LocationGroupBox.Controls.Add(this.RDR2LocationDetectButton);
+            this.RDR2LocationGroupBox.Controls.Add(this.RDR2LocationSelectButton);
+            this.RDR2LocationGroupBox.Controls.Add(this.RDR2LocationTextBox);
+            this.RDR2LocationGroupBox.Location = new System.Drawing.Point(6, 86);
+            this.RDR2LocationGroupBox.Name = "RDR2LocationGroupBox";
+            this.RDR2LocationGroupBox.Size = new System.Drawing.Size(464, 74);
+            this.RDR2LocationGroupBox.TabIndex = 4;
+            this.RDR2LocationGroupBox.TabStop = false;
+            this.RDR2LocationGroupBox.Text = "Red Dead Redemption 2 Location";
+            // 
+            // RDR2LocationSaveButton
+            // 
+            this.RDR2LocationSaveButton.Location = new System.Drawing.Point(168, 45);
+            this.RDR2LocationSaveButton.Name = "RDR2LocationSaveButton";
+            this.RDR2LocationSaveButton.Size = new System.Drawing.Size(75, 23);
+            this.RDR2LocationSaveButton.TabIndex = 3;
+            this.RDR2LocationSaveButton.Text = "Save";
+            this.RDR2LocationSaveButton.UseVisualStyleBackColor = true;
+            this.RDR2LocationSaveButton.Click += new System.EventHandler(this.RDR2LocationSaveButton_Click);
+            // 
+            // RDR2LocationDetectButton
+            // 
+            this.RDR2LocationDetectButton.Location = new System.Drawing.Point(87, 45);
+            this.RDR2LocationDetectButton.Name = "RDR2LocationDetectButton";
+            this.RDR2LocationDetectButton.Size = new System.Drawing.Size(75, 23);
+            this.RDR2LocationDetectButton.TabIndex = 2;
+            this.RDR2LocationDetectButton.Text = "Detect";
+            this.RDR2LocationDetectButton.UseVisualStyleBackColor = true;
+            this.RDR2LocationDetectButton.Click += new System.EventHandler(this.RDR2LocationDetectButton_Click);
+            // 
+            // RDR2LocationSelectButton
+            // 
+            this.RDR2LocationSelectButton.Location = new System.Drawing.Point(6, 45);
+            this.RDR2LocationSelectButton.Name = "RDR2LocationSelectButton";
+            this.RDR2LocationSelectButton.Size = new System.Drawing.Size(75, 23);
+            this.RDR2LocationSelectButton.TabIndex = 1;
+            this.RDR2LocationSelectButton.Text = "Select";
+            this.RDR2LocationSelectButton.UseVisualStyleBackColor = true;
+            this.RDR2LocationSelectButton.Click += new System.EventHandler(this.RDR2LocationSelectButton_Click);
+            // 
+            // RDR2LocationTextBox
+            // 
+            this.RDR2LocationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RDR2LocationTextBox.Location = new System.Drawing.Point(6, 19);
+            this.RDR2LocationTextBox.Name = "RDR2LocationTextBox";
+            this.RDR2LocationTextBox.Size = new System.Drawing.Size(452, 20);
+            this.RDR2LocationTextBox.TabIndex = 0;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -522,6 +583,8 @@ namespace PatchMyPath
             this.LoggingTabPage.PerformLayout();
             this.TopMenuStrip.ResumeLayout(false);
             this.TopMenuStrip.PerformLayout();
+            this.RDR2LocationGroupBox.ResumeLayout(false);
+            this.RDR2LocationGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -566,6 +629,11 @@ namespace PatchMyPath
         private System.Windows.Forms.TextBox LogTextBox;
         private System.Windows.Forms.GroupBox GameGroupBox;
         private System.Windows.Forms.ComboBox GameComboBox;
+        private System.Windows.Forms.GroupBox RDR2LocationGroupBox;
+        private System.Windows.Forms.Button RDR2LocationSaveButton;
+        private System.Windows.Forms.Button RDR2LocationDetectButton;
+        private System.Windows.Forms.Button RDR2LocationSelectButton;
+        private System.Windows.Forms.TextBox RDR2LocationTextBox;
     }
 }
 

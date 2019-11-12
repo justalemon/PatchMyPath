@@ -380,6 +380,30 @@ namespace PatchMyPath
             Program.SaveConfig();
         }
 
+        private void RDR2LocationSelectButton_Click(object sender, EventArgs e)
+        {
+            // Show the folder browse dialog
+            DialogResult result = FolderBrowser.ShowDialog();
+
+            // If the user confirmed the folder selection, save it on the text field
+            if (result == DialogResult.OK)
+            {
+                RDR2LocationTextBox.Text = FolderBrowser.SelectedPath;
+            }
+        }
+
+        private void RDR2LocationDetectButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RDR2LocationSaveButton_Click(object sender, EventArgs e)
+        {
+            // Just save the location, nothing more
+            Program.Config.Destination.RDR2 = RDR2LocationTextBox.Text;
+            Program.SaveConfig();
+        }
+
         #endregion
 
         #region Other
