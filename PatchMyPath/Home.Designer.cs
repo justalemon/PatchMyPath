@@ -47,11 +47,20 @@ namespace PatchMyPath
             this.DestinationSelectButton = new System.Windows.Forms.Button();
             this.DestinationTextBox = new System.Windows.Forms.TextBox();
             this.SettingsTabPage = new System.Windows.Forms.TabPage();
+            this.RDR2LocationGroupBox = new System.Windows.Forms.GroupBox();
+            this.RDR2LocationSaveButton = new System.Windows.Forms.Button();
+            this.RDR2LocationDetectButton = new System.Windows.Forms.Button();
+            this.RDR2LocationSelectButton = new System.Windows.Forms.Button();
+            this.RDR2LocationTextBox = new System.Windows.Forms.TextBox();
             this.SteamGroupBox = new System.Windows.Forms.GroupBox();
-            this.AppIdLabel = new System.Windows.Forms.Label();
-            this.SteamSaveButton = new System.Windows.Forms.Button();
-            this.AppIDTextBox = new System.Windows.Forms.TextBox();
-            this.UseSteamCheckBox = new System.Windows.Forms.CheckBox();
+            this.SteamGTAVCheckBox = new System.Windows.Forms.CheckBox();
+            this.IDGTAVLabel = new System.Windows.Forms.Label();
+            this.IDGTAVTextBox = new System.Windows.Forms.TextBox();
+            this.SteamGTAVButton = new System.Windows.Forms.Button();
+            this.SteamRDR2Button = new System.Windows.Forms.Button();
+            this.IDRDR2Label = new System.Windows.Forms.Label();
+            this.IDRDR2TextBox = new System.Windows.Forms.TextBox();
+            this.SteamRDR2CheckBox = new System.Windows.Forms.CheckBox();
             this.GTAVLocationGroupBox = new System.Windows.Forms.GroupBox();
             this.GTAVLocationSaveButton = new System.Windows.Forms.Button();
             this.GTAVLocationDetectButton = new System.Windows.Forms.Button();
@@ -65,11 +74,6 @@ namespace PatchMyPath
             this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RefreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RDR2LocationGroupBox = new System.Windows.Forms.GroupBox();
-            this.RDR2LocationSaveButton = new System.Windows.Forms.Button();
-            this.RDR2LocationDetectButton = new System.Windows.Forms.Button();
-            this.RDR2LocationSelectButton = new System.Windows.Forms.Button();
-            this.RDR2LocationTextBox = new System.Windows.Forms.TextBox();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.DuplicatorTabPage.SuspendLayout();
@@ -79,11 +83,11 @@ namespace PatchMyPath
             this.OriginGroupBox.SuspendLayout();
             this.DestinationGroupBox.SuspendLayout();
             this.SettingsTabPage.SuspendLayout();
+            this.RDR2LocationGroupBox.SuspendLayout();
             this.SteamGroupBox.SuspendLayout();
             this.GTAVLocationGroupBox.SuspendLayout();
             this.LoggingTabPage.SuspendLayout();
             this.TopMenuStrip.SuspendLayout();
-            this.RDR2LocationGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // GeneralTabControl
@@ -314,58 +318,158 @@ namespace PatchMyPath
             this.SettingsTabPage.Text = "Settings";
             this.SettingsTabPage.UseVisualStyleBackColor = true;
             // 
+            // RDR2LocationGroupBox
+            // 
+            this.RDR2LocationGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RDR2LocationGroupBox.Controls.Add(this.RDR2LocationSaveButton);
+            this.RDR2LocationGroupBox.Controls.Add(this.RDR2LocationDetectButton);
+            this.RDR2LocationGroupBox.Controls.Add(this.RDR2LocationSelectButton);
+            this.RDR2LocationGroupBox.Controls.Add(this.RDR2LocationTextBox);
+            this.RDR2LocationGroupBox.Location = new System.Drawing.Point(6, 86);
+            this.RDR2LocationGroupBox.Name = "RDR2LocationGroupBox";
+            this.RDR2LocationGroupBox.Size = new System.Drawing.Size(464, 74);
+            this.RDR2LocationGroupBox.TabIndex = 4;
+            this.RDR2LocationGroupBox.TabStop = false;
+            this.RDR2LocationGroupBox.Text = "Red Dead Redemption 2 Location";
+            // 
+            // RDR2LocationSaveButton
+            // 
+            this.RDR2LocationSaveButton.Location = new System.Drawing.Point(168, 45);
+            this.RDR2LocationSaveButton.Name = "RDR2LocationSaveButton";
+            this.RDR2LocationSaveButton.Size = new System.Drawing.Size(75, 23);
+            this.RDR2LocationSaveButton.TabIndex = 3;
+            this.RDR2LocationSaveButton.Text = "Save";
+            this.RDR2LocationSaveButton.UseVisualStyleBackColor = true;
+            this.RDR2LocationSaveButton.Click += new System.EventHandler(this.RDR2LocationSaveButton_Click);
+            // 
+            // RDR2LocationDetectButton
+            // 
+            this.RDR2LocationDetectButton.Location = new System.Drawing.Point(87, 45);
+            this.RDR2LocationDetectButton.Name = "RDR2LocationDetectButton";
+            this.RDR2LocationDetectButton.Size = new System.Drawing.Size(75, 23);
+            this.RDR2LocationDetectButton.TabIndex = 2;
+            this.RDR2LocationDetectButton.Text = "Detect";
+            this.RDR2LocationDetectButton.UseVisualStyleBackColor = true;
+            this.RDR2LocationDetectButton.Click += new System.EventHandler(this.RDR2LocationDetectButton_Click);
+            // 
+            // RDR2LocationSelectButton
+            // 
+            this.RDR2LocationSelectButton.Location = new System.Drawing.Point(6, 45);
+            this.RDR2LocationSelectButton.Name = "RDR2LocationSelectButton";
+            this.RDR2LocationSelectButton.Size = new System.Drawing.Size(75, 23);
+            this.RDR2LocationSelectButton.TabIndex = 1;
+            this.RDR2LocationSelectButton.Text = "Select";
+            this.RDR2LocationSelectButton.UseVisualStyleBackColor = true;
+            this.RDR2LocationSelectButton.Click += new System.EventHandler(this.RDR2LocationSelectButton_Click);
+            // 
+            // RDR2LocationTextBox
+            // 
+            this.RDR2LocationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RDR2LocationTextBox.Location = new System.Drawing.Point(6, 19);
+            this.RDR2LocationTextBox.Name = "RDR2LocationTextBox";
+            this.RDR2LocationTextBox.Size = new System.Drawing.Size(452, 20);
+            this.RDR2LocationTextBox.TabIndex = 0;
+            // 
             // SteamGroupBox
             // 
             this.SteamGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.SteamGroupBox.Controls.Add(this.AppIdLabel);
-            this.SteamGroupBox.Controls.Add(this.SteamSaveButton);
-            this.SteamGroupBox.Controls.Add(this.AppIDTextBox);
-            this.SteamGroupBox.Controls.Add(this.UseSteamCheckBox);
+            this.SteamGroupBox.Controls.Add(this.SteamGTAVCheckBox);
+            this.SteamGroupBox.Controls.Add(this.IDGTAVLabel);
+            this.SteamGroupBox.Controls.Add(this.IDGTAVTextBox);
+            this.SteamGroupBox.Controls.Add(this.SteamGTAVButton);
+            this.SteamGroupBox.Controls.Add(this.SteamRDR2Button);
+            this.SteamGroupBox.Controls.Add(this.IDRDR2Label);
+            this.SteamGroupBox.Controls.Add(this.IDRDR2TextBox);
+            this.SteamGroupBox.Controls.Add(this.SteamRDR2CheckBox);
             this.SteamGroupBox.Location = new System.Drawing.Point(6, 166);
             this.SteamGroupBox.Name = "SteamGroupBox";
             this.SteamGroupBox.Size = new System.Drawing.Size(464, 74);
             this.SteamGroupBox.TabIndex = 2;
             this.SteamGroupBox.TabStop = false;
-            this.SteamGroupBox.Text = "Steam";
+            this.SteamGroupBox.Text = "Use Steam to launch";
             // 
-            // AppIdLabel
+            // SteamGTAVCheckBox
             // 
-            this.AppIdLabel.AutoSize = true;
-            this.AppIdLabel.Location = new System.Drawing.Point(6, 45);
-            this.AppIdLabel.Name = "AppIdLabel";
-            this.AppIdLabel.Size = new System.Drawing.Size(40, 13);
-            this.AppIdLabel.TabIndex = 3;
-            this.AppIdLabel.Text = "App ID";
+            this.SteamGTAVCheckBox.AutoSize = true;
+            this.SteamGTAVCheckBox.Location = new System.Drawing.Point(6, 48);
+            this.SteamGTAVCheckBox.Name = "SteamGTAVCheckBox";
+            this.SteamGTAVCheckBox.Size = new System.Drawing.Size(118, 17);
+            this.SteamGTAVCheckBox.TabIndex = 7;
+            this.SteamGTAVCheckBox.Text = "Grand Theft Auto V";
+            this.SteamGTAVCheckBox.UseVisualStyleBackColor = true;
+            this.SteamGTAVCheckBox.CheckedChanged += new System.EventHandler(this.SteamGTAVCheckBox_CheckedChanged);
             // 
-            // SteamSaveButton
+            // IDGTAVLabel
             // 
-            this.SteamSaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SteamSaveButton.Location = new System.Drawing.Point(383, 40);
-            this.SteamSaveButton.Name = "SteamSaveButton";
-            this.SteamSaveButton.Size = new System.Drawing.Size(75, 23);
-            this.SteamSaveButton.TabIndex = 2;
-            this.SteamSaveButton.Text = "Save";
-            this.SteamSaveButton.UseVisualStyleBackColor = true;
+            this.IDGTAVLabel.AutoSize = true;
+            this.IDGTAVLabel.Location = new System.Drawing.Point(223, 49);
+            this.IDGTAVLabel.Name = "IDGTAVLabel";
+            this.IDGTAVLabel.Size = new System.Drawing.Size(40, 13);
+            this.IDGTAVLabel.TabIndex = 6;
+            this.IDGTAVLabel.Text = "App ID";
             // 
-            // AppIDTextBox
+            // IDGTAVTextBox
             // 
-            this.AppIDTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.IDGTAVTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.AppIDTextBox.Location = new System.Drawing.Point(52, 42);
-            this.AppIDTextBox.Name = "AppIDTextBox";
-            this.AppIDTextBox.Size = new System.Drawing.Size(325, 20);
-            this.AppIDTextBox.TabIndex = 1;
+            this.IDGTAVTextBox.Location = new System.Drawing.Point(269, 46);
+            this.IDGTAVTextBox.Name = "IDGTAVTextBox";
+            this.IDGTAVTextBox.Size = new System.Drawing.Size(108, 20);
+            this.IDGTAVTextBox.TabIndex = 5;
             // 
-            // UseSteamCheckBox
+            // SteamGTAVButton
             // 
-            this.UseSteamCheckBox.AutoSize = true;
-            this.UseSteamCheckBox.Location = new System.Drawing.Point(6, 19);
-            this.UseSteamCheckBox.Name = "UseSteamCheckBox";
-            this.UseSteamCheckBox.Size = new System.Drawing.Size(306, 17);
-            this.UseSteamCheckBox.TabIndex = 0;
-            this.UseSteamCheckBox.Text = "Use Steam to launch the game (Disables Launcher Bypass)";
-            this.UseSteamCheckBox.UseVisualStyleBackColor = true;
+            this.SteamGTAVButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SteamGTAVButton.Location = new System.Drawing.Point(383, 44);
+            this.SteamGTAVButton.Name = "SteamGTAVButton";
+            this.SteamGTAVButton.Size = new System.Drawing.Size(75, 23);
+            this.SteamGTAVButton.TabIndex = 4;
+            this.SteamGTAVButton.Text = "Save";
+            this.SteamGTAVButton.UseVisualStyleBackColor = true;
+            this.SteamGTAVButton.Click += new System.EventHandler(this.SteamGTAVButton_Click);
+            // 
+            // SteamRDR2Button
+            // 
+            this.SteamRDR2Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SteamRDR2Button.Location = new System.Drawing.Point(383, 15);
+            this.SteamRDR2Button.Name = "SteamRDR2Button";
+            this.SteamRDR2Button.Size = new System.Drawing.Size(75, 23);
+            this.SteamRDR2Button.TabIndex = 2;
+            this.SteamRDR2Button.Text = "Save";
+            this.SteamRDR2Button.UseVisualStyleBackColor = true;
+            this.SteamRDR2Button.Click += new System.EventHandler(this.SteamRDR2Button_Click);
+            // 
+            // IDRDR2Label
+            // 
+            this.IDRDR2Label.AutoSize = true;
+            this.IDRDR2Label.Location = new System.Drawing.Point(223, 20);
+            this.IDRDR2Label.Name = "IDRDR2Label";
+            this.IDRDR2Label.Size = new System.Drawing.Size(40, 13);
+            this.IDRDR2Label.TabIndex = 3;
+            this.IDRDR2Label.Text = "App ID";
+            // 
+            // IDRDR2TextBox
+            // 
+            this.IDRDR2TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.IDRDR2TextBox.Location = new System.Drawing.Point(269, 17);
+            this.IDRDR2TextBox.Name = "IDRDR2TextBox";
+            this.IDRDR2TextBox.Size = new System.Drawing.Size(108, 20);
+            this.IDRDR2TextBox.TabIndex = 1;
+            // 
+            // SteamRDR2CheckBox
+            // 
+            this.SteamRDR2CheckBox.AutoSize = true;
+            this.SteamRDR2CheckBox.Location = new System.Drawing.Point(6, 19);
+            this.SteamRDR2CheckBox.Name = "SteamRDR2CheckBox";
+            this.SteamRDR2CheckBox.Size = new System.Drawing.Size(144, 17);
+            this.SteamRDR2CheckBox.TabIndex = 0;
+            this.SteamRDR2CheckBox.Text = "Red Dead Redemption 2";
+            this.SteamRDR2CheckBox.UseVisualStyleBackColor = true;
+            this.SteamRDR2CheckBox.CheckedChanged += new System.EventHandler(this.SteamRDR2CheckBox_CheckedChanged);
             // 
             // GTAVLocationGroupBox
             // 
@@ -496,60 +600,6 @@ namespace PatchMyPath
             this.RefreshToolStripMenuItem.Text = "Refresh";
             this.RefreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
             // 
-            // RDR2LocationGroupBox
-            // 
-            this.RDR2LocationGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RDR2LocationGroupBox.Controls.Add(this.RDR2LocationSaveButton);
-            this.RDR2LocationGroupBox.Controls.Add(this.RDR2LocationDetectButton);
-            this.RDR2LocationGroupBox.Controls.Add(this.RDR2LocationSelectButton);
-            this.RDR2LocationGroupBox.Controls.Add(this.RDR2LocationTextBox);
-            this.RDR2LocationGroupBox.Location = new System.Drawing.Point(6, 86);
-            this.RDR2LocationGroupBox.Name = "RDR2LocationGroupBox";
-            this.RDR2LocationGroupBox.Size = new System.Drawing.Size(464, 74);
-            this.RDR2LocationGroupBox.TabIndex = 4;
-            this.RDR2LocationGroupBox.TabStop = false;
-            this.RDR2LocationGroupBox.Text = "Red Dead Redemption 2 Location";
-            // 
-            // RDR2LocationSaveButton
-            // 
-            this.RDR2LocationSaveButton.Location = new System.Drawing.Point(168, 45);
-            this.RDR2LocationSaveButton.Name = "RDR2LocationSaveButton";
-            this.RDR2LocationSaveButton.Size = new System.Drawing.Size(75, 23);
-            this.RDR2LocationSaveButton.TabIndex = 3;
-            this.RDR2LocationSaveButton.Text = "Save";
-            this.RDR2LocationSaveButton.UseVisualStyleBackColor = true;
-            this.RDR2LocationSaveButton.Click += new System.EventHandler(this.RDR2LocationSaveButton_Click);
-            // 
-            // RDR2LocationDetectButton
-            // 
-            this.RDR2LocationDetectButton.Location = new System.Drawing.Point(87, 45);
-            this.RDR2LocationDetectButton.Name = "RDR2LocationDetectButton";
-            this.RDR2LocationDetectButton.Size = new System.Drawing.Size(75, 23);
-            this.RDR2LocationDetectButton.TabIndex = 2;
-            this.RDR2LocationDetectButton.Text = "Detect";
-            this.RDR2LocationDetectButton.UseVisualStyleBackColor = true;
-            this.RDR2LocationDetectButton.Click += new System.EventHandler(this.RDR2LocationDetectButton_Click);
-            // 
-            // RDR2LocationSelectButton
-            // 
-            this.RDR2LocationSelectButton.Location = new System.Drawing.Point(6, 45);
-            this.RDR2LocationSelectButton.Name = "RDR2LocationSelectButton";
-            this.RDR2LocationSelectButton.Size = new System.Drawing.Size(75, 23);
-            this.RDR2LocationSelectButton.TabIndex = 1;
-            this.RDR2LocationSelectButton.Text = "Select";
-            this.RDR2LocationSelectButton.UseVisualStyleBackColor = true;
-            this.RDR2LocationSelectButton.Click += new System.EventHandler(this.RDR2LocationSelectButton_Click);
-            // 
-            // RDR2LocationTextBox
-            // 
-            this.RDR2LocationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RDR2LocationTextBox.Location = new System.Drawing.Point(6, 19);
-            this.RDR2LocationTextBox.Name = "RDR2LocationTextBox";
-            this.RDR2LocationTextBox.Size = new System.Drawing.Size(452, 20);
-            this.RDR2LocationTextBox.TabIndex = 0;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -575,6 +625,8 @@ namespace PatchMyPath
             this.DestinationGroupBox.ResumeLayout(false);
             this.DestinationGroupBox.PerformLayout();
             this.SettingsTabPage.ResumeLayout(false);
+            this.RDR2LocationGroupBox.ResumeLayout(false);
+            this.RDR2LocationGroupBox.PerformLayout();
             this.SteamGroupBox.ResumeLayout(false);
             this.SteamGroupBox.PerformLayout();
             this.GTAVLocationGroupBox.ResumeLayout(false);
@@ -583,8 +635,6 @@ namespace PatchMyPath
             this.LoggingTabPage.PerformLayout();
             this.TopMenuStrip.ResumeLayout(false);
             this.TopMenuStrip.PerformLayout();
-            this.RDR2LocationGroupBox.ResumeLayout(false);
-            this.RDR2LocationGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -621,10 +671,10 @@ namespace PatchMyPath
         private System.Windows.Forms.Button GTAVLocationDetectButton;
         private System.Windows.Forms.Button GTAVLocationSaveButton;
         private System.Windows.Forms.GroupBox SteamGroupBox;
-        private System.Windows.Forms.CheckBox UseSteamCheckBox;
-        private System.Windows.Forms.Button SteamSaveButton;
-        private System.Windows.Forms.TextBox AppIDTextBox;
-        private System.Windows.Forms.Label AppIdLabel;
+        private System.Windows.Forms.CheckBox SteamRDR2CheckBox;
+        private System.Windows.Forms.Button SteamRDR2Button;
+        private System.Windows.Forms.TextBox IDRDR2TextBox;
+        private System.Windows.Forms.Label IDRDR2Label;
         private System.Windows.Forms.TabPage LoggingTabPage;
         private System.Windows.Forms.TextBox LogTextBox;
         private System.Windows.Forms.GroupBox GameGroupBox;
@@ -634,6 +684,10 @@ namespace PatchMyPath
         private System.Windows.Forms.Button RDR2LocationDetectButton;
         private System.Windows.Forms.Button RDR2LocationSelectButton;
         private System.Windows.Forms.TextBox RDR2LocationTextBox;
+        private System.Windows.Forms.CheckBox SteamGTAVCheckBox;
+        private System.Windows.Forms.Label IDGTAVLabel;
+        private System.Windows.Forms.TextBox IDGTAVTextBox;
+        private System.Windows.Forms.Button SteamGTAVButton;
     }
 }
 

@@ -79,8 +79,8 @@ namespace PatchMyPath
         {
             // Just load the settings from the program configuration
             GTAVLocationTextBox.Text = Program.Config.Destination.GTAV;
-            UseSteamCheckBox.Checked = Program.Config.UseSteam;
-            AppIDTextBox.Text = Program.Config.AppID.ToString();
+            SteamRDR2CheckBox.Checked = Program.Config.UseSteam;
+            IDRDR2TextBox.Text = Program.Config.AppID.ToString();
         }
 
         #endregion
@@ -402,6 +402,26 @@ namespace PatchMyPath
             // Just save the location, nothing more
             Program.Config.Destination.RDR2 = RDR2LocationTextBox.Text;
             Program.SaveConfig();
+        }
+
+        private void SteamRDR2CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SteamRDR2Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SteamGTAVCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SteamGTAVButton_Click(object sender, EventArgs e)
+        {
+
         }
 
         #endregion
