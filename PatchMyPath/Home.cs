@@ -324,7 +324,7 @@ namespace PatchMyPath
         private void GTAVLocationDetectButton_Click(object sender, EventArgs e)
         {
             // Try to get the path from the Uninstall Information
-            string uninstall = Paths.GetUninstallPath();
+            string uninstall = Paths.GTAV.UninstallLocation;
             // If is not null
             if (uninstall != null)
             {
@@ -337,7 +337,7 @@ namespace PatchMyPath
             }
 
             // If we got here, try with the legacy Rockstar Warehouse location
-            string warehouse = Paths.GetRockstarLauncherPath();
+            string warehouse = Paths.GTAV.WarehouseLocation;
             // If is not null
             if (warehouse != null)
             {

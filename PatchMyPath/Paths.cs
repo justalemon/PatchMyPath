@@ -10,6 +10,21 @@ namespace PatchMyPath
     public static class Paths
     {
         /// <summary>
+        /// Class that contains the posible install locations for GTA V.
+        /// </summary>
+        public static class GTAV
+        {
+            /// <summary>
+            /// The possible path from the InstallShield Uninstall information.
+            /// </summary>
+            public static string UninstallLocation => Path.GetDirectoryName(GetStringFromRegistry(@"SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{5EFC6C07-6B87-43FC-9524-F9E967241741}", "DisplayIcon", true));
+            /// <summary>
+            /// The possible path from the legacy Rockstar Warehouse version.
+            /// </summary>
+            public static string WarehouseLocation => GetStringFromRegistry(@"SOFTWARE\WOW6432Node\Rockstar Games\Grand Theft Auto V", "InstallFolder");
+        }
+
+        /// <summary>
         /// Gets a string from a Registry Key.
         /// </summary>
         private static string GetStringFromRegistry(string subkey, string value, bool removeQuotes = false)
@@ -41,22 +56,6 @@ namespace PatchMyPath
 
             // Finally, return the string that we got
             return builder.ToString();
-        }
-
-        /// <summary>
-        /// Gets the GTA V install location from the InstallShield Uninstall information.
-        /// </summary>
-        public static string GetUninstallPath()
-        {
-            return Path.GetDirectoryName(GetStringFromRegistry(@"SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{5EFC6C07-6B87-43FC-9524-F9E967241741}", "DisplayIcon", true));
-        }
-
-        /// <summary>
-        /// Gets the GTA V install location from the Legacy Rockstar Warehouse Installer.
-        /// </summary>
-        public static string GetRockstarLauncherPath()
-        {
-            return GetStringFromRegistry(@"SOFTWARE\WOW6432Node\Rockstar Games\Grand Theft Auto V", "InstallFolder");
         }
     }
 }
