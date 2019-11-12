@@ -410,14 +410,14 @@ namespace PatchMyPath
         private void SteamRDR2CheckBox_CheckedChanged(object sender, EventArgs e)
         {
             // Save the checkbox status
-            Program.Config.Steam.GTAVUse = SteamGTAVCheckBox.Checked;
+            Program.Config.Steam.RDR2Use = SteamRDR2CheckBox.Checked;
             Program.SaveConfig();
         }
 
         private void SteamRDR2Button_Click(object sender, EventArgs e)
         {
             // Save the App ID as an uint
-            Program.Config.Steam.GTAVAppID = uint.Parse(IDGTAVTextBox.Text);
+            Program.Config.Steam.GTAVAppID = ulong.Parse(IDGTAVTextBox.Text);
             Program.SaveConfig();
         }
 
@@ -431,7 +431,7 @@ namespace PatchMyPath
         private void SteamGTAVButton_Click(object sender, EventArgs e)
         {
             // Save the App ID as an uint
-            Program.Config.Steam.GTAVAppID = uint.Parse(IDGTAVTextBox.Text);
+            Program.Config.Steam.GTAVAppID = ulong.Parse(IDGTAVTextBox.Text);
             Program.SaveConfig();
         }
 
