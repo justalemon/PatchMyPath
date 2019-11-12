@@ -52,11 +52,11 @@ namespace PatchMyPath
             this.SteamSaveButton = new System.Windows.Forms.Button();
             this.AppIDTextBox = new System.Windows.Forms.TextBox();
             this.UseSteamCheckBox = new System.Windows.Forms.CheckBox();
-            this.LocationGroupBox = new System.Windows.Forms.GroupBox();
-            this.LocationSaveButton = new System.Windows.Forms.Button();
-            this.LocationDetectButton = new System.Windows.Forms.Button();
-            this.LocationSelectButton = new System.Windows.Forms.Button();
-            this.LocationTextBox = new System.Windows.Forms.TextBox();
+            this.GTAVLocationGroupBox = new System.Windows.Forms.GroupBox();
+            this.GTAVLocationSaveButton = new System.Windows.Forms.Button();
+            this.GTAVLocationDetectButton = new System.Windows.Forms.Button();
+            this.GTAVLocationSelectButton = new System.Windows.Forms.Button();
+            this.GTAVLocationTextBox = new System.Windows.Forms.TextBox();
             this.LoggingTabPage = new System.Windows.Forms.TabPage();
             this.LogTextBox = new System.Windows.Forms.TextBox();
             this.FolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
@@ -75,7 +75,7 @@ namespace PatchMyPath
             this.DestinationGroupBox.SuspendLayout();
             this.SettingsTabPage.SuspendLayout();
             this.SteamGroupBox.SuspendLayout();
-            this.LocationGroupBox.SuspendLayout();
+            this.GTAVLocationGroupBox.SuspendLayout();
             this.LoggingTabPage.SuspendLayout();
             this.TopMenuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -298,7 +298,7 @@ namespace PatchMyPath
             // SettingsTabPage
             // 
             this.SettingsTabPage.Controls.Add(this.SteamGroupBox);
-            this.SettingsTabPage.Controls.Add(this.LocationGroupBox);
+            this.SettingsTabPage.Controls.Add(this.GTAVLocationGroupBox);
             this.SettingsTabPage.Location = new System.Drawing.Point(4, 22);
             this.SettingsTabPage.Name = "SettingsTabPage";
             this.SettingsTabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -360,59 +360,59 @@ namespace PatchMyPath
             this.UseSteamCheckBox.Text = "Use Steam to launch the game (Disables Launcher Bypass)";
             this.UseSteamCheckBox.UseVisualStyleBackColor = true;
             // 
-            // LocationGroupBox
+            // GTAVLocationGroupBox
             // 
-            this.LocationGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.GTAVLocationGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LocationGroupBox.Controls.Add(this.LocationSaveButton);
-            this.LocationGroupBox.Controls.Add(this.LocationDetectButton);
-            this.LocationGroupBox.Controls.Add(this.LocationSelectButton);
-            this.LocationGroupBox.Controls.Add(this.LocationTextBox);
-            this.LocationGroupBox.Location = new System.Drawing.Point(6, 6);
-            this.LocationGroupBox.Name = "LocationGroupBox";
-            this.LocationGroupBox.Size = new System.Drawing.Size(464, 74);
-            this.LocationGroupBox.TabIndex = 1;
-            this.LocationGroupBox.TabStop = false;
-            this.LocationGroupBox.Text = "Game Location";
+            this.GTAVLocationGroupBox.Controls.Add(this.GTAVLocationSaveButton);
+            this.GTAVLocationGroupBox.Controls.Add(this.GTAVLocationDetectButton);
+            this.GTAVLocationGroupBox.Controls.Add(this.GTAVLocationSelectButton);
+            this.GTAVLocationGroupBox.Controls.Add(this.GTAVLocationTextBox);
+            this.GTAVLocationGroupBox.Location = new System.Drawing.Point(6, 6);
+            this.GTAVLocationGroupBox.Name = "GTAVLocationGroupBox";
+            this.GTAVLocationGroupBox.Size = new System.Drawing.Size(464, 74);
+            this.GTAVLocationGroupBox.TabIndex = 1;
+            this.GTAVLocationGroupBox.TabStop = false;
+            this.GTAVLocationGroupBox.Text = "Grand Theft Auto V Location";
             // 
-            // LocationSaveButton
+            // GTAVLocationSaveButton
             // 
-            this.LocationSaveButton.Location = new System.Drawing.Point(168, 45);
-            this.LocationSaveButton.Name = "LocationSaveButton";
-            this.LocationSaveButton.Size = new System.Drawing.Size(75, 23);
-            this.LocationSaveButton.TabIndex = 3;
-            this.LocationSaveButton.Text = "Save";
-            this.LocationSaveButton.UseVisualStyleBackColor = true;
-            this.LocationSaveButton.Click += new System.EventHandler(this.LocationSaveButton_Click);
+            this.GTAVLocationSaveButton.Location = new System.Drawing.Point(168, 45);
+            this.GTAVLocationSaveButton.Name = "GTAVLocationSaveButton";
+            this.GTAVLocationSaveButton.Size = new System.Drawing.Size(75, 23);
+            this.GTAVLocationSaveButton.TabIndex = 3;
+            this.GTAVLocationSaveButton.Text = "Save";
+            this.GTAVLocationSaveButton.UseVisualStyleBackColor = true;
+            this.GTAVLocationSaveButton.Click += new System.EventHandler(this.GTAVLocationSaveButton_Click);
             // 
-            // LocationDetectButton
+            // GTAVLocationDetectButton
             // 
-            this.LocationDetectButton.Location = new System.Drawing.Point(87, 45);
-            this.LocationDetectButton.Name = "LocationDetectButton";
-            this.LocationDetectButton.Size = new System.Drawing.Size(75, 23);
-            this.LocationDetectButton.TabIndex = 2;
-            this.LocationDetectButton.Text = "Detect";
-            this.LocationDetectButton.UseVisualStyleBackColor = true;
-            this.LocationDetectButton.Click += new System.EventHandler(this.LocationDetectButton_Click);
+            this.GTAVLocationDetectButton.Location = new System.Drawing.Point(87, 45);
+            this.GTAVLocationDetectButton.Name = "GTAVLocationDetectButton";
+            this.GTAVLocationDetectButton.Size = new System.Drawing.Size(75, 23);
+            this.GTAVLocationDetectButton.TabIndex = 2;
+            this.GTAVLocationDetectButton.Text = "Detect";
+            this.GTAVLocationDetectButton.UseVisualStyleBackColor = true;
+            this.GTAVLocationDetectButton.Click += new System.EventHandler(this.GTAVLocationDetectButton_Click);
             // 
-            // LocationSelectButton
+            // GTAVLocationSelectButton
             // 
-            this.LocationSelectButton.Location = new System.Drawing.Point(6, 45);
-            this.LocationSelectButton.Name = "LocationSelectButton";
-            this.LocationSelectButton.Size = new System.Drawing.Size(75, 23);
-            this.LocationSelectButton.TabIndex = 1;
-            this.LocationSelectButton.Text = "Select";
-            this.LocationSelectButton.UseVisualStyleBackColor = true;
-            this.LocationSelectButton.Click += new System.EventHandler(this.LocationSelectButton_Click);
+            this.GTAVLocationSelectButton.Location = new System.Drawing.Point(6, 45);
+            this.GTAVLocationSelectButton.Name = "GTAVLocationSelectButton";
+            this.GTAVLocationSelectButton.Size = new System.Drawing.Size(75, 23);
+            this.GTAVLocationSelectButton.TabIndex = 1;
+            this.GTAVLocationSelectButton.Text = "Select";
+            this.GTAVLocationSelectButton.UseVisualStyleBackColor = true;
+            this.GTAVLocationSelectButton.Click += new System.EventHandler(this.GTAVLocationSelectButton_Click);
             // 
-            // LocationTextBox
+            // GTAVLocationTextBox
             // 
-            this.LocationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.GTAVLocationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LocationTextBox.Location = new System.Drawing.Point(6, 19);
-            this.LocationTextBox.Name = "LocationTextBox";
-            this.LocationTextBox.Size = new System.Drawing.Size(452, 20);
-            this.LocationTextBox.TabIndex = 0;
+            this.GTAVLocationTextBox.Location = new System.Drawing.Point(6, 19);
+            this.GTAVLocationTextBox.Name = "GTAVLocationTextBox";
+            this.GTAVLocationTextBox.Size = new System.Drawing.Size(452, 20);
+            this.GTAVLocationTextBox.TabIndex = 0;
             // 
             // LoggingTabPage
             // 
@@ -420,7 +420,7 @@ namespace PatchMyPath
             this.LoggingTabPage.Location = new System.Drawing.Point(4, 22);
             this.LoggingTabPage.Name = "LoggingTabPage";
             this.LoggingTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.LoggingTabPage.Size = new System.Drawing.Size(476, 398);
+            this.LoggingTabPage.Size = new System.Drawing.Size(476, 348);
             this.LoggingTabPage.TabIndex = 3;
             this.LoggingTabPage.Text = "Logging";
             this.LoggingTabPage.UseVisualStyleBackColor = true;
@@ -433,7 +433,7 @@ namespace PatchMyPath
             this.LogTextBox.Name = "LogTextBox";
             this.LogTextBox.ReadOnly = true;
             this.LogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LogTextBox.Size = new System.Drawing.Size(470, 392);
+            this.LogTextBox.Size = new System.Drawing.Size(470, 342);
             this.LogTextBox.TabIndex = 0;
             // 
             // TopMenuStrip
@@ -516,8 +516,8 @@ namespace PatchMyPath
             this.SettingsTabPage.ResumeLayout(false);
             this.SteamGroupBox.ResumeLayout(false);
             this.SteamGroupBox.PerformLayout();
-            this.LocationGroupBox.ResumeLayout(false);
-            this.LocationGroupBox.PerformLayout();
+            this.GTAVLocationGroupBox.ResumeLayout(false);
+            this.GTAVLocationGroupBox.PerformLayout();
             this.LoggingTabPage.ResumeLayout(false);
             this.LoggingTabPage.PerformLayout();
             this.TopMenuStrip.ResumeLayout(false);
@@ -552,11 +552,11 @@ namespace PatchMyPath
         private System.Windows.Forms.ToolStripMenuItem RefreshToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem LaunchToolStripMenuItem;
         private System.Windows.Forms.TabPage SettingsTabPage;
-        private System.Windows.Forms.GroupBox LocationGroupBox;
-        private System.Windows.Forms.Button LocationSelectButton;
-        private System.Windows.Forms.TextBox LocationTextBox;
-        private System.Windows.Forms.Button LocationDetectButton;
-        private System.Windows.Forms.Button LocationSaveButton;
+        private System.Windows.Forms.GroupBox GTAVLocationGroupBox;
+        private System.Windows.Forms.Button GTAVLocationSelectButton;
+        private System.Windows.Forms.TextBox GTAVLocationTextBox;
+        private System.Windows.Forms.Button GTAVLocationDetectButton;
+        private System.Windows.Forms.Button GTAVLocationSaveButton;
         private System.Windows.Forms.GroupBox SteamGroupBox;
         private System.Windows.Forms.CheckBox UseSteamCheckBox;
         private System.Windows.Forms.Button SteamSaveButton;

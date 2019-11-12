@@ -78,7 +78,7 @@ namespace PatchMyPath
         public void LoadSettings()
         {
             // Just load the settings from the program configuration
-            LocationTextBox.Text = Program.Config.Destination.GTAV;
+            GTAVLocationTextBox.Text = Program.Config.Destination.GTAV;
             UseSteamCheckBox.Checked = Program.Config.UseSteam;
             AppIDTextBox.Text = Program.Config.AppID.ToString();
         }
@@ -332,7 +332,7 @@ namespace PatchMyPath
 
         #region Settings
 
-        private void LocationSelectButton_Click(object sender, EventArgs e)
+        private void GTAVLocationSelectButton_Click(object sender, EventArgs e)
         {
             // Show the folder browse dialog
             DialogResult result = FolderBrowser.ShowDialog();
@@ -340,11 +340,11 @@ namespace PatchMyPath
             // If the user confirmed the folder selection, save it on the text field
             if (result == DialogResult.OK)
             {
-                LocationTextBox.Text = FolderBrowser.SelectedPath;
+                GTAVLocationTextBox.Text = FolderBrowser.SelectedPath;
             }
         }
 
-        private void LocationDetectButton_Click(object sender, EventArgs e)
+        private void GTAVLocationDetectButton_Click(object sender, EventArgs e)
         {
             // Try to get the path from the Uninstall Information
             string uninstall = Paths.GetUninstallPath();
@@ -352,7 +352,7 @@ namespace PatchMyPath
             if (uninstall != null)
             {
                 // Set the text
-                LocationTextBox.Text = uninstall;
+                GTAVLocationTextBox.Text = uninstall;
                 // Notify the user
                 MessageBox.Show("Found the Vanilla Location on the Uninstall Information!", "Install Location Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // And return
@@ -365,7 +365,7 @@ namespace PatchMyPath
             if (warehouse != null)
             {
                 // Set the text
-                LocationTextBox.Text = warehouse;
+                GTAVLocationTextBox.Text = warehouse;
                 // Notify the user
                 MessageBox.Show("Found the Vanilla Location on the Legacy Rockstar Warehouse Information!", "Install Location Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // And return
@@ -373,10 +373,10 @@ namespace PatchMyPath
             }
         }
 
-        private void LocationSaveButton_Click(object sender, EventArgs e)
+        private void GTAVLocationSaveButton_Click(object sender, EventArgs e)
         {
             // Just save the location, nothing more
-            Program.Config.Destination.GTAV = LocationTextBox.Text;
+            Program.Config.Destination.GTAV = GTAVLocationTextBox.Text;
             Program.SaveConfig();
         }
 
