@@ -41,7 +41,7 @@ namespace PatchMyPath
                 SaveConfig();
             }
             // If the file could not be parsed
-            catch (JsonReaderException ex)
+            catch (JsonException ex)
             {
                 // Ask the user if he wants to make a new configuration
                 DialogResult result = MessageBox.Show($"We tried to load the configuration file but is invalid.\nDo you want to create a new configuration file?\nPress No if you want to manually check the file.\n\n({ex.Message})", "Invalid Configuration", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
