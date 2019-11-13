@@ -1,7 +1,7 @@
 # Getting started
 
 !!! tip
-    If you have questions about PatchMyPath or you are having problems setting it up, [join the Discord server](https://discord.gg/Cf6sspj). If I'm not available, just mention me and I'll answer as soon as possible.
+    If you need support or want some questions answered [join the Discord server](https://discord.gg/Cf6sspj).
 
 !!! warning
     PatchMyPath does not supports pirate copies of Grand Theft Auto V, the only versions supported are the ones from Steam and the Rockstar Games Launcher (previously called Rockstar Warehouse).
