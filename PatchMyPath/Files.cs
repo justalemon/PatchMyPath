@@ -31,9 +31,9 @@ namespace PatchMyPath
             { "x64", EntryType.Folder },
 
             { "GTA5.exe", EntryType.File | EntryType.Copy },
-            { "GTAVLanguageSelect.exe", EntryType.File | EntryType.Optional },
+            { "GTAVLanguageSelect.exe", EntryType.File | EntryType.Optional | EntryType.Copy },
             { "GTAVLauncher.exe", EntryType.File | EntryType.Copy },
-            { "PlayGTAV.exe", EntryType.File | EntryType.Optional },
+            { "PlayGTAV.exe", EntryType.File | EntryType.Optional | EntryType.Optional },
             { "bink2w64.dll", EntryType.File },
             { "d3dcompiler_46.dll", EntryType.File },
             { "d3dcsx_46.dll", EntryType.File },
@@ -78,7 +78,7 @@ namespace PatchMyPath
             { "Redistributables", EntryType.Folder | EntryType.Optional },
             { "x64", EntryType.Folder },
 
-            { "RDR2.exe", EntryType.File },
+            { "RDR2.exe", EntryType.File | EntryType.Copy },
             { "amd_ags_x64.dll", EntryType.File },
             { "bink2w64.dll", EntryType.File },
             { "dxilconv7.dll", EntryType.File },
