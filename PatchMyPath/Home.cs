@@ -375,7 +375,21 @@ namespace PatchMyPath
 
         private void GTAVLocationSaveButton_Click(object sender, EventArgs e)
         {
-            // Just save the location, nothing more
+            // If the selected folder matches the real folder, this might be the original game folder
+            if (GTAVLocationTextBox.Text == Links.GetRealPath(GTAVLocationTextBox.Text))
+            {
+                // Ask the user if he wants to rename it
+                DialogResult result = MessageBox.Show("Looks like this is the original game folder.\nDo you want to rename it? (To prevent the game from being deleted/overwritten)", "Original Folder Detected", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                // If he does, do it
+                if (result == DialogResult.Yes)
+                {
+                    Directory.Move(GTAVLocationTextBox.Text, GTAVLocationTextBox.Text + " - Clean");
+                    Links.CreateSymbolicLink(GTAVLocationTextBox.Text, GTAVLocationTextBox.Text + " - Clean", 3);
+                }
+            }
+
+            // Then save the location
             Program.Config.Destination.GTAV = GTAVLocationTextBox.Text;
             Program.SaveConfig();
         }
@@ -399,7 +413,21 @@ namespace PatchMyPath
 
         private void RDR2LocationSaveButton_Click(object sender, EventArgs e)
         {
-            // Just save the location, nothing more
+            // If the selected folder matches the real folder, this might be the original game folder
+            if (RDR2LocationTextBox.Text == Links.GetRealPath(RDR2LocationTextBox.Text))
+            {
+                // Ask the user if he wants to rename it
+                DialogResult result = MessageBox.Show("Looks like this is the original game folder.\nDo you want to rename it? (To prevent the game from being deleted/overwritten)", "Original Folder Detected", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                // If he does, do it
+                if (result == DialogResult.Yes)
+                {
+                    Directory.Move(RDR2LocationTextBox.Text, RDR2LocationTextBox.Text + " - Clean");
+                    Links.CreateSymbolicLink(RDR2LocationTextBox.Text, RDR2LocationTextBox.Text + " - Clean", 3);
+                }
+            }
+
+            // Then save the location
             Program.Config.Destination.RDR2 = RDR2LocationTextBox.Text;
             Program.SaveConfig();
         }
