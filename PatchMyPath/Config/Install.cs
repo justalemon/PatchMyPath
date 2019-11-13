@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
@@ -34,7 +34,7 @@ namespace PatchMyPath.Config
         /// <summary>
         /// Launch the game from ScriptHook\rdr2d.exe if present.
         /// </summary>
-        ScriptHookForRDR2 = 4,
+        ScriptHook = 4,
     }
     /// <summary>
     /// The type of game that this install contains.
