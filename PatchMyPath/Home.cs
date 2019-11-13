@@ -262,31 +262,49 @@ namespace PatchMyPath
                 bool fileExists = File.Exists(origin);
                 bool directoryExists = Directory.Exists(origin);
 
-                // If the file or directory does not exists
-                if ((!fileExists && entry.Value == EntryType.FileRequired) || (!directoryExists && entry.Value == EntryType.FolderRequired))
+                // If the entry is a file and it does not exists
+                if (entry.Value.HasFlag(EntryType.File) && !fileExists)
                 {
-                    // Notify the user and return
-                    MessageBox.Show($"The file or folder {entry.Key} does not exists and is required!\nThe process has been stopped!", "Unable to find Required File/Folder", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    LogTextBox.AppendText($"Process Stopped: The file or folder {entry.Key} does not exists and is required{Environment.NewLine}");
-                    return;
+                    // If is optional, notify and continue
+                    if (entry.Value.HasFlag(EntryType.Optional))
+                    {
+                        // Notify and continue
+                        LogTextBox.AppendText($"Warning: The file {entry.Key} does not exists but is not required, skipping...{Environment.NewLine}");
+                        continue;
+                    }
+                    // If is required, notify and return
+                    else
+                    {
+                        MessageBox.Show($"The file {entry.Key} does not exists and is required!\nThe process has been stopped!", "Unable to find Required File", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        LogTextBox.AppendText($"Error: The file {entry.Key} does not exists and is required{Environment.NewLine}");
+                        return;
+                    }
                 }
-                // If it does not exists but is not required
-                else if ((!fileExists && entry.Value == EntryType.FileOptional) || (!directoryExists && entry.Value == EntryType.FolderOptional))
+                // If the entry is a file and it does not exists
+                else if (entry.Value.HasFlag(EntryType.Folder) && !directoryExists)
                 {
-                    // Notify and continue
-                    LogTextBox.AppendText($"Warning: The file or folder {entry.Key} does not exists but is not required, skipping...{Environment.NewLine}");
-                    continue;
+                    // If is optional, notify and continue
+                    if (entry.Value.HasFlag(EntryType.Optional))
+                    {
+                        LogTextBox.AppendText($"Warning: The folder {entry.Key} does not exists but is not required, skipping...{Environment.NewLine}");
+                        continue;
+                    }
+                    // If is required, notify and return
+                    else
+                    {
+                        MessageBox.Show($"The folder {entry.Key} does not exists and is required!\nThe process has been stopped!", "Unable to find Required Folder", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        LogTextBox.AppendText($"Error: The folder {entry.Key} does not exists and is required{Environment.NewLine}");
+                        return;
+                    }
                 }
 
-                // Set the correct flag for the symbolic link
-                uint flag = (entry.Value == EntryType.FileOptional || entry.Value == EntryType.FileRequired) ? 2u : 3u;
-                // Otherwise, try to create the respective type
+                // If we got here, try to create the respective type
                 try
                 {
                     // If the symbolic link option is selected or this is a directory
-                    if (SymbolicRadioButton.Checked || flag == 3u)
+                    if (SymbolicRadioButton.Checked || entry.Value.HasFlag(EntryType.Folder))
                     {
-                        Links.CreateSymbolicLink(destination, origin, flag);
+                        Links.CreateSymbolicLink(destination, origin, entry.Value.HasFlag(EntryType.File) ? 2u : 3u);
                         LogTextBox.AppendText($"Successfully created symbolic link for {entry.Key}!{Environment.NewLine}");
                     }
                     // Otherwise
