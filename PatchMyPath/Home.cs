@@ -301,8 +301,13 @@ namespace PatchMyPath
                 // If we got here, try to create the respective type
                 try
                 {
+                    // If this is a file and we need to copy it
+                    if (fileExists && entry.Value.HasFlag(EntryType.Copy))
+                    {
+                        File.Copy(origin, destination);
+                    }
                     // If the symbolic link option is selected or this is a directory
-                    if (SymbolicRadioButton.Checked || entry.Value.HasFlag(EntryType.Folder))
+                    else if (SymbolicRadioButton.Checked || entry.Value.HasFlag(EntryType.Folder))
                     {
                         Links.CreateSymbolicLink(destination, origin, entry.Value.HasFlag(EntryType.File) ? 2u : 3u);
                         LogTextBox.AppendText($"Successfully created symbolic link for {entry.Key}!{Environment.NewLine}");
