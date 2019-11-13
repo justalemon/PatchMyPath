@@ -215,7 +215,7 @@ namespace PatchMyPath.Config
                 else
                 {
                     // If Steam is enabled, use the specified App ID
-                    if (Program.Config.Steam.GTAVUse)
+                    if (Program.Config.Steam.GTAVUse && Program.Config.Steam.GTAVAppID != 0)
                     {
                         Process.Start($"steam://rungameid/{Program.Config.Steam.GTAVAppID}");
                     }
