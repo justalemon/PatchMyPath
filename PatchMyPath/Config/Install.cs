@@ -99,7 +99,7 @@ namespace PatchMyPath.Config
                     return Launch.RagePluginHook;
                 }
                 // If there is a GTA5.exe and GTAVLauncherBypass.asi but is not from Steam, let the user start via Unknown's Magic Tool
-                else if (File.Exists(Path.Combine(GamePath, "GTA5.exe")) && File.Exists(Path.Combine(GamePath, "GTAVLauncherBypass.asi")) && !Program.Config.Steam.GTAVUse)
+                else if (File.Exists(Path.Combine(GamePath, "GTA5.exe")) && File.Exists(Path.Combine(GamePath, "GTAVLauncherBypass.asi")))
                 {
                     return Launch.LauncherBypass;
                 }
