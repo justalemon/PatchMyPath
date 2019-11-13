@@ -41,7 +41,13 @@ Before installing PatchMyPath, make sure that [.NET Framework 4.5.2](https://dot
 
 ## Usage
 
-To use PatchMyPath, you just need to run `PatchMyPath.exe`, enter an install number and press enter. Then, the application is going to close the Rockstar Games Launcher and Steam (if is required) to change the install location to then launch the game from the selected install.
+First, you need to add your game installs by pressing <img src="../../images/icons/Add.png" width="3%">. Then, select the RDR 2 or GTA V folder and press `OK`.
+
+To launch the install, select it on the list and press <img src="../../images/icons/Start.png" width="3%">. Please note that games with executables tampered can't be launched.
+
+If you want to remove an install from the list, select it and press <img src="../../images/icons/Remove.png" width="3%">. You will be asked if you also want to remove it from the hard drive.
+
+To refresh the list of installs and check again if they are valid, press <img src="../../images/icons/Refresh.png" width="3%">.
 
 [releases-url]: https://github.com/justalemon/PatchMyPath/releases
 [5mods-url]: https://www.gta5-mods.com/tools/patchmypath
