@@ -409,7 +409,7 @@ namespace PatchMyPath
         private void SteamRDR2Button_Click(object sender, EventArgs e)
         {
             // Save the App ID as an uint
-            Program.Config.Steam.GTAVAppID = ulong.Parse(IDGTAVTextBox.Text);
+            Program.Config.Steam.RDR2AppID = ulong.Parse(IDRDR2TextBox.Text);
             Program.SaveConfig();
         }
 
