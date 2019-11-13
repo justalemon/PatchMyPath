@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
@@ -103,6 +103,16 @@ namespace PatchMyPath.Config
                 {
                     return Launch.LauncherBypass;
                 }
+                // If RedHook2\Loader.exe is present, this is Dot's RH2
+                else if (File.Exists(Path.Combine(GamePath, "RedHook2", "Loader.exe")))
+                {
+                    return Launch.RedHook2;
+                }
+                // If ScriptHook\rdr2d.exe is present, this is Dot's RH2
+                else if (File.Exists(Path.Combine(GamePath, "ScriptHook", "rdr2d.exe")))
+                {
+                    return Launch.ScriptHook;
+                }
                 // If we got here, there is no alternative way to launch the game other than the main executabke
                 else if (File.Exists(Path.Combine(GamePath, "GTAVLauncher.exe")) || File.Exists(Path.Combine(GamePath, "RDR2.exe")))
                 {
@@ -182,6 +192,13 @@ namespace PatchMyPath.Config
             // If the game is RDR2
             if (game == Game.RedDeadRedemption2)
             {
+                // If the user is using ScriptHook for Red Dead Redemption 2, launch it as-it and let it do the heavy work
+                if (type == Launch.ScriptHook)
+                {
+                    Process.Start(Path.Combine(Program.Config.Destination.RDR2, "ScriptHook", "rdr2d.exe"));
+                    return;
+                }
+
                 // If the user wants Steam and the App ID is not zero, use the Steam URL
                 if (Program.Config.Steam.RDR2Use && Program.Config.Steam.RDR2AppID != 0)
                 {
@@ -191,6 +208,12 @@ namespace PatchMyPath.Config
                 else
                 {
                     Process.Start(Path.Combine(Program.Config.Destination.RDR2, "RDR2.exe"));
+                }
+                
+                // If the user wants to launch RedHook2
+                if (type == Launch.RedHook2)
+                {
+                    Process.Start(Path.Combine(Program.Config.Destination.RDR2, "RedHook2", "Loader.exe"));
                 }
             }
             // If the game is GTA V
