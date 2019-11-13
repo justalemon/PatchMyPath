@@ -43,6 +43,9 @@ Before installing PatchMyPath, make sure that [.NET Framework 4.5.2](https://dot
 
 First, you need to add your game installs by pressing <img src="../../images/icons/Add.png" width="3%">. Then, select the RDR 2 or GTA V folder and press `OK`.
 
+!!! info
+    If you want to use RedHook2 or ScriptHook with RDR 2, you need to create a folder called RedHook2 or ScriptHook respectively and place all of the files in there.
+
 To launch the install, select it on the list and press <img src="../../images/icons/Start.png" width="3%">. Please note that games with executables tampered can't be launched.
 
 If you want to remove an install from the list, select it and press <img src="../../images/icons/Remove.png" width="3%">. You will be asked if you also want to remove it from the hard drive.
