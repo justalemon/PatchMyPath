@@ -327,6 +327,13 @@ namespace PatchMyPath
                 }
             }
 
+            // If the user wants to automatically add the install, do it
+            if (AutoAddCheckBox.Checked)
+            {
+                Program.Config.GameInstalls.Add(new Install(DestinationTextBox.Text));
+                RefreshInstalls();
+            }
+
             // Finally, notify the user that the install is ready
             MessageBox.Show("Success! The install has been duplicated successfully.", "Duplication Finished!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
