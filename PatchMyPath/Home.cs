@@ -371,6 +371,9 @@ namespace PatchMyPath
                 // And return
                 return;
             }
+
+            // If we got here, we were unable to fetch the default folder
+            MessageBox.Show("We were unable to detect the original location. \nPlease make sure that the game was installed from RGL, Steam or EGL and try again.", "Unable to find location", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void GTAVLocationSaveButton_Click(object sender, EventArgs e)
