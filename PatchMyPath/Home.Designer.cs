@@ -73,6 +73,7 @@ namespace PatchMyPath
             this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RefreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DuplicationProgressBar = new System.Windows.Forms.ProgressBar();
             this.OtherGroupBox = new System.Windows.Forms.GroupBox();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
@@ -127,6 +128,7 @@ namespace PatchMyPath
             // DuplicatorTabPage
             // 
             this.DuplicatorTabPage.Controls.Add(this.OtherGroupBox);
+            this.DuplicatorTabPage.Controls.Add(this.DuplicationProgressBar);
             this.DuplicatorTabPage.Controls.Add(this.GameGroupBox);
             this.DuplicatorTabPage.Controls.Add(this.LinkTypeGroupBox);
             this.DuplicatorTabPage.Controls.Add(this.DuplicateButton);
@@ -598,6 +600,18 @@ namespace PatchMyPath
             this.DuplicationProgressBar.Size = new System.Drawing.Size(464, 23);
             this.DuplicationProgressBar.TabIndex = 8;
             // 
+            // OtherGroupBox
+            // 
+            this.OtherGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OtherGroupBox.Controls.Add(this.AutoAddCheckBox);
+            this.OtherGroupBox.Location = new System.Drawing.Point(6, 237);
+            this.OtherGroupBox.Name = "OtherGroupBox";
+            this.OtherGroupBox.Size = new System.Drawing.Size(464, 45);
+            this.OtherGroupBox.TabIndex = 9;
+            this.OtherGroupBox.TabStop = false;
+            this.OtherGroupBox.Text = "Other Options";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -685,6 +699,7 @@ namespace PatchMyPath
         private System.Windows.Forms.Label IDGTAVLabel;
         private System.Windows.Forms.TextBox IDGTAVTextBox;
         private System.Windows.Forms.Button SteamGTAVButton;
+        private System.Windows.Forms.ProgressBar DuplicationProgressBar;
         private System.Windows.Forms.GroupBox OtherGroupBox;
     }
 }

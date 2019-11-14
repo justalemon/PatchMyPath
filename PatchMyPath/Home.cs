@@ -261,6 +261,11 @@ namespace PatchMyPath
                 Directory.CreateDirectory(DestinationTextBox.Text);
             }
 
+            // Reset the progress bar to zero (just in case)
+            DuplicationProgressBar.Value = 0;
+            // Set the max progress to the number of items on the list
+            DuplicationProgressBar.Maximum = entries.Count;
+
             // Iterate over the dictionary of game files and folders
             foreach (KeyValuePair<string, EntryType> entry in entries)
             {
@@ -334,6 +339,9 @@ namespace PatchMyPath
                     MessageBox.Show($"Got an Error while creating the Symbolic or Hard link\n\n{er.Message}\n\nThe process has been stopped.", "Error while creating Symbolic/Hard Link", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
+                // Increase the progress count by one
+                DuplicationProgressBar.Value += 1;
             }
 
             // If the user wants to automatically add the install, do it
@@ -342,6 +350,9 @@ namespace PatchMyPath
                 Program.Config.GameInstalls.Add(new Install(DestinationTextBox.Text));
                 RefreshInstalls();
             }
+
+            // Reset the progress of the bar
+            DuplicationProgressBar.Value = 0;
 
             // Finally, notify the user that the install is ready
             MessageBox.Show("Success! The install has been duplicated successfully.", "Duplication Finished!", MessageBoxButtons.OK, MessageBoxIcon.Information);
