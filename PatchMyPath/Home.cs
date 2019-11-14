@@ -224,13 +224,12 @@ namespace PatchMyPath
             // If the destination folder exists and is not empty
             if (Directory.Exists(DestinationTextBox.Text) && Directory.EnumerateFileSystemEntries(DestinationTextBox.Text).Any())
             {
-                // Ask the user if he wants to wipe the folder
-                DialogResult result = MessageBox.Show("The Destination folder contains files and/or folders\nDo you want to search for game files and delete them if they are present?", "Destination Contains Files and/or Folders", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                // And ask the user if he wants to wipe the folder
+                DialogResult result = MessageBox.Show("The Destination folder contains files and/or folders.\nExisting game files will be removed and replaced with links. Installed modifications will not be touched.\n\nDo you want to continue?", "Destination Contains Files and/or Folders", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                // Return if the user said no
+                // Return if the user said no, log it and return
                 if (result == DialogResult.No)
                 {
-                    MessageBox.Show($"The Destination folder contains files and you cancelled the removal of game files.", "Cancelled Removal of Game Files", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
