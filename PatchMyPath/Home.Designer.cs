@@ -34,7 +34,6 @@ namespace PatchMyPath
             this.DuplicatorTabPage = new System.Windows.Forms.TabPage();
             this.GameGroupBox = new System.Windows.Forms.GroupBox();
             this.GameComboBox = new System.Windows.Forms.ComboBox();
-            this.AutoAddGroupBox = new System.Windows.Forms.GroupBox();
             this.AutoAddCheckBox = new System.Windows.Forms.CheckBox();
             this.LinkTypeGroupBox = new System.Windows.Forms.GroupBox();
             this.HardRadioButton = new System.Windows.Forms.RadioButton();
@@ -78,7 +77,6 @@ namespace PatchMyPath
             this.InstallsTabPage.SuspendLayout();
             this.DuplicatorTabPage.SuspendLayout();
             this.GameGroupBox.SuspendLayout();
-            this.AutoAddGroupBox.SuspendLayout();
             this.LinkTypeGroupBox.SuspendLayout();
             this.OriginGroupBox.SuspendLayout();
             this.DestinationGroupBox.SuspendLayout();
@@ -126,8 +124,8 @@ namespace PatchMyPath
             // 
             // DuplicatorTabPage
             // 
+            this.DuplicatorTabPage.Controls.Add(this.AutoAddCheckBox);
             this.DuplicatorTabPage.Controls.Add(this.GameGroupBox);
-            this.DuplicatorTabPage.Controls.Add(this.AutoAddGroupBox);
             this.DuplicatorTabPage.Controls.Add(this.LinkTypeGroupBox);
             this.DuplicatorTabPage.Controls.Add(this.DuplicateButton);
             this.DuplicatorTabPage.Controls.Add(this.OriginGroupBox);
@@ -163,27 +161,16 @@ namespace PatchMyPath
             this.GameComboBox.Size = new System.Drawing.Size(450, 21);
             this.GameComboBox.TabIndex = 0;
             // 
-            // AutoAddGroupBox
-            // 
-            this.AutoAddGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.AutoAddGroupBox.Controls.Add(this.AutoAddCheckBox);
-            this.AutoAddGroupBox.Location = new System.Drawing.Point(6, 237);
-            this.AutoAddGroupBox.Name = "AutoAddGroupBox";
-            this.AutoAddGroupBox.Size = new System.Drawing.Size(464, 42);
-            this.AutoAddGroupBox.TabIndex = 6;
-            this.AutoAddGroupBox.TabStop = false;
-            this.AutoAddGroupBox.Text = "Add to the Manager";
-            // 
             // AutoAddCheckBox
             // 
             this.AutoAddCheckBox.AutoSize = true;
-            this.AutoAddCheckBox.Location = new System.Drawing.Point(6, 19);
+            this.AutoAddCheckBox.Location = new System.Drawing.Point(90, 237);
             this.AutoAddCheckBox.Name = "AutoAddCheckBox";
             this.AutoAddCheckBox.Size = new System.Drawing.Size(289, 17);
             this.AutoAddCheckBox.TabIndex = 0;
             this.AutoAddCheckBox.Text = "Add install to PatchMyPath after completing the process";
             this.AutoAddCheckBox.UseVisualStyleBackColor = true;
+            this.AutoAddCheckBox.CheckedChanged += new System.EventHandler(this.AutoAddCheckBox_CheckedChanged);
             // 
             // LinkTypeGroupBox
             // 
@@ -615,9 +602,8 @@ namespace PatchMyPath
             this.GeneralTabControl.ResumeLayout(false);
             this.InstallsTabPage.ResumeLayout(false);
             this.DuplicatorTabPage.ResumeLayout(false);
+            this.DuplicatorTabPage.PerformLayout();
             this.GameGroupBox.ResumeLayout(false);
-            this.AutoAddGroupBox.ResumeLayout(false);
-            this.AutoAddGroupBox.PerformLayout();
             this.LinkTypeGroupBox.ResumeLayout(false);
             this.LinkTypeGroupBox.PerformLayout();
             this.OriginGroupBox.ResumeLayout(false);
@@ -657,7 +643,6 @@ namespace PatchMyPath
         private System.Windows.Forms.RadioButton HardRadioButton;
         private System.Windows.Forms.RadioButton SymbolicRadioButton;
         private System.Windows.Forms.Button DuplicateButton;
-        private System.Windows.Forms.GroupBox AutoAddGroupBox;
         private System.Windows.Forms.CheckBox AutoAddCheckBox;
         private System.Windows.Forms.MenuStrip TopMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem AddToolStripMenuItem;

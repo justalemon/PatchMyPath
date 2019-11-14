@@ -12,6 +12,11 @@ namespace PatchMyPath.Config
     public class Configuration
     {
         /// <summary>
+        /// If the install should be added after finishing with the duplication process.
+        /// </summary>
+        [JsonProperty("add_after_dupe")]
+        public bool AddAfterDupe { get; set; } = true;
+        /// <summary>
         /// The settings for the usage of Steam for launching the game..
         /// </summary>
         [JsonProperty("steam")]

@@ -78,6 +78,8 @@ namespace PatchMyPath
         public void LoadSettings()
         {
             // Just load the settings from the program configuration
+            AutoAddCheckBox.Checked = Program.Config.AddAfterDupe;
+
             RDR2LocationTextBox.Text = Program.Config.Destination.RDR2;
             GTAVLocationTextBox.Text = Program.Config.Destination.GTAV;
             SteamRDR2CheckBox.Checked = Program.Config.Steam.RDR2Use;
@@ -171,6 +173,13 @@ namespace PatchMyPath
             {
                 DestinationTextBox.Text = FolderBrowser.SelectedPath;
             }
+        }
+
+        private void AutoAddCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            // Save the checkbox status on the settings
+            Program.Config.AddAfterDupe = AutoAddCheckBox.Checked;
+            Program.SaveConfig();
         }
 
         private void DuplicateButton_Click(object sender, EventArgs e)
