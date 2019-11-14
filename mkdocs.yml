@@ -4,7 +4,7 @@ nav:
   - PatchMyPath:
     - About: index.md
     - Getting started: getting-started.md
-    - Customization: customization.md
+    - Using Steam: steam.md
   - InstallDuplicator:
     - About: duplicator/index.md
     - Getting started: duplicator/getting-started.md
