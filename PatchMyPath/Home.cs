@@ -330,7 +330,7 @@ namespace PatchMyPath
 
         #endregion
 
-        #region Settings
+        #region Settings - GTA V
 
         private void GTAVLocationSelectButton_Click(object sender, EventArgs e)
         {
@@ -394,6 +394,10 @@ namespace PatchMyPath
             Program.SaveConfig();
         }
 
+        #endregion
+
+        #region Settings - RDR 2
+
         private void RDR2LocationSelectButton_Click(object sender, EventArgs e)
         {
             // Show the folder browse dialog
@@ -431,6 +435,10 @@ namespace PatchMyPath
             Program.Config.Destination.RDR2 = RDR2LocationTextBox.Text;
             Program.SaveConfig();
         }
+
+        #endregion
+
+        #region Settings - Steam
 
         private void SteamRDR2CheckBox_CheckedChanged(object sender, EventArgs e)
         {
