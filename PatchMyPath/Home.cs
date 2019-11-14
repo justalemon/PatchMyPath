@@ -326,6 +326,9 @@ namespace PatchMyPath
                     return;
                 }
             }
+
+            // Finally, notify the user that the install is ready
+            MessageBox.Show("Success! The install has been duplicated successfully.", "Duplication Finished!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         #endregion
