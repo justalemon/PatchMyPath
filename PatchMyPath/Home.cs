@@ -415,7 +415,21 @@ namespace PatchMyPath
 
         private void RDR2LocationDetectButton_Click(object sender, EventArgs e)
         {
+            // Try to get the path from the Uninstall Information
+            string uninstall = Paths.RDR2.UninstallLocation;
+            // If is not null
+            if (uninstall != null)
+            {
+                // Set the text
+                RDR2LocationTextBox.Text = uninstall;
+                // Notify the user
+                MessageBox.Show("Found the Vanilla Location on the Uninstall Information!", "Install Location Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // And return
+                return;
+            }
 
+            // If we got here, we were unable to fetch the default folder
+            MessageBox.Show("We were unable to detect the original location. \nPlease make sure that the game was installed from RGL, Steam or EGL and try again.", "Unable to find location", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void RDR2LocationSaveButton_Click(object sender, EventArgs e)

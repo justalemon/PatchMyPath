@@ -23,6 +23,16 @@ namespace PatchMyPath
             /// </summary>
             public static string WarehouseLocation => GetStringFromRegistry(@"SOFTWARE\WOW6432Node\Rockstar Games\Grand Theft Auto V", "InstallFolder");
         }
+        /// <summary>
+        /// Class that contains the posible install locations for RDR2.
+        /// </summary>
+        public static class RDR2
+        {
+            /// <summary>
+            /// The possible path from the RGL Uninstall information.
+            /// </summary>
+            public static string UninstallLocation => Path.GetDirectoryName(GetStringFromRegistry(@"SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Red Dead Redemption 2", "DisplayIcon", true));
+        }
 
         /// <summary>
         /// Gets a string from a Registry Key.
