@@ -77,7 +77,6 @@
     </Compile>
     <Compile Include="Links.cs" />
     <Compile Include="Paths.cs" />
-    <Compile Include="Processes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Home.resx">
