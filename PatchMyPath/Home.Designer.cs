@@ -32,9 +32,11 @@ namespace PatchMyPath
             this.InstallsTabPage = new System.Windows.Forms.TabPage();
             this.InstallsListBox = new System.Windows.Forms.ListBox();
             this.DuplicatorTabPage = new System.Windows.Forms.TabPage();
+            this.OtherGroupBox = new System.Windows.Forms.GroupBox();
+            this.AutoAddCheckBox = new System.Windows.Forms.CheckBox();
+            this.DuplicationProgressBar = new System.Windows.Forms.ProgressBar();
             this.GameGroupBox = new System.Windows.Forms.GroupBox();
             this.GameComboBox = new System.Windows.Forms.ComboBox();
-            this.AutoAddCheckBox = new System.Windows.Forms.CheckBox();
             this.LinkTypeGroupBox = new System.Windows.Forms.GroupBox();
             this.HardRadioButton = new System.Windows.Forms.RadioButton();
             this.SymbolicRadioButton = new System.Windows.Forms.RadioButton();
@@ -65,19 +67,16 @@ namespace PatchMyPath
             this.GTAVLocationDetectButton = new System.Windows.Forms.Button();
             this.GTAVLocationSelectButton = new System.Windows.Forms.Button();
             this.GTAVLocationTextBox = new System.Windows.Forms.TextBox();
-            this.LoggingTabPage = new System.Windows.Forms.TabPage();
-            this.LogTextBox = new System.Windows.Forms.TextBox();
             this.FolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.TopMenuStrip = new System.Windows.Forms.MenuStrip();
             this.LaunchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RefreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DuplicationProgressBar = new System.Windows.Forms.ProgressBar();
-            this.OtherGroupBox = new System.Windows.Forms.GroupBox();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.DuplicatorTabPage.SuspendLayout();
+            this.OtherGroupBox.SuspendLayout();
             this.GameGroupBox.SuspendLayout();
             this.LinkTypeGroupBox.SuspendLayout();
             this.OriginGroupBox.SuspendLayout();
@@ -86,9 +85,7 @@ namespace PatchMyPath
             this.RDR2LocationGroupBox.SuspendLayout();
             this.SteamGroupBox.SuspendLayout();
             this.GTAVLocationGroupBox.SuspendLayout();
-            this.LoggingTabPage.SuspendLayout();
             this.TopMenuStrip.SuspendLayout();
-            this.OtherGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // GeneralTabControl
@@ -96,7 +93,6 @@ namespace PatchMyPath
             this.GeneralTabControl.Controls.Add(this.InstallsTabPage);
             this.GeneralTabControl.Controls.Add(this.DuplicatorTabPage);
             this.GeneralTabControl.Controls.Add(this.SettingsTabPage);
-            this.GeneralTabControl.Controls.Add(this.LoggingTabPage);
             this.GeneralTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GeneralTabControl.Location = new System.Drawing.Point(0, 37);
             this.GeneralTabControl.Name = "GeneralTabControl";
@@ -142,6 +138,38 @@ namespace PatchMyPath
             this.DuplicatorTabPage.Text = "Duplicator Tool";
             this.DuplicatorTabPage.UseVisualStyleBackColor = true;
             // 
+            // OtherGroupBox
+            // 
+            this.OtherGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OtherGroupBox.Controls.Add(this.AutoAddCheckBox);
+            this.OtherGroupBox.Location = new System.Drawing.Point(6, 237);
+            this.OtherGroupBox.Name = "OtherGroupBox";
+            this.OtherGroupBox.Size = new System.Drawing.Size(464, 45);
+            this.OtherGroupBox.TabIndex = 9;
+            this.OtherGroupBox.TabStop = false;
+            this.OtherGroupBox.Text = "Other Options";
+            // 
+            // AutoAddCheckBox
+            // 
+            this.AutoAddCheckBox.AutoSize = true;
+            this.AutoAddCheckBox.Location = new System.Drawing.Point(8, 19);
+            this.AutoAddCheckBox.Name = "AutoAddCheckBox";
+            this.AutoAddCheckBox.Size = new System.Drawing.Size(289, 17);
+            this.AutoAddCheckBox.TabIndex = 0;
+            this.AutoAddCheckBox.Text = "Add install to PatchMyPath after completing the process";
+            this.AutoAddCheckBox.UseVisualStyleBackColor = true;
+            this.AutoAddCheckBox.CheckedChanged += new System.EventHandler(this.AutoAddCheckBox_CheckedChanged);
+            // 
+            // DuplicationProgressBar
+            // 
+            this.DuplicationProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DuplicationProgressBar.Location = new System.Drawing.Point(6, 288);
+            this.DuplicationProgressBar.Name = "DuplicationProgressBar";
+            this.DuplicationProgressBar.Size = new System.Drawing.Size(464, 23);
+            this.DuplicationProgressBar.TabIndex = 8;
+            // 
             // GameGroupBox
             // 
             this.GameGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -164,17 +192,6 @@ namespace PatchMyPath
             this.GameComboBox.Name = "GameComboBox";
             this.GameComboBox.Size = new System.Drawing.Size(450, 21);
             this.GameComboBox.TabIndex = 0;
-            // 
-            // AutoAddCheckBox
-            // 
-            this.AutoAddCheckBox.AutoSize = true;
-            this.AutoAddCheckBox.Location = new System.Drawing.Point(8, 19);
-            this.AutoAddCheckBox.Name = "AutoAddCheckBox";
-            this.AutoAddCheckBox.Size = new System.Drawing.Size(289, 17);
-            this.AutoAddCheckBox.TabIndex = 0;
-            this.AutoAddCheckBox.Text = "Add install to PatchMyPath after completing the process";
-            this.AutoAddCheckBox.UseVisualStyleBackColor = true;
-            this.AutoAddCheckBox.CheckedChanged += new System.EventHandler(this.AutoAddCheckBox_CheckedChanged);
             // 
             // LinkTypeGroupBox
             // 
@@ -516,28 +533,6 @@ namespace PatchMyPath
             this.GTAVLocationTextBox.Size = new System.Drawing.Size(452, 20);
             this.GTAVLocationTextBox.TabIndex = 0;
             // 
-            // LoggingTabPage
-            // 
-            this.LoggingTabPage.Controls.Add(this.LogTextBox);
-            this.LoggingTabPage.Location = new System.Drawing.Point(4, 22);
-            this.LoggingTabPage.Name = "LoggingTabPage";
-            this.LoggingTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.LoggingTabPage.Size = new System.Drawing.Size(476, 348);
-            this.LoggingTabPage.TabIndex = 3;
-            this.LoggingTabPage.Text = "Logging";
-            this.LoggingTabPage.UseVisualStyleBackColor = true;
-            // 
-            // LogTextBox
-            // 
-            this.LogTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LogTextBox.Location = new System.Drawing.Point(3, 3);
-            this.LogTextBox.Multiline = true;
-            this.LogTextBox.Name = "LogTextBox";
-            this.LogTextBox.ReadOnly = true;
-            this.LogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LogTextBox.Size = new System.Drawing.Size(470, 342);
-            this.LogTextBox.TabIndex = 0;
-            // 
             // TopMenuStrip
             // 
             this.TopMenuStrip.ImageScalingSize = new System.Drawing.Size(25, 25);
@@ -591,27 +586,6 @@ namespace PatchMyPath
             this.RefreshToolStripMenuItem.Text = "Refresh";
             this.RefreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
             // 
-            // DuplicationProgressBar
-            // 
-            this.DuplicationProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DuplicationProgressBar.Location = new System.Drawing.Point(6, 288);
-            this.DuplicationProgressBar.Name = "DuplicationProgressBar";
-            this.DuplicationProgressBar.Size = new System.Drawing.Size(464, 23);
-            this.DuplicationProgressBar.TabIndex = 8;
-            // 
-            // OtherGroupBox
-            // 
-            this.OtherGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OtherGroupBox.Controls.Add(this.AutoAddCheckBox);
-            this.OtherGroupBox.Location = new System.Drawing.Point(6, 237);
-            this.OtherGroupBox.Name = "OtherGroupBox";
-            this.OtherGroupBox.Size = new System.Drawing.Size(464, 45);
-            this.OtherGroupBox.TabIndex = 9;
-            this.OtherGroupBox.TabStop = false;
-            this.OtherGroupBox.Text = "Other Options";
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -627,6 +601,8 @@ namespace PatchMyPath
             this.GeneralTabControl.ResumeLayout(false);
             this.InstallsTabPage.ResumeLayout(false);
             this.DuplicatorTabPage.ResumeLayout(false);
+            this.OtherGroupBox.ResumeLayout(false);
+            this.OtherGroupBox.PerformLayout();
             this.GameGroupBox.ResumeLayout(false);
             this.LinkTypeGroupBox.ResumeLayout(false);
             this.LinkTypeGroupBox.PerformLayout();
@@ -641,12 +617,8 @@ namespace PatchMyPath
             this.SteamGroupBox.PerformLayout();
             this.GTAVLocationGroupBox.ResumeLayout(false);
             this.GTAVLocationGroupBox.PerformLayout();
-            this.LoggingTabPage.ResumeLayout(false);
-            this.LoggingTabPage.PerformLayout();
             this.TopMenuStrip.ResumeLayout(false);
             this.TopMenuStrip.PerformLayout();
-            this.OtherGroupBox.ResumeLayout(false);
-            this.OtherGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -686,8 +658,6 @@ namespace PatchMyPath
         private System.Windows.Forms.Button SteamRDR2Button;
         private System.Windows.Forms.TextBox IDRDR2TextBox;
         private System.Windows.Forms.Label IDRDR2Label;
-        private System.Windows.Forms.TabPage LoggingTabPage;
-        private System.Windows.Forms.TextBox LogTextBox;
         private System.Windows.Forms.GroupBox GameGroupBox;
         private System.Windows.Forms.ComboBox GameComboBox;
         private System.Windows.Forms.GroupBox RDR2LocationGroupBox;
