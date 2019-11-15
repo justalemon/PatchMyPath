@@ -143,11 +143,25 @@ namespace PatchMyPath.Config
 
         public void Start()
         {
-            // If the install is invalid, notify the user and return
-            if (Type == Launch.Invalid)
+            // If the install has been tampered, notify the user and return
+            if (!IsLegal)
             {
-                Logger.Error("User attempted to launch {0} but is invalid", GamePath);
-                MessageBox.Show("We did some preliminary checks and we found that this install is invalid. Please make sure that all of the game files are present and the executables have not been modified and try again.", "Invalid Install", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.Error("User attempted to launch {0} but the executables are tampered", GamePath);
+                MessageBox.Show("The game executables have been tampered.\nPlease make sure that they have not been modified and try again.", "Executables Tampered", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            // If the type is set to Invalid, notify the user and return
+            else if (Type == Launch.Invalid)
+            {
+                Logger.Error("User attempted to launch {0} but the executables are missing");
+                MessageBox.Show("The game executables could not be found.\nPlease make sure that the files are present and try again.", "Executables Missing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            // If the game is set to Invalid, notify the user and return
+            else if (Game == Game.Invalid)
+            {
+                Logger.Error("User attempted to launch {0} but no game install could be detected");
+                MessageBox.Show("No game install could be found on the specified folder.\nPlease make sure one of the supported games exists on the install folder and try again.", "No Game Detected", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -264,12 +278,6 @@ namespace PatchMyPath.Config
                         Process.Start(Path.Combine(Program.Config.Destination.GTAV, "GTAVLauncher.exe"));
                     }
                 }
-            }
-            // If we managed to get here, either the game or options are invalid
-            else
-            {
-                Logger.Info("Game install {0} is invalid: Game is {1}, Launch Type is {2}", GamePath, (int)game, (int)type);
-                MessageBox.Show("We were unable to start the game.\nPlease check that the selected install is valid and try again.", "Invalid Install", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
