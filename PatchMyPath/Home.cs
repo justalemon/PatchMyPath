@@ -452,8 +452,12 @@ namespace PatchMyPath
 
         private void GTAVLocationSaveButton_Click(object sender, EventArgs e)
         {
+            // Get the original paths for both locations
+            string providedPath = GTAVLocationTextBox.Text.TrimEnd('\\');
+            string realPath = Links.GetRealPath(GTAVLocationTextBox.Text).TrimEnd('\\');
+
             // If the selected folder matches the real folder, this might be the original game folder
-            if (GTAVLocationTextBox.Text == Links.GetRealPath(GTAVLocationTextBox.Text))
+            if (providedPath == realPath)
             {
                 // Ask the user if he wants to rename it
                 DialogResult result = MessageBox.Show("Looks like this is the original game folder.\nDo you want to rename it? (To prevent the game from being deleted/overwritten)", "Original Folder Detected", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -461,19 +465,19 @@ namespace PatchMyPath
                 // If he does, do it
                 if (result == DialogResult.Yes)
                 {
-                    string path = GTAVLocationTextBox.Text + " - Clean";
-
-                    Logger.Info("{0} is being renamed to {1} for saving", GTAVLocationTextBox.Text, path);
-
-                    Directory.Move(GTAVLocationTextBox.Text, path);
-                    Links.CreateSymbolicLink(GTAVLocationTextBox.Text, path, 3);
+                    string newPath = providedPath + " - Clean";
+                    Logger.Info("{0} is being renamed to {1} for saving", providedPath, newPath);
+                    Directory.Move(providedPath, newPath);
+                    Links.CreateSymbolicLink(providedPath, newPath, 3);
                 }
             }
             
             // Log it
-            Logger.Info("Grand Theft Auto V location set to {0}", GTAVLocationTextBox.Text);
+            Logger.Info("Grand Theft Auto V location set to {0}", providedPath);
+            // Replace the existing TextBox value
+            GTAVLocationTextBox.Text = providedPath;
             // And save the location
-            Program.Config.Destination.GTAV = GTAVLocationTextBox.Text;
+            Program.Config.Destination.GTAV = providedPath;
             Program.SaveConfig();
         }
 
@@ -516,8 +520,12 @@ namespace PatchMyPath
 
         private void RDR2LocationSaveButton_Click(object sender, EventArgs e)
         {
+            // Get the original paths for both locations
+            string providedPath = RDR2LocationTextBox.Text.TrimEnd('\\');
+            string realPath = Links.GetRealPath(RDR2LocationTextBox.Text).TrimEnd('\\');
+
             // If the selected folder matches the real folder, this might be the original game folder
-            if (RDR2LocationTextBox.Text == Links.GetRealPath(RDR2LocationTextBox.Text))
+            if (providedPath == realPath)
             {
                 // Ask the user if he wants to rename it
                 DialogResult result = MessageBox.Show("Looks like this is the original game folder.\nDo you want to rename it? (To prevent the game from being deleted/overwritten)", "Original Folder Detected", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -525,19 +533,19 @@ namespace PatchMyPath
                 // If he does, do it
                 if (result == DialogResult.Yes)
                 {
-                    string path = RDR2LocationTextBox.Text + " - Clean";
-
-                    Logger.Info("{0} is being renamed to {1} for saving", RDR2LocationTextBox.Text, path);
-
-                    Directory.Move(RDR2LocationTextBox.Text, path);
-                    Links.CreateSymbolicLink(RDR2LocationTextBox.Text, path, 3);
+                    string newPath = providedPath + " - Clean";
+                    Logger.Info("{0} is being renamed to {1} for saving", providedPath, newPath);
+                    Directory.Move(providedPath, newPath);
+                    Links.CreateSymbolicLink(providedPath, newPath, 3);
                 }
             }
 
             // Log it
-            Logger.Info("Red Dead Redemption 2 location set to {0}", RDR2LocationTextBox.Text);
+            Logger.Info("Red Dead Redemption 2 location set to {0}", providedPath);
+            // Replace the existing TextBox value
+            RDR2LocationTextBox.Text = providedPath;
             // And save the location
-            Program.Config.Destination.RDR2 = RDR2LocationTextBox.Text;
+            Program.Config.Destination.RDR2 = providedPath;
             Program.SaveConfig();
         }
 
