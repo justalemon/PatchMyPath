@@ -562,8 +562,15 @@ namespace PatchMyPath
 
         private void SteamRDR2Button_Click(object sender, EventArgs e)
         {
-            // Save the App ID as an uint
-            Program.Config.Steam.RDR2AppID = ulong.Parse(IDRDR2TextBox.Text);
+            // Try to parse the number as an uint
+            // If we failed, notify the user and return
+            if (!ulong.TryParse(IDRDR2TextBox.Text, out ulong output))
+            {
+                MessageBox.Show($"'{IDRDR2TextBox.Text}' is not a valid number or is too big to be processed (max value is {uint.MaxValue}).");
+                return;
+            }
+            // If we managed to parse the number, save it
+            Program.Config.Steam.RDR2AppID = output;
             Program.SaveConfig();
         }
 
@@ -576,8 +583,15 @@ namespace PatchMyPath
 
         private void SteamGTAVButton_Click(object sender, EventArgs e)
         {
-            // Save the App ID as an uint
-            Program.Config.Steam.GTAVAppID = ulong.Parse(IDGTAVTextBox.Text);
+            // Try to parse the number as an uint
+            // If we failed, notify the user and return
+            if (!ulong.TryParse(IDGTAVTextBox.Text, out ulong output))
+            {
+                MessageBox.Show($"'{IDGTAVTextBox.Text}' is not a valid number or is too big to be processed (max value is {uint.MaxValue}).");
+                return;
+            }
+            // If we managed to parse the number, save it
+            Program.Config.Steam.GTAVAppID = output;
             Program.SaveConfig();
         }
 
