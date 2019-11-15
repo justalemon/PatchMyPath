@@ -366,7 +366,6 @@ namespace PatchMyPath
                     else
                     {
                         Links.CreateHardLink(origin, destination);
-                        LogTextBox.AppendText($"Successfully created hard link for {entry.Key}!{Environment.NewLine}");
                         Logger.Debug("File hard link was created from {0} to {1}", origin, destination);
                     }
                 }
