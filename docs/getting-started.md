@@ -1,7 +1,7 @@
 # Getting started
 
 !!! tip
-    If you need support or want some questions answered [join the Discord server](https://discord.gg/Cf6sspj).
+    If you are having problems while trying to use or configure the program [join the Discord server](https://discord.gg/Cf6sspj).
 
 !!! warning
     PatchMyPath does not supports pirate copies of Red Dead Redemption 2 and Grand Theft Auto V.
