@@ -24,11 +24,11 @@ To use the Install Duplicator, you need a working Grand Theft Auto V or Red Dead
 ??? tip "Click here for instructions that allow you to check the Integrity of the game"
     * Rockstar Games Launcher: Go to `Settings > My installed games > Grand Theft Auto V` and click `Verify Integrity` to ensure that all of the files are on their vanilla state
 
-    ![RGL](../images/duplicating/01.png)
+    ![RGL](images/duplicating/rgl.png)
 
     * Steam: Right Click the game and select `Properties`. Then, go to the `Local Files` tab and click `Verify Integrity of Local Files...`
 
-    ![Steam](../images/duplicating/02.png)
+    ![Steam](images/duplicating/steam.png)
 
 Using the Install Duplicator is pretty easy, you need to:
 
