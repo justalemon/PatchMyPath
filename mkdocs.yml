@@ -1,14 +1,10 @@
 site_name: PatchMyPath
 
 nav:
-  - PatchMyPath:
-    - About: index.md
-    - Getting started: getting-started.md
-    - Install Duplicator tool: duplicator.md
-    - Using Steam: steam.md
-  - Configuration:
-    - Base Configuration: config/root.md
-    - Install Objects: config/install.md
+  - About: index.md
+  - Getting started: getting-started.md
+  - Install Duplicator tool: duplicator.md
+  - Using Steam: steam.md
 
 repo_name: justalemon/PatchMyPath
 repo_url: https://github.com/justalemon/PatchMyPath
@@ -22,8 +18,6 @@ theme:
   palette:
     primary: red
     accent: red
-  feature:
-    tabs: true
 
 extra:
   social:
