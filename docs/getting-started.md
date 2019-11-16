@@ -10,7 +10,7 @@
 
 Before installing PatchMyPath, make sure that [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452) is installed on your computer.
 
-1. Download the compressed file from [GitHub Releases][releases-url] or [5mods][5mods-url]
+1. Download the compressed file from [GitHub][releases-url], [5mods][5mods-url] or [Nexus Mods][nexus-url]
 2. Extracts the contents of the compressed file somewhere on your PC
 3. Launch `PatchMyPath.exe` and select the `Settings` tab
 4. Click the respective `Detect` buttons for the game that you plan to use
@@ -54,3 +54,4 @@ To refresh the list of installs and check again if they are valid, press <img sr
 
 [releases-url]: https://github.com/justalemon/PatchMyPath/releases
 [5mods-url]: https://www.gta5-mods.com/tools/patchmypath
+[nexus-url]: https://www.nexusmods.com/reddeadredemption2/mods/61

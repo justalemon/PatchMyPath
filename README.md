@@ -1,6 +1,6 @@
 # PatchMyPath <small>for Grand Theft Auto V</small>
 
-[![5mods][5mods-img]][5mods-url] [![AppVeyor][appveyor-img]][appveyor-url] [![CodeFactor][codefactor-img]][codefactor-url] [![Discord][discord-img]][discord-url]
+[![5mods][5mods-img]][5mods-url] [![Nexux Mods][nexus-img]][nexus-url] [![AppVeyor][appveyor-img]][appveyor-url] [![CodeFactor][codefactor-img]][codefactor-url] [![Discord][discord-img]][discord-url]
 
 PatchMyPath is a little application that allows you to have multiple Grand Theft Auto V and Red Dead Redemption 2 installs without losing any hard drive space with duplicate files. Is compatible with all game versions and stores. You can even use external tools like [Unknown's](https://www.gta5-mods.com/users/Unknown%20Modder) [Launcher Bypass](https://www.gta5-mods.com/tools/gtavlauncherbypass) or hooks like [Dot's](https://www.nexusmods.com/reddeadredemption2/users/76034948) [RedHook2](https://www.nexusmods.com/reddeadredemption2/mods/53)!
 
@@ -10,6 +10,8 @@ PatchMyPath is a little application that allows you to have multiple Grand Theft
 
 [5mods-img]: https://img.shields.io/badge/5mods-download-20BA4E.svg
 [5mods-url]: https://www.gta5-mods.com/tools/patchmypath
+[nexus-img]: https://img.shields.io/badge/nexus%20mods-download-DC1A0E.svg
+[nexus-url]: https://www.nexusmods.com/reddeadredemption2/mods/61
 [appveyor-img]: https://img.shields.io/appveyor/ci/justalemon/patchmypath.svg?label=appveyor
 [appveyor-url]: https://ci.appveyor.com/project/justalemon/patchmypath
 [codefactor-img]: https://www.codefactor.io/repository/github/justalemon/patchmypath/badge
