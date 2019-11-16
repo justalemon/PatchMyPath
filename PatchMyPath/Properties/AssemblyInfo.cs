@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("PatchMyPath")]
-[assembly: AssemblyCopyright("© 2018-2019 Hannele Ruiz")]
+[assembly: AssemblyCopyright("© 2017-2019 Hannele Ruiz")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
