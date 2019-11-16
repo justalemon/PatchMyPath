@@ -17,7 +17,7 @@ Before installing PatchMyPath, make sure that [.NET Framework 4.5.2](https://dot
     * If the button was unable to detect your game original location, you can enter the game location manually
 
     ??? tip "Click here for Steam instructions"
-        ![RGL](../images/getting-started/steam.png)
+        ![RGL](images/getting-started/steam.png)
 
         1. Right click the game that you want to get the location from
         2. At the bottom of the menu, click `Properties...`
@@ -27,7 +27,7 @@ Before installing PatchMyPath, make sure that [.NET Framework 4.5.2](https://dot
         6. Select `Copy address as text` and paste it on the PatchMyPath Location field
 
     ??? tip "Click here for Rockstar Games Launcher instructions"
-        ![RGL](../images/getting-started/rgsc.png)
+        ![RGL](images/getting-started/rgsc.png)
 
         1. At the top left of the application, click `Settings`
         2. Select the game that you want to get the location from in `My installed games`
@@ -37,7 +37,7 @@ Before installing PatchMyPath, make sure that [.NET Framework 4.5.2](https://dot
 
 5. Click `Save` to store the original location of the game
 6. If this is the orignal folder of the game, you will be asked to rename it to prevent future problems, click `Yes`
-7. Optional: Use the [Install Duplicator](duplicator/getting-started.md) to reduce the size of your existing installs or create new ones
+7. Optional: Use the [Install Duplicator](getting-started.md) to reduce the size of your existing installs or create new ones
 
 ## Usage
 
