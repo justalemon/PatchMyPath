@@ -4,10 +4,8 @@ nav:
   - PatchMyPath:
     - About: index.md
     - Getting started: getting-started.md
+    - Install Duplicator tool: duplicator.md
     - Using Steam: steam.md
-  - InstallDuplicator:
-    - About: duplicator/index.md
-    - Getting started: duplicator/getting-started.md
   - Configuration:
     - Base Configuration: config/root.md
     - Install Objects: config/install.md
