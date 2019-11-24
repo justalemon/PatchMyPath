@@ -23,5 +23,4 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: FullDiveCollective/DeployToBranch@master
         with:
-          folder: site
           token: ${{ secrets.ACCESS_TOKEN }}
