@@ -19,7 +19,7 @@ jobs:
       - name: Say that this is not Jekyll
         run: cat > site/.nojekyll
       - name: Specify custom domain
-        run: echo "patchmypath.justalemon.ml" >> site/CNAME
+        run: sudo echo "patchmypath.justalemon.ml" >> site/CNAME
       - name: Deploy to GitHub Pages
         uses: FullDiveCollective/DeployToBranch@master
         with:
