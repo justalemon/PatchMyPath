@@ -16,10 +16,8 @@ jobs:
         uses: actions/checkout@master
       - name: Build with mkdocs and mkdocs-material
         uses: FullDiveCollective/MarkdownMaterial@master
-      - name: Say that this is not Jekyll
-        run: cat > site/.nojekyll
-      - name: Specify custom domain
-        run: sudo echo "patchmypath.justalemon.ml" >> site/CNAME
+        with:
+          cname: "patchmypath.justalemon.ml"
       - name: Deploy to GitHub Pages
         uses: FullDiveCollective/DeployToBranch@master
         with:
