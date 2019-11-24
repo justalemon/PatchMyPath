@@ -549,7 +549,7 @@ namespace PatchMyPath
             // LaunchToolStripMenuItem
             // 
             this.LaunchToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.LaunchToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.Start;
+            this.LaunchToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.Play;
             this.LaunchToolStripMenuItem.Name = "LaunchToolStripMenuItem";
             this.LaunchToolStripMenuItem.Padding = new System.Windows.Forms.Padding(2);
             this.LaunchToolStripMenuItem.Size = new System.Drawing.Size(33, 33);
@@ -569,7 +569,7 @@ namespace PatchMyPath
             // RemoveToolStripMenuItem
             // 
             this.RemoveToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.RemoveToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.Remove;
+            this.RemoveToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.Clear;
             this.RemoveToolStripMenuItem.Name = "RemoveToolStripMenuItem";
             this.RemoveToolStripMenuItem.Padding = new System.Windows.Forms.Padding(2);
             this.RemoveToolStripMenuItem.Size = new System.Drawing.Size(33, 33);
