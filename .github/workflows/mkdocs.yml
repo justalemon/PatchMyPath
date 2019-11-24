@@ -12,13 +12,10 @@ jobs:
   build:
     runs-on: ubuntu-18.04
     steps:
-      - name: Checkout on Current Commit
-        uses: actions/checkout@master
-      - name: Build with mkdocs and mkdocs-material
-        uses: FullDiveCollective/MarkdownMaterial@master
+      - uses: actions/checkout@master
+      - uses: justalemon/MarkdownMaterial@master
         with:
           cname: "patchmypath.justalemon.ml"
-      - name: Deploy to GitHub Pages
-        uses: FullDiveCollective/DeployToBranch@master
+      - uses: justalemon/DeployToBranch@master
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
