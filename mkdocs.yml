@@ -18,8 +18,8 @@ markdown_extensions:
 theme:
   name: material
   palette:
-    primary: red
-    accent: red
+    primary: cyan
+    accent: cyan
 
 extra:
   social:
