@@ -28,6 +28,7 @@ namespace PatchMyPath
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.GeneralTabControl = new System.Windows.Forms.TabControl();
             this.InstallsTabPage = new System.Windows.Forms.TabPage();
             this.InstallsListBox = new System.Windows.Forms.ListBox();
@@ -593,6 +594,7 @@ namespace PatchMyPath
             this.ClientSize = new System.Drawing.Size(484, 411);
             this.Controls.Add(this.GeneralTabControl);
             this.Controls.Add(this.TopMenuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.TopMenuStrip;
             this.MinimumSize = new System.Drawing.Size(500, 450);
             this.Name = "Home";
