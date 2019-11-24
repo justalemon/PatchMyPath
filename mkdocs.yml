@@ -5,7 +5,8 @@ nav:
   - Getting started: getting-started.md
   - Install Duplicator tool: duplicator.md
   - Using Steam: steam.md
-  - License: license.md
+  - Software License: license.md
+  - Icon License: license-icons.md
 
 repo_name: justalemon/PatchMyPath
 repo_url: https://github.com/justalemon/PatchMyPath
