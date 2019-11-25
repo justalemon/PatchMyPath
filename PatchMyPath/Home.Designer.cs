@@ -74,6 +74,8 @@ namespace PatchMyPath
             this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RefreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LanguageGroupBox = new System.Windows.Forms.GroupBox();
+            this.LanguageComboBox = new System.Windows.Forms.ComboBox();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.DuplicatorTabPage.SuspendLayout();
@@ -87,6 +89,7 @@ namespace PatchMyPath
             this.SteamGroupBox.SuspendLayout();
             this.GTAVLocationGroupBox.SuspendLayout();
             this.TopMenuStrip.SuspendLayout();
+            this.LanguageGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // GeneralTabControl
@@ -231,6 +234,7 @@ namespace PatchMyPath
             // 
             // SettingsTabPage
             // 
+            this.SettingsTabPage.Controls.Add(this.LanguageGroupBox);
             this.SettingsTabPage.Controls.Add(this.RDR2LocationGroupBox);
             this.SettingsTabPage.Controls.Add(this.SteamGroupBox);
             this.SettingsTabPage.Controls.Add(this.GTAVLocationGroupBox);
@@ -419,6 +423,20 @@ namespace PatchMyPath
             resources.ApplyResources(this.RefreshToolStripMenuItem, "RefreshToolStripMenuItem");
             this.RefreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
             // 
+            // LanguageGroupBox
+            // 
+            resources.ApplyResources(this.LanguageGroupBox, "LanguageGroupBox");
+            this.LanguageGroupBox.Controls.Add(this.LanguageComboBox);
+            this.LanguageGroupBox.Name = "LanguageGroupBox";
+            this.LanguageGroupBox.TabStop = false;
+            // 
+            // LanguageComboBox
+            // 
+            resources.ApplyResources(this.LanguageComboBox, "LanguageComboBox");
+            this.LanguageComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LanguageComboBox.FormattingEnabled = true;
+            this.LanguageComboBox.Name = "LanguageComboBox";
+            // 
             // Home
             // 
             resources.ApplyResources(this, "$this");
@@ -448,6 +466,7 @@ namespace PatchMyPath
             this.GTAVLocationGroupBox.PerformLayout();
             this.TopMenuStrip.ResumeLayout(false);
             this.TopMenuStrip.PerformLayout();
+            this.LanguageGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -500,6 +519,8 @@ namespace PatchMyPath
         private System.Windows.Forms.Button SteamGTAVButton;
         private System.Windows.Forms.ProgressBar DuplicationProgressBar;
         private System.Windows.Forms.GroupBox OtherGroupBox;
+        private System.Windows.Forms.GroupBox LanguageGroupBox;
+        private System.Windows.Forms.ComboBox LanguageComboBox;
     }
 }
 
