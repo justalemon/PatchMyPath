@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using NLog;
 using NLog.Config;
 using NLog.Targets;
@@ -7,6 +7,7 @@ using PatchMyPath.Properties;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace PatchMyPath
@@ -81,6 +82,8 @@ namespace PatchMyPath
                 SaveConfig();
             }
 
+            // Set the culture to the one from the config
+            Thread.CurrentThread.CurrentUICulture = Config.Language;
             // And run the application with the form
             Application.Run(new Home());
             // Finally, return a status code of zero
