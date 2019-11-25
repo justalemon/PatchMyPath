@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
+using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace PatchMyPath.Config
@@ -16,7 +18,7 @@ namespace PatchMyPath.Config
         /// The language of the program.
         /// </summary>
         [JsonProperty("language")]
-        public CultureInfo Language { get; set; } = new CultureInfo("en");
+        public CultureInfo Language { get; set; } = Program.Cultures.Where(p => Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName == p.TwoLetterISOLanguageName).FirstOrDefault() ?? Program.Cultures[0];
         /// <summary>
         /// If the install should be added after finishing with the duplication process.
         /// </summary>
