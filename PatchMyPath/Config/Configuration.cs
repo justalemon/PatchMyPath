@@ -16,7 +16,7 @@ namespace PatchMyPath.Config
         /// The language of the program.
         /// </summary>
         [JsonProperty("language")]
-        public CultureInfo Language { get; set; } = new CultureInfo("en-US");
+        public CultureInfo Language { get; set; } = new CultureInfo("en");
         /// <summary>
         /// If the install should be added after finishing with the duplication process.
         /// </summary>
