@@ -648,6 +648,24 @@ namespace PatchMyPath.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The Language Change will take effect the next time the application is started.
+        /// </summary>
+        internal static string SettingsLanguageChanged {
+            get {
+                return ResourceManager.GetString("SettingsLanguageChanged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language Changed.
+        /// </summary>
+        internal static string SettingsLanguageChangedTitle {
+            get {
+                return ResourceManager.GetString("SettingsLanguageChangedTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} was found at {1}.
         /// </summary>
         internal static string SettingsPathFoundLog {

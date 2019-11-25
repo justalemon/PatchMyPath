@@ -208,6 +208,12 @@ Por favor asegurate de que esta carpeta contiene una copia de RDR2 o GTA V e int
   <data name="SettingsInvalidID" xml:space="preserve">
     <value>"{0}" no es un numero valido o es muy grande para ser procesado (valor maximo es {1})</value>
   </data>
+  <data name="SettingsLanguageChanged" xml:space="preserve">
+    <value>El Cambio de Idioma tomara efecto la proxima vez que inicies la aplicacion</value>
+  </data>
+  <data name="SettingsLanguageChangedTitle" xml:space="preserve">
+    <value>Idioma Cambiado</value>
+  </data>
   <data name="SettingsPathNotFound" xml:space="preserve">
     <value>No se ha podido detectar la ubicacion de instalacion original.
 Por favor asegurate de que el juego fue instalado desde RGL, Steam o EGL e intenta nuevamente.</value>

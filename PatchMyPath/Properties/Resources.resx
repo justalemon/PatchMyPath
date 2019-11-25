@@ -323,6 +323,12 @@ Please make sure that the folder contains a copy of RDR2 or GTAV and try again.<
   <data name="SettingsInvalidID" xml:space="preserve">
     <value>"{0}" is not a valid number or is too big to be processed (max value is {1}).</value>
   </data>
+  <data name="SettingsLanguageChanged" xml:space="preserve">
+    <value>The Language Change will take effect the next time the application is started</value>
+  </data>
+  <data name="SettingsLanguageChangedTitle" xml:space="preserve">
+    <value>Language Changed</value>
+  </data>
   <data name="SettingsPathFoundLog" xml:space="preserve">
     <value>{0} was found at {1}</value>
   </data>

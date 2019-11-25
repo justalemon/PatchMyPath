@@ -429,6 +429,12 @@ namespace PatchMyPath
                     // Set the culture on the configuration and save it
                     Program.Config.Language = culture;
                     Program.SaveConfig();
+                    // If the form is visible, show a message about the change
+                    if (Visible)
+                    {
+                        MessageBox.Show(Resources.SettingsLanguageChanged, Resources.SettingsLanguageChangedTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    // And return
                     return;
                 }
             }
