@@ -94,32 +94,22 @@ namespace PatchMyPath
             this.GeneralTabControl.Controls.Add(this.InstallsTabPage);
             this.GeneralTabControl.Controls.Add(this.DuplicatorTabPage);
             this.GeneralTabControl.Controls.Add(this.SettingsTabPage);
-            this.GeneralTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GeneralTabControl.Location = new System.Drawing.Point(0, 37);
+            resources.ApplyResources(this.GeneralTabControl, "GeneralTabControl");
             this.GeneralTabControl.Name = "GeneralTabControl";
             this.GeneralTabControl.SelectedIndex = 0;
-            this.GeneralTabControl.Size = new System.Drawing.Size(484, 374);
-            this.GeneralTabControl.TabIndex = 0;
             // 
             // InstallsTabPage
             // 
             this.InstallsTabPage.Controls.Add(this.InstallsListBox);
-            this.InstallsTabPage.Location = new System.Drawing.Point(4, 22);
+            resources.ApplyResources(this.InstallsTabPage, "InstallsTabPage");
             this.InstallsTabPage.Name = "InstallsTabPage";
-            this.InstallsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.InstallsTabPage.Size = new System.Drawing.Size(476, 348);
-            this.InstallsTabPage.TabIndex = 0;
-            this.InstallsTabPage.Text = "Game Installs";
             this.InstallsTabPage.UseVisualStyleBackColor = true;
             // 
             // InstallsListBox
             // 
-            this.InstallsListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            resources.ApplyResources(this.InstallsListBox, "InstallsListBox");
             this.InstallsListBox.FormattingEnabled = true;
-            this.InstallsListBox.Location = new System.Drawing.Point(3, 3);
             this.InstallsListBox.Name = "InstallsListBox";
-            this.InstallsListBox.Size = new System.Drawing.Size(470, 342);
-            this.InstallsListBox.TabIndex = 0;
             this.InstallsListBox.SelectedIndexChanged += new System.EventHandler(this.InstallsListBox_SelectedIndexChanged);
             // 
             // DuplicatorTabPage
@@ -131,260 +121,162 @@ namespace PatchMyPath
             this.DuplicatorTabPage.Controls.Add(this.DuplicateButton);
             this.DuplicatorTabPage.Controls.Add(this.OriginGroupBox);
             this.DuplicatorTabPage.Controls.Add(this.DestinationGroupBox);
-            this.DuplicatorTabPage.Location = new System.Drawing.Point(4, 22);
+            resources.ApplyResources(this.DuplicatorTabPage, "DuplicatorTabPage");
             this.DuplicatorTabPage.Name = "DuplicatorTabPage";
-            this.DuplicatorTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.DuplicatorTabPage.Size = new System.Drawing.Size(476, 348);
-            this.DuplicatorTabPage.TabIndex = 1;
-            this.DuplicatorTabPage.Text = "Duplicator Tool";
             this.DuplicatorTabPage.UseVisualStyleBackColor = true;
             // 
             // OtherGroupBox
             // 
-            this.OtherGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.OtherGroupBox, "OtherGroupBox");
             this.OtherGroupBox.Controls.Add(this.AutoAddCheckBox);
-            this.OtherGroupBox.Location = new System.Drawing.Point(6, 237);
             this.OtherGroupBox.Name = "OtherGroupBox";
-            this.OtherGroupBox.Size = new System.Drawing.Size(464, 45);
-            this.OtherGroupBox.TabIndex = 9;
             this.OtherGroupBox.TabStop = false;
-            this.OtherGroupBox.Text = "Other Options";
             // 
             // AutoAddCheckBox
             // 
-            this.AutoAddCheckBox.AutoSize = true;
-            this.AutoAddCheckBox.Location = new System.Drawing.Point(8, 19);
+            resources.ApplyResources(this.AutoAddCheckBox, "AutoAddCheckBox");
             this.AutoAddCheckBox.Name = "AutoAddCheckBox";
-            this.AutoAddCheckBox.Size = new System.Drawing.Size(289, 17);
-            this.AutoAddCheckBox.TabIndex = 0;
-            this.AutoAddCheckBox.Text = "Add install to PatchMyPath after completing the process";
             this.AutoAddCheckBox.UseVisualStyleBackColor = true;
             this.AutoAddCheckBox.CheckedChanged += new System.EventHandler(this.AutoAddCheckBox_CheckedChanged);
             // 
             // DuplicationProgressBar
             // 
-            this.DuplicationProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DuplicationProgressBar.Location = new System.Drawing.Point(6, 288);
+            resources.ApplyResources(this.DuplicationProgressBar, "DuplicationProgressBar");
             this.DuplicationProgressBar.Name = "DuplicationProgressBar";
-            this.DuplicationProgressBar.Size = new System.Drawing.Size(464, 23);
-            this.DuplicationProgressBar.TabIndex = 8;
             // 
             // GameGroupBox
             // 
-            this.GameGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.GameGroupBox, "GameGroupBox");
             this.GameGroupBox.Controls.Add(this.GameComboBox);
-            this.GameGroupBox.Location = new System.Drawing.Point(8, 6);
             this.GameGroupBox.Name = "GameGroupBox";
-            this.GameGroupBox.Size = new System.Drawing.Size(462, 52);
-            this.GameGroupBox.TabIndex = 7;
             this.GameGroupBox.TabStop = false;
-            this.GameGroupBox.Text = "Game";
             // 
             // GameComboBox
             // 
-            this.GameComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.GameComboBox, "GameComboBox");
             this.GameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GameComboBox.FormattingEnabled = true;
-            this.GameComboBox.Location = new System.Drawing.Point(6, 19);
             this.GameComboBox.Name = "GameComboBox";
-            this.GameComboBox.Size = new System.Drawing.Size(450, 21);
-            this.GameComboBox.TabIndex = 0;
             // 
             // LinkTypeGroupBox
             // 
-            this.LinkTypeGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.LinkTypeGroupBox, "LinkTypeGroupBox");
             this.LinkTypeGroupBox.Controls.Add(this.HardRadioButton);
             this.LinkTypeGroupBox.Controls.Add(this.SymbolicRadioButton);
-            this.LinkTypeGroupBox.Location = new System.Drawing.Point(6, 166);
             this.LinkTypeGroupBox.Name = "LinkTypeGroupBox";
-            this.LinkTypeGroupBox.Size = new System.Drawing.Size(464, 65);
-            this.LinkTypeGroupBox.TabIndex = 5;
             this.LinkTypeGroupBox.TabStop = false;
-            this.LinkTypeGroupBox.Text = "Link Type";
             // 
             // HardRadioButton
             // 
-            this.HardRadioButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.HardRadioButton.AutoSize = true;
+            resources.ApplyResources(this.HardRadioButton, "HardRadioButton");
             this.HardRadioButton.Checked = true;
-            this.HardRadioButton.Location = new System.Drawing.Point(6, 19);
             this.HardRadioButton.Name = "HardRadioButton";
-            this.HardRadioButton.Size = new System.Drawing.Size(350, 17);
-            this.HardRadioButton.TabIndex = 1;
             this.HardRadioButton.TabStop = true;
-            this.HardRadioButton.Text = "Hard Link for Files and Symbolic Links for Folders (All Game Versions)";
             this.HardRadioButton.UseVisualStyleBackColor = true;
             // 
             // SymbolicRadioButton
             // 
-            this.SymbolicRadioButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SymbolicRadioButton.AutoSize = true;
-            this.SymbolicRadioButton.Location = new System.Drawing.Point(6, 42);
+            resources.ApplyResources(this.SymbolicRadioButton, "SymbolicRadioButton");
             this.SymbolicRadioButton.Name = "SymbolicRadioButton";
-            this.SymbolicRadioButton.Size = new System.Drawing.Size(422, 17);
-            this.SymbolicRadioButton.TabIndex = 0;
-            this.SymbolicRadioButton.Text = "Symbolic Links for Files and Folders (Steam and pre Rockstar Games Launcher only)" +
-    "";
             this.SymbolicRadioButton.UseVisualStyleBackColor = true;
             // 
             // DuplicateButton
             // 
-            this.DuplicateButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DuplicateButton.Location = new System.Drawing.Point(6, 317);
+            resources.ApplyResources(this.DuplicateButton, "DuplicateButton");
             this.DuplicateButton.Name = "DuplicateButton";
-            this.DuplicateButton.Size = new System.Drawing.Size(464, 23);
-            this.DuplicateButton.TabIndex = 2;
-            this.DuplicateButton.Text = "Duplicate Game Folder";
             this.DuplicateButton.UseVisualStyleBackColor = true;
             this.DuplicateButton.Click += new System.EventHandler(this.DuplicateButton_Click);
             // 
             // OriginGroupBox
             // 
-            this.OriginGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.OriginGroupBox, "OriginGroupBox");
             this.OriginGroupBox.Controls.Add(this.OriginSelectButton);
             this.OriginGroupBox.Controls.Add(this.OriginTextBox);
-            this.OriginGroupBox.Location = new System.Drawing.Point(6, 64);
             this.OriginGroupBox.Name = "OriginGroupBox";
-            this.OriginGroupBox.Size = new System.Drawing.Size(464, 45);
-            this.OriginGroupBox.TabIndex = 0;
             this.OriginGroupBox.TabStop = false;
-            this.OriginGroupBox.Text = "Origin";
             // 
             // OriginSelectButton
             // 
-            this.OriginSelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OriginSelectButton.Location = new System.Drawing.Point(383, 17);
+            resources.ApplyResources(this.OriginSelectButton, "OriginSelectButton");
             this.OriginSelectButton.Name = "OriginSelectButton";
-            this.OriginSelectButton.Size = new System.Drawing.Size(75, 23);
-            this.OriginSelectButton.TabIndex = 1;
-            this.OriginSelectButton.Text = "Select";
             this.OriginSelectButton.UseVisualStyleBackColor = true;
             this.OriginSelectButton.Click += new System.EventHandler(this.OriginSelectButton_Click);
             // 
             // OriginTextBox
             // 
-            this.OriginTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OriginTextBox.Location = new System.Drawing.Point(6, 19);
+            resources.ApplyResources(this.OriginTextBox, "OriginTextBox");
             this.OriginTextBox.Name = "OriginTextBox";
             this.OriginTextBox.ReadOnly = true;
-            this.OriginTextBox.Size = new System.Drawing.Size(371, 20);
-            this.OriginTextBox.TabIndex = 0;
             // 
             // DestinationGroupBox
             // 
-            this.DestinationGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.DestinationGroupBox, "DestinationGroupBox");
             this.DestinationGroupBox.Controls.Add(this.DestinationSelectButton);
             this.DestinationGroupBox.Controls.Add(this.DestinationTextBox);
-            this.DestinationGroupBox.Location = new System.Drawing.Point(6, 115);
             this.DestinationGroupBox.Name = "DestinationGroupBox";
-            this.DestinationGroupBox.Size = new System.Drawing.Size(464, 45);
-            this.DestinationGroupBox.TabIndex = 1;
             this.DestinationGroupBox.TabStop = false;
-            this.DestinationGroupBox.Text = "Destination";
             // 
             // DestinationSelectButton
             // 
-            this.DestinationSelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DestinationSelectButton.Location = new System.Drawing.Point(383, 17);
+            resources.ApplyResources(this.DestinationSelectButton, "DestinationSelectButton");
             this.DestinationSelectButton.Name = "DestinationSelectButton";
-            this.DestinationSelectButton.Size = new System.Drawing.Size(75, 23);
-            this.DestinationSelectButton.TabIndex = 1;
-            this.DestinationSelectButton.Text = "Select";
             this.DestinationSelectButton.UseVisualStyleBackColor = true;
             this.DestinationSelectButton.Click += new System.EventHandler(this.DestinationSelectButton_Click);
             // 
             // DestinationTextBox
             // 
-            this.DestinationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DestinationTextBox.Location = new System.Drawing.Point(6, 19);
+            resources.ApplyResources(this.DestinationTextBox, "DestinationTextBox");
             this.DestinationTextBox.Name = "DestinationTextBox";
             this.DestinationTextBox.ReadOnly = true;
-            this.DestinationTextBox.Size = new System.Drawing.Size(371, 20);
-            this.DestinationTextBox.TabIndex = 0;
             // 
             // SettingsTabPage
             // 
             this.SettingsTabPage.Controls.Add(this.RDR2LocationGroupBox);
             this.SettingsTabPage.Controls.Add(this.SteamGroupBox);
             this.SettingsTabPage.Controls.Add(this.GTAVLocationGroupBox);
-            this.SettingsTabPage.Location = new System.Drawing.Point(4, 22);
+            resources.ApplyResources(this.SettingsTabPage, "SettingsTabPage");
             this.SettingsTabPage.Name = "SettingsTabPage";
-            this.SettingsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.SettingsTabPage.Size = new System.Drawing.Size(476, 348);
-            this.SettingsTabPage.TabIndex = 2;
-            this.SettingsTabPage.Text = "Settings";
             this.SettingsTabPage.UseVisualStyleBackColor = true;
             // 
             // RDR2LocationGroupBox
             // 
-            this.RDR2LocationGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.RDR2LocationGroupBox, "RDR2LocationGroupBox");
             this.RDR2LocationGroupBox.Controls.Add(this.RDR2LocationSaveButton);
             this.RDR2LocationGroupBox.Controls.Add(this.RDR2LocationDetectButton);
             this.RDR2LocationGroupBox.Controls.Add(this.RDR2LocationSelectButton);
             this.RDR2LocationGroupBox.Controls.Add(this.RDR2LocationTextBox);
-            this.RDR2LocationGroupBox.Location = new System.Drawing.Point(6, 86);
             this.RDR2LocationGroupBox.Name = "RDR2LocationGroupBox";
-            this.RDR2LocationGroupBox.Size = new System.Drawing.Size(464, 74);
-            this.RDR2LocationGroupBox.TabIndex = 4;
             this.RDR2LocationGroupBox.TabStop = false;
-            this.RDR2LocationGroupBox.Text = "Red Dead Redemption 2 Location";
             // 
             // RDR2LocationSaveButton
             // 
-            this.RDR2LocationSaveButton.Location = new System.Drawing.Point(168, 45);
+            resources.ApplyResources(this.RDR2LocationSaveButton, "RDR2LocationSaveButton");
             this.RDR2LocationSaveButton.Name = "RDR2LocationSaveButton";
-            this.RDR2LocationSaveButton.Size = new System.Drawing.Size(75, 23);
-            this.RDR2LocationSaveButton.TabIndex = 3;
-            this.RDR2LocationSaveButton.Text = "Save";
             this.RDR2LocationSaveButton.UseVisualStyleBackColor = true;
             this.RDR2LocationSaveButton.Click += new System.EventHandler(this.RDR2LocationSaveButton_Click);
             // 
             // RDR2LocationDetectButton
             // 
-            this.RDR2LocationDetectButton.Location = new System.Drawing.Point(87, 45);
+            resources.ApplyResources(this.RDR2LocationDetectButton, "RDR2LocationDetectButton");
             this.RDR2LocationDetectButton.Name = "RDR2LocationDetectButton";
-            this.RDR2LocationDetectButton.Size = new System.Drawing.Size(75, 23);
-            this.RDR2LocationDetectButton.TabIndex = 2;
-            this.RDR2LocationDetectButton.Text = "Detect";
             this.RDR2LocationDetectButton.UseVisualStyleBackColor = true;
             this.RDR2LocationDetectButton.Click += new System.EventHandler(this.RDR2LocationDetectButton_Click);
             // 
             // RDR2LocationSelectButton
             // 
-            this.RDR2LocationSelectButton.Location = new System.Drawing.Point(6, 45);
+            resources.ApplyResources(this.RDR2LocationSelectButton, "RDR2LocationSelectButton");
             this.RDR2LocationSelectButton.Name = "RDR2LocationSelectButton";
-            this.RDR2LocationSelectButton.Size = new System.Drawing.Size(75, 23);
-            this.RDR2LocationSelectButton.TabIndex = 1;
-            this.RDR2LocationSelectButton.Text = "Select";
             this.RDR2LocationSelectButton.UseVisualStyleBackColor = true;
             this.RDR2LocationSelectButton.Click += new System.EventHandler(this.RDR2LocationSelectButton_Click);
             // 
             // RDR2LocationTextBox
             // 
-            this.RDR2LocationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RDR2LocationTextBox.Location = new System.Drawing.Point(6, 19);
+            resources.ApplyResources(this.RDR2LocationTextBox, "RDR2LocationTextBox");
             this.RDR2LocationTextBox.Name = "RDR2LocationTextBox";
-            this.RDR2LocationTextBox.Size = new System.Drawing.Size(452, 20);
-            this.RDR2LocationTextBox.TabIndex = 0;
             // 
             // SteamGroupBox
             // 
-            this.SteamGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.SteamGroupBox, "SteamGroupBox");
             this.SteamGroupBox.Controls.Add(this.SteamGTAVCheckBox);
             this.SteamGroupBox.Controls.Add(this.IDGTAVLabel);
             this.SteamGroupBox.Controls.Add(this.IDGTAVTextBox);
@@ -393,146 +285,92 @@ namespace PatchMyPath
             this.SteamGroupBox.Controls.Add(this.IDRDR2Label);
             this.SteamGroupBox.Controls.Add(this.IDRDR2TextBox);
             this.SteamGroupBox.Controls.Add(this.SteamRDR2CheckBox);
-            this.SteamGroupBox.Location = new System.Drawing.Point(6, 166);
             this.SteamGroupBox.Name = "SteamGroupBox";
-            this.SteamGroupBox.Size = new System.Drawing.Size(464, 74);
-            this.SteamGroupBox.TabIndex = 2;
             this.SteamGroupBox.TabStop = false;
-            this.SteamGroupBox.Text = "Use Steam to launch";
             // 
             // SteamGTAVCheckBox
             // 
-            this.SteamGTAVCheckBox.AutoSize = true;
-            this.SteamGTAVCheckBox.Location = new System.Drawing.Point(6, 48);
+            resources.ApplyResources(this.SteamGTAVCheckBox, "SteamGTAVCheckBox");
             this.SteamGTAVCheckBox.Name = "SteamGTAVCheckBox";
-            this.SteamGTAVCheckBox.Size = new System.Drawing.Size(118, 17);
-            this.SteamGTAVCheckBox.TabIndex = 7;
-            this.SteamGTAVCheckBox.Text = "Grand Theft Auto V";
             this.SteamGTAVCheckBox.UseVisualStyleBackColor = true;
             this.SteamGTAVCheckBox.CheckedChanged += new System.EventHandler(this.SteamGTAVCheckBox_CheckedChanged);
             // 
             // IDGTAVLabel
             // 
-            this.IDGTAVLabel.AutoSize = true;
-            this.IDGTAVLabel.Location = new System.Drawing.Point(160, 49);
+            resources.ApplyResources(this.IDGTAVLabel, "IDGTAVLabel");
             this.IDGTAVLabel.Name = "IDGTAVLabel";
-            this.IDGTAVLabel.Size = new System.Drawing.Size(40, 13);
-            this.IDGTAVLabel.TabIndex = 6;
-            this.IDGTAVLabel.Text = "App ID";
             // 
             // IDGTAVTextBox
             // 
-            this.IDGTAVTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.IDGTAVTextBox.Location = new System.Drawing.Point(206, 46);
+            resources.ApplyResources(this.IDGTAVTextBox, "IDGTAVTextBox");
             this.IDGTAVTextBox.Name = "IDGTAVTextBox";
-            this.IDGTAVTextBox.Size = new System.Drawing.Size(171, 20);
-            this.IDGTAVTextBox.TabIndex = 5;
             // 
             // SteamGTAVButton
             // 
-            this.SteamGTAVButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SteamGTAVButton.Location = new System.Drawing.Point(383, 44);
+            resources.ApplyResources(this.SteamGTAVButton, "SteamGTAVButton");
             this.SteamGTAVButton.Name = "SteamGTAVButton";
-            this.SteamGTAVButton.Size = new System.Drawing.Size(75, 23);
-            this.SteamGTAVButton.TabIndex = 4;
-            this.SteamGTAVButton.Text = "Save";
             this.SteamGTAVButton.UseVisualStyleBackColor = true;
             this.SteamGTAVButton.Click += new System.EventHandler(this.SteamGTAVButton_Click);
             // 
             // SteamRDR2Button
             // 
-            this.SteamRDR2Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SteamRDR2Button.Location = new System.Drawing.Point(383, 15);
+            resources.ApplyResources(this.SteamRDR2Button, "SteamRDR2Button");
             this.SteamRDR2Button.Name = "SteamRDR2Button";
-            this.SteamRDR2Button.Size = new System.Drawing.Size(75, 23);
-            this.SteamRDR2Button.TabIndex = 2;
-            this.SteamRDR2Button.Text = "Save";
             this.SteamRDR2Button.UseVisualStyleBackColor = true;
             this.SteamRDR2Button.Click += new System.EventHandler(this.SteamRDR2Button_Click);
             // 
             // IDRDR2Label
             // 
-            this.IDRDR2Label.AutoSize = true;
-            this.IDRDR2Label.Location = new System.Drawing.Point(160, 20);
+            resources.ApplyResources(this.IDRDR2Label, "IDRDR2Label");
             this.IDRDR2Label.Name = "IDRDR2Label";
-            this.IDRDR2Label.Size = new System.Drawing.Size(40, 13);
-            this.IDRDR2Label.TabIndex = 3;
-            this.IDRDR2Label.Text = "App ID";
             // 
             // IDRDR2TextBox
             // 
-            this.IDRDR2TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.IDRDR2TextBox.Location = new System.Drawing.Point(206, 17);
+            resources.ApplyResources(this.IDRDR2TextBox, "IDRDR2TextBox");
             this.IDRDR2TextBox.Name = "IDRDR2TextBox";
-            this.IDRDR2TextBox.Size = new System.Drawing.Size(171, 20);
-            this.IDRDR2TextBox.TabIndex = 1;
             // 
             // SteamRDR2CheckBox
             // 
-            this.SteamRDR2CheckBox.AutoSize = true;
-            this.SteamRDR2CheckBox.Location = new System.Drawing.Point(6, 19);
+            resources.ApplyResources(this.SteamRDR2CheckBox, "SteamRDR2CheckBox");
             this.SteamRDR2CheckBox.Name = "SteamRDR2CheckBox";
-            this.SteamRDR2CheckBox.Size = new System.Drawing.Size(144, 17);
-            this.SteamRDR2CheckBox.TabIndex = 0;
-            this.SteamRDR2CheckBox.Text = "Red Dead Redemption 2";
             this.SteamRDR2CheckBox.UseVisualStyleBackColor = true;
             this.SteamRDR2CheckBox.CheckedChanged += new System.EventHandler(this.SteamRDR2CheckBox_CheckedChanged);
             // 
             // GTAVLocationGroupBox
             // 
-            this.GTAVLocationGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.GTAVLocationGroupBox, "GTAVLocationGroupBox");
             this.GTAVLocationGroupBox.Controls.Add(this.GTAVLocationSaveButton);
             this.GTAVLocationGroupBox.Controls.Add(this.GTAVLocationDetectButton);
             this.GTAVLocationGroupBox.Controls.Add(this.GTAVLocationSelectButton);
             this.GTAVLocationGroupBox.Controls.Add(this.GTAVLocationTextBox);
-            this.GTAVLocationGroupBox.Location = new System.Drawing.Point(6, 6);
             this.GTAVLocationGroupBox.Name = "GTAVLocationGroupBox";
-            this.GTAVLocationGroupBox.Size = new System.Drawing.Size(464, 74);
-            this.GTAVLocationGroupBox.TabIndex = 1;
             this.GTAVLocationGroupBox.TabStop = false;
-            this.GTAVLocationGroupBox.Text = "Grand Theft Auto V Location";
             // 
             // GTAVLocationSaveButton
             // 
-            this.GTAVLocationSaveButton.Location = new System.Drawing.Point(168, 45);
+            resources.ApplyResources(this.GTAVLocationSaveButton, "GTAVLocationSaveButton");
             this.GTAVLocationSaveButton.Name = "GTAVLocationSaveButton";
-            this.GTAVLocationSaveButton.Size = new System.Drawing.Size(75, 23);
-            this.GTAVLocationSaveButton.TabIndex = 3;
-            this.GTAVLocationSaveButton.Text = "Save";
             this.GTAVLocationSaveButton.UseVisualStyleBackColor = true;
             this.GTAVLocationSaveButton.Click += new System.EventHandler(this.GTAVLocationSaveButton_Click);
             // 
             // GTAVLocationDetectButton
             // 
-            this.GTAVLocationDetectButton.Location = new System.Drawing.Point(87, 45);
+            resources.ApplyResources(this.GTAVLocationDetectButton, "GTAVLocationDetectButton");
             this.GTAVLocationDetectButton.Name = "GTAVLocationDetectButton";
-            this.GTAVLocationDetectButton.Size = new System.Drawing.Size(75, 23);
-            this.GTAVLocationDetectButton.TabIndex = 2;
-            this.GTAVLocationDetectButton.Text = "Detect";
             this.GTAVLocationDetectButton.UseVisualStyleBackColor = true;
             this.GTAVLocationDetectButton.Click += new System.EventHandler(this.GTAVLocationDetectButton_Click);
             // 
             // GTAVLocationSelectButton
             // 
-            this.GTAVLocationSelectButton.Location = new System.Drawing.Point(6, 45);
+            resources.ApplyResources(this.GTAVLocationSelectButton, "GTAVLocationSelectButton");
             this.GTAVLocationSelectButton.Name = "GTAVLocationSelectButton";
-            this.GTAVLocationSelectButton.Size = new System.Drawing.Size(75, 23);
-            this.GTAVLocationSelectButton.TabIndex = 1;
-            this.GTAVLocationSelectButton.Text = "Select";
             this.GTAVLocationSelectButton.UseVisualStyleBackColor = true;
             this.GTAVLocationSelectButton.Click += new System.EventHandler(this.GTAVLocationSelectButton_Click);
             // 
             // GTAVLocationTextBox
             // 
-            this.GTAVLocationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.GTAVLocationTextBox.Location = new System.Drawing.Point(6, 19);
+            resources.ApplyResources(this.GTAVLocationTextBox, "GTAVLocationTextBox");
             this.GTAVLocationTextBox.Name = "GTAVLocationTextBox";
-            this.GTAVLocationTextBox.Size = new System.Drawing.Size(452, 20);
-            this.GTAVLocationTextBox.TabIndex = 0;
             // 
             // TopMenuStrip
             // 
@@ -542,10 +380,8 @@ namespace PatchMyPath
             this.AddToolStripMenuItem,
             this.RemoveToolStripMenuItem,
             this.RefreshToolStripMenuItem});
-            this.TopMenuStrip.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.TopMenuStrip, "TopMenuStrip");
             this.TopMenuStrip.Name = "TopMenuStrip";
-            this.TopMenuStrip.Size = new System.Drawing.Size(484, 37);
-            this.TopMenuStrip.TabIndex = 1;
             // 
             // LaunchToolStripMenuItem
             // 
@@ -553,8 +389,7 @@ namespace PatchMyPath
             this.LaunchToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.Play;
             this.LaunchToolStripMenuItem.Name = "LaunchToolStripMenuItem";
             this.LaunchToolStripMenuItem.Padding = new System.Windows.Forms.Padding(2);
-            this.LaunchToolStripMenuItem.Size = new System.Drawing.Size(33, 33);
-            this.LaunchToolStripMenuItem.Text = "Launch";
+            resources.ApplyResources(this.LaunchToolStripMenuItem, "LaunchToolStripMenuItem");
             this.LaunchToolStripMenuItem.Click += new System.EventHandler(this.LaunchToolStripMenuItem_Click);
             // 
             // AddToolStripMenuItem
@@ -563,8 +398,7 @@ namespace PatchMyPath
             this.AddToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.Add;
             this.AddToolStripMenuItem.Name = "AddToolStripMenuItem";
             this.AddToolStripMenuItem.Padding = new System.Windows.Forms.Padding(2);
-            this.AddToolStripMenuItem.Size = new System.Drawing.Size(33, 33);
-            this.AddToolStripMenuItem.Text = "Add";
+            resources.ApplyResources(this.AddToolStripMenuItem, "AddToolStripMenuItem");
             this.AddToolStripMenuItem.Click += new System.EventHandler(this.AddToolStripMenuItem_Click);
             // 
             // RemoveToolStripMenuItem
@@ -573,8 +407,7 @@ namespace PatchMyPath
             this.RemoveToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.Clear;
             this.RemoveToolStripMenuItem.Name = "RemoveToolStripMenuItem";
             this.RemoveToolStripMenuItem.Padding = new System.Windows.Forms.Padding(2);
-            this.RemoveToolStripMenuItem.Size = new System.Drawing.Size(33, 33);
-            this.RemoveToolStripMenuItem.Text = "Remove";
+            resources.ApplyResources(this.RemoveToolStripMenuItem, "RemoveToolStripMenuItem");
             this.RemoveToolStripMenuItem.Click += new System.EventHandler(this.RemoveToolStripMenuItem_Click);
             // 
             // RefreshToolStripMenuItem
@@ -583,23 +416,17 @@ namespace PatchMyPath
             this.RefreshToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.Refresh;
             this.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem";
             this.RefreshToolStripMenuItem.Padding = new System.Windows.Forms.Padding(2);
-            this.RefreshToolStripMenuItem.Size = new System.Drawing.Size(33, 33);
-            this.RefreshToolStripMenuItem.Text = "Refresh";
+            resources.ApplyResources(this.RefreshToolStripMenuItem, "RefreshToolStripMenuItem");
             this.RefreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 411);
             this.Controls.Add(this.GeneralTabControl);
             this.Controls.Add(this.TopMenuStrip);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.TopMenuStrip;
-            this.MinimumSize = new System.Drawing.Size(500, 450);
             this.Name = "Home";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PatchMyPath";
             this.GeneralTabControl.ResumeLayout(false);
             this.InstallsTabPage.ResumeLayout(false);
             this.DuplicatorTabPage.ResumeLayout(false);
