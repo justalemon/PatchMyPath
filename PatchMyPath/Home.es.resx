@@ -150,6 +150,9 @@
   <data name="InstallsTabPage.Text" xml:space="preserve">
     <value>Instalaciones</value>
   </data>
+  <data name="LanguageGroupBox.Text" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
   <data name="LinkTypeGroupBox.Text" xml:space="preserve">
     <value>Tipo de Enlace</value>
   </data>
