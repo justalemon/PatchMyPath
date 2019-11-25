@@ -6,6 +6,7 @@ using PatchMyPath.Config;
 using PatchMyPath.Properties;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
@@ -18,6 +19,14 @@ namespace PatchMyPath
         /// The logger for the current class.
         /// </summary>
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
+        /// <summary>
+        /// The list of supported culture languages.
+        /// </summary>
+        public static readonly List<CultureInfo> Cultures = new List<CultureInfo>
+        {
+            new CultureInfo("en-US"),
+            new CultureInfo("es-419"),
+        };
         /// <summary>
         /// The configuration of the program.
         /// </summary>
