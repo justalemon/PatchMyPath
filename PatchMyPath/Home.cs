@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Security;
@@ -65,6 +66,14 @@ namespace PatchMyPath
                     GameComboBox.Items.Add(value.SpaceOnUpperCase());
                 }
             }
+
+            // Add the supported languages into the ComboBox
+            foreach (CultureInfo culture in Program.Cultures)
+            {
+                LanguageComboBox.Items.Add(culture.NativeName);
+            }
+            // And select the correct one
+            LanguageComboBox.SelectedIndex = LanguageComboBox.FindStringExact(Program.Config.Language.NativeName);
 
             // Log that we have loaded everything
             Logger.Debug(Resources.FormInitEndLog);
