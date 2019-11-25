@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ConfigInvalid" xml:space="preserve">
+    <value>Intentamos cargar el archivo de configuraciones pero no es valido.
+¿Deseas crear un nuevo archivo de configuracion?
+Presiona No si deseas verificar el archivo manualmente.
+
+({0})</value>
+  </data>
+  <data name="ConfigInvalidTitle" xml:space="preserve">
+    <value>Configuracion Invalida</value>
+  </data>
+  <data name="DuplicatorCompleted" xml:space="preserve">
+    <value>¡La instalación ha sido duplicada con éxito!</value>
+  </data>
+  <data name="DuplicatorCompletedTitle" xml:space="preserve">
+    <value>¡Duplicacion Completada!</value>
+  </data>
+  <data name="DuplicatorHasFiles" xml:space="preserve">
+    <value>La carpeta de Destino contiene archivos y/o carpetas.
+Los archivos del juego existente seran removidos y reemplazados con links. Las modificaciones instaladas no seran tocadas.
+
+¿Deseas continuar?</value>
+  </data>
+  <data name="DuplicatorHasFilesTitle" xml:space="preserve">
+    <value>Destino contiene Archivos y/o Carpetas</value>
+  </data>
+  <data name="DuplicatorNativeError" xml:space="preserve">
+    <value>Error: {0}
+El proceso ha sido detenido.</value>
+  </data>
+  <data name="DuplicatorNativeErrorTitle" xml:space="preserve">
+    <value>Error al crear Enlace Simbolico/Duro</value>
+  </data>
+  <data name="DuplicatorNoGame" xml:space="preserve">
+    <value>No se ha seleccionado un juego.
+Por favor elige un tipo de juego en la parte de arriba e intenta nuevamente</value>
+  </data>
+  <data name="DuplicatorNoGameTitle" xml:space="preserve">
+    <value>Juego no seleccionado</value>
+  </data>
+  <data name="DuplicatorNoPath" xml:space="preserve">
+    <value>Parece que una de las carpetas no ha sido seleccionada.
+Por favor asegurate de que hay una carpeta de Origen y Destino e intenta nuevamente</value>
+  </data>
+  <data name="DuplicatorNoPathTitle" xml:space="preserve">
+    <value>Carpeta no Seleccionada</value>
+  </data>
+  <data name="DuplicatorOriginMissing" xml:space="preserve">
+    <value>¡La carpeta de Origen no existe!
+Por favor asgurate que la carpeta de origen esta presente e intenta nuevamente.</value>
+  </data>
+  <data name="DuplicatorOriginMissingTitle" xml:space="preserve">
+    <value>Carpeta de Origen no existe</value>
+  </data>
+  <data name="DuplicatorRequiredMissing" xml:space="preserve">
+    <value>¡El {0} {1} no existe y es requerido!
+¡El proceso ha sido detenido!</value>
+  </data>
+  <data name="DuplicatorRequiredMissingTitle" xml:space="preserve">
+    <value>No se ha encontrado {0} requerido</value>
+  </data>
+  <data name="InstallInvalid" xml:space="preserve">
+    <value>Los ejecutables del juego no han sido encontrados.
+Por favor asegurate de que los archivos estan presente e intenta nuevamente.</value>
+  </data>
+  <data name="InstallInvalidTitle" xml:space="preserve">
+    <value>Ejecutables no existen</value>
+  </data>
+  <data name="InstallNoExecutable" xml:space="preserve">
+    <value>Ninguna instalacion ha sido encontrada en la carpeta especificada.
+Por favor asegurate de que uno de los juegos soportados existe en la carpeta de instalacion e intenta nuevamente.</value>
+  </data>
+  <data name="InstallNoExecutableTitle" xml:space="preserve">
+    <value>Juego no detectado</value>
+  </data>
+  <data name="InstallTampered" xml:space="preserve">
+    <value>Los ejecutables del juego han sido manipulados.
+Por favor asegurate de que estos no han sido modificados e intenta nuevamente.</value>
+  </data>
+  <data name="InstallTamperedTitle" xml:space="preserve">
+    <value>Ejecutables manipulados</value>
+  </data>
+  <data name="InstallWrongGame" xml:space="preserve">
+    <value>¡Esta version del juego es invalida!
+Por favor asegurate de que esta carpeta contiene una copia de RDR2 o GTA V e intenta nuevamente.</value>
+  </data>
+  <data name="InstallWrongGameTitle" xml:space="preserve">
+    <value>Juego invalido</value>
+  </data>
+  <data name="SettingsInvalidID" xml:space="preserve">
+    <value>"{0}" no es un numero valido o es muy grande para ser procesado (valor maximo es {1})</value>
+  </data>
+  <data name="SettingsPathNotFound" xml:space="preserve">
+    <value>No se ha podido detectar la ubicacion de instalacion original.
+Por favor asegurate de que el juego fue instalado desde RGL, Steam o EGL e intenta nuevamente.</value>
+  </data>
+  <data name="SettingsPathNotFoundTitle" xml:space="preserve">
+    <value>Ubicacion no encontrada</value>
+  </data>
+  <data name="SettingsPathRename" xml:space="preserve">
+    <value>Parece que esta es la carpeta original del juego
+¿Deseas renombrarla? (Para evitar que el juego sea borrado/sobreescribido)</value>
+  </data>
+  <data name="SettingsPathRenameTitle" xml:space="preserve">
+    <value>Carpeta original detectada</value>
+  </data>
+  <data name="SettingsPathUninstall" xml:space="preserve">
+    <value>¡Se ha encontrado la Ubicacion Original en la informacion de desinstalacion!</value>
+  </data>
+  <data name="SettingsPathUninstallTitle" xml:space="preserve">
+    <value>Ubicacion de Instalacion Encontrada</value>
+  </data>
+  <data name="SettingsPathWarehouse" xml:space="preserve">
+    <value>¡Se ha encontrado la Ubicacion Original en la antigua informacion de la version de Rockstar Warehouse!</value>
+  </data>
+  <data name="SettingsPathWarehouseTitle" xml:space="preserve">
+    <value>Ubicacion de Instalacion Encontrada</value>
+  </data>
+  <data name="SymbolicLinkError" xml:space="preserve">
+    <value>Se ha producido un error:
+{0}</value>
+  </data>
+  <data name="SymbolicLinkErrorTitle" xml:space="preserve">
+    <value>No se puede crear un enlace simbolico</value>
+  </data>
+</root>
