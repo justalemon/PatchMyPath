@@ -166,7 +166,7 @@ namespace PatchMyPath.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Success! The install has been duplicated successfully..
+        ///   Looks up a localized string similar to The install has been duplicated successfully!.
         /// </summary>
         internal static string DuplicatorCompleted {
             get {

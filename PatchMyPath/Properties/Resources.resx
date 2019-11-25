@@ -156,7 +156,7 @@ Press No if you want to manually check the file.
     <value>Duplicated install {0} got added into the list</value>
   </data>
   <data name="DuplicatorCompleted" xml:space="preserve">
-    <value>Success! The install has been duplicated successfully.</value>
+    <value>The install has been duplicated successfully!</value>
   </data>
   <data name="DuplicatorCompletedLog" xml:space="preserve">
     <value>Duplication from {0} to {1} completed</value>
