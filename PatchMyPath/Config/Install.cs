@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using NLog;
+using PatchMyPath.Properties;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
@@ -146,22 +147,22 @@ namespace PatchMyPath.Config
             // If the install has been tampered, notify the user and return
             if (!IsLegal)
             {
-                Logger.Error("User attempted to launch {0} but the executables are tampered", GamePath);
-                MessageBox.Show("The game executables have been tampered.\nPlease make sure that they have not been modified and try again.", "Executables Tampered", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.Error(Resources.InstallTamperedLog, GamePath);
+                MessageBox.Show(Resources.InstallTampered, Resources.InstallTamperedTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             // If the type is set to Invalid, notify the user and return
             else if (Type == Launch.Invalid)
             {
-                Logger.Error("User attempted to launch {0} but the executables are missing");
-                MessageBox.Show("The game executables could not be found.\nPlease make sure that the files are present and try again.", "Executables Missing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.Error(Resources.InstallInvalidLog);
+                MessageBox.Show(Resources.InstallInvalid, Resources.InstallInvalidTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             // If the game is set to Invalid, notify the user and return
             else if (Game == Game.Invalid)
             {
-                Logger.Error("User attempted to launch {0} but no game install could be detected");
-                MessageBox.Show("No game install could be found on the specified folder.\nPlease make sure one of the supported games exists on the install folder and try again.", "No Game Detected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.Error(Resources.InstallNoExecutableLog);
+                MessageBox.Show(Resources.InstallNoExecutable, Resources.InstallNoExecutableTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -177,8 +178,8 @@ namespace PatchMyPath.Config
             }
             else
             {
-                Logger.Error("Game type {0} ({1}) is not valid", Game, (int)Game);
-                MessageBox.Show("The game version is invalid!\nPlease make sure that the folder contains a copy of RDR2 or GTAV and try again.", "Invalid Game", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.Error(Resources.InstallWrongGameLog, Game, (int)Game);
+                MessageBox.Show(Resources.InstallWrongGame, Resources.InstallWrongGameTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -196,8 +197,8 @@ namespace PatchMyPath.Config
             // If we failed, print the respective error message and return
             catch (Win32Exception er)
             {
-                Logger.Error("Error while creating symbolic link from {0} to {1}: {2}", directory, GamePath);
-                MessageBox.Show($"An error has ocurred:\n{er.Message}", "Unable to create Symbolic Link", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.Error(Resources.SymbolicLinkErrorLog, directory, GamePath);
+                MessageBox.Show(string.Format(Resources.SymbolicLinkError, er.Message), Resources.SymbolicLinkErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -217,7 +218,7 @@ namespace PatchMyPath.Config
                 // If the user is using ScriptHook for Red Dead Redemption 2, launch it as-it and let it do the heavy work
                 if (type == Launch.ScriptHook)
                 {
-                    Logger.Info("Starting RDR2 from {0} with ScriptHook", GamePath);
+                    Logger.Info(Resources.StartingScriptHookLog, GamePath);
                     Process.Start(Path.Combine(Program.Config.Destination.RDR2, "ScriptHook", "rdr2d.exe"));
                     return;
                 }
@@ -225,20 +226,20 @@ namespace PatchMyPath.Config
                 // If the user wants Steam and the App ID is not zero, use the Steam URL
                 if (Program.Config.Steam.RDR2Use && Program.Config.Steam.RDR2AppID != 0)
                 {
-                    Logger.Info("Starting RDR2 from {0} with Steam", GamePath);
+                    Logger.Info(Resources.StartingRDR2SteamLog, GamePath);
                     Process.Start($"steam://rungameid/{Program.Config.Steam.RDR2AppID}");
                 }
                 // Otherwise, just launch the exe
                 else
                 {
-                    Logger.Info("Starting Vanila RDR2 from {0}", GamePath);
+                    Logger.Info(Resources.StartingRDR2VanillaLog, GamePath);
                     Process.Start(Path.Combine(Program.Config.Destination.RDR2, "RDR2.exe"));
                 }
-                
+
                 // If the user wants to launch RedHook2
                 if (type == Launch.RedHook2)
                 {
-                    Logger.Info("Starting RedHook2 from {0}", GamePath);
+                    Logger.Info(Resources.StartingRedHookLog, GamePath);
                     Process.Start(Path.Combine(Program.Config.Destination.RDR2, "RedHook2", "Loader.exe"));
                 }
             }
@@ -248,7 +249,7 @@ namespace PatchMyPath.Config
                 // If the launch type is set to RPH, launch RPH
                 if (type == Launch.RagePluginHook)
                 {
-                    Logger.Info("Starting GTA V from {0} with RagePluginHook", GamePath);
+                    Logger.Info(Resources.StartingRPHLog, GamePath);
                     using (Process rph = new Process())
                     {
                         rph.StartInfo.FileName = Path.Combine(Program.Config.Destination.GTAV, "RAGEPluginHook.exe");
@@ -259,7 +260,7 @@ namespace PatchMyPath.Config
                 // If Unknown's Launcher Bypass is enabled and we don't need to use Steam
                 else if (type == Launch.LauncherBypass)
                 {
-                    Logger.Info("Starting GTA V from {0} with the main executable and LauncherBypass", GamePath);
+                    Logger.Info(Resources.StartingLauncherBypassLog, GamePath);
                     Process.Start(Path.Combine(Program.Config.Destination.GTAV, "GTA5.exe"));
                 }
                 // Otherwise, launch the game as normal
@@ -268,13 +269,13 @@ namespace PatchMyPath.Config
                     // If Steam is enabled, use the specified App ID
                     if (Program.Config.Steam.GTAVUse && Program.Config.Steam.GTAVAppID != 0)
                     {
-                        Logger.Info("Starting GTA V from {0} with Steam", GamePath);
+                        Logger.Info(Resources.StartingGTAVSteamLog, GamePath);
                         Process.Start($"steam://rungameid/{Program.Config.Steam.GTAVAppID}");
                     }
                     // If not, use the Launcher file
                     else
                     {
-                        Logger.Info("Starting Vanilla GTA V from {0}", GamePath);
+                        Logger.Info(Resources.StartingGTAVVanillaLog, GamePath);
                         Process.Start(Path.Combine(Program.Config.Destination.GTAV, "GTAVLauncher.exe"));
                     }
                 }

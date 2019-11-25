@@ -3,6 +3,7 @@ using NLog;
 using NLog.Config;
 using NLog.Targets;
 using PatchMyPath.Config;
+using PatchMyPath.Properties;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -45,7 +46,7 @@ namespace PatchMyPath
             try
             {
                 // Try to load the configuration
-                Logger.Info("Attempting to load the configuration...");
+                Logger.Info(Resources.ConfigLoadingLog);
                 // Get the contents of the file
                 string contents = File.ReadAllText("PatchMyPath.json");
                 // And store the parsed config object
@@ -55,7 +56,7 @@ namespace PatchMyPath
             catch (FileNotFoundException)
             {
                 // Log it
-                Logger.Warn("Configuration file not found, a new one was generated");
+                Logger.Warn(Resources.ConfigCreatedLog);
                 // And create a new configuration instance and save it
                 Config = new Configuration();
                 SaveConfig();
@@ -64,14 +65,14 @@ namespace PatchMyPath
             catch (JsonException ex)
             {
                 // Log it
-                Logger.Error("Unable to parse configuration: {0}", ex.Message);
+                Logger.Error(Resources.ConfigNotParsedLog, ex.Message);
                 // Ask the user if he wants to make a new configuration
-                DialogResult result = MessageBox.Show($"We tried to load the configuration file but is invalid.\nDo you want to create a new configuration file?\nPress No if you want to manually check the file.\n\n({ex.Message})", "Invalid Configuration", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult result = MessageBox.Show(string.Format(Resources.ConfigInvalid, ex.Message), Resources.ConfigInvalidTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 // If the answer is no
                 if (result == DialogResult.No)
                 {
-                    Logger.Fatal("Configuration is invalid, user prevented the creation of a new file");
+                    Logger.Fatal(Resources.ConfigInvalidLog);
                     return 1;
                 }
 
@@ -92,13 +93,13 @@ namespace PatchMyPath
         public static void SaveConfig()
         {
             // Log that we are going to save the config
-            Logger.Info("Attempting to save configuration...");
+            Logger.Info(Resources.ConfigSavingLog);
             // Serialize the configuration to a JSON string and add a new line at the end
             string output = JsonConvert.SerializeObject(Config, Formatting.Indented, new InstallConverter()) + Environment.NewLine;
             // Then, save that string on PatchMyPath.json
             File.WriteAllText("PatchMyPath.json", output);
             // Yeet, config is saved
-            Logger.Info("Configuration saved");
+            Logger.Info(Resources.ConfigSavedLog);
         }
     }
 }
