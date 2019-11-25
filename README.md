@@ -20,4 +20,3 @@ PatchMyPath is a free and open source installation manager for Grand Theft Auto 
 [codefactor-url]: https://www.codefactor.io/repository/github/justalemon/patchmypath
 [discord-img]: https://img.shields.io/badge/discord-join-7289DA.svg
 [discord-url]: https://discord.gg/Cf6sspj
-[releases-url]: https://github.com/justalemon/PatchMyPath/releases
