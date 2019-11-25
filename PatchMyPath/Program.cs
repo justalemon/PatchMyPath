@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using NLog;
 using NLog.Config;
 using NLog.Targets;
@@ -50,7 +50,7 @@ namespace PatchMyPath
                 // Get the contents of the file
                 string contents = File.ReadAllText("PatchMyPath.json");
                 // And store the parsed config object
-                Config = JsonConvert.DeserializeObject<Configuration>(contents, new InstallConverter());
+                Config = JsonConvert.DeserializeObject<Configuration>(contents, new InstallConverter(), new CultureConverter());
             }
             // If the file was not found
             catch (FileNotFoundException)
@@ -95,7 +95,7 @@ namespace PatchMyPath
             // Log that we are going to save the config
             Logger.Info(Resources.ConfigSavingLog);
             // Serialize the configuration to a JSON string and add a new line at the end
-            string output = JsonConvert.SerializeObject(Config, Formatting.Indented, new InstallConverter()) + Environment.NewLine;
+            string output = JsonConvert.SerializeObject(Config, Formatting.Indented, new InstallConverter(), new CultureConverter()) + Environment.NewLine;
             // Then, save that string on PatchMyPath.json
             File.WriteAllText("PatchMyPath.json", output);
             // Yeet, config is saved
