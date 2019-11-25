@@ -410,6 +410,32 @@ namespace PatchMyPath
 
         #endregion
 
+        #region Settings - Language
+
+        private void LanguageComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // If there is nothing selected, return
+            if (LanguageComboBox.SelectedItem == null)
+            {
+                return;
+            }
+
+            // Iterate over the supported languages
+            foreach (CultureInfo culture in Program.Cultures)
+            {
+                // If the name matches
+                if (culture.NativeName == LanguageComboBox.SelectedItem.ToString())
+                {
+                    // Set the culture on the configuration and save it
+                    Program.Config.Language = culture;
+                    Program.SaveConfig();
+                    return;
+                }
+            }
+        }
+
+        #endregion
+
         #region Settings - GTA V
 
         private void GTAVLocationSelectButton_Click(object sender, EventArgs e)
