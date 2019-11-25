@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
 
@@ -11,6 +12,11 @@ namespace PatchMyPath.Config
     /// </summary>
     public class Configuration
     {
+        /// <summary>
+        /// The language of the program.
+        /// </summary>
+        [JsonProperty("language")]
+        public CultureInfo Language { get; set; } = new CultureInfo("en-US");
         /// <summary>
         /// If the install should be added after finishing with the duplication process.
         /// </summary>
