@@ -74,10 +74,12 @@ namespace PatchMyPath
         /// </summary>
         public static readonly Dictionary<string, EntryType> RDR2 = new Dictionary<string, EntryType>()
         {
+            { ".egstore", EntryType.Folder | EntryType.Optional },
             { "12on7", EntryType.Folder },
             { "Redistributables", EntryType.Folder | EntryType.Optional },
             { "x64", EntryType.Folder },
 
+            { "PlayRDR2.exe", EntryType.File | EntryType.Copy | EntryType.Optional },
             { "RDR2.exe", EntryType.File | EntryType.Copy },
             { "amd_ags_x64.dll", EntryType.File },
             { "bink2w64.dll", EntryType.File },
