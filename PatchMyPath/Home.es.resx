@@ -178,7 +178,7 @@
     <value>Ajustes</value>
   </data>
   <data name="SteamGroupBox.Text" xml:space="preserve">
-    <value>Usar Steam para iniciar</value>
+    <value>Lanzador del Juego</value>
   </data>
   <data name="SteamGTAVButton.Text" xml:space="preserve">
     <value>Guardar</value>

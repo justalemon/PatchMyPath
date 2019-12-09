@@ -49,20 +49,20 @@ namespace PatchMyPath
             this.DestinationSelectButton = new System.Windows.Forms.Button();
             this.DestinationTextBox = new System.Windows.Forms.TextBox();
             this.SettingsTabPage = new System.Windows.Forms.TabPage();
+            this.LanguageGroupBox = new System.Windows.Forms.GroupBox();
+            this.LanguageComboBox = new System.Windows.Forms.ComboBox();
             this.RDR2LocationGroupBox = new System.Windows.Forms.GroupBox();
             this.RDR2LocationSaveButton = new System.Windows.Forms.Button();
             this.RDR2LocationDetectButton = new System.Windows.Forms.Button();
             this.RDR2LocationSelectButton = new System.Windows.Forms.Button();
             this.RDR2LocationTextBox = new System.Windows.Forms.TextBox();
             this.SteamGroupBox = new System.Windows.Forms.GroupBox();
-            this.SteamGTAVCheckBox = new System.Windows.Forms.CheckBox();
-            this.IDGTAVLabel = new System.Windows.Forms.Label();
+            this.GTAVLabel = new System.Windows.Forms.Label();
             this.IDGTAVTextBox = new System.Windows.Forms.TextBox();
             this.SteamGTAVButton = new System.Windows.Forms.Button();
             this.SteamRDR2Button = new System.Windows.Forms.Button();
-            this.IDRDR2Label = new System.Windows.Forms.Label();
+            this.RDR2Label = new System.Windows.Forms.Label();
             this.IDRDR2TextBox = new System.Windows.Forms.TextBox();
-            this.SteamRDR2CheckBox = new System.Windows.Forms.CheckBox();
             this.GTAVLocationGroupBox = new System.Windows.Forms.GroupBox();
             this.GTAVLocationSaveButton = new System.Windows.Forms.Button();
             this.GTAVLocationDetectButton = new System.Windows.Forms.Button();
@@ -74,8 +74,8 @@ namespace PatchMyPath
             this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RefreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.LanguageGroupBox = new System.Windows.Forms.GroupBox();
-            this.LanguageComboBox = new System.Windows.Forms.ComboBox();
+            this.GTAVComboBox = new System.Windows.Forms.ComboBox();
+            this.RDR2ComboBox = new System.Windows.Forms.ComboBox();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.DuplicatorTabPage.SuspendLayout();
@@ -85,11 +85,11 @@ namespace PatchMyPath
             this.OriginGroupBox.SuspendLayout();
             this.DestinationGroupBox.SuspendLayout();
             this.SettingsTabPage.SuspendLayout();
+            this.LanguageGroupBox.SuspendLayout();
             this.RDR2LocationGroupBox.SuspendLayout();
             this.SteamGroupBox.SuspendLayout();
             this.GTAVLocationGroupBox.SuspendLayout();
             this.TopMenuStrip.SuspendLayout();
-            this.LanguageGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // GeneralTabControl
@@ -242,6 +242,21 @@ namespace PatchMyPath
             this.SettingsTabPage.Name = "SettingsTabPage";
             this.SettingsTabPage.UseVisualStyleBackColor = true;
             // 
+            // LanguageGroupBox
+            // 
+            resources.ApplyResources(this.LanguageGroupBox, "LanguageGroupBox");
+            this.LanguageGroupBox.Controls.Add(this.LanguageComboBox);
+            this.LanguageGroupBox.Name = "LanguageGroupBox";
+            this.LanguageGroupBox.TabStop = false;
+            // 
+            // LanguageComboBox
+            // 
+            resources.ApplyResources(this.LanguageComboBox, "LanguageComboBox");
+            this.LanguageComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LanguageComboBox.FormattingEnabled = true;
+            this.LanguageComboBox.Name = "LanguageComboBox";
+            this.LanguageComboBox.SelectedIndexChanged += new System.EventHandler(this.LanguageComboBox_SelectedIndexChanged);
+            // 
             // RDR2LocationGroupBox
             // 
             resources.ApplyResources(this.RDR2LocationGroupBox, "RDR2LocationGroupBox");
@@ -281,28 +296,21 @@ namespace PatchMyPath
             // SteamGroupBox
             // 
             resources.ApplyResources(this.SteamGroupBox, "SteamGroupBox");
-            this.SteamGroupBox.Controls.Add(this.SteamGTAVCheckBox);
-            this.SteamGroupBox.Controls.Add(this.IDGTAVLabel);
+            this.SteamGroupBox.Controls.Add(this.RDR2ComboBox);
+            this.SteamGroupBox.Controls.Add(this.GTAVComboBox);
+            this.SteamGroupBox.Controls.Add(this.GTAVLabel);
             this.SteamGroupBox.Controls.Add(this.IDGTAVTextBox);
             this.SteamGroupBox.Controls.Add(this.SteamGTAVButton);
             this.SteamGroupBox.Controls.Add(this.SteamRDR2Button);
-            this.SteamGroupBox.Controls.Add(this.IDRDR2Label);
+            this.SteamGroupBox.Controls.Add(this.RDR2Label);
             this.SteamGroupBox.Controls.Add(this.IDRDR2TextBox);
-            this.SteamGroupBox.Controls.Add(this.SteamRDR2CheckBox);
             this.SteamGroupBox.Name = "SteamGroupBox";
             this.SteamGroupBox.TabStop = false;
             // 
-            // SteamGTAVCheckBox
+            // GTAVLabel
             // 
-            resources.ApplyResources(this.SteamGTAVCheckBox, "SteamGTAVCheckBox");
-            this.SteamGTAVCheckBox.Name = "SteamGTAVCheckBox";
-            this.SteamGTAVCheckBox.UseVisualStyleBackColor = true;
-            this.SteamGTAVCheckBox.CheckedChanged += new System.EventHandler(this.SteamGTAVCheckBox_CheckedChanged);
-            // 
-            // IDGTAVLabel
-            // 
-            resources.ApplyResources(this.IDGTAVLabel, "IDGTAVLabel");
-            this.IDGTAVLabel.Name = "IDGTAVLabel";
+            resources.ApplyResources(this.GTAVLabel, "GTAVLabel");
+            this.GTAVLabel.Name = "GTAVLabel";
             // 
             // IDGTAVTextBox
             // 
@@ -323,22 +331,15 @@ namespace PatchMyPath
             this.SteamRDR2Button.UseVisualStyleBackColor = true;
             this.SteamRDR2Button.Click += new System.EventHandler(this.SteamRDR2Button_Click);
             // 
-            // IDRDR2Label
+            // RDR2Label
             // 
-            resources.ApplyResources(this.IDRDR2Label, "IDRDR2Label");
-            this.IDRDR2Label.Name = "IDRDR2Label";
+            resources.ApplyResources(this.RDR2Label, "RDR2Label");
+            this.RDR2Label.Name = "RDR2Label";
             // 
             // IDRDR2TextBox
             // 
             resources.ApplyResources(this.IDRDR2TextBox, "IDRDR2TextBox");
             this.IDRDR2TextBox.Name = "IDRDR2TextBox";
-            // 
-            // SteamRDR2CheckBox
-            // 
-            resources.ApplyResources(this.SteamRDR2CheckBox, "SteamRDR2CheckBox");
-            this.SteamRDR2CheckBox.Name = "SteamRDR2CheckBox";
-            this.SteamRDR2CheckBox.UseVisualStyleBackColor = true;
-            this.SteamRDR2CheckBox.CheckedChanged += new System.EventHandler(this.SteamRDR2CheckBox_CheckedChanged);
             // 
             // GTAVLocationGroupBox
             // 
@@ -423,20 +424,21 @@ namespace PatchMyPath
             resources.ApplyResources(this.RefreshToolStripMenuItem, "RefreshToolStripMenuItem");
             this.RefreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
             // 
-            // LanguageGroupBox
+            // GTAVComboBox
             // 
-            resources.ApplyResources(this.LanguageGroupBox, "LanguageGroupBox");
-            this.LanguageGroupBox.Controls.Add(this.LanguageComboBox);
-            this.LanguageGroupBox.Name = "LanguageGroupBox";
-            this.LanguageGroupBox.TabStop = false;
+            this.GTAVComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GTAVComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.GTAVComboBox, "GTAVComboBox");
+            this.GTAVComboBox.Name = "GTAVComboBox";
+            this.GTAVComboBox.SelectedIndexChanged += new System.EventHandler(this.GTAVComboBox_SelectedIndexChanged);
             // 
-            // LanguageComboBox
+            // RDR2ComboBox
             // 
-            resources.ApplyResources(this.LanguageComboBox, "LanguageComboBox");
-            this.LanguageComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.LanguageComboBox.FormattingEnabled = true;
-            this.LanguageComboBox.Name = "LanguageComboBox";
-            this.LanguageComboBox.SelectedIndexChanged += new System.EventHandler(this.LanguageComboBox_SelectedIndexChanged);
+            this.RDR2ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.RDR2ComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.RDR2ComboBox, "RDR2ComboBox");
+            this.RDR2ComboBox.Name = "RDR2ComboBox";
+            this.RDR2ComboBox.SelectedIndexChanged += new System.EventHandler(this.RDR2ComboBox_SelectedIndexChanged);
             // 
             // Home
             // 
@@ -459,6 +461,7 @@ namespace PatchMyPath
             this.DestinationGroupBox.ResumeLayout(false);
             this.DestinationGroupBox.PerformLayout();
             this.SettingsTabPage.ResumeLayout(false);
+            this.LanguageGroupBox.ResumeLayout(false);
             this.RDR2LocationGroupBox.ResumeLayout(false);
             this.RDR2LocationGroupBox.PerformLayout();
             this.SteamGroupBox.ResumeLayout(false);
@@ -467,7 +470,6 @@ namespace PatchMyPath
             this.GTAVLocationGroupBox.PerformLayout();
             this.TopMenuStrip.ResumeLayout(false);
             this.TopMenuStrip.PerformLayout();
-            this.LanguageGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -503,10 +505,9 @@ namespace PatchMyPath
         private System.Windows.Forms.Button GTAVLocationDetectButton;
         private System.Windows.Forms.Button GTAVLocationSaveButton;
         private System.Windows.Forms.GroupBox SteamGroupBox;
-        private System.Windows.Forms.CheckBox SteamRDR2CheckBox;
         private System.Windows.Forms.Button SteamRDR2Button;
         private System.Windows.Forms.TextBox IDRDR2TextBox;
-        private System.Windows.Forms.Label IDRDR2Label;
+        private System.Windows.Forms.Label RDR2Label;
         private System.Windows.Forms.GroupBox GameGroupBox;
         private System.Windows.Forms.ComboBox GameComboBox;
         private System.Windows.Forms.GroupBox RDR2LocationGroupBox;
@@ -514,14 +515,15 @@ namespace PatchMyPath
         private System.Windows.Forms.Button RDR2LocationDetectButton;
         private System.Windows.Forms.Button RDR2LocationSelectButton;
         private System.Windows.Forms.TextBox RDR2LocationTextBox;
-        private System.Windows.Forms.CheckBox SteamGTAVCheckBox;
-        private System.Windows.Forms.Label IDGTAVLabel;
+        private System.Windows.Forms.Label GTAVLabel;
         private System.Windows.Forms.TextBox IDGTAVTextBox;
         private System.Windows.Forms.Button SteamGTAVButton;
         private System.Windows.Forms.ProgressBar DuplicationProgressBar;
         private System.Windows.Forms.GroupBox OtherGroupBox;
         private System.Windows.Forms.GroupBox LanguageGroupBox;
         private System.Windows.Forms.ComboBox LanguageComboBox;
+        private System.Windows.Forms.ComboBox RDR2ComboBox;
+        private System.Windows.Forms.ComboBox GTAVComboBox;
     }
 }
 
