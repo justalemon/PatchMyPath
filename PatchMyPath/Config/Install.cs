@@ -229,6 +229,12 @@ namespace PatchMyPath.Config
                     Logger.Info(Resources.StartingRDR2SteamLog, GamePath);
                     Process.Start($"steam://rungameid/{Program.Config.Launchers.RDR2SteamID}");
                 }
+                // If the user wants the Epic Games Launcher and the ID is not empty, use the EGS URL
+                if (Program.Config.Launchers.RDR2Use == LauncherType.EpicGamesStore && !string.IsNullOrWhiteSpace(Program.Config.Launchers.RDR2EpicID))
+                {
+                    Logger.Info(Resources.StartingRDR2SteamLog, GamePath);
+                    Process.Start($"com.epicgames.launcher://apps/{Program.Config.Launchers.RDR2EpicID}?action=launch&silent=true");
+                }
                 // Otherwise, just launch the exe
                 else
                 {
