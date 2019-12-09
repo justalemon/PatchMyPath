@@ -53,9 +53,15 @@ namespace PatchMyPath
             RefreshInstalls();
             // And lock the UI elements
             Locked = true;
-            // Load the settings
-            LoadSettings();
 
+            // Iterate over the launcher types
+            foreach (string value in Enum.GetNames(typeof(LauncherType)))
+            {
+                // Add the item into the combo box
+                RDR2ComboBox.Items.Add(value.SpaceOnUpperCase());
+                GTAVComboBox.Items.Add(value.SpaceOnUpperCase());
+            }
+            
             // Iterate over the games supported
             foreach (string value in Enum.GetNames(typeof(Game)))
             {
@@ -75,6 +81,8 @@ namespace PatchMyPath
             // And select the correct one
             LanguageComboBox.SelectedIndex = LanguageComboBox.FindStringExact(Program.Config.Language.NativeName);
 
+            // Load the settings
+            LoadSettings();
             // Log that we have loaded everything
             Logger.Debug(Resources.FormInitEndLog);
         }
@@ -105,10 +113,8 @@ namespace PatchMyPath
 
             RDR2LocationTextBox.Text = Program.Config.Destination.RDR2;
             GTAVLocationTextBox.Text = Program.Config.Destination.GTAV;
-            SteamRDR2CheckBox.Checked = Program.Config.Steam.RDR2Use;
-            SteamGTAVCheckBox.Checked = Program.Config.Steam.GTAVUse;
-            IDRDR2TextBox.Text = Program.Config.Steam.RDR2AppID.ToString();
-            IDGTAVTextBox.Text = Program.Config.Steam.GTAVAppID.ToString();
+            RDR2ComboBox.SelectedIndex = (int)Program.Config.Launchers.RDR2Use;
+            GTAVComboBox.SelectedIndex = (int)Program.Config.Launchers.GTAVUse;
 
             // And log that we have finished
             Logger.Info(Resources.FormSettingsLoadLog);
@@ -593,48 +599,106 @@ namespace PatchMyPath
 
         #endregion
 
-        #region Settings - Steam
+        #region Settings - Launcher
 
-        private void SteamRDR2CheckBox_CheckedChanged(object sender, EventArgs e)
+        private void RDR2ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Save the checkbox status
-            Program.Config.Steam.RDR2Use = SteamRDR2CheckBox.Checked;
-            Program.Config.Save();
+            // Cast the selected index to an enum and set the appropiate ID
+            switch ((LauncherType)RDR2ComboBox.SelectedIndex)
+            {
+                case LauncherType.Executable:
+                case LauncherType.RockstarGamesLauncher:
+                    IDRDR2TextBox.Text = string.Empty;
+                    IDRDR2TextBox.Enabled = false;
+                    break;
+                case LauncherType.Steam:
+                    IDRDR2TextBox.Text = Program.Config.Launchers.RDR2SteamID.ToString();
+                    IDRDR2TextBox.Enabled = true;
+                    break;
+                case LauncherType.EpicGamesStore:
+                    IDRDR2TextBox.Text = Program.Config.Launchers.RDR2EpicID;
+                    IDRDR2TextBox.Enabled = true;
+                    break;
+            }
         }
 
         private void SteamRDR2Button_Click(object sender, EventArgs e)
         {
-            // Try to parse the number as an uint
-            // If we failed, notify the user and return
-            if (!ulong.TryParse(IDRDR2TextBox.Text, out ulong output))
+            // Cast the choosen type to an enum
+            LauncherType type = (LauncherType)RDR2ComboBox.SelectedIndex;
+
+            // If the type is set to steam
+            if (type == LauncherType.Steam)
             {
-                MessageBox.Show(string.Format(Resources.SettingsInvalidID, IDRDR2TextBox.Text, uint.MaxValue));
-                return;
+                // Try to parse the number as an uint
+                // If we failed, notify the user and return
+                if (!ulong.TryParse(IDRDR2TextBox.Text, out ulong output))
+                {
+                    MessageBox.Show(string.Format(Resources.SettingsInvalidID, IDRDR2TextBox.Text, ulong.MaxValue));
+                    return;
+                }
+                // If we managed to parse the number, save it
+                Program.Config.Launchers.RDR2SteamID = output;
+                Program.Config.Save();
             }
-            // If we managed to parse the number, save it
-            Program.Config.Steam.RDR2AppID = output;
-            Program.Config.Save();
+            // If the type is set to Epic Games
+            else if (type == LauncherType.EpicGamesStore)
+            {
+                // Just save the string
+                // If we managed to parse the number, save it
+                Program.Config.Launchers.RDR2EpicID = IDRDR2TextBox.Text;
+                Program.Config.Save();
+            }
         }
 
-        private void SteamGTAVCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void GTAVComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Save the checkbox status
-            Program.Config.Steam.GTAVUse = SteamGTAVCheckBox.Checked;
-            Program.Config.Save();
+            // Cast the selected index to an enum and set the appropiate ID
+            switch ((LauncherType)GTAVComboBox.SelectedIndex)
+            {
+                case LauncherType.Executable:
+                case LauncherType.RockstarGamesLauncher:
+                    IDGTAVTextBox.Text = string.Empty;
+                    IDGTAVTextBox.Enabled = false;
+                    break;
+                case LauncherType.Steam:
+                    IDGTAVTextBox.Text = Program.Config.Launchers.GTAVSteamID.ToString();
+                    IDGTAVTextBox.Enabled = true;
+                    break;
+                case LauncherType.EpicGamesStore:
+                    IDGTAVTextBox.Text = Program.Config.Launchers.GTAVEpicID;
+                    IDGTAVTextBox.Enabled = true;
+                    break;
+            }
         }
 
         private void SteamGTAVButton_Click(object sender, EventArgs e)
         {
-            // Try to parse the number as an uint
-            // If we failed, notify the user and return
-            if (!ulong.TryParse(IDGTAVTextBox.Text, out ulong output))
+            // Cast the choosen type to an enum
+            LauncherType type = (LauncherType)GTAVComboBox.SelectedIndex;
+
+            // If the type is set to steam
+            if (type == LauncherType.Steam)
             {
-                MessageBox.Show(string.Format(Resources.SettingsInvalidID, IDRDR2TextBox.Text, uint.MaxValue));
-                return;
+                // Try to parse the number as an uint
+                // If we failed, notify the user and return
+                if (!ulong.TryParse(IDGTAVTextBox.Text, out ulong output))
+                {
+                    MessageBox.Show(string.Format(Resources.SettingsInvalidID, IDGTAVTextBox.Text, ulong.MaxValue));
+                    return;
+                }
+                // If we managed to parse the number, save it
+                Program.Config.Launchers.GTAVSteamID = output;
+                Program.Config.Save();
             }
-            // If we managed to parse the number, save it
-            Program.Config.Steam.GTAVAppID = output;
-            Program.Config.Save();
+            // If the type is set to Epic Games
+            else if (type == LauncherType.EpicGamesStore)
+            {
+                // Just save the string
+                // If we managed to parse the number, save it
+                Program.Config.Launchers.GTAVEpicID = IDGTAVTextBox.Text;
+                Program.Config.Save();
+            }
         }
 
         #endregion

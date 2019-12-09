@@ -224,10 +224,10 @@ namespace PatchMyPath.Config
                 }
 
                 // If the user wants Steam and the App ID is not zero, use the Steam URL
-                if (Program.Config.Steam.RDR2Use && Program.Config.Steam.RDR2AppID != 0)
+                if (Program.Config.Launchers.RDR2Use == LauncherType.Steam && Program.Config.Launchers.RDR2SteamID != 0)
                 {
                     Logger.Info(Resources.StartingRDR2SteamLog, GamePath);
-                    Process.Start($"steam://rungameid/{Program.Config.Steam.RDR2AppID}");
+                    Process.Start($"steam://rungameid/{Program.Config.Launchers.RDR2SteamID}");
                 }
                 // Otherwise, just launch the exe
                 else
@@ -267,10 +267,10 @@ namespace PatchMyPath.Config
                 else
                 {
                     // If Steam is enabled, use the specified App ID
-                    if (Program.Config.Steam.GTAVUse && Program.Config.Steam.GTAVAppID != 0)
+                    if (Program.Config.Launchers.GTAVUse == LauncherType.Steam && Program.Config.Launchers.GTAVSteamID != 0)
                     {
                         Logger.Info(Resources.StartingGTAVSteamLog, GamePath);
-                        Process.Start($"steam://rungameid/{Program.Config.Steam.GTAVAppID}");
+                        Process.Start($"steam://rungameid/{Program.Config.Launchers.GTAVSteamID}");
                     }
                     // If not, use the Launcher file
                     else

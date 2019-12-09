@@ -34,9 +34,10 @@ namespace PatchMyPath.Config
         public bool AddAfterDupe { get; set; } = true;
         /// <summary>
         /// The settings for the usage of Steam for launching the game.
-        /// </summary> 
+        /// </summary>
+        [Obsolete("Use Configuration.Launchers instead.")]
         [JsonProperty("steam")]
-        public Steam Steam { get; set; } = new Steam();
+        public Steam Steam { get; set; } = null;
         /// <summary>
         /// The settings for using specific launchers to start the games.
         /// </summary>
@@ -64,6 +65,9 @@ namespace PatchMyPath.Config
         }
         public static Configuration Load()
         {
+            // Store the configuration here just in case
+            Configuration config;
+
             // Then, is time to handle the program configuration
             try
             {
@@ -74,7 +78,7 @@ namespace PatchMyPath.Config
                 // Get the contents of the file
                 string contents = File.ReadAllText(path);
                 // And store the parsed config object
-                return JsonConvert.DeserializeObject<Configuration>(contents, new InstallConverter(), new CultureConverter());
+                config = JsonConvert.DeserializeObject<Configuration>(contents, new InstallConverter(), new CultureConverter());
             }
             // If the file was not found
             catch (FileNotFoundException)
@@ -82,10 +86,8 @@ namespace PatchMyPath.Config
                 // Log it
                 Logger.Warn(Resources.ConfigCreatedLog);
                 // Create a new configuration instance and save it
-                Configuration config = new Configuration();
+                config = new Configuration();
                 config.Save();
-                // To finally return it
-                return config;
             }
             // If the file could not be parsed
             catch (JsonException ex)
@@ -103,10 +105,16 @@ namespace PatchMyPath.Config
                 }
 
                 // Otherwise, create a new configuration and save it
-                Configuration config = new Configuration();
+                config = new Configuration();
                 config.Save();
-                return config;
             }
+
+            // If an upgrade was required and it was done, save the configuration
+            if (config.Upgrade())
+            {
+                config.Save();
+            }
+            return config;
         }
         public static Configuration Regenerate()
         {
@@ -117,10 +125,34 @@ namespace PatchMyPath.Config
             // And return it
             return config;
         }
+        public bool Upgrade()
+        {
+            // Save the status of the upgrade
+            bool done = false;
+
+            // If the configuration has a Steam object
+            #pragma warning disable CS0618
+            if (Steam != null)
+            {
+                // Save the parameters into the new classes
+                Launchers.RDR2Use = Steam.RDR2Use ? LauncherType.Steam : LauncherType.Executable;
+                Launchers.RDR2SteamID = Steam.RDR2AppID;
+                Launchers.GTAVUse = Steam.GTAVUse ? LauncherType.Steam : LauncherType.Executable;
+                Launchers.GTAVSteamID = Steam.GTAVAppID;
+                // Set steam to null
+                Steam = null;
+                // And save that an upgrade was done
+                done = true;
+            }
+            #pragma warning restore CS0618
+
+            // Finally, return the upgrade status
+            return done;
+        }
         public void Save()
         {
             // Get the output of the serialization
-            string output = JsonConvert.SerializeObject(this, Formatting.Indented) + Environment.NewLine;
+            string output = JsonConvert.SerializeObject(this, Formatting.Indented, new InstallConverter(), new CultureConverter()) + Environment.NewLine;
             // And dump the contents of the file
             File.WriteAllText(GetConfigLocation(), output);
         }
