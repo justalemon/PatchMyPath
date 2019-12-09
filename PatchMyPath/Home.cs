@@ -639,7 +639,6 @@ namespace PatchMyPath
                 }
                 // If we managed to parse the number, save it
                 Program.Config.Launchers.RDR2SteamID = output;
-                Program.Config.Save();
             }
             // If the type is set to Epic Games
             else if (type == LauncherType.EpicGamesStore)
@@ -647,8 +646,11 @@ namespace PatchMyPath
                 // Just save the string
                 // If we managed to parse the number, save it
                 Program.Config.Launchers.RDR2EpicID = IDRDR2TextBox.Text;
-                Program.Config.Save();
             }
+
+            // Finally, save the selected launcher type
+            Program.Config.Launchers.RDR2Use = type;
+            Program.Config.Save();
         }
 
         private void GTAVComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -689,7 +691,6 @@ namespace PatchMyPath
                 }
                 // If we managed to parse the number, save it
                 Program.Config.Launchers.GTAVSteamID = output;
-                Program.Config.Save();
             }
             // If the type is set to Epic Games
             else if (type == LauncherType.EpicGamesStore)
@@ -697,8 +698,11 @@ namespace PatchMyPath
                 // Just save the string
                 // If we managed to parse the number, save it
                 Program.Config.Launchers.GTAVEpicID = IDGTAVTextBox.Text;
-                Program.Config.Save();
             }
+
+            // Finally, save the selected launcher type
+            Program.Config.Launchers.GTAVUse = type;
+            Program.Config.Save();
         }
 
         #endregion
