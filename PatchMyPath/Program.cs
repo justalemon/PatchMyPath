@@ -16,10 +16,6 @@ namespace PatchMyPath
     public static class Program
     {
         /// <summary>
-        /// The logger for the current class.
-        /// </summary>
-        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
-        /// <summary>
         /// The list of supported culture languages.
         /// </summary>
         public static readonly List<CultureInfo> Cultures = new List<CultureInfo>
@@ -30,7 +26,7 @@ namespace PatchMyPath
         /// <summary>
         /// The configuration of the program.
         /// </summary>
-        public static Configuration Config = null;
+        public static Configuration Config = Configuration.Load();
 
         /// <summary>
         /// The main entry point for the application.
@@ -52,66 +48,12 @@ namespace PatchMyPath
             // And apply the configuration
             LogManager.Configuration = config;
 
-            // Then, is time to handle the program configuration
-            try
-            {
-                // Try to load the configuration
-                Logger.Info(Resources.ConfigLoadingLog);
-                // Get the contents of the file
-                string contents = File.ReadAllText("PatchMyPath.json");
-                // And store the parsed config object
-                Config = JsonConvert.DeserializeObject<Configuration>(contents, new InstallConverter(), new CultureConverter());
-            }
-            // If the file was not found
-            catch (FileNotFoundException)
-            {
-                // Log it
-                Logger.Warn(Resources.ConfigCreatedLog);
-                // And create a new configuration instance and save it
-                Config = new Configuration();
-                SaveConfig();
-            }
-            // If the file could not be parsed
-            catch (JsonException ex)
-            {
-                // Log it
-                Logger.Error(Resources.ConfigNotParsedLog, ex.Message);
-                // Ask the user if he wants to make a new configuration
-                DialogResult result = MessageBox.Show(string.Format(Resources.ConfigInvalid, ex.Message), Resources.ConfigInvalidTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                // If the answer is no
-                if (result == DialogResult.No)
-                {
-                    Logger.Fatal(Resources.ConfigInvalidLog);
-                    return 1;
-                }
-
-                // Otherwise, create a new configuration and save it
-                Config = new Configuration();
-                SaveConfig();
-            }
-
             // Set the culture to the one from the config
             Thread.CurrentThread.CurrentUICulture = Config.Language;
             // And run the application with the form
             Application.Run(new Home());
             // Finally, return a status code of zero
             return 0;
-        }
-
-        /// <summary>
-        /// Saves the current configuration.
-        /// </summary>
-        public static void SaveConfig()
-        {
-            // Log that we are going to save the config
-            Logger.Info(Resources.ConfigSavingLog);
-            // Serialize the configuration to a JSON string and add a new line at the end
-            string output = JsonConvert.SerializeObject(Config, Formatting.Indented, new InstallConverter(), new CultureConverter()) + Environment.NewLine;
-            // Then, save that string on PatchMyPath.json
-            File.WriteAllText("PatchMyPath.json", output);
-            // Yeet, config is saved
-            Logger.Info(Resources.ConfigSavedLog);
         }
     }
 }

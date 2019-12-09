@@ -151,7 +151,7 @@ namespace PatchMyPath
             // Notify that a new install was added
             Logger.Info(Resources.FormInstallAddedLog, install.GamePath);
             // Save the settings
-            Program.SaveConfig();
+            Program.Config.Save();
             // And refresh the ListBox
             RefreshInstalls();
         }
@@ -172,7 +172,7 @@ namespace PatchMyPath
             // Log the removal
             Logger.Info(Resources.FormInstallRemovedLog, install.GamePath);
             // Save the configuration
-            Program.SaveConfig();
+            Program.Config.Save();
             // And update the listbox
             RefreshInstalls();
         }
@@ -215,7 +215,7 @@ namespace PatchMyPath
         {
             // Save the checkbox status on the settings
             Program.Config.AddAfterDupe = AutoAddCheckBox.Checked;
-            Program.SaveConfig();
+            Program.Config.Save();
         }
 
         private void DuplicateButton_Click(object sender, EventArgs e)
@@ -428,7 +428,7 @@ namespace PatchMyPath
                 {
                     // Set the culture on the configuration and save it
                     Program.Config.Language = culture;
-                    Program.SaveConfig();
+                    Program.Config.Save();
                     // If the form is visible, show a message about the change
                     if (Visible)
                     {
@@ -520,7 +520,7 @@ namespace PatchMyPath
             GTAVLocationTextBox.Text = providedPath;
             // And save the location
             Program.Config.Destination.GTAV = providedPath;
-            Program.SaveConfig();
+            Program.Config.Save();
         }
 
         #endregion
@@ -588,7 +588,7 @@ namespace PatchMyPath
             RDR2LocationTextBox.Text = providedPath;
             // And save the location
             Program.Config.Destination.RDR2 = providedPath;
-            Program.SaveConfig();
+            Program.Config.Save();
         }
 
         #endregion
@@ -599,7 +599,7 @@ namespace PatchMyPath
         {
             // Save the checkbox status
             Program.Config.Steam.RDR2Use = SteamRDR2CheckBox.Checked;
-            Program.SaveConfig();
+            Program.Config.Save();
         }
 
         private void SteamRDR2Button_Click(object sender, EventArgs e)
@@ -613,14 +613,14 @@ namespace PatchMyPath
             }
             // If we managed to parse the number, save it
             Program.Config.Steam.RDR2AppID = output;
-            Program.SaveConfig();
+            Program.Config.Save();
         }
 
         private void SteamGTAVCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             // Save the checkbox status
             Program.Config.Steam.GTAVUse = SteamGTAVCheckBox.Checked;
-            Program.SaveConfig();
+            Program.Config.Save();
         }
 
         private void SteamGTAVButton_Click(object sender, EventArgs e)
@@ -634,7 +634,7 @@ namespace PatchMyPath
             }
             // If we managed to parse the number, save it
             Program.Config.Steam.GTAVAppID = output;
-            Program.SaveConfig();
+            Program.Config.Save();
         }
 
         #endregion
