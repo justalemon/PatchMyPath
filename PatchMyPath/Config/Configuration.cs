@@ -25,10 +25,15 @@ namespace PatchMyPath.Config
         [JsonProperty("add_after_dupe")]
         public bool AddAfterDupe { get; set; } = true;
         /// <summary>
-        /// The settings for the usage of Steam for launching the game..
-        /// </summary>
+        /// The settings for the usage of Steam for launching the game.
+        /// </summary> 
         [JsonProperty("steam")]
         public Steam Steam { get; set; } = new Steam();
+        /// <summary>
+        /// The settings for using specific launchers to start the games.
+        /// </summary>
+        [JsonProperty("launchers")]
+        public Launchers Launchers { get; set; } = new Launchers();
         /// <summary>
         /// The destination folder for the game files.
         /// </summary>
