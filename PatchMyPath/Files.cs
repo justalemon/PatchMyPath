@@ -85,7 +85,7 @@ namespace PatchMyPath
             { "bink2w64.dll", EntryType.File },
             { "dxilconv7.dll", EntryType.File },
             { "oo2core_5_win64.dll", EntryType.File },
-            { "vulkan-1.dll", EntryType.File },
+            { "vulkan-1.dll", EntryType.File | EntryType.Optional },
             { "index.bin", EntryType.File | EntryType.Optional },
             { "anim_0.rpf", EntryType.File },
             { "appdata0_update.rpf", EntryType.File },
