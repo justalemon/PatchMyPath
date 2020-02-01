@@ -40,7 +40,7 @@ namespace PatchMyPath
             { "GFSDK_ShadowLib.win64.dll", EntryType.File },
             { "GFSDK_TXAA.win64.dll", EntryType.File },
             { "GFSDK_TXAA_AlphaResolve.win64.dll", EntryType.File },
-            { "GPUPerfAPIDX11-x64.dll", EntryType.File },
+            { "GPUPerfAPIDX11-x64.dll", EntryType.File | EntryType.Optional },
             { "NvPmApi.Core.win64.dll", EntryType.File },
             { "index.bin", EntryType.File | EntryType.Optional },
             { "common.rpf", EntryType.File },
