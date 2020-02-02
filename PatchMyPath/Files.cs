@@ -41,7 +41,7 @@ namespace PatchMyPath
             { "GFSDK_TXAA.win64.dll", EntryType.File },
             { "GFSDK_TXAA_AlphaResolve.win64.dll", EntryType.File },
             { "GPUPerfAPIDX11-x64.dll", EntryType.File | EntryType.Optional },
-            { "NvPmApi.Core.win64.dll", EntryType.File },
+            { "NvPmApi.Core.win64.dll", EntryType.File | EntryType.Optional },
             { "steam_api64.dll", EntryType.File | EntryType.Optional },
             { "index.bin", EntryType.File | EntryType.Optional },
             { "common.rpf", EntryType.File },
