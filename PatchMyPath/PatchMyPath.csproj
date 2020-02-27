@@ -120,6 +120,8 @@
     <None Include="Resources\Play.png" />
     <None Include="Resources\Clear.png" />
     <None Include="Resources\Add.png" />
+    <None Include="FileList\GrandTheftAutoV.json" />
+    <None Include="FileList\RedDeadRedemption2.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
