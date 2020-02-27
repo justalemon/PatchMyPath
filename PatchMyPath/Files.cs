@@ -9,6 +9,7 @@ namespace PatchMyPath
     [Flags]
     public enum EntryType
     {
+        Ignore = 0,
         File = 1,
         Folder = 2,
         Optional = 4,
