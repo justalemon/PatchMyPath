@@ -252,19 +252,13 @@ namespace PatchMyPath
 
             // Cast the selected game
             Game game = (Game)GameComboBox.SelectedIndex;
-            // And select the correct list of files
-            Dictionary<string, EntryType> entries;
-            switch (game)
+            // If there are no entries for this game, return
+            if (!Program.FileLists.ContainsKey(game))
             {
-                case Game.GrandTheftAutoV:
-                    entries = Files.GTAV;
-                    break;
-                case Game.RedDeadRedemption2:
-                    entries = Files.RDR2;
-                    break;
-                default:
-                    return;
+                return;
             }
+            // Otherwise, select the correct set of entries
+            Dictionary<string, EntryType> entries = Program.FileLists[game];
 
             // If the destination folder exists and is not empty
             if (Directory.Exists(DestinationTextBox.Text) && Directory.EnumerateFileSystemEntries(DestinationTextBox.Text).Any())

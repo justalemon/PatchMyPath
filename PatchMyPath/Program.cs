@@ -24,6 +24,10 @@ namespace PatchMyPath
             new CultureInfo("es-419"),
         };
         /// <summary>
+        /// The list of files for GTA V and RDR2.
+        /// </summary>
+        public static readonly Dictionary<Game, Dictionary<string, EntryType>> FileLists = new Dictionary<Game, Dictionary<string, EntryType>>();
+        /// <summary>
         /// The configuration of the program.
         /// </summary>
         public static Configuration Config = Configuration.Load();
