@@ -36,6 +36,8 @@ namespace PatchMyPath
             // Disable the compatible text rendering
             Application.SetCompatibleTextRenderingDefault(false);
 
+            // Set the culture to the one from the config
+            Thread.CurrentThread.CurrentUICulture = Config.Language;
             // Create a new home formulary
             Home form = new Home();
 
@@ -47,8 +49,6 @@ namespace PatchMyPath
             // And apply the configuration
             LogManager.Configuration = config;
 
-            // Set the culture to the one from the config
-            Thread.CurrentThread.CurrentUICulture = Config.Language;
             // And run the application with the form
             Application.Run(form);
             // Finally, return a status code of zero
