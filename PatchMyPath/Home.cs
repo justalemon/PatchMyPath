@@ -313,12 +313,6 @@ namespace PatchMyPath
             // Iterate over the dictionary of game files and folders
             foreach (KeyValuePair<string, EntryType> entry in entries)
             {
-                // If this entry needs to be ignored, continue to the next iteration
-                if (entry.Value.HasFlag(EntryType.Ignore))
-                {
-                    continue;
-                }
-
                 // Format the origin and destination
                 string origin = Path.Combine(OriginTextBox.Text, entry.Key);
                 string destination = Path.Combine(DestinationTextBox.Text, entry.Key);
