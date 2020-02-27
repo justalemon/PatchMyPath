@@ -34,7 +34,7 @@ namespace PatchMyPath
             { "GTA5.exe", EntryType.File | EntryType.Copy },
             { "GTAVLanguageSelect.exe", EntryType.File | EntryType.Optional | EntryType.Copy },
             { "GTAVLauncher.exe", EntryType.File | EntryType.Copy },
-            { "PlayGTAV.exe", EntryType.File | EntryType.Optional | EntryType.Optional },
+            { "PlayGTAV.exe", EntryType.File | EntryType.Optional },
             { "bink2w64.dll", EntryType.File },
             { "d3dcompiler_46.dll", EntryType.File },
             { "d3dcsx_46.dll", EntryType.File },
