@@ -46,7 +46,7 @@ namespace PatchMyPath
             // Create a new NLog configuration
             LoggingConfiguration config = new LoggingConfiguration();
             // Create a target to write the logging into a file
-            FileTarget logfile = new FileTarget("logfile") { FileName = "PatchMyPath.log" };
+            FileTarget logfile = new FileTarget("logfile") { FileName = "PatchMyPath.log", MaxArchiveFiles = 5, ArchiveOldFileOnStartup = true };
             // Add the rules for using the targets
             config.AddRule(LogLevel.Debug, LogLevel.Fatal, logfile);
             // And apply the configuration
