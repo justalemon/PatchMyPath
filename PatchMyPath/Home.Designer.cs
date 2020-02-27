@@ -78,6 +78,8 @@ namespace PatchMyPath
             this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RefreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LogTabPage = new System.Windows.Forms.TabPage();
+            this.LogTextBox = new System.Windows.Forms.TextBox();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.DuplicatorTabPage.SuspendLayout();
@@ -93,12 +95,14 @@ namespace PatchMyPath
             this.SteamGroupBox.SuspendLayout();
             this.GTAVLocationGroupBox.SuspendLayout();
             this.TopMenuStrip.SuspendLayout();
+            this.LogTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // GeneralTabControl
             // 
             this.GeneralTabControl.Controls.Add(this.InstallsTabPage);
             this.GeneralTabControl.Controls.Add(this.DuplicatorTabPage);
+            this.GeneralTabControl.Controls.Add(this.LogTabPage);
             this.GeneralTabControl.Controls.Add(this.SettingsTabPage);
             resources.ApplyResources(this.GeneralTabControl, "GeneralTabControl");
             this.GeneralTabControl.Name = "GeneralTabControl";
@@ -458,6 +462,19 @@ namespace PatchMyPath
             resources.ApplyResources(this.RefreshToolStripMenuItem, "RefreshToolStripMenuItem");
             this.RefreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
             // 
+            // LogTabPage
+            // 
+            this.LogTabPage.Controls.Add(this.LogTextBox);
+            resources.ApplyResources(this.LogTabPage, "LogTabPage");
+            this.LogTabPage.Name = "LogTabPage";
+            this.LogTabPage.UseVisualStyleBackColor = true;
+            // 
+            // LogTextBox
+            // 
+            resources.ApplyResources(this.LogTextBox, "LogTextBox");
+            this.LogTextBox.Name = "LogTextBox";
+            this.LogTextBox.ReadOnly = true;
+            // 
             // Home
             // 
             resources.ApplyResources(this, "$this");
@@ -490,6 +507,8 @@ namespace PatchMyPath
             this.GTAVLocationGroupBox.PerformLayout();
             this.TopMenuStrip.ResumeLayout(false);
             this.TopMenuStrip.PerformLayout();
+            this.LogTabPage.ResumeLayout(false);
+            this.LogTabPage.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -546,6 +565,8 @@ namespace PatchMyPath
         private System.Windows.Forms.ComboBox GTAVComboBox;
         private System.Windows.Forms.GroupBox OtherSettingsGroupBox;
         private System.Windows.Forms.Button DownloadFileListsButton;
+        private System.Windows.Forms.TabPage LogTabPage;
+        internal System.Windows.Forms.TextBox LogTextBox;
     }
 }
 
