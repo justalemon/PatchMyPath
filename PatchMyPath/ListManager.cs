@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Threading.Tasks;
 
 namespace PatchMyPath
 {
@@ -28,36 +27,6 @@ namespace PatchMyPath
         /// The list of files for GTA V and RDR2.
         /// </summary>
         public static readonly Dictionary<Game, Dictionary<string, EntryType>> Lists = new Dictionary<Game, Dictionary<string, EntryType>>();
-
-        /// <summary>
-        /// Downloads the content of a URL as a string.
-        /// </summary>
-        /// <param name="from">The URL to fetch.</param>
-        /// <returns>The contents of the response if the request succeeded, null otherwise.</returns>
-        private static async Task<string> DownloadStringAsync(string from)
-        {
-            try
-            {
-                // Create a new web client
-                using (WebClient client = new WebClient())
-                {
-                    // Try to download the string and return it
-                    return await client.DownloadStringTaskAsync(from);
-                }
-            }
-            catch (WebException er)
-            {
-                // If we got a HTTP exception, log it and return
-                Logger.Error("Error while fetching '{0}': {1}", from, er.Message);
-                return null;
-            }
-            catch (ArgumentException er)
-            {
-                // If one of the arguments is invalid, log it and return
-                Logger.Error("Error while fetching '{0}': {1}", from, er.Message);
-                return null;
-            }
-        }
 
         /// <summary>
         /// Populates the lists for all games.
