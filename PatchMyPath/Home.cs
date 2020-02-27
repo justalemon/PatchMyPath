@@ -253,12 +253,12 @@ namespace PatchMyPath
             // Cast the selected game
             Game game = (Game)GameComboBox.SelectedIndex;
             // If there are no entries for this game, return
-            if (!Program.FileLists.ContainsKey(game))
+            if (!ListManager.Lists.ContainsKey(game))
             {
                 return;
             }
             // Otherwise, select the correct set of entries
-            Dictionary<string, EntryType> entries = Program.FileLists[game];
+            Dictionary<string, EntryType> entries = ListManager.Lists[game];
 
             // If the destination folder exists and is not empty
             if (Directory.Exists(DestinationTextBox.Text) && Directory.EnumerateFileSystemEntries(DestinationTextBox.Text).Any())
@@ -708,6 +708,12 @@ namespace PatchMyPath
         #endregion
 
         #region Other
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            // Populate the lists of files
+            ListManager.Populate();
+        }
 
         private void InstallsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {

@@ -84,6 +84,7 @@
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Links.cs" />
+    <Compile Include="ListManager.cs" />
     <Compile Include="Paths.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

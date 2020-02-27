@@ -1,13 +1,10 @@
-﻿using Newtonsoft.Json;
-using NLog;
+﻿using NLog;
 using NLog.Config;
 using NLog.Targets;
 using PatchMyPath.Config;
-using PatchMyPath.Properties;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -23,10 +20,6 @@ namespace PatchMyPath
             new CultureInfo("en-US"),
             new CultureInfo("es-419"),
         };
-        /// <summary>
-        /// The list of files for GTA V and RDR2.
-        /// </summary>
-        public static readonly Dictionary<Game, Dictionary<string, EntryType>> FileLists = new Dictionary<Game, Dictionary<string, EntryType>>();
         /// <summary>
         /// The configuration of the program.
         /// </summary>
@@ -48,7 +41,7 @@ namespace PatchMyPath
             // Create a target to write the logging into a file
             FileTarget logfile = new FileTarget("logfile") { FileName = "PatchMyPath.log", MaxArchiveFiles = 5, ArchiveOldFileOnStartup = true };
             // Add the rules for using the targets
-            config.AddRule(LogLevel.Debug, LogLevel.Fatal, logfile);
+            config.AddRule(LogLevel.Trace, LogLevel.Fatal, logfile);
             // And apply the configuration
             LogManager.Configuration = config;
 
