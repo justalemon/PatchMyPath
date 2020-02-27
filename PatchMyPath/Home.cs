@@ -34,7 +34,6 @@ namespace PatchMyPath
             {
                 LaunchToolStripMenuItem.Enabled = !value;
                 RemoveToolStripMenuItem.Enabled = !value;
-                Logger.Debug(Resources.UILockedLog, value);
             }
         }
 
