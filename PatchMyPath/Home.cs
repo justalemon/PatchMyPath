@@ -715,6 +715,17 @@ namespace PatchMyPath
             Locked = InstallsListBox.SelectedItem == null;
         }
 
+        private void DownloadFileListsButton_Click(object sender, EventArgs e)
+        {
+            // Ask the user if he is sure about this
+            DialogResult result = MessageBox.Show(Resources.SettingsOtherDownload, Resources.SettingsOtherDownloadTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            // If he does, force the redownload of the files
+            if (result == DialogResult.Yes)
+            {
+                ListManager.Populate(true);
+            }
+        }
+
         #endregion
     }
 }

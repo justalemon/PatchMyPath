@@ -214,6 +214,14 @@ Por favor asegurate de que esta carpeta contiene una copia de RDR2 o GTA V e int
   <data name="SettingsLanguageChangedTitle" xml:space="preserve">
     <value>Idioma Cambiado</value>
   </data>
+  <data name="SettingsOtherDownload" xml:space="preserve">
+    <value>Vamos a descargar las Listas de Archivos desde la pagina del proyecto en GitHub.
+
+¿Deseas Continuar?</value>
+  </data>
+  <data name="SettingsOtherDownloadTitle" xml:space="preserve">
+    <value>Descarga de Listas de Archivos Actualizadas</value>
+  </data>
   <data name="SettingsPathNotFound" xml:space="preserve">
     <value>No se ha podido detectar la ubicacion de instalacion original.
 Por favor asegurate de que el juego fue instalado desde RGL, Steam o EGL e intenta nuevamente.</value>

@@ -49,6 +49,8 @@ namespace PatchMyPath
             this.DestinationSelectButton = new System.Windows.Forms.Button();
             this.DestinationTextBox = new System.Windows.Forms.TextBox();
             this.SettingsTabPage = new System.Windows.Forms.TabPage();
+            this.OtherSettingsGroupBox = new System.Windows.Forms.GroupBox();
+            this.DownloadFileListsButton = new System.Windows.Forms.Button();
             this.LanguageGroupBox = new System.Windows.Forms.GroupBox();
             this.LanguageComboBox = new System.Windows.Forms.ComboBox();
             this.RDR2LocationGroupBox = new System.Windows.Forms.GroupBox();
@@ -57,6 +59,8 @@ namespace PatchMyPath
             this.RDR2LocationSelectButton = new System.Windows.Forms.Button();
             this.RDR2LocationTextBox = new System.Windows.Forms.TextBox();
             this.SteamGroupBox = new System.Windows.Forms.GroupBox();
+            this.RDR2ComboBox = new System.Windows.Forms.ComboBox();
+            this.GTAVComboBox = new System.Windows.Forms.ComboBox();
             this.GTAVLabel = new System.Windows.Forms.Label();
             this.IDGTAVTextBox = new System.Windows.Forms.TextBox();
             this.SteamGTAVButton = new System.Windows.Forms.Button();
@@ -74,8 +78,6 @@ namespace PatchMyPath
             this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RefreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.GTAVComboBox = new System.Windows.Forms.ComboBox();
-            this.RDR2ComboBox = new System.Windows.Forms.ComboBox();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.DuplicatorTabPage.SuspendLayout();
@@ -85,6 +87,7 @@ namespace PatchMyPath
             this.OriginGroupBox.SuspendLayout();
             this.DestinationGroupBox.SuspendLayout();
             this.SettingsTabPage.SuspendLayout();
+            this.OtherSettingsGroupBox.SuspendLayout();
             this.LanguageGroupBox.SuspendLayout();
             this.RDR2LocationGroupBox.SuspendLayout();
             this.SteamGroupBox.SuspendLayout();
@@ -234,6 +237,7 @@ namespace PatchMyPath
             // 
             // SettingsTabPage
             // 
+            this.SettingsTabPage.Controls.Add(this.OtherSettingsGroupBox);
             this.SettingsTabPage.Controls.Add(this.LanguageGroupBox);
             this.SettingsTabPage.Controls.Add(this.RDR2LocationGroupBox);
             this.SettingsTabPage.Controls.Add(this.SteamGroupBox);
@@ -241,6 +245,20 @@ namespace PatchMyPath
             resources.ApplyResources(this.SettingsTabPage, "SettingsTabPage");
             this.SettingsTabPage.Name = "SettingsTabPage";
             this.SettingsTabPage.UseVisualStyleBackColor = true;
+            // 
+            // OtherSettingsGroupBox
+            // 
+            resources.ApplyResources(this.OtherSettingsGroupBox, "OtherSettingsGroupBox");
+            this.OtherSettingsGroupBox.Controls.Add(this.DownloadFileListsButton);
+            this.OtherSettingsGroupBox.Name = "OtherSettingsGroupBox";
+            this.OtherSettingsGroupBox.TabStop = false;
+            // 
+            // DownloadFileListsButton
+            // 
+            resources.ApplyResources(this.DownloadFileListsButton, "DownloadFileListsButton");
+            this.DownloadFileListsButton.Name = "DownloadFileListsButton";
+            this.DownloadFileListsButton.UseVisualStyleBackColor = true;
+            this.DownloadFileListsButton.Click += new System.EventHandler(this.DownloadFileListsButton_Click);
             // 
             // LanguageGroupBox
             // 
@@ -306,6 +324,22 @@ namespace PatchMyPath
             this.SteamGroupBox.Controls.Add(this.IDRDR2TextBox);
             this.SteamGroupBox.Name = "SteamGroupBox";
             this.SteamGroupBox.TabStop = false;
+            // 
+            // RDR2ComboBox
+            // 
+            this.RDR2ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.RDR2ComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.RDR2ComboBox, "RDR2ComboBox");
+            this.RDR2ComboBox.Name = "RDR2ComboBox";
+            this.RDR2ComboBox.SelectedIndexChanged += new System.EventHandler(this.RDR2ComboBox_SelectedIndexChanged);
+            // 
+            // GTAVComboBox
+            // 
+            this.GTAVComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GTAVComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.GTAVComboBox, "GTAVComboBox");
+            this.GTAVComboBox.Name = "GTAVComboBox";
+            this.GTAVComboBox.SelectedIndexChanged += new System.EventHandler(this.GTAVComboBox_SelectedIndexChanged);
             // 
             // GTAVLabel
             // 
@@ -424,22 +458,6 @@ namespace PatchMyPath
             resources.ApplyResources(this.RefreshToolStripMenuItem, "RefreshToolStripMenuItem");
             this.RefreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
             // 
-            // GTAVComboBox
-            // 
-            this.GTAVComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.GTAVComboBox.FormattingEnabled = true;
-            resources.ApplyResources(this.GTAVComboBox, "GTAVComboBox");
-            this.GTAVComboBox.Name = "GTAVComboBox";
-            this.GTAVComboBox.SelectedIndexChanged += new System.EventHandler(this.GTAVComboBox_SelectedIndexChanged);
-            // 
-            // RDR2ComboBox
-            // 
-            this.RDR2ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.RDR2ComboBox.FormattingEnabled = true;
-            resources.ApplyResources(this.RDR2ComboBox, "RDR2ComboBox");
-            this.RDR2ComboBox.Name = "RDR2ComboBox";
-            this.RDR2ComboBox.SelectedIndexChanged += new System.EventHandler(this.RDR2ComboBox_SelectedIndexChanged);
-            // 
             // Home
             // 
             resources.ApplyResources(this, "$this");
@@ -462,6 +480,7 @@ namespace PatchMyPath
             this.DestinationGroupBox.ResumeLayout(false);
             this.DestinationGroupBox.PerformLayout();
             this.SettingsTabPage.ResumeLayout(false);
+            this.OtherSettingsGroupBox.ResumeLayout(false);
             this.LanguageGroupBox.ResumeLayout(false);
             this.RDR2LocationGroupBox.ResumeLayout(false);
             this.RDR2LocationGroupBox.PerformLayout();
@@ -525,6 +544,8 @@ namespace PatchMyPath
         private System.Windows.Forms.ComboBox LanguageComboBox;
         private System.Windows.Forms.ComboBox RDR2ComboBox;
         private System.Windows.Forms.ComboBox GTAVComboBox;
+        private System.Windows.Forms.GroupBox OtherSettingsGroupBox;
+        private System.Windows.Forms.Button DownloadFileListsButton;
     }
 }
 

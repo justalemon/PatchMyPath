@@ -123,6 +123,9 @@
   <data name="DestinationGroupBox.Text" xml:space="preserve">
     <value>Destino</value>
   </data>
+  <data name="DownloadFileListsButton.Text" xml:space="preserve">
+    <value>Descargar Listas de Archivos Actualizadas</value>
+  </data>
   <data name="DuplicateButton.Text" xml:space="preserve">
     <value>Duplicar Carpeta del Juego</value>
   </data>
@@ -161,6 +164,9 @@
   </data>
   <data name="OtherGroupBox.Text" xml:space="preserve">
     <value>Otras Opciones</value>
+  </data>
+  <data name="OtherSettingsGroupBox.Text" xml:space="preserve">
+    <value>Otros</value>
   </data>
   <data name="RDR2LocationDetectButton.Text" xml:space="preserve">
     <value>Detectar</value>

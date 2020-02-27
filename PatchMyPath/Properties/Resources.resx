@@ -329,6 +329,14 @@ Please make sure that the folder contains a copy of RDR2 or GTAV and try again.<
   <data name="SettingsLanguageChangedTitle" xml:space="preserve">
     <value>Language Changed</value>
   </data>
+  <data name="SettingsOtherDownload" xml:space="preserve">
+    <value>We will download up to date File Lists from the project's GitHub Page.
+
+Continue?</value>
+  </data>
+  <data name="SettingsOtherDownloadTitle" xml:space="preserve">
+    <value>Download Updated File Lists</value>
+  </data>
   <data name="SettingsPathFoundLog" xml:space="preserve">
     <value>{0} was found at {1}</value>
   </data>

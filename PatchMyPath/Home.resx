@@ -126,7 +126,7 @@
     <value>3, 3</value>
   </data>
   <data name="InstallsListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>470, 342</value>
+    <value>470, 354</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="InstallsListBox.TabIndex" type="System.Int32, mscorlib">
@@ -151,7 +151,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="InstallsTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>476, 348</value>
+    <value>476, 360</value>
   </data>
   <data name="InstallsTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -229,7 +229,7 @@
     <value>Bottom, Left, Right</value>
   </data>
   <data name="DuplicationProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 288</value>
+    <value>6, 300</value>
   </data>
   <data name="DuplicationProgressBar.Size" type="System.Drawing.Size, System.Drawing">
     <value>464, 23</value>
@@ -391,7 +391,7 @@
     <value>Bottom, Left, Right</value>
   </data>
   <data name="DuplicateButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 317</value>
+    <value>6, 329</value>
   </data>
   <data name="DuplicateButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>464, 23</value>
@@ -577,7 +577,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="DuplicatorTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>476, 348</value>
+    <value>476, 360</value>
   </data>
   <data name="DuplicatorTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -596,6 +596,57 @@
   </data>
   <data name="&gt;&gt;DuplicatorTabPage.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="OtherSettingsGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="DownloadFileListsButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="DownloadFileListsButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>452, 23</value>
+  </data>
+  <data name="DownloadFileListsButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="DownloadFileListsButton.Text" xml:space="preserve">
+    <value>Download Updated File Lists</value>
+  </data>
+  <data name="&gt;&gt;DownloadFileListsButton.Name" xml:space="preserve">
+    <value>DownloadFileListsButton</value>
+  </data>
+  <data name="&gt;&gt;DownloadFileListsButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DownloadFileListsButton.Parent" xml:space="preserve">
+    <value>OtherSettingsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;DownloadFileListsButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="OtherSettingsGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 303</value>
+  </data>
+  <data name="OtherSettingsGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 49</value>
+  </data>
+  <data name="OtherSettingsGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="OtherSettingsGroupBox.Text" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="&gt;&gt;OtherSettingsGroupBox.Name" xml:space="preserve">
+    <value>OtherSettingsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;OtherSettingsGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OtherSettingsGroupBox.Parent" xml:space="preserve">
+    <value>SettingsTabPage</value>
+  </data>
+  <data name="&gt;&gt;OtherSettingsGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="LanguageGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -646,7 +697,7 @@
     <value>SettingsTabPage</value>
   </data>
   <data name="&gt;&gt;LanguageGroupBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="RDR2LocationGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -769,7 +820,7 @@
     <value>SettingsTabPage</value>
   </data>
   <data name="&gt;&gt;RDR2LocationGroupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="SteamGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -994,7 +1045,7 @@
     <value>SettingsTabPage</value>
   </data>
   <data name="&gt;&gt;SteamGroupBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="GTAVLocationGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -1117,7 +1168,7 @@
     <value>SettingsTabPage</value>
   </data>
   <data name="&gt;&gt;GTAVLocationGroupBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="SettingsTabPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -1126,7 +1177,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="SettingsTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>476, 348</value>
+    <value>476, 360</value>
   </data>
   <data name="SettingsTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1153,7 +1204,7 @@
     <value>0, 37</value>
   </data>
   <data name="GeneralTabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>484, 374</value>
+    <value>484, 386</value>
   </data>
   <data name="GeneralTabControl.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1224,11 +1275,14 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>61</value>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>484, 411</value>
+    <value>484, 423</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

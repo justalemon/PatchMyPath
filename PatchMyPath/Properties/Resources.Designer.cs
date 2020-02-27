@@ -666,6 +666,26 @@ namespace PatchMyPath.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to We will download up to date File Lists from the project&apos;s GitHub Page.
+        ///
+        ///Continue?.
+        /// </summary>
+        internal static string SettingsOtherDownload {
+            get {
+                return ResourceManager.GetString("SettingsOtherDownload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Download Updated File Lists.
+        /// </summary>
+        internal static string SettingsOtherDownloadTitle {
+            get {
+                return ResourceManager.GetString("SettingsOtherDownloadTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} was found at {1}.
         /// </summary>
         internal static string SettingsPathFoundLog {
