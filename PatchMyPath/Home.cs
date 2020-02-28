@@ -43,13 +43,8 @@ namespace PatchMyPath
 
         public Home()
         {
-            // Log that we are creating a new instance of the form
-            Logger.Debug(Resources.FormCreatingLog);
-
             // Initialize the UI components
             InitializeComponent();
-            // Reload the list of installs
-            RefreshInstalls();
             // And lock the UI elements
             Locked = true;
 
@@ -79,11 +74,6 @@ namespace PatchMyPath
             }
             // And select the correct one
             LanguageComboBox.SelectedIndex = LanguageComboBox.FindStringExact(Program.Config.Language.NativeName);
-
-            // Load the settings
-            LoadSettings();
-            // Log that we have loaded everything
-            Logger.Debug(Resources.FormInitEndLog);
         }
 
         #endregion
@@ -160,7 +150,6 @@ namespace PatchMyPath
             // And refresh the ListBox
             RefreshInstalls();
         }
-
 
         private void RemoveToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -704,6 +693,10 @@ namespace PatchMyPath
 
         private void Home_Load(object sender, EventArgs e)
         {
+            // Reload the list of installs
+            RefreshInstalls();
+            // Load the settings
+            LoadSettings();
             // Populate the lists of files
             ListManager.Populate();
         }

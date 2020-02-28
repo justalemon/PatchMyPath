@@ -2,6 +2,7 @@
 using NLog.Config;
 using NLog.Targets;
 using PatchMyPath.Config;
+using PatchMyPath.Properties;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -12,6 +13,10 @@ namespace PatchMyPath
 {
     public static class Program
     {
+        /// <summary>
+        /// The logger for the current class.
+        /// </summary>
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
         /// <summary>
         /// The list of supported culture languages.
         /// </summary>
@@ -38,8 +43,12 @@ namespace PatchMyPath
 
             // Set the culture to the one from the config
             Thread.CurrentThread.CurrentUICulture = Config.Language;
-            // Create a new home formulary
+            // Log that we are creating a new instance of the form
+            Logger.Trace(Resources.FormCreatingLog);
+            // An a new home formulary
             Home form = new Home();
+            // Log that we have loaded everything
+            Logger.Debug(Resources.FormInitEndLog);
 
             // Create a new NLog configuration
             LoggingConfiguration config = new LoggingConfiguration();
