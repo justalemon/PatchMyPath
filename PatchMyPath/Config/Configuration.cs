@@ -23,6 +23,11 @@ namespace PatchMyPath.Config
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
+        /// If this is the first time that the program has been started.
+        /// </summary>
+        [JsonProperty("first_launch")]
+        public bool FirstLaunch { get; set; } = true;
+        /// <summary>
         /// The language of the program.
         /// </summary>
         [JsonProperty("language")]

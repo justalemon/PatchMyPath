@@ -693,12 +693,20 @@ namespace PatchMyPath
 
         private void Home_Load(object sender, EventArgs e)
         {
+            // If this is the first time that the program has been launched
+            if (Program.Config.FirstLaunch)
+            {
+                // Populate the lists of files
+                ListManager.Populate(true);
+                // Disable the First Launch flag and save the settings
+                Program.Config.FirstLaunch = false;
+                Program.Config.Save();
+            }
+
             // Reload the list of installs
             RefreshInstalls();
             // Load the settings
             LoadSettings();
-            // Populate the lists of files
-            ListManager.Populate();
         }
 
         private void InstallsListBox_SelectedIndexChanged(object sender, EventArgs e)
