@@ -76,7 +76,6 @@
     <Compile Include="Config\Steam.cs" />
     <Compile Include="Converters.cs" />
     <Compile Include="Extensions.cs" />
-    <Compile Include="Files.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
