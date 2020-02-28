@@ -703,6 +703,8 @@ namespace PatchMyPath
                 Program.Config.Save();
             }
 
+            // Fill the text
+            LicensesRichTextBox.Rtf = Resources.Licenses;
             // Reload the list of installs
             RefreshInstalls();
             // Load the settings

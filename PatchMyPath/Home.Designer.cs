@@ -48,6 +48,8 @@ namespace PatchMyPath
             this.DestinationGroupBox = new System.Windows.Forms.GroupBox();
             this.DestinationSelectButton = new System.Windows.Forms.Button();
             this.DestinationTextBox = new System.Windows.Forms.TextBox();
+            this.LogTabPage = new System.Windows.Forms.TabPage();
+            this.LogTextBox = new System.Windows.Forms.TextBox();
             this.SettingsTabPage = new System.Windows.Forms.TabPage();
             this.OtherSettingsGroupBox = new System.Windows.Forms.GroupBox();
             this.DownloadFileListsButton = new System.Windows.Forms.Button();
@@ -72,14 +74,14 @@ namespace PatchMyPath
             this.GTAVLocationDetectButton = new System.Windows.Forms.Button();
             this.GTAVLocationSelectButton = new System.Windows.Forms.Button();
             this.GTAVLocationTextBox = new System.Windows.Forms.TextBox();
+            this.LicensesTabPage = new System.Windows.Forms.TabPage();
+            this.LicensesRichTextBox = new System.Windows.Forms.RichTextBox();
             this.FolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.TopMenuStrip = new System.Windows.Forms.MenuStrip();
             this.LaunchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RefreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.LogTabPage = new System.Windows.Forms.TabPage();
-            this.LogTextBox = new System.Windows.Forms.TextBox();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.DuplicatorTabPage.SuspendLayout();
@@ -88,14 +90,15 @@ namespace PatchMyPath
             this.LinkTypeGroupBox.SuspendLayout();
             this.OriginGroupBox.SuspendLayout();
             this.DestinationGroupBox.SuspendLayout();
+            this.LogTabPage.SuspendLayout();
             this.SettingsTabPage.SuspendLayout();
             this.OtherSettingsGroupBox.SuspendLayout();
             this.LanguageGroupBox.SuspendLayout();
             this.RDR2LocationGroupBox.SuspendLayout();
             this.SteamGroupBox.SuspendLayout();
             this.GTAVLocationGroupBox.SuspendLayout();
+            this.LicensesTabPage.SuspendLayout();
             this.TopMenuStrip.SuspendLayout();
-            this.LogTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // GeneralTabControl
@@ -104,6 +107,7 @@ namespace PatchMyPath
             this.GeneralTabControl.Controls.Add(this.DuplicatorTabPage);
             this.GeneralTabControl.Controls.Add(this.LogTabPage);
             this.GeneralTabControl.Controls.Add(this.SettingsTabPage);
+            this.GeneralTabControl.Controls.Add(this.LicensesTabPage);
             resources.ApplyResources(this.GeneralTabControl, "GeneralTabControl");
             this.GeneralTabControl.Name = "GeneralTabControl";
             this.GeneralTabControl.SelectedIndex = 0;
@@ -238,6 +242,19 @@ namespace PatchMyPath
             resources.ApplyResources(this.DestinationTextBox, "DestinationTextBox");
             this.DestinationTextBox.Name = "DestinationTextBox";
             this.DestinationTextBox.ReadOnly = true;
+            // 
+            // LogTabPage
+            // 
+            this.LogTabPage.Controls.Add(this.LogTextBox);
+            resources.ApplyResources(this.LogTabPage, "LogTabPage");
+            this.LogTabPage.Name = "LogTabPage";
+            this.LogTabPage.UseVisualStyleBackColor = true;
+            // 
+            // LogTextBox
+            // 
+            resources.ApplyResources(this.LogTextBox, "LogTextBox");
+            this.LogTextBox.Name = "LogTextBox";
+            this.LogTextBox.ReadOnly = true;
             // 
             // SettingsTabPage
             // 
@@ -415,6 +432,21 @@ namespace PatchMyPath
             resources.ApplyResources(this.GTAVLocationTextBox, "GTAVLocationTextBox");
             this.GTAVLocationTextBox.Name = "GTAVLocationTextBox";
             // 
+            // LicensesTabPage
+            // 
+            this.LicensesTabPage.Controls.Add(this.LicensesRichTextBox);
+            resources.ApplyResources(this.LicensesTabPage, "LicensesTabPage");
+            this.LicensesTabPage.Name = "LicensesTabPage";
+            this.LicensesTabPage.UseVisualStyleBackColor = true;
+            // 
+            // LicensesRichTextBox
+            // 
+            this.LicensesRichTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LicensesRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.LicensesRichTextBox, "LicensesRichTextBox");
+            this.LicensesRichTextBox.Name = "LicensesRichTextBox";
+            this.LicensesRichTextBox.ReadOnly = true;
+            // 
             // TopMenuStrip
             // 
             this.TopMenuStrip.ImageScalingSize = new System.Drawing.Size(25, 25);
@@ -462,19 +494,6 @@ namespace PatchMyPath
             resources.ApplyResources(this.RefreshToolStripMenuItem, "RefreshToolStripMenuItem");
             this.RefreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
             // 
-            // LogTabPage
-            // 
-            this.LogTabPage.Controls.Add(this.LogTextBox);
-            resources.ApplyResources(this.LogTabPage, "LogTabPage");
-            this.LogTabPage.Name = "LogTabPage";
-            this.LogTabPage.UseVisualStyleBackColor = true;
-            // 
-            // LogTextBox
-            // 
-            resources.ApplyResources(this.LogTextBox, "LogTextBox");
-            this.LogTextBox.Name = "LogTextBox";
-            this.LogTextBox.ReadOnly = true;
-            // 
             // Home
             // 
             resources.ApplyResources(this, "$this");
@@ -496,6 +515,8 @@ namespace PatchMyPath
             this.OriginGroupBox.PerformLayout();
             this.DestinationGroupBox.ResumeLayout(false);
             this.DestinationGroupBox.PerformLayout();
+            this.LogTabPage.ResumeLayout(false);
+            this.LogTabPage.PerformLayout();
             this.SettingsTabPage.ResumeLayout(false);
             this.OtherSettingsGroupBox.ResumeLayout(false);
             this.LanguageGroupBox.ResumeLayout(false);
@@ -505,10 +526,9 @@ namespace PatchMyPath
             this.SteamGroupBox.PerformLayout();
             this.GTAVLocationGroupBox.ResumeLayout(false);
             this.GTAVLocationGroupBox.PerformLayout();
+            this.LicensesTabPage.ResumeLayout(false);
             this.TopMenuStrip.ResumeLayout(false);
             this.TopMenuStrip.PerformLayout();
-            this.LogTabPage.ResumeLayout(false);
-            this.LogTabPage.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -567,6 +587,8 @@ namespace PatchMyPath
         private System.Windows.Forms.Button DownloadFileListsButton;
         private System.Windows.Forms.TabPage LogTabPage;
         internal System.Windows.Forms.TextBox LogTextBox;
+        private System.Windows.Forms.TabPage LicensesTabPage;
+        private System.Windows.Forms.RichTextBox LicensesRichTextBox;
     }
 }
 

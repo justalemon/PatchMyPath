@@ -619,6 +619,21 @@ namespace PatchMyPath.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Symbol;}}
+        ///{\colortbl ;\red0\green0\blue255;}
+        ///{\*\generator Riched20 10.0.18362}\viewkind4\uc1 
+        ///\pard\sa200\sl276\slmult1\b\f0\fs24\lang9 PatchMyPath\par
+        ///\b0\fs20 MIT License\par
+        ///Copyright (c) 2017-2020 Hannele Ruiz\par
+        ///Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software withou [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Licenses {
+            get {
+                return ResourceManager.GetString("Licenses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Play {
