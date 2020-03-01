@@ -82,6 +82,8 @@ namespace PatchMyPath
             this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RefreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LogStatusStrip = new System.Windows.Forms.StatusStrip();
+            this.LogToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.DuplicatorTabPage.SuspendLayout();
@@ -99,6 +101,7 @@ namespace PatchMyPath
             this.GTAVLocationGroupBox.SuspendLayout();
             this.LicensesTabPage.SuspendLayout();
             this.TopMenuStrip.SuspendLayout();
+            this.LogStatusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // GeneralTabControl
@@ -494,10 +497,23 @@ namespace PatchMyPath
             resources.ApplyResources(this.RefreshToolStripMenuItem, "RefreshToolStripMenuItem");
             this.RefreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
             // 
+            // LogStatusStrip
+            // 
+            this.LogStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.LogToolStripStatusLabel});
+            resources.ApplyResources(this.LogStatusStrip, "LogStatusStrip");
+            this.LogStatusStrip.Name = "LogStatusStrip";
+            // 
+            // LogToolStripStatusLabel
+            // 
+            this.LogToolStripStatusLabel.Name = "LogToolStripStatusLabel";
+            resources.ApplyResources(this.LogToolStripStatusLabel, "LogToolStripStatusLabel");
+            // 
             // Home
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.LogStatusStrip);
             this.Controls.Add(this.GeneralTabControl);
             this.Controls.Add(this.TopMenuStrip);
             this.MainMenuStrip = this.TopMenuStrip;
@@ -529,6 +545,8 @@ namespace PatchMyPath
             this.LicensesTabPage.ResumeLayout(false);
             this.TopMenuStrip.ResumeLayout(false);
             this.TopMenuStrip.PerformLayout();
+            this.LogStatusStrip.ResumeLayout(false);
+            this.LogStatusStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -589,6 +607,8 @@ namespace PatchMyPath
         internal System.Windows.Forms.TextBox LogTextBox;
         private System.Windows.Forms.TabPage LicensesTabPage;
         private System.Windows.Forms.RichTextBox LicensesRichTextBox;
+        private System.Windows.Forms.StatusStrip LogStatusStrip;
+        internal System.Windows.Forms.ToolStripStatusLabel LogToolStripStatusLabel;
     }
 }
 

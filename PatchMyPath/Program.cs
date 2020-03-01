@@ -56,6 +56,7 @@ namespace PatchMyPath
             // Add the rules for the targets
             config.AddRule(LogLevel.Trace, LogLevel.Fatal, new FileTarget() { FileName = "PatchMyPath.log", MaxArchiveFiles = 5, ArchiveOldFileOnStartup = true });
             config.AddRule(LogLevel.Debug, LogLevel.Fatal, new TextBoxTarget(form.LogTextBox) { Layout = "[${date}] [${level}] ${message}" });
+            config.AddRule(LogLevel.Info, LogLevel.Fatal, new ToolStripStatusLabelTarget(form.LogToolStripStatusLabel) { Layout = "${message}" });
             // And apply the configuration
             LogManager.Configuration = config;
 
