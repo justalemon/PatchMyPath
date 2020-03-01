@@ -93,7 +93,7 @@ namespace PatchMyPath
             // Finally, update the locked status on the items
             Locked = true;
             // And log that we have finished
-            Logger.Info(Resources.FormRefreshedLog);
+            Logger.Debug(Resources.FormRefreshedLog);
         }
         public void LoadSettings()
         {
@@ -106,7 +106,7 @@ namespace PatchMyPath
             GTAVComboBox.SelectedIndex = (int)Program.Config.Launchers.GTAVUse;
 
             // And log that we have finished
-            Logger.Info(Resources.FormSettingsLoadLog);
+            Logger.Debug(Resources.FormSettingsLoadLog);
         }
 
         #endregion
