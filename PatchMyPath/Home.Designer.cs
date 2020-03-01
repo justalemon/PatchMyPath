@@ -519,6 +519,7 @@ namespace PatchMyPath
             this.MainMenuStrip = this.TopMenuStrip;
             this.Name = "Home";
             this.Load += new System.EventHandler(this.Home_Load);
+            this.Shown += new System.EventHandler(this.Home_Shown);
             this.GeneralTabControl.ResumeLayout(false);
             this.InstallsTabPage.ResumeLayout(false);
             this.DuplicatorTabPage.ResumeLayout(false);
