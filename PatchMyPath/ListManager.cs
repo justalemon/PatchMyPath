@@ -67,10 +67,10 @@ namespace PatchMyPath
             }
 
             // Get the readable name of it
-            string name = game.ToString();
+            string name = game.ToString().SpaceOnUpperCase();
             // Create the path for the directory and file
             string directory = Path.Combine("FileList");
-            string location = Path.Combine(directory, name + ".json");
+            string location = Path.Combine(directory, game.ToString() + ".json");
 
             // If the file does not exists or we are forced to download it
             if (!File.Exists(location) || force)
@@ -83,7 +83,7 @@ namespace PatchMyPath
                 // If we didn't got code 200, log it and return
                 if (response.StatusCode != HttpStatusCode.OK)
                 {
-                    Logger.Error($"Got code {response.StatusCode} when fetching list for {game}!");
+                    Logger.Error($"Got code {response.StatusCode} when fetching list for {name}!");
                     return;
                 }
 
@@ -102,7 +102,7 @@ namespace PatchMyPath
                 File.WriteAllText(location, json);
 
                 // Finally, log that we have finished
-                Logger.Info($"List of Files for {game} was downloaded from GitHub");
+                Logger.Info($"List of Files for {name} was downloaded from GitHub");
             }
             // If the file exists
             else
@@ -115,7 +115,7 @@ namespace PatchMyPath
                 Lists[game] = data;
 
                 // Finally, log that we have finished
-                Logger.Info($"List of Files for {game} was loaded from file");
+                Logger.Info($"List of Files for {name} was loaded from file");
             }
         }
     }
