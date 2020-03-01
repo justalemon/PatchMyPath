@@ -117,92 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;InstallsTabPage.Name" xml:space="preserve">
-    <value>InstallsTabPage</value>
-  </data>
-  <data name="&gt;&gt;InstallsTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;InstallsTabPage.Parent" xml:space="preserve">
-    <value>GeneralTabControl</value>
-  </data>
-  <data name="&gt;&gt;InstallsTabPage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;DuplicatorTabPage.Name" xml:space="preserve">
-    <value>DuplicatorTabPage</value>
-  </data>
-  <data name="&gt;&gt;DuplicatorTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DuplicatorTabPage.Parent" xml:space="preserve">
-    <value>GeneralTabControl</value>
-  </data>
-  <data name="&gt;&gt;DuplicatorTabPage.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;LogTabPage.Name" xml:space="preserve">
-    <value>LogTabPage</value>
-  </data>
-  <data name="&gt;&gt;LogTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LogTabPage.Parent" xml:space="preserve">
-    <value>GeneralTabControl</value>
-  </data>
-  <data name="&gt;&gt;LogTabPage.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;SettingsTabPage.Name" xml:space="preserve">
-    <value>SettingsTabPage</value>
-  </data>
-  <data name="&gt;&gt;SettingsTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SettingsTabPage.Parent" xml:space="preserve">
-    <value>GeneralTabControl</value>
-  </data>
-  <data name="&gt;&gt;SettingsTabPage.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;LicensesTabPage.Name" xml:space="preserve">
-    <value>LicensesTabPage</value>
-  </data>
-  <data name="&gt;&gt;LicensesTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LicensesTabPage.Parent" xml:space="preserve">
-    <value>GeneralTabControl</value>
-  </data>
-  <data name="&gt;&gt;LicensesTabPage.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="GeneralTabControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="GeneralTabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 37</value>
-  </data>
-  <data name="GeneralTabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>484, 382</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="GeneralTabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;GeneralTabControl.Name" xml:space="preserve">
-    <value>GeneralTabControl</value>
-  </data>
-  <data name="&gt;&gt;GeneralTabControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GeneralTabControl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;GeneralTabControl.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="GeneralTabControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="&gt;&gt;InstallsListBox.Name" xml:space="preserve">
     <value>InstallsListBox</value>
@@ -216,6 +133,7 @@
   <data name="&gt;&gt;InstallsListBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="InstallsTabPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
@@ -225,6 +143,7 @@
   <data name="InstallsTabPage.Size" type="System.Drawing.Size, System.Drawing">
     <value>476, 356</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="InstallsTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -241,30 +160,6 @@
     <value>GeneralTabControl</value>
   </data>
   <data name="&gt;&gt;InstallsTabPage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="InstallsListBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="InstallsListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="InstallsListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>470, 350</value>
-  </data>
-  <data name="InstallsListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;InstallsListBox.Name" xml:space="preserve">
-    <value>InstallsListBox</value>
-  </data>
-  <data name="&gt;&gt;InstallsListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;InstallsListBox.Parent" xml:space="preserve">
-    <value>InstallsTabPage</value>
-  </data>
-  <data name="&gt;&gt;InstallsListBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="&gt;&gt;OtherGroupBox.Name" xml:space="preserve">
@@ -377,6 +272,216 @@
   </data>
   <data name="&gt;&gt;DuplicatorTabPage.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;LogTextBox.Name" xml:space="preserve">
+    <value>LogTextBox</value>
+  </data>
+  <data name="&gt;&gt;LogTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LogTextBox.Parent" xml:space="preserve">
+    <value>LogTabPage</value>
+  </data>
+  <data name="&gt;&gt;LogTextBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LogTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="LogTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="LogTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>476, 360</value>
+  </data>
+  <data name="LogTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="LogTabPage.Text" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="&gt;&gt;LogTabPage.Name" xml:space="preserve">
+    <value>LogTabPage</value>
+  </data>
+  <data name="&gt;&gt;LogTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LogTabPage.Parent" xml:space="preserve">
+    <value>GeneralTabControl</value>
+  </data>
+  <data name="&gt;&gt;LogTabPage.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;OtherSettingsGroupBox.Name" xml:space="preserve">
+    <value>OtherSettingsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;OtherSettingsGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OtherSettingsGroupBox.Parent" xml:space="preserve">
+    <value>SettingsTabPage</value>
+  </data>
+  <data name="&gt;&gt;OtherSettingsGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;LanguageGroupBox.Name" xml:space="preserve">
+    <value>LanguageGroupBox</value>
+  </data>
+  <data name="&gt;&gt;LanguageGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LanguageGroupBox.Parent" xml:space="preserve">
+    <value>SettingsTabPage</value>
+  </data>
+  <data name="&gt;&gt;LanguageGroupBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RDR2LocationGroupBox.Name" xml:space="preserve">
+    <value>RDR2LocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;RDR2LocationGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RDR2LocationGroupBox.Parent" xml:space="preserve">
+    <value>SettingsTabPage</value>
+  </data>
+  <data name="&gt;&gt;RDR2LocationGroupBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;SteamGroupBox.Name" xml:space="preserve">
+    <value>SteamGroupBox</value>
+  </data>
+  <data name="&gt;&gt;SteamGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SteamGroupBox.Parent" xml:space="preserve">
+    <value>SettingsTabPage</value>
+  </data>
+  <data name="&gt;&gt;SteamGroupBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;GTAVLocationGroupBox.Name" xml:space="preserve">
+    <value>GTAVLocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAVLocationGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAVLocationGroupBox.Parent" xml:space="preserve">
+    <value>SettingsTabPage</value>
+  </data>
+  <data name="&gt;&gt;GTAVLocationGroupBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="SettingsTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="SettingsTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="SettingsTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>476, 356</value>
+  </data>
+  <data name="SettingsTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="SettingsTabPage.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="&gt;&gt;SettingsTabPage.Name" xml:space="preserve">
+    <value>SettingsTabPage</value>
+  </data>
+  <data name="&gt;&gt;SettingsTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SettingsTabPage.Parent" xml:space="preserve">
+    <value>GeneralTabControl</value>
+  </data>
+  <data name="&gt;&gt;SettingsTabPage.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;LicensesRichTextBox.Name" xml:space="preserve">
+    <value>LicensesRichTextBox</value>
+  </data>
+  <data name="&gt;&gt;LicensesRichTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LicensesRichTextBox.Parent" xml:space="preserve">
+    <value>LicensesTabPage</value>
+  </data>
+  <data name="&gt;&gt;LicensesRichTextBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LicensesTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="LicensesTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="LicensesTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>476, 335</value>
+  </data>
+  <data name="LicensesTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="LicensesTabPage.Text" xml:space="preserve">
+    <value>Licenses</value>
+  </data>
+  <data name="&gt;&gt;LicensesTabPage.Name" xml:space="preserve">
+    <value>LicensesTabPage</value>
+  </data>
+  <data name="&gt;&gt;LicensesTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LicensesTabPage.Parent" xml:space="preserve">
+    <value>GeneralTabControl</value>
+  </data>
+  <data name="&gt;&gt;LicensesTabPage.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="GeneralTabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 37</value>
+  </data>
+  <data name="GeneralTabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>484, 382</value>
+  </data>
+  <data name="GeneralTabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GeneralTabControl.Name" xml:space="preserve">
+    <value>GeneralTabControl</value>
+  </data>
+  <data name="&gt;&gt;GeneralTabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GeneralTabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GeneralTabControl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="InstallsListBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="InstallsListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="InstallsListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>470, 350</value>
+  </data>
+  <data name="InstallsListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;InstallsListBox.Name" xml:space="preserve">
+    <value>InstallsListBox</value>
+  </data>
+  <data name="&gt;&gt;InstallsListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;InstallsListBox.Parent" xml:space="preserve">
+    <value>InstallsTabPage</value>
+  </data>
+  <data name="&gt;&gt;InstallsListBox.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="OtherGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -873,45 +978,6 @@
   <data name="&gt;&gt;DestinationTextBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;LogTextBox.Name" xml:space="preserve">
-    <value>LogTextBox</value>
-  </data>
-  <data name="&gt;&gt;LogTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LogTextBox.Parent" xml:space="preserve">
-    <value>LogTabPage</value>
-  </data>
-  <data name="&gt;&gt;LogTextBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="LogTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="LogTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="LogTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>476, 360</value>
-  </data>
-  <data name="LogTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="LogTabPage.Text" xml:space="preserve">
-    <value>Log</value>
-  </data>
-  <data name="&gt;&gt;LogTabPage.Name" xml:space="preserve">
-    <value>LogTabPage</value>
-  </data>
-  <data name="&gt;&gt;LogTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LogTabPage.Parent" xml:space="preserve">
-    <value>GeneralTabControl</value>
-  </data>
-  <data name="&gt;&gt;LogTabPage.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="LogTextBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -938,93 +1004,6 @@
   </data>
   <data name="&gt;&gt;LogTextBox.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;OtherSettingsGroupBox.Name" xml:space="preserve">
-    <value>OtherSettingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;OtherSettingsGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;OtherSettingsGroupBox.Parent" xml:space="preserve">
-    <value>SettingsTabPage</value>
-  </data>
-  <data name="&gt;&gt;OtherSettingsGroupBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;LanguageGroupBox.Name" xml:space="preserve">
-    <value>LanguageGroupBox</value>
-  </data>
-  <data name="&gt;&gt;LanguageGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LanguageGroupBox.Parent" xml:space="preserve">
-    <value>SettingsTabPage</value>
-  </data>
-  <data name="&gt;&gt;LanguageGroupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;RDR2LocationGroupBox.Name" xml:space="preserve">
-    <value>RDR2LocationGroupBox</value>
-  </data>
-  <data name="&gt;&gt;RDR2LocationGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RDR2LocationGroupBox.Parent" xml:space="preserve">
-    <value>SettingsTabPage</value>
-  </data>
-  <data name="&gt;&gt;RDR2LocationGroupBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;SteamGroupBox.Name" xml:space="preserve">
-    <value>SteamGroupBox</value>
-  </data>
-  <data name="&gt;&gt;SteamGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SteamGroupBox.Parent" xml:space="preserve">
-    <value>SettingsTabPage</value>
-  </data>
-  <data name="&gt;&gt;SteamGroupBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;GTAVLocationGroupBox.Name" xml:space="preserve">
-    <value>GTAVLocationGroupBox</value>
-  </data>
-  <data name="&gt;&gt;GTAVLocationGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GTAVLocationGroupBox.Parent" xml:space="preserve">
-    <value>SettingsTabPage</value>
-  </data>
-  <data name="&gt;&gt;GTAVLocationGroupBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="SettingsTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="SettingsTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="SettingsTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>476, 356</value>
-  </data>
-  <data name="SettingsTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="SettingsTabPage.Text" xml:space="preserve">
-    <value>Settings</value>
-  </data>
-  <data name="&gt;&gt;SettingsTabPage.Name" xml:space="preserve">
-    <value>SettingsTabPage</value>
-  </data>
-  <data name="&gt;&gt;SettingsTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SettingsTabPage.Parent" xml:space="preserve">
-    <value>GeneralTabControl</value>
-  </data>
-  <data name="&gt;&gt;SettingsTabPage.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="OtherSettingsGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -1815,45 +1794,6 @@
   <data name="&gt;&gt;GTAVLocationTextBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;LicensesRichTextBox.Name" xml:space="preserve">
-    <value>LicensesRichTextBox</value>
-  </data>
-  <data name="&gt;&gt;LicensesRichTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LicensesRichTextBox.Parent" xml:space="preserve">
-    <value>LicensesTabPage</value>
-  </data>
-  <data name="&gt;&gt;LicensesRichTextBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="LicensesTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="LicensesTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="LicensesTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>476, 335</value>
-  </data>
-  <data name="LicensesTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="LicensesTabPage.Text" xml:space="preserve">
-    <value>Licenses</value>
-  </data>
-  <data name="&gt;&gt;LicensesTabPage.Name" xml:space="preserve">
-    <value>LicensesTabPage</value>
-  </data>
-  <data name="&gt;&gt;LicensesTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LicensesTabPage.Parent" xml:space="preserve">
-    <value>GeneralTabControl</value>
-  </data>
-  <data name="&gt;&gt;LicensesTabPage.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="LicensesRichTextBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -1935,9 +1875,6 @@
   <metadata name="LogStatusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>275, 17</value>
   </metadata>
-  <data name="LogToolStripStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 17</value>
-  </data>
   <data name="LogStatusStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 422</value>
   </data>
@@ -1961,6 +1898,9 @@
   </data>
   <data name="&gt;&gt;LogStatusStrip.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="LogToolStripStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 17</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

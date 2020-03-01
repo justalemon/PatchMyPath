@@ -106,12 +106,12 @@ namespace PatchMyPath
             // 
             // GeneralTabControl
             // 
+            resources.ApplyResources(this.GeneralTabControl, "GeneralTabControl");
             this.GeneralTabControl.Controls.Add(this.InstallsTabPage);
             this.GeneralTabControl.Controls.Add(this.DuplicatorTabPage);
             this.GeneralTabControl.Controls.Add(this.LogTabPage);
             this.GeneralTabControl.Controls.Add(this.SettingsTabPage);
             this.GeneralTabControl.Controls.Add(this.LicensesTabPage);
-            resources.ApplyResources(this.GeneralTabControl, "GeneralTabControl");
             this.GeneralTabControl.Name = "GeneralTabControl";
             this.GeneralTabControl.SelectedIndex = 0;
             // 
