@@ -1,4 +1,5 @@
-﻿using NLog;
+﻿using Lemon.NLog.WinForms;
+using NLog;
 using NLog.Config;
 using NLog.Targets;
 using PatchMyPath.Config;
