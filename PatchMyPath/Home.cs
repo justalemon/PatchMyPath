@@ -491,8 +491,17 @@ namespace PatchMyPath
                 {
                     string newPath = providedPath + " - Clean";
                     Logger.Info(Resources.SettingsPathRenameLog, providedPath, newPath);
-                    Directory.Move(providedPath, newPath);
-                    Links.CreateSymbolicLink(providedPath, newPath, 3);
+                    try
+                    {
+                        Directory.Move(providedPath, newPath);
+                        Links.CreateSymbolicLink(providedPath, newPath, 3);
+                    }
+                    catch (IOException)
+                    {
+                        MessageBox.Show(string.Format(Resources.SettingsAccessDenied, providedPath), Resources.SettingsAccessDeniedTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Logger.Error(string.Format(Resources.SettingsAccessDeniedLog, providedPath));
+                        return;
+                    }
                 }
             }
             
@@ -559,8 +568,17 @@ namespace PatchMyPath
                 {
                     string newPath = providedPath + " - Clean";
                     Logger.Info(Resources.SettingsPathRenameLog, providedPath, newPath);
-                    Directory.Move(providedPath, newPath);
-                    Links.CreateSymbolicLink(providedPath, newPath, 3);
+                    try
+                    {
+                        Directory.Move(providedPath, newPath);
+                        Links.CreateSymbolicLink(providedPath, newPath, 3);
+                    }
+                    catch (IOException)
+                    {
+                        MessageBox.Show(string.Format(Resources.SettingsAccessDenied, providedPath), Resources.SettingsAccessDeniedTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Logger.Error(string.Format(Resources.SettingsAccessDeniedLog, providedPath));
+                        return;
+                    }
                 }
             }
 

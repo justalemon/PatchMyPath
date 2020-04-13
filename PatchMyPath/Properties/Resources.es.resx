@@ -205,6 +205,12 @@ Por favor asegurate de que esta carpeta contiene una copia de RDR2 o GTA V e int
   <data name="InstallWrongGameTitle" xml:space="preserve">
     <value>Juego invalido</value>
   </data>
+  <data name="SettingsAccessDenied" xml:space="preserve">
+    <value>Acceso denegado al intentar mover {0}. Reinicia la aplicacion como administrador e intenta nuevamente.</value>
+  </data>
+  <data name="SettingsAccessDeniedTitle" xml:space="preserve">
+    <value>Acceso denegado</value>
+  </data>
   <data name="SettingsInvalidID" xml:space="preserve">
     <value>"{0}" no es un numero valido o es muy grande para ser procesado (valor maximo es {1})</value>
   </data>

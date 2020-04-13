@@ -654,6 +654,33 @@ namespace PatchMyPath.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Access denied when trying to move {0}. Restart the application as administrator and try again..
+        /// </summary>
+        internal static string SettingsAccessDenied {
+            get {
+                return ResourceManager.GetString("SettingsAccessDenied", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Access denied to folder {0}.
+        /// </summary>
+        internal static string SettingsAccessDeniedLog {
+            get {
+                return ResourceManager.GetString("SettingsAccessDeniedLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Access denied.
+        /// </summary>
+        internal static string SettingsAccessDeniedTitle {
+            get {
+                return ResourceManager.GetString("SettingsAccessDeniedTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &quot;{0}&quot; is not a valid number or is too big to be processed (max value is {1})..
         /// </summary>
         internal static string SettingsInvalidID {
