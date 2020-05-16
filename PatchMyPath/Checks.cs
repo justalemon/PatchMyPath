@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
 
@@ -10,14 +11,10 @@ namespace PatchMyPath
     public static class Checks
     {
         /// <summary>
-        /// Checks that the specified file was signed by Rockstar Games.
+        /// The hashes of the certificates used by Rockstar to sign the game files.
         /// </summary>
-        /// <param name="file">The file to check.</param>
-        /// <returns>true if the file exists and has a valid signature, false otherwise.</returns>
-        public static bool IsFileSignedByRockstar(string file)
+        private static readonly List<string> hashes = new List<string>
         {
-            // This is the basic information of the Rockstar Games certificates:
-
             // Issued to: Rockstar Games, Inc.
             // Issues by: Entrust Code Signing CA - OVCS1
             // Serial number: 00e49e47111fec98cd0000000055662b3e
@@ -25,7 +22,7 @@ namespace PatchMyPath
             // Valid from: ‎Thursday, ‎March ‎9, ‎2017 7:04:49 PM
             // Valid to: ‎Friday, ‎March ‎20, ‎2020 7:34:46 PM
             // Thumbprint/Hash: aa0d31a9c8c1ebd9e18ec1d8d3f98b3523178ad8
-
+            "AA0D31A9C8C1EBD9E18EC1D8D3F98B3523178AD8",
             // Issued to: Rockstar Games, Inc.
             // Issues by: DigiCert SHA2 Assured ID Code Signing CA
             // Serial number: 0f65f4572517cbccaa8b3776580a8d3d
@@ -33,7 +30,16 @@ namespace PatchMyPath
             // Valid from: ‎Thursday, ‎February ‎6, ‎2020 8:00:00 PM
             // Valid to: ‎Friday, ‎February ‎17, ‎2023 8:00:00 AM
             // Thumbprint/Hash: 0ebf58d74ccabca4fce1ab83adba62b40dfc014a
+            "0EBF58D74CCABCA4FCE1AB83ADBA62B40DFC014A"
+        };
 
+        /// <summary>
+        /// Checks that the specified file was signed by Rockstar Games.
+        /// </summary>
+        /// <param name="file">The file to check.</param>
+        /// <returns>true if the file exists and has a valid signature, false otherwise.</returns>
+        public static bool IsFileSignedByRockstar(string file)
+        {
             // If the file does not exists, return
             if (!File.Exists(file))
             {
@@ -63,7 +69,7 @@ namespace PatchMyPath
 
             // Then finally, check if the file is signed by Rockstar Games
             string hash = certificate.GetCertHashString();
-            return hash == "AA0D31A9C8C1EBD9E18EC1D8D3F98B3523178AD8" || hash == "0EBF58D74CCABCA4FCE1AB83ADBA62B40DFC014A";
+            return hashes.Contains(hash);
         }
     }
 }
