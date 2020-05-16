@@ -278,6 +278,12 @@ namespace PatchMyPath.Config
                         Logger.Info(Resources.StartingGTAVSteamLog, GamePath);
                         Process.Start($"steam://rungameid/{Program.Config.Launchers.GTAVSteamID}");
                     }
+                    // If the user wants the Epic Games Launcher and the ID is not empty, use the EGS URL
+                    if (Program.Config.Launchers.GTAVUse == LauncherType.EpicGamesStore && !string.IsNullOrWhiteSpace(Program.Config.Launchers.GTAVEpicID))
+                    {
+                        Logger.Info(Resources.StartingGTAVSteamLog, GamePath);
+                        Process.Start($"com.epicgames.launcher://apps/{Program.Config.Launchers.GTAVEpicID}?action=launch&silent=true");
+                    }
                     // If not, use the Launcher file
                     else
                     {
