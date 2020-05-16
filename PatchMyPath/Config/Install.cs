@@ -135,7 +135,7 @@ namespace PatchMyPath.Config
         /// If the game executables are tampered or not.
         /// </summary>
         [JsonIgnore]
-        public bool IsLegal => (Checks.IsFileSignedByRockstar(Path.Combine(GamePath, "GTAVLauncher.exe")) && Checks.IsFileSignedByRockstar(Path.Combine(GamePath, "GTA5.exe"))) || Checks.IsFileSignedByRockstar(Path.Combine(GamePath, "RDR2.exe"));
+        public bool IsLegal => Checks.IsFileSignedByRockstar(Path.Combine(GamePath, "GTA5.exe")) || Checks.IsFileSignedByRockstar(Path.Combine(GamePath, "RDR2.exe"));
 
         public Install(string path)
         {
