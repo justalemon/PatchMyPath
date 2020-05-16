@@ -48,6 +48,6 @@ namespace PatchMyPath.Config
         /// The EGS Identifier to use for launching Grand Theft Auto V.
         /// </summary>
         [JsonProperty("gtav_epic_id")]
-        public string GTAVEpicID { get; set; } = "";
+        public string GTAVEpicID { get; set; } = "9d2d0eb64d5c44529cece33fe2a46482";
     }
 }
