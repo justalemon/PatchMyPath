@@ -1,4 +1,5 @@
 {
+    ".egstore": 6,
     "ReadMe": 6,
     "Redistributables": 6,
     "update": 2,
@@ -6,11 +7,12 @@
 
     "GTA5.exe": 9,
     "GTAVLanguageSelect.exe": 13,
-    "GTAVLauncher.exe": 9,
+    "GTAVLauncher.exe": 13,
     "PlayGTAV.exe": 5,
     "bink2w64.dll": 1,
     "d3dcompiler_46.dll": 1,
     "d3dcsx_46.dll": 1,
+    "EOSSDK-Win64-Shipping.dll": 5,
     "GFSDK_ShadowLib.win64.dll": 1,
     "GFSDK_TXAA.win64.dll": 1,
     "GFSDK_TXAA_AlphaResolve.win64.dll": 1,
