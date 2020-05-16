@@ -203,58 +203,73 @@ namespace PatchMyPath.Config
             }
 
             // Finally, launch the game
-            LaunchExecutable();
+            switch (Game)
+            {
+                // If this is RDR2
+                case Game.RedDeadRedemption2:
+                    LaunchRDR2();
+                    break;
+                // If this is GTA V
+                case Game.GrandTheftAutoV:
+                    LaunchGTAV();
+                    break;
+            }
         }
 
-        public void LaunchExecutable()
+        /// <summary>
+        /// Launches Red Dead Redemption 2.
+        /// </summary>
+        public void LaunchRDR2()
         {
-            // Get the game and install type
-            Game game = Game;
+            // Get the launch type
             Launch type = Type;
 
-            // If the game is RDR2
-            if (game == Game.RedDeadRedemption2)
+            // If the user wants ScriptHook for Red Dead Redemption 2, launch it as-it and let it do the heavy work
+            if (type == Launch.ScriptHook)
             {
-                // If the user is using ScriptHook for Red Dead Redemption 2, launch it as-it and let it do the heavy work
-                if (type == Launch.ScriptHook)
-                {
-                    Logger.Info(Resources.StartingScriptHookLog, GamePath);
-                    Process.Start(Path.Combine(Program.Config.Destination.RDR2, "ScriptHook", "rdr2d.exe"));
-                    return;
-                }
+                Logger.Info(Resources.StartingScriptHookLog, GamePath);
+                Process.Start(Path.Combine(Program.Config.Destination.RDR2, "ScriptHook", "rdr2d.exe"));
+                return;
+            }
 
-                // If the user wants Steam and the App ID is not zero, use the Steam URL
-                if (Program.Config.Launchers.RDR2Use == LauncherType.Steam && Program.Config.Launchers.RDR2SteamID != 0)
-                {
+            // Launch the game with the correct manager
+            switch (Program.Config.Launchers.RDR2Use)
+            {
+                // For Steam, use the Network Protocol
+                case LauncherType.Steam:
                     Logger.Info(Resources.StartingRDR2SteamLog, GamePath);
                     Process.Start($"steam://rungameid/{Program.Config.Launchers.RDR2SteamID}");
-                }
-                // If the user wants the Epic Games Launcher and the ID is not empty, use the EGS URL
-                if (Program.Config.Launchers.RDR2Use == LauncherType.EpicGamesStore && !string.IsNullOrWhiteSpace(Program.Config.Launchers.RDR2EpicID))
-                {
+                    break;
+                // For EGS, also use the Network Protocol
+                case LauncherType.EpicGamesStore:
                     Logger.Info(Resources.StartingRDR2SteamLog, GamePath);
                     Process.Start($"com.epicgames.launcher://apps/{Program.Config.Launchers.RDR2EpicID}?action=launch&silent=true");
-                }
-                // Otherwise, just launch the exe
-                else
-                {
+                    break;
+                // For everything else, use the executable directly
+                default:
                     Logger.Info(Resources.StartingRDR2VanillaLog, GamePath);
                     Process.Start(Path.Combine(Program.Config.Destination.RDR2, "RDR2.exe"));
-                }
-
-                // If the user wants to launch RedHook2
-                if (type == Launch.RedHook2)
-                {
-                    Logger.Info(Resources.StartingRedHookLog, GamePath);
-                    Process.Start(Path.Combine(Program.Config.Destination.RDR2, "RedHook2", "Loader.exe"));
-                }
+                    break;
             }
-            // If the game is GTA V
-            else if (game == Game.GrandTheftAutoV)
+
+            // If the user wants RedHook2, launch it after the game executable
+            if (type == Launch.RedHook2)
             {
-                // If the launch type is set to RPH, launch RPH
-                if (type == Launch.RagePluginHook)
-                {
+                Logger.Info(Resources.StartingRedHookLog, GamePath);
+                Process.Start(Path.Combine(Program.Config.Destination.RDR2, "RedHook2", "Loader.exe"));
+            }
+        }
+
+        /// <summary>
+        /// Launches Grand Theft Auto V.
+        /// </summary>
+        public void LaunchGTAV()
+        {
+            // For special types, launch them directly
+            switch (Type)
+            {
+                // For RPH, launch the executable from the same directory as the game
+                case Launch.RagePluginHook:
                     Logger.Info(Resources.StartingRPHLog, GamePath);
                     using (Process rph = new Process())
                     {
@@ -262,41 +277,42 @@ namespace PatchMyPath.Config
                         rph.StartInfo.WorkingDirectory = Program.Config.Destination.GTAV;
                         rph.Start();
                     }
-                }
-                // If Unknown's Launcher Bypass is enabled and we don't need to use Steam
-                else if (type == Launch.LauncherBypass)
-                {
+                    return;
+                // For Unknown's Launcher Bypass, use GTA5.exe Directly
+                case Launch.LauncherBypass:
                     Logger.Info(Resources.StartingLauncherBypassLog, GamePath);
                     Process.Start(Path.Combine(Program.Config.Destination.GTAV, "GTA5.exe"));
-                }
-                // Otherwise, launch the game as normal
-                else
-                {
-                    // If Steam is enabled, use the specified App ID
-                    if (Program.Config.Launchers.GTAVUse == LauncherType.Steam && Program.Config.Launchers.GTAVSteamID != 0)
+                    return;
+            }
+
+            // Launch the game with the correct manager
+            switch (Program.Config.Launchers.GTAVUse)
+            {
+                // For Steam, use the Network Protocol
+                case LauncherType.Steam:
+                    Logger.Info(Resources.StartingGTAVSteamLog, GamePath);
+                    Process.Start($"steam://rungameid/{Program.Config.Launchers.GTAVSteamID}");
+                    break;
+                // For EGS, also use the Network Protocol
+                case LauncherType.EpicGamesStore:
+                    Logger.Info(Resources.StartingGTAVSteamLog, GamePath);
+                    Process.Start($"com.epicgames.launcher://apps/{Program.Config.Launchers.GTAVEpicID}?action=launch&silent=true");
+                    break;
+                // For everything else, use either GTAVLauncher.exe or PlayGTAV.exe
+                default:
+                    Logger.Info(Resources.StartingGTAVVanillaLog, GamePath);
+                    if (File.Exists(Path.Combine(Program.Config.Destination.GTAV, "GTAVLauncher.exe")))
                     {
-                        Logger.Info(Resources.StartingGTAVSteamLog, GamePath);
-                        Process.Start($"steam://rungameid/{Program.Config.Launchers.GTAVSteamID}");
-                    }
-                    // If the user wants the Epic Games Launcher and the ID is not empty, use the EGS URL
-                    if (Program.Config.Launchers.GTAVUse == LauncherType.EpicGamesStore && !string.IsNullOrWhiteSpace(Program.Config.Launchers.GTAVEpicID))
-                    {
-                        Logger.Info(Resources.StartingGTAVSteamLog, GamePath);
-                        Process.Start($"com.epicgames.launcher://apps/{Program.Config.Launchers.GTAVEpicID}?action=launch&silent=true");
-                    }
-                    // If not, use the Launcher file
-                    else
-                    {
-                        Logger.Info(Resources.StartingGTAVVanillaLog, GamePath);
                         Process.Start(Path.Combine(Program.Config.Destination.GTAV, "GTAVLauncher.exe"));
                     }
-                }
+                    else if (File.Exists(Path.Combine(Program.Config.Destination.GTAV, "PlayGTAV.exe")))
+                    {
+                        Process.Start(Path.Combine(Program.Config.Destination.GTAV, "PlayGTAV.exe"));
+                    }
+                    break;
             }
         }
 
-        public override string ToString()
-        {
-            return $"{GamePath} [{Game.ToString().SpaceOnUpperCase()}] [{Type}]";
-        }
+        public override string ToString() => $"{GamePath} [{Game.ToString().SpaceOnUpperCase()}] [{Type}]";
     }
 }
