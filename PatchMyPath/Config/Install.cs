@@ -120,7 +120,7 @@ namespace PatchMyPath.Config
                     return Launch.ScriptHook;
                 }
                 // If we got here, there is no alternative way to launch the game other than the main executabke
-                else if (File.Exists(Path.Combine(GamePath, "GTAVLauncher.exe")) || File.Exists(Path.Combine(GamePath, "RDR2.exe")))
+                else if (File.Exists(Path.Combine(GamePath, "GTAVLauncher.exe")) || File.Exists(Path.Combine(GamePath, "PlayGTAV.exe")) || File.Exists(Path.Combine(GamePath, "RDR2.exe")))
                 {
                     return Launch.Normal;
                 }
