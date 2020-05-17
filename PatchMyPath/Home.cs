@@ -89,6 +89,19 @@ namespace PatchMyPath
             // And log that we have finished
             Logger.Debug(Resources.FormRefreshedLog);
         }
+
+        public void AddInstall(Install install)
+        {
+            // Add the new install onto the configuration
+            Program.Config.GameInstalls.Add(install);
+            // Notify that a new install was added
+            Logger.Info(Resources.FormInstallAddedLog, install.GamePath);
+            // Save the settings
+            Program.Config.Save();
+            // And refresh the ListBox
+            RefreshInstalls();
+        }
+
         public void LoadSettings()
         {
             // Just load the settings from the program configuration
@@ -133,16 +146,8 @@ namespace PatchMyPath
                 return;
             }
 
-            // Then, create a new install object with this and add it into the text box
-            Install install = new Install(FolderBrowser.SelectedPath);
-            // Add the new install
-            Program.Config.GameInstalls.Add(install);
-            // Notify that a new install was added
-            Logger.Info(Resources.FormInstallAddedLog, install.GamePath);
-            // Save the settings
-            Program.Config.Save();
-            // And refresh the ListBox
-            RefreshInstalls();
+            // Otherwise, add the install
+            AddInstall(new Install(FolderBrowser.SelectedPath));
         }
 
         private void RemoveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -378,9 +383,7 @@ namespace PatchMyPath
             // If the user wants to automatically add the install, do it
             if (AutoAddCheckBox.Checked)
             {
-                Program.Config.GameInstalls.Add(new Install(DestinationTextBox.Text));
-                Logger.Info(Resources.DuplicatorAddedLog, DestinationTextBox.Text);
-                RefreshInstalls();
+                AddInstall(new Install(DestinationTextBox.Text));
             }
 
             // Reset the progress of the bar
