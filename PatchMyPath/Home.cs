@@ -498,6 +498,7 @@ namespace PatchMyPath
                     {
                         Directory.Move(providedPath, newPath);
                         Links.CreateSymbolicLink(providedPath, newPath, 3);
+                        AddInstall(new Install(newPath));
                     }
                     catch (IOException)
                     {
@@ -575,6 +576,7 @@ namespace PatchMyPath
                     {
                         Directory.Move(providedPath, newPath);
                         Links.CreateSymbolicLink(providedPath, newPath, 3);
+                        AddInstall(new Install(newPath));
                     }
                     catch (IOException)
                     {
