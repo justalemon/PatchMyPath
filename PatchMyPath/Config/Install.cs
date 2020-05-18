@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using NLog;
+﻿using NLog;
 using PatchMyPath.Properties;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -122,6 +121,10 @@ namespace PatchMyPath.Config
 
         public void Start()
         {
+            // Get type of the launcher and game
+            Launch type = Type;
+            Game game = Game;
+
             // If the install has been tampered, notify the user and return
             if (!IsLegal)
             {
@@ -130,14 +133,14 @@ namespace PatchMyPath.Config
                 return;
             }
             // If the type is set to Invalid, notify the user and return
-            else if (Type == Launch.Invalid)
+            else if (type == Launch.Invalid)
             {
                 Logger.Error(Resources.InstallInvalidLog);
                 MessageBox.Show(Resources.InstallInvalid, Resources.InstallInvalidTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             // If the game is set to Invalid, notify the user and return
-            else if (Game == Game.Invalid)
+            else if (game == Game.Invalid)
             {
                 Logger.Error(Resources.InstallNoExecutableLog);
                 MessageBox.Show(Resources.InstallNoExecutable, Resources.InstallNoExecutableTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -145,18 +148,11 @@ namespace PatchMyPath.Config
             }
 
             // Get the correct directory for the game
-            string directory;
-            if (Game == Game.RedDeadRedemption2)
+            string directory = Program.Config.Destination.GetDestination(game);
+            // If the target directory is null, the game is invallid
+            if (string.IsNullOrWhiteSpace(directory))
             {
-                directory = Program.Config.Destination.RDR2;
-            }
-            else if (Game == Game.GrandTheftAutoV)
-            {
-                directory = Program.Config.Destination.GTAV;
-            }
-            else
-            {
-                Logger.Error(Resources.InstallWrongGameLog, Game, (int)Game);
+                Logger.Error(Resources.InstallWrongGameLog, game, (int)game);
                 MessageBox.Show(Resources.InstallWrongGame, Resources.InstallWrongGameTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -180,27 +176,7 @@ namespace PatchMyPath.Config
                 return;
             }
 
-            // Finally, launch the game
-            switch (Game)
-            {
-                // If this is RDR2
-                case Game.RedDeadRedemption2:
-                    LaunchRDR2();
-                    break;
-                // If this is GTA V
-                case Game.GrandTheftAutoV:
-                    LaunchGTAV();
-                    break;
-            }
-        }
-
-        /// <summary>
-        /// Launches Red Dead Redemption 2.
-        /// </summary>
-        public void LaunchRDR2()
-        {
-            // Get the launch type
-            Launch type = Type;
+            // TIME TO LAUNCH THE GAME!
 
             // If the user wants ScriptHook for Red Dead Redemption 2, launch it as-it and let it do the heavy work
             if (type == Launch.ScriptHook)
@@ -209,28 +185,49 @@ namespace PatchMyPath.Config
                 Process.Start(Path.Combine(Program.Config.Destination.RDR2, "ScriptHook", "rdr2d.exe"));
                 return;
             }
+            // For Rage Plugin Hook, launch the executable and let it do it's job
+            else if (type == Launch.RagePluginHook)
+            {
+                Logger.Info(Resources.StartingRPHLog, GamePath);
+                using (Process rph = new Process())
+                {
+                    rph.StartInfo.FileName = Path.Combine(Program.Config.Destination.GTAV, "RAGEPluginHook.exe");
+                    rph.StartInfo.WorkingDirectory = Program.Config.Destination.GTAV;
+                    rph.Start();
+                }
+                return;
+            }
+            // For alloc8or's Launcher Bypass for pre-RGL copies, just use GTA5.exe
+            else if (type == Launch.LauncherBypass)
+            {
+                Logger.Info(Resources.StartingLauncherBypassLog, GamePath);
+                Process.Start(Path.Combine(Program.Config.Destination.GTAV, "GTA5.exe"));
+                return;
+            }
 
-            // Launch the game with the correct manager
-            switch (Program.Config.Launchers.RDR2Use)
+            // If none of the previous options are needed, launch the game like normal
+            switch (Program.Config.Launchers.GetLauncher(game))
             {
                 // For Steam, use the Network Protocol
                 case LauncherType.Steam:
+                    ulong steam = Program.Config.Launchers.GetSteamAppID(game);
                     Logger.Info(Resources.StartingRDR2SteamLog, GamePath);
-                    Process.Start($"steam://rungameid/{Program.Config.Launchers.RDR2SteamID}");
+                    Process.Start($"steam://rungameid/{steam}");
                     break;
                 // For EGS, also use the Network Protocol
                 case LauncherType.EpicGamesStore:
-                    Logger.Info(Resources.StartingRDR2SteamLog, GamePath);
-                    Process.Start($"com.epicgames.launcher://apps/{Program.Config.Launchers.RDR2EpicID}?action=launch&silent=true");
+                    string epic = Program.Config.Launchers.GetEpicID(game);
+                    Logger.Info(Resources.StartingRDR2SteamLog, GamePath, epic);
+                    Process.Start($"com.epicgames.launcher://apps/{epic}?action=launch&silent=true");
                     break;
                 // For everything else, use the executable directly
-                default:
-                    Logger.Info(Resources.StartingRDR2VanillaLog, GamePath);
-                    Process.Start(Path.Combine(Program.Config.Destination.RDR2, "RDR2.exe"));
+                case LauncherType.Executable:
+                case LauncherType.RockstarGamesLauncher:
+                    StartExecutable(game);
                     break;
             }
 
-            // If the user wants RedHook2, launch it after the game executable
+            // If the user wants RedHook2, launch it after the game
             if (type == Launch.RedHook2)
             {
                 Logger.Info(Resources.StartingRedHookLog, GamePath);
@@ -239,46 +236,32 @@ namespace PatchMyPath.Config
         }
 
         /// <summary>
-        /// Launches Grand Theft Auto V.
+        /// Starts the executable for the specified game.
         /// </summary>
-        public void LaunchGTAV()
+        /// <param name="game">The game to launch.</param>
+        private void StartExecutable(Game game)
         {
-            // For special types, launch them directly
-            switch (Type)
+            switch (game)
             {
-                // For RPH, launch the executable from the same directory as the game
-                case Launch.RagePluginHook:
-                    Logger.Info(Resources.StartingRPHLog, GamePath);
-                    using (Process rph = new Process())
+                // For RDR2, just use RDR2.exe
+                case Game.RedDeadRedemption2:
+                    Logger.Info(Resources.StartingRDR2VanillaLog, GamePath);
+                    Process.Start(Path.Combine(Program.Config.Destination.RDR2, "RDR2.exe"));
+                    break;
+                // For GTA IV, use PlayGTAIV.exe (Steam re-release) or LaunchGTAIV.exe (retail and Patch 7 on Steam)
+                case Game.GrandTheftAutoIV:
+                    if (File.Exists(Path.Combine(Program.Config.Destination.GTAV, "PlayGTAIV.exe")))
                     {
-                        rph.StartInfo.FileName = Path.Combine(Program.Config.Destination.GTAV, "RAGEPluginHook.exe");
-                        rph.StartInfo.WorkingDirectory = Program.Config.Destination.GTAV;
-                        rph.Start();
+                        Process.Start(Path.Combine(Program.Config.Destination.GTAV, "PlayGTAIV.exe"));
                     }
-                    return;
-                // For Unknown's Launcher Bypass, use GTA5.exe Directly
-                case Launch.LauncherBypass:
-                    Logger.Info(Resources.StartingLauncherBypassLog, GamePath);
-                    Process.Start(Path.Combine(Program.Config.Destination.GTAV, "GTA5.exe"));
-                    return;
-            }
+                    else if (File.Exists(Path.Combine(Program.Config.Destination.GTAV, "LaunchGTAIV.exe")))
+                    {
+                        Process.Start(Path.Combine(Program.Config.Destination.GTAV, "LaunchGTAIV.exe"));
+                    }
+                    break;
+                // For GTA V, use GTAVLauncher.exe (R* Warehouse/Launcher) or PlayGTAV.exe (Steam and EGL)
+                case Game.GrandTheftAutoV:
 
-            // Launch the game with the correct manager
-            switch (Program.Config.Launchers.GTAVUse)
-            {
-                // For Steam, use the Network Protocol
-                case LauncherType.Steam:
-                    Logger.Info(Resources.StartingGTAVSteamLog, GamePath);
-                    Process.Start($"steam://rungameid/{Program.Config.Launchers.GTAVSteamID}");
-                    break;
-                // For EGS, also use the Network Protocol
-                case LauncherType.EpicGamesStore:
-                    Logger.Info(Resources.StartingGTAVSteamLog, GamePath);
-                    Process.Start($"com.epicgames.launcher://apps/{Program.Config.Launchers.GTAVEpicID}?action=launch&silent=true");
-                    break;
-                // For everything else, use either GTAVLauncher.exe or PlayGTAV.exe
-                default:
-                    Logger.Info(Resources.StartingGTAVVanillaLog, GamePath);
                     if (File.Exists(Path.Combine(Program.Config.Destination.GTAV, "GTAVLauncher.exe")))
                     {
                         Process.Start(Path.Combine(Program.Config.Destination.GTAV, "GTAVLauncher.exe"));
@@ -287,7 +270,7 @@ namespace PatchMyPath.Config
                     {
                         Process.Start(Path.Combine(Program.Config.Destination.GTAV, "PlayGTAV.exe"));
                     }
-                    break;
+                    return;
             }
         }
 
