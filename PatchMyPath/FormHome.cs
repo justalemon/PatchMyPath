@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PatchMyPath
 {
-    public partial class Home : Form
+    public partial class FormHome : Form
     {
         #region Properties
 
@@ -34,7 +34,7 @@ namespace PatchMyPath
 
         #region Constructor
 
-        public Home()
+        public FormHome()
         {
             // Initialize the UI components
             InitializeComponent();

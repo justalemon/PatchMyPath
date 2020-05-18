@@ -33,7 +33,7 @@ namespace PatchMyPath
         /// <summary>
         /// The form used for the main operations.
         /// </summary>
-        public static Home HomeForm = null;
+        public static FormHome HomeForm = null;
         /// <summary>
         /// Form that allows the user to configure the application.
         /// </summary>
@@ -55,7 +55,7 @@ namespace PatchMyPath
             // Log that we are creating a new instance of the form
             Logger.Trace(Resources.FormCreatingLog);
             // Create the forms
-            HomeForm = new Home();
+            HomeForm = new FormHome();
             ConfigForm = new FormConfig();
             // Log that we have loaded everything
             Logger.Debug(Resources.FormInitEndLog);
