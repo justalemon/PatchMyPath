@@ -48,7 +48,7 @@ namespace PatchMyPath.Config
         /// The Steam appid that will be used to launch Grand Theft Auto IV.
         /// </summary>
         [JsonProperty("gtaiv_steam_id")]
-        public ulong GTAIVSteamID { get; set; } = 271590;
+        public ulong GTAIVSteamID { get; set; } = 12210;
         /// <summary>
         /// The EGS Identifier to use for launching Grand Theft Auto IV.
         /// </summary>
