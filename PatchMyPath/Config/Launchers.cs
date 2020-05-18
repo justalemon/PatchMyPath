@@ -3,17 +3,6 @@
 namespace PatchMyPath.Config
 {
     /// <summary>
-    /// The type of launcher for the game.
-    /// </summary>
-    public enum LauncherType
-    {
-        Executable = 0,
-        RockstarGamesLauncher = 1,
-        Steam = 2,
-        EpicGamesStore = 3
-    }
-
-    /// <summary>
     /// THe configuration for using specific game launchers with RDR2 and GTA V.
     /// </summary>
     public class Launchers
