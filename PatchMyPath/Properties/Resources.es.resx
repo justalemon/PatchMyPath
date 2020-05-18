@@ -151,14 +151,14 @@ El proceso ha sido detenido.</value>
   </data>
   <data name="DuplicatorNoGame" xml:space="preserve">
     <value>No se ha seleccionado un juego.
-Por favor elige un tipo de juego en la parte de arriba e intenta nuevamente</value>
+Por favor elige un tipo de juego en la parte de arriba e intenta nuevamente.</value>
   </data>
   <data name="DuplicatorNoGameTitle" xml:space="preserve">
     <value>Juego no seleccionado</value>
   </data>
   <data name="DuplicatorNoPath" xml:space="preserve">
     <value>Parece que una de las carpetas no ha sido seleccionada.
-Por favor asegurate de que hay una carpeta de Origen y Destino e intenta nuevamente</value>
+Por favor asegurate de que hay una carpeta de Origen y Destino e intenta nuevamente.</value>
   </data>
   <data name="DuplicatorNoPathTitle" xml:space="preserve">
     <value>Carpeta no Seleccionada</value>
@@ -212,7 +212,7 @@ Por favor asegurate de que esta carpeta contiene una copia de RDR2 o GTA V e int
     <value>Acceso denegado</value>
   </data>
   <data name="SettingsInvalidID" xml:space="preserve">
-    <value>"{0}" no es un numero valido o es muy grande para ser procesado (valor maximo es {1})</value>
+    <value>"{0}" no es un numero valido o es muy grande para ser procesado (valor maximo es {1}).</value>
   </data>
   <data name="SettingsLanguageChanged" xml:space="preserve">
     <value>El Cambio de Idioma tomara efecto la proxima vez que inicies la aplicacion</value>
