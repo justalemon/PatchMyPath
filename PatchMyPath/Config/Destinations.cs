@@ -22,5 +22,23 @@ namespace PatchMyPath.Config
         /// </summary>
         [JsonProperty("gtaiv", NullValueHandling = NullValueHandling.Ignore)]
         public string GTAIV { get; set; } = "";
+
+        /// <summary>
+        /// Gets the target directory for a game.
+        /// </summary>
+        public string GetDestination(Game game)
+        {
+            switch (game)
+            {
+                case Game.RedDeadRedemption2:
+                    return RDR2;
+                case Game.GrandTheftAutoV:
+                    return GTAV;
+                case Game.GrandTheftAutoIV:
+                    return GTAIV;
+                default:
+                    return null;
+            }
+        }
     }
 }

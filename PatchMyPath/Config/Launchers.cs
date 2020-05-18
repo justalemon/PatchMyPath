@@ -54,5 +54,57 @@ namespace PatchMyPath.Config
         /// </summary>
         [JsonProperty("gtaiv_epic_id")]
         public string GTAIVEpicID { get; set; } = "";
+
+        /// <summary>
+        /// Gets the launcher used by a specific game.
+        /// </summary>
+        public LauncherType GetLauncher(Game game)
+        {
+            switch (game)
+            {
+                case Game.RedDeadRedemption2:
+                    return RDR2Use;
+                case Game.GrandTheftAutoIV:
+                    return GTAIVUse;
+                case Game.GrandTheftAutoV:
+                    return GTAVUse;
+                default:
+                    return (LauncherType)(-1);
+            }
+        }
+        /// <summary>
+        /// Gets the Steam App ID for the specified game.
+        /// </summary>
+        public ulong GetSteamAppID(Game game)
+        {
+            switch (game)
+            {
+                case Game.RedDeadRedemption2:
+                    return RDR2SteamID;
+                case Game.GrandTheftAutoIV:
+                    return GTAIVSteamID;
+                case Game.GrandTheftAutoV:
+                    return GTAVSteamID;
+                default:
+                    return 0u;
+            }
+        }
+        /// <summary>
+        /// Gets the Epic Games ID for the specified game.
+        /// </summary>
+        public string GetEpicID(Game game)
+        {
+            switch (game)
+            {
+                case Game.RedDeadRedemption2:
+                    return RDR2EpicID;
+                case Game.GrandTheftAutoIV:
+                    return GTAIVEpicID;
+                case Game.GrandTheftAutoV:
+                    return GTAVEpicID;
+                default:
+                    return null;
+            }
+        }
     }
 }
