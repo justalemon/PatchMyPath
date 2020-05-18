@@ -17,5 +17,10 @@ namespace PatchMyPath.Config
         /// </summary>
         [JsonProperty("gtav", NullValueHandling = NullValueHandling.Ignore)]
         public string GTAV { get; set; } = "";
+        /// <summary>
+        /// The location where Grand Theft Auto IV should be located.
+        /// </summary>
+        [JsonProperty("gtaiv", NullValueHandling = NullValueHandling.Ignore)]
+        public string GTAIV { get; set; } = "";
     }
 }

@@ -8,12 +8,12 @@ namespace PatchMyPath.Config
     public class Launchers
     {
         /// <summary>
-        /// What launch system should Red Dead Redemption 2 use to start the game.
+        /// The type of Launcher that Red Dead Redemption 2 should use.
         /// </summary>
         [JsonProperty("rdr2_use")]
         public LauncherType RDR2Use { get; set; } = LauncherType.Executable;
         /// <summary>
-        /// The Steam AppID to use for launching Red Dead Redemption 2.
+        /// The Steam appid that will be used to launch Red Dead Redemption 2.
         /// </summary>
         [JsonProperty("rdr2_steam_id")]
         public ulong RDR2SteamID { get; set; } = 1174180;
@@ -24,12 +24,12 @@ namespace PatchMyPath.Config
         public string RDR2EpicID { get; set; } = "Heather";
 
         /// <summary>
-        /// If Grand Theft Auto V should use Steam to launch the game.
+        /// The type of Launcher that Grand Theft Auto IV should use.
         /// </summary>
         [JsonProperty("gtav_use")]
         public LauncherType GTAVUse { get; set; } = LauncherType.Executable;
         /// <summary>
-        /// What launch system should Grand Theft Auto V use to start the game.
+        /// The Steam appid that will be used to launch Grand Theft Auto V.
         /// </summary>
         [JsonProperty("gtav_steam_id")]
         public ulong GTAVSteamID { get; set; } = 271590;
@@ -38,5 +38,21 @@ namespace PatchMyPath.Config
         /// </summary>
         [JsonProperty("gtav_epic_id")]
         public string GTAVEpicID { get; set; } = "9d2d0eb64d5c44529cece33fe2a46482";
+
+        /// <summary>
+        /// The type of Launcher that Grand Theft Auto IV should use.
+        /// </summary>
+        [JsonProperty("gtav_use")]
+        public LauncherType GTAIVUse { get; set; } = LauncherType.Executable;
+        /// <summary>
+        /// The Steam appid that will be used to launch Grand Theft Auto IV.
+        /// </summary>
+        [JsonProperty("gtav_steam_id")]
+        public ulong GTAIVSteamID { get; set; } = 271590;
+        /// <summary>
+        /// The EGS Identifier to use for launching Grand Theft Auto IV.
+        /// </summary>
+        [JsonProperty("gtav_epic_id")]
+        public string GTAIVEpicID { get; set; } = "";
     }
 }
