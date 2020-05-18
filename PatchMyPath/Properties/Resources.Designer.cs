@@ -489,6 +489,15 @@ namespace PatchMyPath.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Grand Theft Auto IV.
+        /// </summary>
+        internal static string GameGTAIV {
+            get {
+                return ResourceManager.GetString("GameGTAIV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Grand Theft Auto V.
         /// </summary>
         internal static string GameGTAV {
