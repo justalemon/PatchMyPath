@@ -42,17 +42,17 @@ namespace PatchMyPath.Config
         /// <summary>
         /// The type of Launcher that Grand Theft Auto IV should use.
         /// </summary>
-        [JsonProperty("gtav_use")]
+        [JsonProperty("gtaiv_use")]
         public LauncherType GTAIVUse { get; set; } = LauncherType.Executable;
         /// <summary>
         /// The Steam appid that will be used to launch Grand Theft Auto IV.
         /// </summary>
-        [JsonProperty("gtav_steam_id")]
+        [JsonProperty("gtaiv_steam_id")]
         public ulong GTAIVSteamID { get; set; } = 271590;
         /// <summary>
         /// The EGS Identifier to use for launching Grand Theft Auto IV.
         /// </summary>
-        [JsonProperty("gtav_epic_id")]
+        [JsonProperty("gtaiv_epic_id")]
         public string GTAIVEpicID { get; set; } = "";
     }
 }
