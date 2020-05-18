@@ -30,6 +30,10 @@ namespace PatchMyPath
         /// The configuration of the program.
         /// </summary>
         public static Configuration Config = Configuration.Load();
+        /// <summary>
+        /// The form used for the main operations.
+        /// </summary>
+        public static Home HomeForm = null;
 
         /// <summary>
         /// The main entry point for the application.
@@ -47,7 +51,7 @@ namespace PatchMyPath
             // Log that we are creating a new instance of the form
             Logger.Trace(Resources.FormCreatingLog);
             // An a new home formulary
-            Home form = new Home();
+            HomeForm = new Home();
             // Log that we have loaded everything
             Logger.Debug(Resources.FormInitEndLog);
 
@@ -55,13 +59,13 @@ namespace PatchMyPath
             LoggingConfiguration config = new LoggingConfiguration();
             // Add the rules for the targets
             config.AddRule(LogLevel.Debug, LogLevel.Fatal, new FileTarget() { FileName = "PatchMyPath.log", MaxArchiveFiles = 5, ArchiveOldFileOnStartup = true });
-            config.AddRule(LogLevel.Info, LogLevel.Fatal, new TextBoxTarget(form.LogTextBox) { Layout = "[${date}] [${level}] ${message}" });
-            config.AddRule(LogLevel.Info, LogLevel.Fatal, new ToolStripStatusLabelTarget(form.LogToolStripStatusLabel) { Layout = "${message}" });
+            config.AddRule(LogLevel.Info, LogLevel.Fatal, new TextBoxTarget(HomeForm.LogTextBox) { Layout = "[${date}] [${level}] ${message}" });
+            config.AddRule(LogLevel.Info, LogLevel.Fatal, new ToolStripStatusLabelTarget(HomeForm.LogToolStripStatusLabel) { Layout = "${message}" });
             // And apply the configuration
             LogManager.Configuration = config;
 
             // And run the application with the form
-            Application.Run(form);
+            Application.Run(HomeForm);
             // Finally, return a status code of zero
             return 0;
         }
