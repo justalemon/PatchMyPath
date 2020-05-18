@@ -50,30 +50,6 @@ namespace PatchMyPath
             this.DestinationTextBox = new System.Windows.Forms.TextBox();
             this.LogTabPage = new System.Windows.Forms.TabPage();
             this.LogTextBox = new System.Windows.Forms.TextBox();
-            this.SettingsTabPage = new System.Windows.Forms.TabPage();
-            this.OtherSettingsGroupBox = new System.Windows.Forms.GroupBox();
-            this.DownloadFileListsButton = new System.Windows.Forms.Button();
-            this.LanguageGroupBox = new System.Windows.Forms.GroupBox();
-            this.LanguageComboBox = new System.Windows.Forms.ComboBox();
-            this.RDR2LocationGroupBox = new System.Windows.Forms.GroupBox();
-            this.RDR2LocationSaveButton = new System.Windows.Forms.Button();
-            this.RDR2LocationDetectButton = new System.Windows.Forms.Button();
-            this.RDR2LocationSelectButton = new System.Windows.Forms.Button();
-            this.RDR2LocationTextBox = new System.Windows.Forms.TextBox();
-            this.SteamGroupBox = new System.Windows.Forms.GroupBox();
-            this.RDR2ComboBox = new System.Windows.Forms.ComboBox();
-            this.GTAVComboBox = new System.Windows.Forms.ComboBox();
-            this.GTAVLabel = new System.Windows.Forms.Label();
-            this.IDGTAVTextBox = new System.Windows.Forms.TextBox();
-            this.SteamGTAVButton = new System.Windows.Forms.Button();
-            this.SteamRDR2Button = new System.Windows.Forms.Button();
-            this.RDR2Label = new System.Windows.Forms.Label();
-            this.IDRDR2TextBox = new System.Windows.Forms.TextBox();
-            this.GTAVLocationGroupBox = new System.Windows.Forms.GroupBox();
-            this.GTAVLocationSaveButton = new System.Windows.Forms.Button();
-            this.GTAVLocationDetectButton = new System.Windows.Forms.Button();
-            this.GTAVLocationSelectButton = new System.Windows.Forms.Button();
-            this.GTAVLocationTextBox = new System.Windows.Forms.TextBox();
             this.LicensesTabPage = new System.Windows.Forms.TabPage();
             this.LicensesRichTextBox = new System.Windows.Forms.RichTextBox();
             this.FolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
@@ -84,6 +60,7 @@ namespace PatchMyPath
             this.RefreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LogStatusStrip = new System.Windows.Forms.StatusStrip();
             this.LogToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.DuplicatorTabPage.SuspendLayout();
@@ -93,12 +70,6 @@ namespace PatchMyPath
             this.OriginGroupBox.SuspendLayout();
             this.DestinationGroupBox.SuspendLayout();
             this.LogTabPage.SuspendLayout();
-            this.SettingsTabPage.SuspendLayout();
-            this.OtherSettingsGroupBox.SuspendLayout();
-            this.LanguageGroupBox.SuspendLayout();
-            this.RDR2LocationGroupBox.SuspendLayout();
-            this.SteamGroupBox.SuspendLayout();
-            this.GTAVLocationGroupBox.SuspendLayout();
             this.LicensesTabPage.SuspendLayout();
             this.TopMenuStrip.SuspendLayout();
             this.LogStatusStrip.SuspendLayout();
@@ -110,7 +81,6 @@ namespace PatchMyPath
             this.GeneralTabControl.Controls.Add(this.InstallsTabPage);
             this.GeneralTabControl.Controls.Add(this.DuplicatorTabPage);
             this.GeneralTabControl.Controls.Add(this.LogTabPage);
-            this.GeneralTabControl.Controls.Add(this.SettingsTabPage);
             this.GeneralTabControl.Controls.Add(this.LicensesTabPage);
             this.GeneralTabControl.Name = "GeneralTabControl";
             this.GeneralTabControl.SelectedIndex = 0;
@@ -259,182 +229,6 @@ namespace PatchMyPath
             this.LogTextBox.Name = "LogTextBox";
             this.LogTextBox.ReadOnly = true;
             // 
-            // SettingsTabPage
-            // 
-            this.SettingsTabPage.Controls.Add(this.OtherSettingsGroupBox);
-            this.SettingsTabPage.Controls.Add(this.LanguageGroupBox);
-            this.SettingsTabPage.Controls.Add(this.RDR2LocationGroupBox);
-            this.SettingsTabPage.Controls.Add(this.SteamGroupBox);
-            this.SettingsTabPage.Controls.Add(this.GTAVLocationGroupBox);
-            resources.ApplyResources(this.SettingsTabPage, "SettingsTabPage");
-            this.SettingsTabPage.Name = "SettingsTabPage";
-            this.SettingsTabPage.UseVisualStyleBackColor = true;
-            // 
-            // OtherSettingsGroupBox
-            // 
-            resources.ApplyResources(this.OtherSettingsGroupBox, "OtherSettingsGroupBox");
-            this.OtherSettingsGroupBox.Controls.Add(this.DownloadFileListsButton);
-            this.OtherSettingsGroupBox.Name = "OtherSettingsGroupBox";
-            this.OtherSettingsGroupBox.TabStop = false;
-            // 
-            // DownloadFileListsButton
-            // 
-            resources.ApplyResources(this.DownloadFileListsButton, "DownloadFileListsButton");
-            this.DownloadFileListsButton.Name = "DownloadFileListsButton";
-            this.DownloadFileListsButton.UseVisualStyleBackColor = true;
-            this.DownloadFileListsButton.Click += new System.EventHandler(this.DownloadFileListsButton_Click);
-            // 
-            // LanguageGroupBox
-            // 
-            resources.ApplyResources(this.LanguageGroupBox, "LanguageGroupBox");
-            this.LanguageGroupBox.Controls.Add(this.LanguageComboBox);
-            this.LanguageGroupBox.Name = "LanguageGroupBox";
-            this.LanguageGroupBox.TabStop = false;
-            // 
-            // LanguageComboBox
-            // 
-            resources.ApplyResources(this.LanguageComboBox, "LanguageComboBox");
-            this.LanguageComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.LanguageComboBox.FormattingEnabled = true;
-            this.LanguageComboBox.Name = "LanguageComboBox";
-            this.LanguageComboBox.SelectedIndexChanged += new System.EventHandler(this.LanguageComboBox_SelectedIndexChanged);
-            // 
-            // RDR2LocationGroupBox
-            // 
-            resources.ApplyResources(this.RDR2LocationGroupBox, "RDR2LocationGroupBox");
-            this.RDR2LocationGroupBox.Controls.Add(this.RDR2LocationSaveButton);
-            this.RDR2LocationGroupBox.Controls.Add(this.RDR2LocationDetectButton);
-            this.RDR2LocationGroupBox.Controls.Add(this.RDR2LocationSelectButton);
-            this.RDR2LocationGroupBox.Controls.Add(this.RDR2LocationTextBox);
-            this.RDR2LocationGroupBox.Name = "RDR2LocationGroupBox";
-            this.RDR2LocationGroupBox.TabStop = false;
-            // 
-            // RDR2LocationSaveButton
-            // 
-            resources.ApplyResources(this.RDR2LocationSaveButton, "RDR2LocationSaveButton");
-            this.RDR2LocationSaveButton.Name = "RDR2LocationSaveButton";
-            this.RDR2LocationSaveButton.UseVisualStyleBackColor = true;
-            this.RDR2LocationSaveButton.Click += new System.EventHandler(this.RDR2LocationSaveButton_Click);
-            // 
-            // RDR2LocationDetectButton
-            // 
-            resources.ApplyResources(this.RDR2LocationDetectButton, "RDR2LocationDetectButton");
-            this.RDR2LocationDetectButton.Name = "RDR2LocationDetectButton";
-            this.RDR2LocationDetectButton.UseVisualStyleBackColor = true;
-            this.RDR2LocationDetectButton.Click += new System.EventHandler(this.RDR2LocationDetectButton_Click);
-            // 
-            // RDR2LocationSelectButton
-            // 
-            resources.ApplyResources(this.RDR2LocationSelectButton, "RDR2LocationSelectButton");
-            this.RDR2LocationSelectButton.Name = "RDR2LocationSelectButton";
-            this.RDR2LocationSelectButton.UseVisualStyleBackColor = true;
-            this.RDR2LocationSelectButton.Click += new System.EventHandler(this.RDR2LocationSelectButton_Click);
-            // 
-            // RDR2LocationTextBox
-            // 
-            resources.ApplyResources(this.RDR2LocationTextBox, "RDR2LocationTextBox");
-            this.RDR2LocationTextBox.Name = "RDR2LocationTextBox";
-            // 
-            // SteamGroupBox
-            // 
-            resources.ApplyResources(this.SteamGroupBox, "SteamGroupBox");
-            this.SteamGroupBox.Controls.Add(this.RDR2ComboBox);
-            this.SteamGroupBox.Controls.Add(this.GTAVComboBox);
-            this.SteamGroupBox.Controls.Add(this.GTAVLabel);
-            this.SteamGroupBox.Controls.Add(this.IDGTAVTextBox);
-            this.SteamGroupBox.Controls.Add(this.SteamGTAVButton);
-            this.SteamGroupBox.Controls.Add(this.SteamRDR2Button);
-            this.SteamGroupBox.Controls.Add(this.RDR2Label);
-            this.SteamGroupBox.Controls.Add(this.IDRDR2TextBox);
-            this.SteamGroupBox.Name = "SteamGroupBox";
-            this.SteamGroupBox.TabStop = false;
-            // 
-            // RDR2ComboBox
-            // 
-            this.RDR2ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.RDR2ComboBox.FormattingEnabled = true;
-            resources.ApplyResources(this.RDR2ComboBox, "RDR2ComboBox");
-            this.RDR2ComboBox.Name = "RDR2ComboBox";
-            this.RDR2ComboBox.SelectedIndexChanged += new System.EventHandler(this.RDR2ComboBox_SelectedIndexChanged);
-            // 
-            // GTAVComboBox
-            // 
-            this.GTAVComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.GTAVComboBox.FormattingEnabled = true;
-            resources.ApplyResources(this.GTAVComboBox, "GTAVComboBox");
-            this.GTAVComboBox.Name = "GTAVComboBox";
-            this.GTAVComboBox.SelectedIndexChanged += new System.EventHandler(this.GTAVComboBox_SelectedIndexChanged);
-            // 
-            // GTAVLabel
-            // 
-            resources.ApplyResources(this.GTAVLabel, "GTAVLabel");
-            this.GTAVLabel.Name = "GTAVLabel";
-            // 
-            // IDGTAVTextBox
-            // 
-            resources.ApplyResources(this.IDGTAVTextBox, "IDGTAVTextBox");
-            this.IDGTAVTextBox.Name = "IDGTAVTextBox";
-            // 
-            // SteamGTAVButton
-            // 
-            resources.ApplyResources(this.SteamGTAVButton, "SteamGTAVButton");
-            this.SteamGTAVButton.Name = "SteamGTAVButton";
-            this.SteamGTAVButton.UseVisualStyleBackColor = true;
-            this.SteamGTAVButton.Click += new System.EventHandler(this.SteamGTAVButton_Click);
-            // 
-            // SteamRDR2Button
-            // 
-            resources.ApplyResources(this.SteamRDR2Button, "SteamRDR2Button");
-            this.SteamRDR2Button.Name = "SteamRDR2Button";
-            this.SteamRDR2Button.UseVisualStyleBackColor = true;
-            this.SteamRDR2Button.Click += new System.EventHandler(this.SteamRDR2Button_Click);
-            // 
-            // RDR2Label
-            // 
-            resources.ApplyResources(this.RDR2Label, "RDR2Label");
-            this.RDR2Label.Name = "RDR2Label";
-            // 
-            // IDRDR2TextBox
-            // 
-            resources.ApplyResources(this.IDRDR2TextBox, "IDRDR2TextBox");
-            this.IDRDR2TextBox.Name = "IDRDR2TextBox";
-            // 
-            // GTAVLocationGroupBox
-            // 
-            resources.ApplyResources(this.GTAVLocationGroupBox, "GTAVLocationGroupBox");
-            this.GTAVLocationGroupBox.Controls.Add(this.GTAVLocationSaveButton);
-            this.GTAVLocationGroupBox.Controls.Add(this.GTAVLocationDetectButton);
-            this.GTAVLocationGroupBox.Controls.Add(this.GTAVLocationSelectButton);
-            this.GTAVLocationGroupBox.Controls.Add(this.GTAVLocationTextBox);
-            this.GTAVLocationGroupBox.Name = "GTAVLocationGroupBox";
-            this.GTAVLocationGroupBox.TabStop = false;
-            // 
-            // GTAVLocationSaveButton
-            // 
-            resources.ApplyResources(this.GTAVLocationSaveButton, "GTAVLocationSaveButton");
-            this.GTAVLocationSaveButton.Name = "GTAVLocationSaveButton";
-            this.GTAVLocationSaveButton.UseVisualStyleBackColor = true;
-            this.GTAVLocationSaveButton.Click += new System.EventHandler(this.GTAVLocationSaveButton_Click);
-            // 
-            // GTAVLocationDetectButton
-            // 
-            resources.ApplyResources(this.GTAVLocationDetectButton, "GTAVLocationDetectButton");
-            this.GTAVLocationDetectButton.Name = "GTAVLocationDetectButton";
-            this.GTAVLocationDetectButton.UseVisualStyleBackColor = true;
-            this.GTAVLocationDetectButton.Click += new System.EventHandler(this.GTAVLocationDetectButton_Click);
-            // 
-            // GTAVLocationSelectButton
-            // 
-            resources.ApplyResources(this.GTAVLocationSelectButton, "GTAVLocationSelectButton");
-            this.GTAVLocationSelectButton.Name = "GTAVLocationSelectButton";
-            this.GTAVLocationSelectButton.UseVisualStyleBackColor = true;
-            this.GTAVLocationSelectButton.Click += new System.EventHandler(this.GTAVLocationSelectButton_Click);
-            // 
-            // GTAVLocationTextBox
-            // 
-            resources.ApplyResources(this.GTAVLocationTextBox, "GTAVLocationTextBox");
-            this.GTAVLocationTextBox.Name = "GTAVLocationTextBox";
-            // 
             // LicensesTabPage
             // 
             this.LicensesTabPage.Controls.Add(this.LicensesRichTextBox);
@@ -457,7 +251,8 @@ namespace PatchMyPath
             this.LaunchToolStripMenuItem,
             this.AddToolStripMenuItem,
             this.RemoveToolStripMenuItem,
-            this.RefreshToolStripMenuItem});
+            this.RefreshToolStripMenuItem,
+            this.SettingsToolStripMenuItem});
             resources.ApplyResources(this.TopMenuStrip, "TopMenuStrip");
             this.TopMenuStrip.Name = "TopMenuStrip";
             // 
@@ -509,6 +304,15 @@ namespace PatchMyPath
             this.LogToolStripStatusLabel.Name = "LogToolStripStatusLabel";
             resources.ApplyResources(this.LogToolStripStatusLabel, "LogToolStripStatusLabel");
             // 
+            // SettingsToolStripMenuItem
+            // 
+            this.SettingsToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.SettingsToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.SettingsApplications;
+            this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
+            this.SettingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(2);
+            resources.ApplyResources(this.SettingsToolStripMenuItem, "SettingsToolStripMenuItem");
+            this.SettingsToolStripMenuItem.Click += new System.EventHandler(this.SettingsToolStripMenuItem_Click);
+            // 
             // Home
             // 
             resources.ApplyResources(this, "$this");
@@ -534,15 +338,6 @@ namespace PatchMyPath
             this.DestinationGroupBox.PerformLayout();
             this.LogTabPage.ResumeLayout(false);
             this.LogTabPage.PerformLayout();
-            this.SettingsTabPage.ResumeLayout(false);
-            this.OtherSettingsGroupBox.ResumeLayout(false);
-            this.LanguageGroupBox.ResumeLayout(false);
-            this.RDR2LocationGroupBox.ResumeLayout(false);
-            this.RDR2LocationGroupBox.PerformLayout();
-            this.SteamGroupBox.ResumeLayout(false);
-            this.SteamGroupBox.PerformLayout();
-            this.GTAVLocationGroupBox.ResumeLayout(false);
-            this.GTAVLocationGroupBox.PerformLayout();
             this.LicensesTabPage.ResumeLayout(false);
             this.TopMenuStrip.ResumeLayout(false);
             this.TopMenuStrip.PerformLayout();
@@ -576,40 +371,17 @@ namespace PatchMyPath
         private System.Windows.Forms.ToolStripMenuItem RemoveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RefreshToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem LaunchToolStripMenuItem;
-        private System.Windows.Forms.TabPage SettingsTabPage;
-        private System.Windows.Forms.GroupBox GTAVLocationGroupBox;
-        private System.Windows.Forms.Button GTAVLocationSelectButton;
-        private System.Windows.Forms.TextBox GTAVLocationTextBox;
-        private System.Windows.Forms.Button GTAVLocationDetectButton;
-        private System.Windows.Forms.Button GTAVLocationSaveButton;
-        private System.Windows.Forms.GroupBox SteamGroupBox;
-        private System.Windows.Forms.Button SteamRDR2Button;
-        private System.Windows.Forms.TextBox IDRDR2TextBox;
-        private System.Windows.Forms.Label RDR2Label;
         private System.Windows.Forms.GroupBox GameGroupBox;
         private System.Windows.Forms.ComboBox GameComboBox;
-        private System.Windows.Forms.GroupBox RDR2LocationGroupBox;
-        private System.Windows.Forms.Button RDR2LocationSaveButton;
-        private System.Windows.Forms.Button RDR2LocationDetectButton;
-        private System.Windows.Forms.Button RDR2LocationSelectButton;
-        private System.Windows.Forms.TextBox RDR2LocationTextBox;
-        private System.Windows.Forms.Label GTAVLabel;
-        private System.Windows.Forms.TextBox IDGTAVTextBox;
-        private System.Windows.Forms.Button SteamGTAVButton;
         private System.Windows.Forms.ProgressBar DuplicationProgressBar;
         private System.Windows.Forms.GroupBox OtherGroupBox;
-        private System.Windows.Forms.GroupBox LanguageGroupBox;
-        private System.Windows.Forms.ComboBox LanguageComboBox;
-        private System.Windows.Forms.ComboBox RDR2ComboBox;
-        private System.Windows.Forms.ComboBox GTAVComboBox;
-        private System.Windows.Forms.GroupBox OtherSettingsGroupBox;
-        private System.Windows.Forms.Button DownloadFileListsButton;
         private System.Windows.Forms.TabPage LogTabPage;
         internal System.Windows.Forms.TextBox LogTextBox;
         private System.Windows.Forms.TabPage LicensesTabPage;
         private System.Windows.Forms.RichTextBox LicensesRichTextBox;
         private System.Windows.Forms.StatusStrip LogStatusStrip;
         internal System.Windows.Forms.ToolStripStatusLabel LogToolStripStatusLabel;
+        private System.Windows.Forms.ToolStripMenuItem SettingsToolStripMenuItem;
     }
 }
 

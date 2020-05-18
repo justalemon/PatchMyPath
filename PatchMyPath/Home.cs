@@ -4,7 +4,6 @@ using PatchMyPath.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -41,14 +40,6 @@ namespace PatchMyPath
             InitializeComponent();
             // And lock the UI elements
             Locked = true;
-
-            // Iterate over the launcher types
-            foreach (string value in Enum.GetNames(typeof(LauncherType)))
-            {
-                // Add the item into the combo box
-                RDR2ComboBox.Items.Add(value.SpaceOnUpperCase());
-                GTAVComboBox.Items.Add(value.SpaceOnUpperCase());
-            }
             
             // Iterate over the games supported
             foreach (string value in Enum.GetNames(typeof(Game)))
@@ -60,14 +51,6 @@ namespace PatchMyPath
                     GameComboBox.Items.Add(value.SpaceOnUpperCase());
                 }
             }
-
-            // Add the supported languages into the ComboBox
-            foreach (CultureInfo culture in Program.Cultures)
-            {
-                LanguageComboBox.Items.Add(culture.NativeName);
-            }
-            // And select the correct one
-            LanguageComboBox.SelectedIndex = LanguageComboBox.FindStringExact(Program.Config.Language.NativeName);
         }
 
         #endregion
@@ -106,14 +89,6 @@ namespace PatchMyPath
         {
             // Just load the settings from the program configuration
             AutoAddCheckBox.Checked = Program.Config.AddAfterDupe;
-
-            RDR2LocationTextBox.Text = Program.Config.Destination.RDR2;
-            GTAVLocationTextBox.Text = Program.Config.Destination.GTAV;
-            RDR2ComboBox.SelectedIndex = (int)Program.Config.Launchers.RDR2Use;
-            GTAVComboBox.SelectedIndex = (int)Program.Config.Launchers.GTAVUse;
-
-            // And log that we have finished
-            Logger.Debug(Resources.FormSettingsLoadLog);
         }
 
         #endregion
@@ -174,6 +149,12 @@ namespace PatchMyPath
         {
             // Just refresh the list of installs
             RefreshInstalls();
+        }
+
+        private void SettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Open the settings form as a dialog
+            Program.ConfigForm.ShowDialog();
         }
 
         #endregion
@@ -395,317 +376,6 @@ namespace PatchMyPath
 
         #endregion
 
-        #region Settings - Language
-
-        private void LanguageComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // If there is nothing selected, return
-            if (LanguageComboBox.SelectedItem == null)
-            {
-                return;
-            }
-
-            // Iterate over the supported languages
-            foreach (CultureInfo culture in Program.Cultures)
-            {
-                // If the name matches
-                if (culture.NativeName == LanguageComboBox.SelectedItem.ToString())
-                {
-                    // Set the culture on the configuration and save it
-                    Program.Config.Language = culture;
-                    Program.Config.Save();
-                    // If the form is visible, show a message about the change
-                    if (Visible)
-                    {
-                        MessageBox.Show(Resources.SettingsLanguageChanged, Resources.SettingsLanguageChangedTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    // And return
-                    return;
-                }
-            }
-        }
-
-        #endregion
-
-        #region Settings - GTA V
-
-        private void GTAVLocationSelectButton_Click(object sender, EventArgs e)
-        {
-            // Show the folder browse dialog
-            DialogResult result = FolderBrowser.ShowDialog();
-
-            // If the user confirmed the folder selection, save it on the text field
-            if (result == DialogResult.OK)
-            {
-                GTAVLocationTextBox.Text = FolderBrowser.SelectedPath;
-            }
-        }
-
-        private void GTAVLocationDetectButton_Click(object sender, EventArgs e)
-        {
-            // Try to get the path from the Uninstall Information
-            string uninstall = Paths.GTAV.UninstallLocation;
-            // If is not null
-            if (uninstall != null)
-            {
-                // Set the text
-                GTAVLocationTextBox.Text = uninstall;
-                // Notify the user
-                MessageBox.Show(Resources.SettingsPathUninstall, Resources.SettingsPathUninstallTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // Log it
-                Logger.Info(string.Format(Resources.SettingsPathFoundLog, Resources.GameGTAV, uninstall), uninstall);
-                // And return
-                return;
-            }
-
-            // If we got here, try with the legacy Rockstar Warehouse location
-            string warehouse = Paths.GTAV.WarehouseLocation;
-            // If is not null
-            if (warehouse != null)
-            {
-                // Set the text
-                GTAVLocationTextBox.Text = warehouse;
-                // Notify the user
-                MessageBox.Show(Resources.SettingsPathWarehouse, Resources.SettingsPathWarehouseTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // Log it
-                Logger.Info(string.Format(Resources.SettingsPathFoundLog, Resources.GameGTAV, uninstall), warehouse);
-                // And return
-                return;
-            }
-
-            // If we got here, we were unable to fetch the default folder
-            MessageBox.Show(Resources.SettingsPathNotFound, Resources.SettingsPathNotFoundTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void GTAVLocationSaveButton_Click(object sender, EventArgs e)
-        {
-            // Get the original paths for both locations
-            string providedPath = GTAVLocationTextBox.Text.TrimEnd('\\');
-            string realPath = Links.GetRealPath(GTAVLocationTextBox.Text).TrimEnd('\\');
-
-            // If the selected folder matches the real folder, this might be the original game folder
-            if (providedPath == realPath)
-            {
-                // Ask the user if he wants to rename it
-                DialogResult result = MessageBox.Show(Resources.SettingsPathRename, Resources.SettingsPathRenameTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                // If he does, do it
-                if (result == DialogResult.Yes)
-                {
-                    string newPath = providedPath + " - Clean";
-                    Logger.Info(Resources.SettingsPathRenameLog, providedPath, newPath);
-                    try
-                    {
-                        Directory.Move(providedPath, newPath);
-                        Links.CreateSymbolicLink(providedPath, newPath, 3);
-                        AddInstall(new Install(newPath));
-                    }
-                    catch (IOException)
-                    {
-                        MessageBox.Show(string.Format(Resources.SettingsAccessDenied, providedPath), Resources.SettingsAccessDeniedTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        Logger.Error(string.Format(Resources.SettingsAccessDeniedLog, providedPath));
-                        return;
-                    }
-                }
-            }
-            
-            // Log it
-            Logger.Info(Resources.SettingsPathSetLog, Resources.GameGTAV, providedPath);
-            // Replace the existing TextBox value
-            GTAVLocationTextBox.Text = providedPath;
-            // And save the location
-            Program.Config.Destination.GTAV = providedPath;
-            Program.Config.Save();
-        }
-
-        #endregion
-
-        #region Settings - RDR 2
-
-        private void RDR2LocationSelectButton_Click(object sender, EventArgs e)
-        {
-            // Show the folder browse dialog
-            DialogResult result = FolderBrowser.ShowDialog();
-
-            // If the user confirmed the folder selection, save it on the text field
-            if (result == DialogResult.OK)
-            {
-                RDR2LocationTextBox.Text = FolderBrowser.SelectedPath;
-            }
-        }
-
-        private void RDR2LocationDetectButton_Click(object sender, EventArgs e)
-        {
-            // Try to get the path from the Uninstall Information
-            string uninstall = Paths.RDR2.UninstallLocation;
-            // If is not null
-            if (uninstall != null)
-            {
-                // Set the text
-                RDR2LocationTextBox.Text = uninstall;
-                // Notify the user
-                MessageBox.Show(Resources.SettingsPathUninstall, Resources.SettingsPathUninstallTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // Log it
-                Logger.Info(string.Format(Resources.SettingsPathFoundLog, Resources.GameRDR2, uninstall), uninstall);
-                // And return
-                return;
-            }
-
-            // If we got here, we were unable to fetch the default folder
-            MessageBox.Show(Resources.SettingsPathNotFound, Resources.SettingsPathNotFoundTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void RDR2LocationSaveButton_Click(object sender, EventArgs e)
-        {
-            // Get the original paths for both locations
-            string providedPath = RDR2LocationTextBox.Text.TrimEnd('\\');
-            string realPath = Links.GetRealPath(RDR2LocationTextBox.Text).TrimEnd('\\');
-
-            // If the selected folder matches the real folder, this might be the original game folder
-            if (providedPath == realPath)
-            {
-                // Ask the user if he wants to rename it
-                DialogResult result = MessageBox.Show(Resources.SettingsPathRename, Resources.SettingsPathRenameTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                // If he does, do it
-                if (result == DialogResult.Yes)
-                {
-                    string newPath = providedPath + " - Clean";
-                    Logger.Info(Resources.SettingsPathRenameLog, providedPath, newPath);
-                    try
-                    {
-                        Directory.Move(providedPath, newPath);
-                        Links.CreateSymbolicLink(providedPath, newPath, 3);
-                        AddInstall(new Install(newPath));
-                    }
-                    catch (IOException)
-                    {
-                        MessageBox.Show(string.Format(Resources.SettingsAccessDenied, providedPath), Resources.SettingsAccessDeniedTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        Logger.Error(string.Format(Resources.SettingsAccessDeniedLog, providedPath));
-                        return;
-                    }
-                }
-            }
-
-            // Log it
-            Logger.Info(Resources.SettingsPathSetLog, Resources.GameGTAV, providedPath);
-            // Replace the existing TextBox value
-            RDR2LocationTextBox.Text = providedPath;
-            // And save the location
-            Program.Config.Destination.RDR2 = providedPath;
-            Program.Config.Save();
-        }
-
-        #endregion
-
-        #region Settings - Launcher
-
-        private void RDR2ComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Cast the selected index to an enum and set the appropiate ID
-            switch ((LauncherType)RDR2ComboBox.SelectedIndex)
-            {
-                case LauncherType.Executable:
-                case LauncherType.RockstarGamesLauncher:
-                    IDRDR2TextBox.Text = string.Empty;
-                    IDRDR2TextBox.Enabled = false;
-                    break;
-                case LauncherType.Steam:
-                    IDRDR2TextBox.Text = Program.Config.Launchers.RDR2SteamID.ToString();
-                    IDRDR2TextBox.Enabled = true;
-                    break;
-                case LauncherType.EpicGamesStore:
-                    IDRDR2TextBox.Text = Program.Config.Launchers.RDR2EpicID;
-                    IDRDR2TextBox.Enabled = true;
-                    break;
-            }
-        }
-
-        private void SteamRDR2Button_Click(object sender, EventArgs e)
-        {
-            // Cast the choosen type to an enum
-            LauncherType type = (LauncherType)RDR2ComboBox.SelectedIndex;
-
-            // If the type is set to steam
-            if (type == LauncherType.Steam)
-            {
-                // Try to parse the number as an uint
-                // If we failed, notify the user and return
-                if (!ulong.TryParse(IDRDR2TextBox.Text, out ulong output))
-                {
-                    MessageBox.Show(string.Format(Resources.SettingsInvalidID, IDRDR2TextBox.Text, ulong.MaxValue));
-                    return;
-                }
-                // If we managed to parse the number, save it
-                Program.Config.Launchers.RDR2SteamID = output;
-            }
-            // If the type is set to Epic Games
-            else if (type == LauncherType.EpicGamesStore)
-            {
-                // Just save the string
-                // If we managed to parse the number, save it
-                Program.Config.Launchers.RDR2EpicID = IDRDR2TextBox.Text;
-            }
-
-            // Finally, save the selected launcher type
-            Program.Config.Launchers.RDR2Use = type;
-            Program.Config.Save();
-        }
-
-        private void GTAVComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Cast the selected index to an enum and set the appropiate ID
-            switch ((LauncherType)GTAVComboBox.SelectedIndex)
-            {
-                case LauncherType.Executable:
-                case LauncherType.RockstarGamesLauncher:
-                    IDGTAVTextBox.Text = string.Empty;
-                    IDGTAVTextBox.Enabled = false;
-                    break;
-                case LauncherType.Steam:
-                    IDGTAVTextBox.Text = Program.Config.Launchers.GTAVSteamID.ToString();
-                    IDGTAVTextBox.Enabled = true;
-                    break;
-                case LauncherType.EpicGamesStore:
-                    IDGTAVTextBox.Text = Program.Config.Launchers.GTAVEpicID;
-                    IDGTAVTextBox.Enabled = true;
-                    break;
-            }
-        }
-
-        private void SteamGTAVButton_Click(object sender, EventArgs e)
-        {
-            // Cast the choosen type to an enum
-            LauncherType type = (LauncherType)GTAVComboBox.SelectedIndex;
-
-            // If the type is set to steam
-            if (type == LauncherType.Steam)
-            {
-                // Try to parse the number as an uint
-                // If we failed, notify the user and return
-                if (!ulong.TryParse(IDGTAVTextBox.Text, out ulong output))
-                {
-                    MessageBox.Show(string.Format(Resources.SettingsInvalidID, IDGTAVTextBox.Text, ulong.MaxValue));
-                    return;
-                }
-                // If we managed to parse the number, save it
-                Program.Config.Launchers.GTAVSteamID = output;
-            }
-            // If the type is set to Epic Games
-            else if (type == LauncherType.EpicGamesStore)
-            {
-                // Just save the string
-                // If we managed to parse the number, save it
-                Program.Config.Launchers.GTAVEpicID = IDGTAVTextBox.Text;
-            }
-
-            // Finally, save the selected launcher type
-            Program.Config.Launchers.GTAVUse = type;
-            Program.Config.Save();
-        }
-
-        #endregion
-
         #region Other
 
         private void Home_Load(object sender, EventArgs e)
@@ -728,17 +398,6 @@ namespace PatchMyPath
         {
             // If there is no selected item, lock the UI elements
             Locked = InstallsListBox.SelectedItem == null;
-        }
-
-        private void DownloadFileListsButton_Click(object sender, EventArgs e)
-        {
-            // Ask the user if he is sure about this
-            DialogResult result = MessageBox.Show(Resources.SettingsOtherDownload, Resources.SettingsOtherDownloadTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            // If he does, force the redownload of the files
-            if (result == DialogResult.Yes)
-            {
-                ListManager.Populate(true);
-            }
         }
 
         #endregion
