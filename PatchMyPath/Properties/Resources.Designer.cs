@@ -690,6 +690,16 @@ namespace PatchMyPath.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SettingsApplications {
+            get {
+                object obj = ResourceManager.GetObject("SettingsApplications", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &quot;{0}&quot; is not a valid number or is too big to be processed (max value is {1})..
         /// </summary>
         internal static string SettingsInvalidID {

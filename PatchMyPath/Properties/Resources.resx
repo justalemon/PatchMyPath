@@ -335,6 +335,9 @@ Please make sure that the folder contains a copy of RDR2 or GTAV and try again.<
   <data name="SettingsAccessDeniedTitle" xml:space="preserve">
     <value>Access denied</value>
   </data>
+  <data name="SettingsApplications" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SettingsApplications.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SettingsInvalidID" xml:space="preserve">
     <value>"{0}" is not a valid number or is too big to be processed (max value is {1}).</value>
   </data>
