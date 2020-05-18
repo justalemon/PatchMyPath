@@ -54,43 +54,66 @@ namespace PatchMyPath.Config
         {
             get
             {
-                // If there is a RagePluginHook.exe on the folder, this is RPH
-                if (File.Exists(Path.Combine(GamePath, "RAGEPluginHook.exe")))
+                switch (Game)
                 {
-                    return Launch.RagePluginHook;
+                    case Game.RedDeadRedemption2:
+                        if (File.Exists(Path.Combine(GamePath, "RedHook2", "Loader.exe")))
+                        {
+                            return Launch.RedHook2;
+                        }
+                        else if (File.Exists(Path.Combine(GamePath, "ScriptHook", "rdr2d.exe")))
+                        {
+                            return Launch.ScriptHook;
+                        }
+                        else if (File.Exists(Path.Combine(GamePath, "RDR2.exe")))
+                        {
+                            return Launch.Normal;
+                        }
+                        break;
+                    case Game.GrandTheftAutoIV:
+                        if (File.Exists(Path.Combine(GamePath, "LaunchGTAIV.exe")) || File.Exists(Path.Combine(GamePath, "GTAIV.exe")))
+                        {
+                            return Launch.Normal;
+                        }
+                        break;
+                    case Game.GrandTheftAutoV:
+                        if (File.Exists(Path.Combine(GamePath, "RAGEPluginHook.exe")))
+                        {
+                            return Launch.RagePluginHook;
+                        }
+                        else if (File.Exists(Path.Combine(GamePath, "GTA5.exe")) && File.Exists(Path.Combine(GamePath, "GTAVLauncherBypass.asi")))
+                        {
+                            return Launch.LauncherBypass;
+                        }
+                        else if (File.Exists(Path.Combine(GamePath, "GTAVLauncher.exe")) || File.Exists(Path.Combine(GamePath, "PlayGTAV.exe")))
+                        {
+                            return Launch.Normal;
+                        }
+                        break;
                 }
-                // If there is a GTA5.exe and GTAVLauncherBypass.asi but is not from Steam, let the user start via Unknown's Magic Tool
-                else if (File.Exists(Path.Combine(GamePath, "GTA5.exe")) && File.Exists(Path.Combine(GamePath, "GTAVLauncherBypass.asi")))
-                {
-                    return Launch.LauncherBypass;
-                }
-                // If RedHook2\Loader.exe is present, this is Dot's RH2
-                else if (File.Exists(Path.Combine(GamePath, "RedHook2", "Loader.exe")))
-                {
-                    return Launch.RedHook2;
-                }
-                // If ScriptHook\rdr2d.exe is present, this is Dot's RH2
-                else if (File.Exists(Path.Combine(GamePath, "ScriptHook", "rdr2d.exe")))
-                {
-                    return Launch.ScriptHook;
-                }
-                // If we got here, there is no alternative way to launch the game other than the main executabke
-                else if (File.Exists(Path.Combine(GamePath, "GTAVLauncher.exe")) || File.Exists(Path.Combine(GamePath, "PlayGTAV.exe")) || File.Exists(Path.Combine(GamePath, "RDR2.exe")))
-                {
-                    return Launch.Normal;
-                }
-                // Also, if there is no executable just mark the install as invalid
-                else
-                {
-                    return Launch.Invalid;
-                }
+                return Launch.Invalid;
             }
         }
         /// <summary>
         /// If the game executables are tampered or not.
         /// </summary>
-        [JsonIgnore]
-        public bool IsLegal => Checks.IsFileSignedByRockstar(Path.Combine(GamePath, "GTA5.exe")) || Checks.IsFileSignedByRockstar(Path.Combine(GamePath, "RDR2.exe"));
+        public bool IsLegal
+        {
+            get
+            {
+                switch (Game)
+                {
+                    case Game.RedDeadRedemption2:
+                        return Checks.IsFileSignedByRockstar(Path.Combine(GamePath, "RDR2.exe"));
+                    case Game.GrandTheftAutoIV:
+                        return Checks.IsFileSignedByRockstar(Path.Combine(GamePath, "GTAIV.exe")) || Checks.IsFileSignedByRockstar(Path.Combine(GamePath, "gta4Browser.exe"));
+                    case Game.GrandTheftAutoV:
+                        return Checks.IsFileSignedByRockstar(Path.Combine(GamePath, "GTA5.exe"));
+                    default:
+                        return false;
+                }
+            }
+        }
 
         public Install(string path)
         {
