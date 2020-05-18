@@ -14,11 +14,11 @@ namespace PatchMyPath
             // Now, iterate over the name of the game on the enum
             foreach (char character in str)
             {
-                // If the character is numeric or uppercase and there are characters on the builder
-                if ((char.IsDigit(character) || char.IsUpper(character)) && builder.Length != 0)
+                // If the character is numeric or uppercase, the last character is lowercase and there are characters on the builder
+                if ((char.IsDigit(character) || char.IsUpper(character)) && builder.Length != 0 && char.IsLower(builder[builder.Length - 1]))
                 {
                     // Add a space on the builder
-                    builder.Append(" ");
+                    builder.Append(' ');
                 }
 
                 // Then, append the character
