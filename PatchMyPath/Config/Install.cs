@@ -33,6 +33,10 @@ namespace PatchMyPath.Config
                 {
                     return Game.RedDeadRedemption2;
                 }
+                else if (File.Exists(Path.Combine(GamePath, "GTAIV.exe")) || File.Exists(Path.Combine(GamePath, "LaunchGTAIV.exe")))
+                {
+                    return Game.GrandTheftAutoIV;
+                }
                 else if (File.Exists(Path.Combine(GamePath, "GTA5.exe")))
                 {
                     return Game.GrandTheftAutoV;

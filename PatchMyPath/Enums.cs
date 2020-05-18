@@ -47,9 +47,13 @@ namespace PatchMyPath
         /// </summary>
         RedDeadRedemption2 = 0,
         /// <summary>
+        /// Grand Theft Auto IV.
+        /// </summary>
+        GrandTheftAutoIV = 1,
+        /// <summary>
         /// Grand Theft Auto V.
         /// </summary>
-        GrandTheftAutoV = 1,
+        GrandTheftAutoV = 2,
     }
 
     /// <summary>
