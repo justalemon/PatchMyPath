@@ -123,9 +123,6 @@
   <data name="DestinationGroupBox.Text" xml:space="preserve">
     <value>Destino</value>
   </data>
-  <data name="DownloadFileListsButton.Text" xml:space="preserve">
-    <value>Descargar Listas de Archivos Actualizadas</value>
-  </data>
   <data name="DuplicateButton.Text" xml:space="preserve">
     <value>Duplicar Carpeta del Juego</value>
   </data>
@@ -135,26 +132,11 @@
   <data name="GameGroupBox.Text" xml:space="preserve">
     <value>Juego</value>
   </data>
-  <data name="GTAVLocationDetectButton.Text" xml:space="preserve">
-    <value>Detectar</value>
-  </data>
-  <data name="GTAVLocationGroupBox.Text" xml:space="preserve">
-    <value>Ubicacion de Grand Theft Auto V</value>
-  </data>
-  <data name="GTAVLocationSaveButton.Text" xml:space="preserve">
-    <value>Guardar</value>
-  </data>
-  <data name="GTAVLocationSelectButton.Text" xml:space="preserve">
-    <value>Elegir</value>
-  </data>
   <data name="HardRadioButton.Text" xml:space="preserve">
     <value>Duro para Archivos y Enlaces Simbolico para Carpetas (Todas las Versiones)</value>
   </data>
   <data name="InstallsTabPage.Text" xml:space="preserve">
     <value>Instalaciones</value>
-  </data>
-  <data name="LanguageGroupBox.Text" xml:space="preserve">
-    <value>Idioma</value>
   </data>
   <data name="LinkTypeGroupBox.Text" xml:space="preserve">
     <value>Tipo de Enlace</value>
@@ -165,34 +147,31 @@
   <data name="OtherGroupBox.Text" xml:space="preserve">
     <value>Otras Opciones</value>
   </data>
-  <data name="OtherSettingsGroupBox.Text" xml:space="preserve">
-    <value>Otros</value>
-  </data>
-  <data name="RDR2LocationDetectButton.Text" xml:space="preserve">
-    <value>Detectar</value>
-  </data>
-  <data name="RDR2LocationGroupBox.Text" xml:space="preserve">
-    <value>Ubicacion de Red Dead Redemption 2</value>
-  </data>
-  <data name="RDR2LocationSaveButton.Text" xml:space="preserve">
-    <value>Guardar</value>
-  </data>
-  <data name="RDR2LocationSelectButton.Text" xml:space="preserve">
-    <value>Elegir</value>
-  </data>
-  <data name="SettingsTabPage.Text" xml:space="preserve">
-    <value>Ajustes</value>
-  </data>
-  <data name="SteamGroupBox.Text" xml:space="preserve">
-    <value>Lanzador del Juego</value>
-  </data>
-  <data name="SteamGTAVButton.Text" xml:space="preserve">
-    <value>Guardar</value>
-  </data>
-  <data name="SteamRDR2Button.Text" xml:space="preserve">
-    <value>Guardar</value>
-  </data>
   <data name="SymbolicRadioButton.Text" xml:space="preserve">
     <value>Simbolico para Archivos y Carpetas (Steam y pre Rockstar Games Launcher solamente)</value>
+  </data>
+  <data name="OriginSelectButton.Text" xml:space="preserve">
+    <value>Seleccionar</value>
+  </data>
+  <data name="DestinationSelectButton.Text" xml:space="preserve">
+    <value>Seleccionar</value>
+  </data>
+  <data name="LicensesTabPage.Text" xml:space="preserve">
+    <value>Licencias</value>
+  </data>
+  <data name="LaunchToolStripMenuItem.Text" xml:space="preserve">
+    <value>Iniciar</value>
+  </data>
+  <data name="AddToolStripMenuItem.Text" xml:space="preserve">
+    <value>Añadir</value>
+  </data>
+  <data name="RemoveToolStripMenuItem.Text" xml:space="preserve">
+    <value>Remover</value>
+  </data>
+  <data name="RefreshToolStripMenuItem.Text" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="SettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Configuracion</value>
   </data>
 </root>
