@@ -146,15 +146,6 @@ Press No if you want to manually check the file.
   <data name="ConfigNotParsedLog" xml:space="preserve">
     <value>Unable to parse configuration: {0}</value>
   </data>
-  <data name="ConfigSavedLog" xml:space="preserve">
-    <value>Configuration saved</value>
-  </data>
-  <data name="ConfigSavingLog" xml:space="preserve">
-    <value>Attempting to save configuration...</value>
-  </data>
-  <data name="DuplicatorAddedLog" xml:space="preserve">
-    <value>Duplicated install {0} got added into the list</value>
-  </data>
   <data name="DuplicatorCompleted" xml:space="preserve">
     <value>The install has been duplicated successfully!</value>
   </data>
@@ -423,8 +414,5 @@ Do you want to rename it? (To prevent the game from being deleted/overwritten)</
   </data>
   <data name="SymbolicLinkErrorTitle" xml:space="preserve">
     <value>Unable to create Symbolic Link</value>
-  </data>
-  <data name="UILockedLog" xml:space="preserve">
-    <value>UI Locked status set to {0}</value>
   </data>
 </root>

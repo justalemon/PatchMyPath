@@ -139,33 +139,6 @@ namespace PatchMyPath.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Configuration saved.
-        /// </summary>
-        internal static string ConfigSavedLog {
-            get {
-                return ResourceManager.GetString("ConfigSavedLog", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Attempting to save configuration....
-        /// </summary>
-        internal static string ConfigSavingLog {
-            get {
-                return ResourceManager.GetString("ConfigSavingLog", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Duplicated install {0} got added into the list.
-        /// </summary>
-        internal static string DuplicatorAddedLog {
-            get {
-                return ResourceManager.GetString("DuplicatorAddedLog", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to The install has been duplicated successfully!.
         /// </summary>
         internal static string DuplicatorCompleted {
@@ -944,15 +917,6 @@ namespace PatchMyPath.Properties {
         internal static string SymbolicLinkErrorTitle {
             get {
                 return ResourceManager.GetString("SymbolicLinkErrorTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to UI Locked status set to {0}.
-        /// </summary>
-        internal static string UILockedLog {
-            get {
-                return ResourceManager.GetString("UILockedLog", resourceCulture);
             }
         }
     }
