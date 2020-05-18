@@ -65,8 +65,8 @@ namespace PatchMyPath
 
         private void LanguageComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // If there is nothing selected, return
-            if (LanguageComboBox.SelectedItem == null)
+            // If there is nothing selected or the form is not visible, return
+            if (LanguageComboBox.SelectedItem == null || !Visible)
             {
                 return;
             }
