@@ -34,6 +34,10 @@ namespace PatchMyPath
         /// The form used for the main operations.
         /// </summary>
         public static Home HomeForm = null;
+        /// <summary>
+        /// Form that allows the user to configure the application.
+        /// </summary>
+        public static FormConfig ConfigForm = null;
 
         /// <summary>
         /// The main entry point for the application.
@@ -50,8 +54,9 @@ namespace PatchMyPath
             Thread.CurrentThread.CurrentUICulture = Config.Language;
             // Log that we are creating a new instance of the form
             Logger.Trace(Resources.FormCreatingLog);
-            // An a new home formulary
+            // Create the forms
             HomeForm = new Home();
+            ConfigForm = new FormConfig();
             // Log that we have loaded everything
             Logger.Debug(Resources.FormInitEndLog);
 
