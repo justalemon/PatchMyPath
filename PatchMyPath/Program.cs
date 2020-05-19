@@ -1,14 +1,15 @@
-﻿using Lemon.NLog.WinForms;
+﻿using Bugsnag;
+using Lemon.NLog.WinForms;
 using NLog;
 using NLog.Config;
 using NLog.Targets;
-using PatchMyPath.Config;
 using PatchMyPath.Properties;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading;
 using System.Windows.Forms;
+using Configuration = PatchMyPath.Config.Configuration;
 
 namespace PatchMyPath
 {
@@ -18,6 +19,10 @@ namespace PatchMyPath
         /// The logger for the current class.
         /// </summary>
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
+        /// <summary>
+        /// The Bugsnag client used for reporting exceptions.
+        /// </summary>
+        public static Client Bugsnag = null;
         /// <summary>
         /// The list of supported culture languages.
         /// </summary>
@@ -52,6 +57,26 @@ namespace PatchMyPath
 
             // Set the culture to the one from the config
             Thread.CurrentThread.CurrentUICulture = Config.Language;
+
+            // If this is the first time that the program has been launched
+            if (Config.FirstLaunch)
+            {
+                // Ask for consent to use Bugsnag (you know, GDPR)
+                DialogResult result = MessageBox.Show(Resources.BugsnagConsent, Resources.BugsnagConsentTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                // And save the answer
+                Config.Bugsnag = result == DialogResult.Yes;
+
+                // Once we are done, save the configuration
+                Config.FirstLaunch = false;
+                Config.Save();
+            }
+
+            // If Bugsnag is enabled, create the client and save it if we need it
+            if (Config.Bugsnag)
+            {
+                Bugsnag = new Client(new Bugsnag.Configuration("05841a867334bebcf5e3a9898c5a5191"));
+            }
+
             // Log that we are creating a new instance of the form
             Logger.Trace(Resources.FormCreatingLog);
             // Create the forms

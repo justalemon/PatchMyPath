@@ -71,6 +71,26 @@ namespace PatchMyPath.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Do you want to enable Bugsnag for reporting bugs?
+        ///
+        ///You can read the Privacy policy on https://justalemon.ml/Privacy_policy.
+        /// </summary>
+        internal static string BugsnagConsent {
+            get {
+                return ResourceManager.GetString("BugsnagConsent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bugsnag.
+        /// </summary>
+        internal static string BugsnagConsentTitle {
+            get {
+                return ResourceManager.GetString("BugsnagConsentTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Clear {

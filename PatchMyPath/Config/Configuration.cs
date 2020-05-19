@@ -28,6 +28,11 @@ namespace PatchMyPath.Config
         [JsonProperty("first_launch")]
         public bool FirstLaunch { get; set; } = true;
         /// <summary>
+        /// If we have consent to report exceptions via Bugsnag.
+        /// </summary>
+        [JsonProperty("bugsnag")]
+        public bool Bugsnag { get; set; } = false;
+        /// <summary>
         /// The language of the program.
         /// </summary>
         [JsonProperty("language")]

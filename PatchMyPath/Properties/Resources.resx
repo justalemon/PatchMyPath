@@ -415,4 +415,12 @@ Do you want to rename it? (To prevent the game from being deleted/overwritten)</
   <data name="SymbolicLinkErrorTitle" xml:space="preserve">
     <value>Unable to create Symbolic Link</value>
   </data>
+  <data name="BugsnagConsent" xml:space="preserve">
+    <value>Do you want to enable Bugsnag for reporting bugs?
+
+You can read the Privacy policy on https://justalemon.ml/Privacy_policy</value>
+  </data>
+  <data name="BugsnagConsentTitle" xml:space="preserve">
+    <value>Bugsnag</value>
+  </data>
 </root>

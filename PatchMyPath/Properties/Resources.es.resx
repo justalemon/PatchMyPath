@@ -261,4 +261,9 @@ Por favor asegurate de que el juego fue instalado desde RGL, Steam o EGL e inten
   <data name="SymbolicLinkErrorTitle" xml:space="preserve">
     <value>No se puede crear un enlace simbolico</value>
   </data>
+  <data name="BugsnagConsent" xml:space="preserve">
+    <value>¿Deseas activar Bugsnag para reportar bugs?
+
+Puedes leer la Politica de privacidad en https://justalemon.ml/Privacy_policy</value>
+  </data>
 </root>
