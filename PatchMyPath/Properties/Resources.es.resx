@@ -199,11 +199,11 @@ Por favor asegurate de que estos no han sido modificados e intenta nuevamente.</
     <value>Ejecutables manipulados</value>
   </data>
   <data name="InstallWrongGame" xml:space="preserve">
-    <value>¡Esta version del juego es invalida!
-Por favor asegurate de que esta carpeta contiene una copia de RDR2 o GTA V e intenta nuevamente.</value>
+    <value>¡No has configurado la ubicacion de {0}!
+Por favor revisa la configuracion y asegurate de que el juego tiene la ubicacion de la instalacion e intenta nuevamente.</value>
   </data>
   <data name="InstallWrongGameTitle" xml:space="preserve">
-    <value>Juego invalido</value>
+    <value>Directorio de instalacion no encontrado</value>
   </data>
   <data name="SettingsAccessDenied" xml:space="preserve">
     <value>Acceso denegado al intentar mover {0}. Reinicia la aplicacion como administrador e intenta nuevamente.</value>

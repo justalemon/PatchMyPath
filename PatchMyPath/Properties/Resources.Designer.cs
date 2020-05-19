@@ -573,8 +573,8 @@ namespace PatchMyPath.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The game version is invalid!
-        ///Please make sure that the folder contains a copy of RDR2 or GTAV and try again..
+        ///   Looks up a localized string similar to You have not configured the location of {0}!
+        ///Please check the configuration and make sure that this game has an installation folder set and try again..
         /// </summary>
         internal static string InstallWrongGame {
             get {
@@ -583,7 +583,7 @@ namespace PatchMyPath.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Game type {0} ({1}) is not valid.
+        ///   Looks up a localized string similar to Game {0} has no installation folder set.
         /// </summary>
         internal static string InstallWrongGameLog {
             get {
@@ -592,7 +592,7 @@ namespace PatchMyPath.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Invalid Game.
+        ///   Looks up a localized string similar to Missing installation folder.
         /// </summary>
         internal static string InstallWrongGameTitle {
             get {
