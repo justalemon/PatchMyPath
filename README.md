@@ -4,6 +4,8 @@ PatchMyPath is a free and open source Windows application for managing multiple 
 
 Please note that PatchMyPath does not supports pirate copies of Red Dead Redemption 2 and Grand Theft Auto V.
 
+[<img src="https://justalemon.ml/images/c/ce/Bugsnag.png" width="100">](https://www.bugsnag.com) is used for error reporting and monitoring.
+
 [appveyor-img]: https://img.shields.io/appveyor/ci/justalemon/patchmypath.svg?label=appveyor
 [appveyor-url]: https://ci.appveyor.com/project/justalemon/patchmypath
 [codefactor-img]: https://www.codefactor.io/repository/github/justalemon/patchmypath/badge
