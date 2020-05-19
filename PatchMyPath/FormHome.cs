@@ -40,7 +40,7 @@ namespace PatchMyPath
             InitializeComponent();
             // And lock the UI elements
             Locked = true;
-            
+
             // Iterate over the games supported
             foreach (string value in Enum.GetNames(typeof(Game)))
             {
@@ -155,6 +155,42 @@ namespace PatchMyPath
         {
             // Open the settings form as a dialog
             Program.ConfigForm.ShowDialog();
+        }
+
+        #endregion
+
+        #region Context Menu Items
+
+        private void ExecutableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (InstallsListBox.SelectedItem is Install install)
+            {
+                install.Start(Launch.Normal, LauncherType.Executable);
+            }
+        }
+
+        private void RGLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (InstallsListBox.SelectedItem is Install install)
+            {
+                install.Start(Launch.Normal, LauncherType.RockstarGamesLauncher);
+            }
+        }
+
+        private void SteamToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (InstallsListBox.SelectedItem is Install install)
+            {
+                install.Start(Launch.Normal, LauncherType.Steam);
+            }
+        }
+
+        private void EGLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (InstallsListBox.SelectedItem is Install install)
+            {
+                install.Start(Launch.Normal, LauncherType.EpicGamesStore);
+            }
         }
 
         #endregion
@@ -398,6 +434,15 @@ namespace PatchMyPath
         {
             // If there is no selected item, lock the UI elements
             Locked = InstallsListBox.SelectedItem == null;
+        }
+
+        private void InstallContextMenuStrip_Opening(object sender, CancelEventArgs e)
+        {
+            // If there are no items selected, cancel the opening of the menu
+            if (InstallsListBox.SelectedItem == null)
+            {
+                e.Cancel = true;
+            }
         }
 
         #endregion

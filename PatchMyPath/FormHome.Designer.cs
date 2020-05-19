@@ -28,6 +28,7 @@ namespace PatchMyPath
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHome));
             this.GeneralTabControl = new System.Windows.Forms.TabControl();
             this.InstallsTabPage = new System.Windows.Forms.TabPage();
@@ -58,9 +59,15 @@ namespace PatchMyPath
             this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RefreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LogStatusStrip = new System.Windows.Forms.StatusStrip();
             this.LogToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.InstallContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.StartAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExecutableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RGLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SteamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.EGLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.DuplicatorTabPage.SuspendLayout();
@@ -73,6 +80,7 @@ namespace PatchMyPath
             this.LicensesTabPage.SuspendLayout();
             this.TopMenuStrip.SuspendLayout();
             this.LogStatusStrip.SuspendLayout();
+            this.InstallContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // GeneralTabControl
@@ -94,6 +102,7 @@ namespace PatchMyPath
             // 
             // InstallsListBox
             // 
+            this.InstallsListBox.ContextMenuStrip = this.InstallContextMenuStrip;
             resources.ApplyResources(this.InstallsListBox, "InstallsListBox");
             this.InstallsListBox.FormattingEnabled = true;
             this.InstallsListBox.Name = "InstallsListBox";
@@ -292,6 +301,15 @@ namespace PatchMyPath
             resources.ApplyResources(this.RefreshToolStripMenuItem, "RefreshToolStripMenuItem");
             this.RefreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
             // 
+            // SettingsToolStripMenuItem
+            // 
+            this.SettingsToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.SettingsToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.SettingsApplications;
+            this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
+            this.SettingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(2);
+            resources.ApplyResources(this.SettingsToolStripMenuItem, "SettingsToolStripMenuItem");
+            this.SettingsToolStripMenuItem.Click += new System.EventHandler(this.SettingsToolStripMenuItem_Click);
+            // 
             // LogStatusStrip
             // 
             this.LogStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -304,16 +322,49 @@ namespace PatchMyPath
             this.LogToolStripStatusLabel.Name = "LogToolStripStatusLabel";
             resources.ApplyResources(this.LogToolStripStatusLabel, "LogToolStripStatusLabel");
             // 
-            // SettingsToolStripMenuItem
+            // InstallContextMenuStrip
             // 
-            this.SettingsToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.SettingsToolStripMenuItem.Image = global::PatchMyPath.Properties.Resources.SettingsApplications;
-            this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
-            this.SettingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(2);
-            resources.ApplyResources(this.SettingsToolStripMenuItem, "SettingsToolStripMenuItem");
-            this.SettingsToolStripMenuItem.Click += new System.EventHandler(this.SettingsToolStripMenuItem_Click);
+            this.InstallContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StartAsToolStripMenuItem});
+            this.InstallContextMenuStrip.Name = "ContextMenuStrip";
+            resources.ApplyResources(this.InstallContextMenuStrip, "InstallContextMenuStrip");
+            this.InstallContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.InstallContextMenuStrip_Opening);
             // 
-            // Home
+            // StartAsToolStripMenuItem
+            // 
+            this.StartAsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ExecutableToolStripMenuItem,
+            this.RGLToolStripMenuItem,
+            this.SteamToolStripMenuItem,
+            this.EGLToolStripMenuItem});
+            this.StartAsToolStripMenuItem.Name = "StartAsToolStripMenuItem";
+            resources.ApplyResources(this.StartAsToolStripMenuItem, "StartAsToolStripMenuItem");
+            // 
+            // ExecutableToolStripMenuItem
+            // 
+            this.ExecutableToolStripMenuItem.Name = "ExecutableToolStripMenuItem";
+            this.ExecutableToolStripMenuItem.Click += new System.EventHandler(this.ExecutableToolStripMenuItem_Click);
+            resources.ApplyResources(this.ExecutableToolStripMenuItem, "ExecutableToolStripMenuItem");
+            // 
+            // RGLToolStripMenuItem
+            // 
+            this.RGLToolStripMenuItem.Name = "RGLToolStripMenuItem";
+            this.RGLToolStripMenuItem.Click += new System.EventHandler(this.RGLToolStripMenuItem_Click);
+            resources.ApplyResources(this.RGLToolStripMenuItem, "RGLToolStripMenuItem");
+            // 
+            // SteamToolStripMenuItem
+            // 
+            this.SteamToolStripMenuItem.Name = "SteamToolStripMenuItem";
+            this.SteamToolStripMenuItem.Click += new System.EventHandler(this.SteamToolStripMenuItem_Click);
+            resources.ApplyResources(this.SteamToolStripMenuItem, "SteamToolStripMenuItem");
+            // 
+            // EGLToolStripMenuItem
+            // 
+            this.EGLToolStripMenuItem.Name = "EGLToolStripMenuItem";
+            this.EGLToolStripMenuItem.Click += new System.EventHandler(this.EGLToolStripMenuItem_Click);
+            resources.ApplyResources(this.EGLToolStripMenuItem, "EGLToolStripMenuItem");
+            // 
+            // FormHome
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -321,7 +372,7 @@ namespace PatchMyPath
             this.Controls.Add(this.GeneralTabControl);
             this.Controls.Add(this.TopMenuStrip);
             this.MainMenuStrip = this.TopMenuStrip;
-            this.Name = "Home";
+            this.Name = "FormHome";
             this.Load += new System.EventHandler(this.Home_Load);
             this.Shown += new System.EventHandler(this.Home_Shown);
             this.GeneralTabControl.ResumeLayout(false);
@@ -343,6 +394,7 @@ namespace PatchMyPath
             this.TopMenuStrip.PerformLayout();
             this.LogStatusStrip.ResumeLayout(false);
             this.LogStatusStrip.PerformLayout();
+            this.InstallContextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,6 +434,12 @@ namespace PatchMyPath
         private System.Windows.Forms.StatusStrip LogStatusStrip;
         internal System.Windows.Forms.ToolStripStatusLabel LogToolStripStatusLabel;
         private System.Windows.Forms.ToolStripMenuItem SettingsToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip InstallContextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem StartAsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ExecutableToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RGLToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SteamToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem EGLToolStripMenuItem;
     }
 }
 
