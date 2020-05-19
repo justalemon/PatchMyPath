@@ -215,10 +215,10 @@ Por favor revisa la configuracion y asegurate de que el juego tiene la ubicacion
     <value>"{0}" no es un numero valido o es muy grande para ser procesado (valor maximo es {1}).</value>
   </data>
   <data name="SettingsLanguageChanged" xml:space="preserve">
-    <value>El Cambio de Idioma tomara efecto la proxima vez que inicies la aplicacion</value>
+    <value>El cambio tomara efecto la proxima vez que inicies la aplicacion</value>
   </data>
   <data name="SettingsLanguageChangedTitle" xml:space="preserve">
-    <value>Idioma Cambiado</value>
+    <value>Ajuste Modificado</value>
   </data>
   <data name="SettingsOtherDownload" xml:space="preserve">
     <value>Vamos a descargar las Listas de Archivos desde la pagina del proyecto en GitHub.

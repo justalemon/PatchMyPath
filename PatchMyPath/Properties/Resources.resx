@@ -333,10 +333,10 @@ Please check the configuration and make sure that this game has an installation 
     <value>"{0}" is not a valid number or is too big to be processed (max value is {1}).</value>
   </data>
   <data name="SettingsLanguageChanged" xml:space="preserve">
-    <value>The Language Change will take effect the next time the application is started</value>
+    <value>The change will take effect the next time the application is started</value>
   </data>
   <data name="SettingsLanguageChangedTitle" xml:space="preserve">
-    <value>Language Changed</value>
+    <value>Setting Changed</value>
   </data>
   <data name="SettingsOtherDownload" xml:space="preserve">
     <value>We will download up to date File Lists from the project's GitHub Page.

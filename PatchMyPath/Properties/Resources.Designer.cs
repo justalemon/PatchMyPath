@@ -702,7 +702,7 @@ namespace PatchMyPath.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Language Change will take effect the next time the application is started.
+        ///   Looks up a localized string similar to The change will take effect the next time the application is started.
         /// </summary>
         internal static string SettingsLanguageChanged {
             get {
@@ -711,7 +711,7 @@ namespace PatchMyPath.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Language Changed.
+        ///   Looks up a localized string similar to Setting Changed.
         /// </summary>
         internal static string SettingsLanguageChangedTitle {
             get {
