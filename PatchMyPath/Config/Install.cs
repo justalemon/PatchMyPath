@@ -1,5 +1,6 @@
 ﻿using NLog;
 using PatchMyPath.Properties;
+using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
@@ -121,10 +122,20 @@ namespace PatchMyPath.Config
 
         public void Start()
         {
-            // Get type of the launcher and game
-            Launch type = Type;
+            // Get the game
             Game game = Game;
+            // And start it with the default parameters
+            Start(Type, Program.Config.Launchers.GetLauncher(game), game);
+        }
 
+        public void Start(Launch type, LauncherType launcher)
+        {
+            // Launches the game with the specified type and launcher
+            Start(type, launcher, Game);
+        }
+
+        public void Start(Launch type, LauncherType launcher, Game game)
+        {
             // If the install has been tampered, notify the user and return
             if (!IsLegal)
             {
@@ -153,7 +164,7 @@ namespace PatchMyPath.Config
             if (string.IsNullOrWhiteSpace(directory))
             {
                 Logger.Error(Resources.InstallWrongGameLog, game, (int)game);
-                MessageBox.Show(Resources.InstallWrongGame, Resources.InstallWrongGameTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(Resources.InstallWrongGame, game.ToString().SpaceOnUpperCase()), Resources.InstallWrongGameTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -206,7 +217,7 @@ namespace PatchMyPath.Config
             }
 
             // If none of the previous options are needed, launch the game like normal
-            switch (Program.Config.Launchers.GetLauncher(game))
+            switch (launcher)
             {
                 // For Steam, use the Network Protocol
                 case LauncherType.Steam:
