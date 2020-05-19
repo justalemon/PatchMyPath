@@ -2,6 +2,7 @@
 using PatchMyPath.Config;
 using PatchMyPath.Properties;
 using System;
+using System.ComponentModel;
 using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
@@ -191,10 +192,18 @@ namespace PatchMyPath
         {
             // Get the original paths for both locations
             provided = og.TrimEnd('\\');
-            string real = Links.GetRealPath(og).TrimEnd('\\');
+            string real;
+            try
+            {
+                real = Links.GetRealPath(og).TrimEnd('\\');
+            }
+            catch (Win32Exception)
+            {
+                real = provided;
+            }
 
-            // If the selected folder matches the real folder, this might be the original game folder
-            if (provided == real)
+            // If the selected folder matches the real folder and it exists, this might be the original game folder
+            if (provided == real && Directory.Exists(real))
             {
                 // Ask the user if he wants to rename it
                 DialogResult result = MessageBox.Show(Resources.SettingsPathRename, Resources.SettingsPathRenameTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
