@@ -66,6 +66,7 @@
             this.GTAIVSelectButton = new System.Windows.Forms.Button();
             this.GTAIVLocationTextBox = new System.Windows.Forms.TextBox();
             this.FolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
+            this.BugsnagCheckBox = new System.Windows.Forms.CheckBox();
             this.ConfigTabControl.SuspendLayout();
             this.GeneralTabPage.SuspendLayout();
             this.OtherGroupBox.SuspendLayout();
@@ -102,6 +103,7 @@
             // OtherGroupBox
             // 
             resources.ApplyResources(this.OtherGroupBox, "OtherGroupBox");
+            this.OtherGroupBox.Controls.Add(this.BugsnagCheckBox);
             this.OtherGroupBox.Controls.Add(this.DownloadListsButton);
             this.OtherGroupBox.Name = "OtherGroupBox";
             this.OtherGroupBox.TabStop = false;
@@ -347,6 +349,13 @@
             resources.ApplyResources(this.GTAIVLocationTextBox, "GTAIVLocationTextBox");
             this.GTAIVLocationTextBox.Name = "GTAIVLocationTextBox";
             // 
+            // BugsnagCheckBox
+            // 
+            resources.ApplyResources(this.BugsnagCheckBox, "BugsnagCheckBox");
+            this.BugsnagCheckBox.Name = "BugsnagCheckBox";
+            this.BugsnagCheckBox.UseVisualStyleBackColor = true;
+            this.BugsnagCheckBox.CheckedChanged += new System.EventHandler(this.BugsnagCheckBox_CheckedChanged);
+            // 
             // FormConfig
             // 
             resources.ApplyResources(this, "$this");
@@ -358,6 +367,7 @@
             this.ConfigTabControl.ResumeLayout(false);
             this.GeneralTabPage.ResumeLayout(false);
             this.OtherGroupBox.ResumeLayout(false);
+            this.OtherGroupBox.PerformLayout();
             this.LanguageGroupBox.ResumeLayout(false);
             this.RDR2TabPage.ResumeLayout(false);
             this.RDR2LauncherGroupBox.ResumeLayout(false);
@@ -417,5 +427,6 @@
         private System.Windows.Forms.GroupBox OtherGroupBox;
         private System.Windows.Forms.Button DownloadListsButton;
         private System.Windows.Forms.FolderBrowserDialog FolderBrowser;
+        private System.Windows.Forms.CheckBox BugsnagCheckBox;
     }
 }

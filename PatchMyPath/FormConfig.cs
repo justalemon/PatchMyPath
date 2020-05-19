@@ -55,6 +55,8 @@ namespace PatchMyPath
             RDR2LauncherComboBox.SelectedIndex = (int)Program.Config.Launchers.RDR2Use;
             GTAVLauncherComboBox.SelectedIndex = (int)Program.Config.Launchers.GTAVUse;
             GTAIVLauncherComboBox.SelectedIndex = (int)Program.Config.Launchers.GTAIVUse;
+            // And the Bugsnag toggle
+            BugsnagCheckBox.Checked = Program.Config.Bugsnag;
 
             // Finally, log that we have finished the population of settings
             Logger.Debug(Resources.FormSettingsLoadLog);
@@ -413,7 +415,19 @@ namespace PatchMyPath
 
         #endregion
 
-        #region Download Lists
+        #region Other
+
+        private void BugsnagCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!Visible)
+            {
+                return;
+            }
+
+            Program.Config.Bugsnag = BugsnagCheckBox.Checked;
+            Program.Config.Save();
+            MessageBox.Show(Resources.SettingsLanguageChanged, Resources.SettingsLanguageChangedTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
 
         private void DownloadListsButton_Click(object sender, EventArgs e)
         {
