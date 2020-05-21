@@ -274,7 +274,7 @@
     <value>Bottom, Left, Right</value>
   </data>
   <data name="DuplicationProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 275</value>
+    <value>6, 305</value>
   </data>
   <data name="DuplicationProgressBar.Size" type="System.Drawing.Size, System.Drawing">
     <value>464, 23</value>
@@ -436,7 +436,7 @@
     <value>Bottom, Left, Right</value>
   </data>
   <data name="DuplicateButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 304</value>
+    <value>6, 334</value>
   </data>
   <data name="DuplicateButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>464, 23</value>
@@ -1370,6 +1370,36 @@
   <data name="$this.Text" xml:space="preserve">
     <value>PatchMyPath</value>
   </data>
+  <data name="&gt;&gt;StartAsToolStripMenuItem.Name" xml:space="preserve">
+    <value>StartAsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;StartAsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ExecutableToolStripMenuItem.Name" xml:space="preserve">
+    <value>ExecutableToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;ExecutableToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RGLToolStripMenuItem.Name" xml:space="preserve">
+    <value>RGLToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;RGLToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SteamToolStripMenuItem.Name" xml:space="preserve">
+    <value>SteamToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;SteamToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EGLToolStripMenuItem.Name" xml:space="preserve">
+    <value>EGLToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;EGLToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;FolderBrowser.Name" xml:space="preserve">
     <value>FolderBrowser</value>
   </data>
@@ -1411,36 +1441,6 @@
   </data>
   <data name="&gt;&gt;LogToolStripStatusLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;StartAsToolStripMenuItem.Name" xml:space="preserve">
-    <value>StartAsToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;StartAsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ExecutableToolStripMenuItem.Name" xml:space="preserve">
-    <value>ExecutableToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;ExecutableToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RGLToolStripMenuItem.Name" xml:space="preserve">
-    <value>RGLToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;RGLToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SteamToolStripMenuItem.Name" xml:space="preserve">
-    <value>SteamToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;SteamToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EGLToolStripMenuItem.Name" xml:space="preserve">
-    <value>EGLToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;EGLToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormHome</value>

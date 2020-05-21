@@ -33,6 +33,12 @@ namespace PatchMyPath
             this.GeneralTabControl = new System.Windows.Forms.TabControl();
             this.InstallsTabPage = new System.Windows.Forms.TabPage();
             this.InstallsListBox = new System.Windows.Forms.ListBox();
+            this.InstallContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.StartAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExecutableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RGLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SteamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.EGLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DuplicatorTabPage = new System.Windows.Forms.TabPage();
             this.OtherGroupBox = new System.Windows.Forms.GroupBox();
             this.AutoAddCheckBox = new System.Windows.Forms.CheckBox();
@@ -62,14 +68,9 @@ namespace PatchMyPath
             this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LogStatusStrip = new System.Windows.Forms.StatusStrip();
             this.LogToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.InstallContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.StartAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ExecutableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RGLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SteamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.EGLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
+            this.InstallContextMenuStrip.SuspendLayout();
             this.DuplicatorTabPage.SuspendLayout();
             this.OtherGroupBox.SuspendLayout();
             this.GameGroupBox.SuspendLayout();
@@ -80,7 +81,6 @@ namespace PatchMyPath
             this.LicensesTabPage.SuspendLayout();
             this.TopMenuStrip.SuspendLayout();
             this.LogStatusStrip.SuspendLayout();
-            this.InstallContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // GeneralTabControl
@@ -107,6 +107,48 @@ namespace PatchMyPath
             this.InstallsListBox.FormattingEnabled = true;
             this.InstallsListBox.Name = "InstallsListBox";
             this.InstallsListBox.SelectedIndexChanged += new System.EventHandler(this.InstallsListBox_SelectedIndexChanged);
+            // 
+            // InstallContextMenuStrip
+            // 
+            this.InstallContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StartAsToolStripMenuItem});
+            this.InstallContextMenuStrip.Name = "ContextMenuStrip";
+            resources.ApplyResources(this.InstallContextMenuStrip, "InstallContextMenuStrip");
+            this.InstallContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.InstallContextMenuStrip_Opening);
+            // 
+            // StartAsToolStripMenuItem
+            // 
+            this.StartAsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ExecutableToolStripMenuItem,
+            this.RGLToolStripMenuItem,
+            this.SteamToolStripMenuItem,
+            this.EGLToolStripMenuItem});
+            this.StartAsToolStripMenuItem.Name = "StartAsToolStripMenuItem";
+            resources.ApplyResources(this.StartAsToolStripMenuItem, "StartAsToolStripMenuItem");
+            // 
+            // ExecutableToolStripMenuItem
+            // 
+            this.ExecutableToolStripMenuItem.Name = "ExecutableToolStripMenuItem";
+            resources.ApplyResources(this.ExecutableToolStripMenuItem, "ExecutableToolStripMenuItem");
+            this.ExecutableToolStripMenuItem.Click += new System.EventHandler(this.ExecutableToolStripMenuItem_Click);
+            // 
+            // RGLToolStripMenuItem
+            // 
+            this.RGLToolStripMenuItem.Name = "RGLToolStripMenuItem";
+            resources.ApplyResources(this.RGLToolStripMenuItem, "RGLToolStripMenuItem");
+            this.RGLToolStripMenuItem.Click += new System.EventHandler(this.RGLToolStripMenuItem_Click);
+            // 
+            // SteamToolStripMenuItem
+            // 
+            this.SteamToolStripMenuItem.Name = "SteamToolStripMenuItem";
+            resources.ApplyResources(this.SteamToolStripMenuItem, "SteamToolStripMenuItem");
+            this.SteamToolStripMenuItem.Click += new System.EventHandler(this.SteamToolStripMenuItem_Click);
+            // 
+            // EGLToolStripMenuItem
+            // 
+            this.EGLToolStripMenuItem.Name = "EGLToolStripMenuItem";
+            resources.ApplyResources(this.EGLToolStripMenuItem, "EGLToolStripMenuItem");
+            this.EGLToolStripMenuItem.Click += new System.EventHandler(this.EGLToolStripMenuItem_Click);
             // 
             // DuplicatorTabPage
             // 
@@ -322,48 +364,6 @@ namespace PatchMyPath
             this.LogToolStripStatusLabel.Name = "LogToolStripStatusLabel";
             resources.ApplyResources(this.LogToolStripStatusLabel, "LogToolStripStatusLabel");
             // 
-            // InstallContextMenuStrip
-            // 
-            this.InstallContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.StartAsToolStripMenuItem});
-            this.InstallContextMenuStrip.Name = "ContextMenuStrip";
-            resources.ApplyResources(this.InstallContextMenuStrip, "InstallContextMenuStrip");
-            this.InstallContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.InstallContextMenuStrip_Opening);
-            // 
-            // StartAsToolStripMenuItem
-            // 
-            this.StartAsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ExecutableToolStripMenuItem,
-            this.RGLToolStripMenuItem,
-            this.SteamToolStripMenuItem,
-            this.EGLToolStripMenuItem});
-            this.StartAsToolStripMenuItem.Name = "StartAsToolStripMenuItem";
-            resources.ApplyResources(this.StartAsToolStripMenuItem, "StartAsToolStripMenuItem");
-            // 
-            // ExecutableToolStripMenuItem
-            // 
-            this.ExecutableToolStripMenuItem.Name = "ExecutableToolStripMenuItem";
-            this.ExecutableToolStripMenuItem.Click += new System.EventHandler(this.ExecutableToolStripMenuItem_Click);
-            resources.ApplyResources(this.ExecutableToolStripMenuItem, "ExecutableToolStripMenuItem");
-            // 
-            // RGLToolStripMenuItem
-            // 
-            this.RGLToolStripMenuItem.Name = "RGLToolStripMenuItem";
-            this.RGLToolStripMenuItem.Click += new System.EventHandler(this.RGLToolStripMenuItem_Click);
-            resources.ApplyResources(this.RGLToolStripMenuItem, "RGLToolStripMenuItem");
-            // 
-            // SteamToolStripMenuItem
-            // 
-            this.SteamToolStripMenuItem.Name = "SteamToolStripMenuItem";
-            this.SteamToolStripMenuItem.Click += new System.EventHandler(this.SteamToolStripMenuItem_Click);
-            resources.ApplyResources(this.SteamToolStripMenuItem, "SteamToolStripMenuItem");
-            // 
-            // EGLToolStripMenuItem
-            // 
-            this.EGLToolStripMenuItem.Name = "EGLToolStripMenuItem";
-            this.EGLToolStripMenuItem.Click += new System.EventHandler(this.EGLToolStripMenuItem_Click);
-            resources.ApplyResources(this.EGLToolStripMenuItem, "EGLToolStripMenuItem");
-            // 
             // FormHome
             // 
             resources.ApplyResources(this, "$this");
@@ -377,6 +377,7 @@ namespace PatchMyPath
             this.Shown += new System.EventHandler(this.Home_Shown);
             this.GeneralTabControl.ResumeLayout(false);
             this.InstallsTabPage.ResumeLayout(false);
+            this.InstallContextMenuStrip.ResumeLayout(false);
             this.DuplicatorTabPage.ResumeLayout(false);
             this.OtherGroupBox.ResumeLayout(false);
             this.OtherGroupBox.PerformLayout();
@@ -394,7 +395,6 @@ namespace PatchMyPath
             this.TopMenuStrip.PerformLayout();
             this.LogStatusStrip.ResumeLayout(false);
             this.LogStatusStrip.PerformLayout();
-            this.InstallContextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
