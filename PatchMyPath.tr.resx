@@ -118,79 +118,145 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="GeneralTabControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <metadata name="InstallContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>406, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+  <data name="ExecutableToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 22</value>
+  </data>
+  <data name="ExecutableToolStripMenuItem.Text" xml:space="preserve">
+    <value>Executable</value>
+  </data>
+  <data name="RGLToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 22</value>
+  </data>
+  <data name="RGLToolStripMenuItem.Text" xml:space="preserve">
+    <value>Rockstar Games Launcher</value>
+  </data>
+  <data name="SteamToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 22</value>
+  </data>
+  <data name="SteamToolStripMenuItem.Text" xml:space="preserve">
+    <value>Steam</value>
+  </data>
+  <data name="EGLToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 22</value>
+  </data>
+  <data name="EGLToolStripMenuItem.Text" xml:space="preserve">
+    <value>Epic Games Store</value>
+  </data>
+  <data name="StartAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 22</value>
+  </data>
+  <data name="StartAsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Start with</value>
+  </data>
+  <data name="InstallContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 26</value>
+  </data>
+  <data name="&gt;&gt;InstallContextMenuStrip.Name" xml:space="preserve">
+    <value>InstallContextMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;InstallContextMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="InstallsListBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="InstallsListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="InstallsListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>470, 357</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="InstallsListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;InstallsListBox.Name" xml:space="preserve">
+    <value>InstallsListBox</value>
+  </data>
+  <data name="&gt;&gt;InstallsListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;InstallsListBox.Parent" xml:space="preserve">
+    <value>InstallsTabPage</value>
+  </data>
+  <data name="&gt;&gt;InstallsListBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="InstallsTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="InstallsTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="InstallsTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>476, 363</value>
+  </data>
+  <data name="InstallsTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="InstallsTabPage.Text" xml:space="preserve">
+    <value>Game Installs</value>
+  </data>
+  <data name="&gt;&gt;InstallsTabPage.Name" xml:space="preserve">
+    <value>InstallsTabPage</value>
+  </data>
+  <data name="&gt;&gt;InstallsTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;InstallsTabPage.Parent" xml:space="preserve">
+    <value>GeneralTabControl</value>
+  </data>
+  <data name="&gt;&gt;InstallsTabPage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="OtherGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
-  <data name="BugsnagCheckBox.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AutoAddCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
-  <data name="BugsnagCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 19</value>
+  <data name="AutoAddCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 19</value>
   </data>
-  <data name="BugsnagCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 17</value>
+  <data name="AutoAddCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>289, 17</value>
   </data>
-  <data name="BugsnagCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="AutoAddCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="BugsnagCheckBox.Text" xml:space="preserve">
-    <value>Allow reports of crashes to Bugsnag</value>
+  <data name="AutoAddCheckBox.Text" xml:space="preserve">
+    <value>Add install to PatchMyPath after completing the process</value>
   </data>
-  <data name="&gt;&gt;BugsnagCheckBox.Name" xml:space="preserve">
-    <value>BugsnagCheckBox</value>
+  <data name="&gt;&gt;AutoAddCheckBox.Name" xml:space="preserve">
+    <value>AutoAddCheckBox</value>
   </data>
-  <data name="&gt;&gt;BugsnagCheckBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;AutoAddCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BugsnagCheckBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;AutoAddCheckBox.Parent" xml:space="preserve">
     <value>OtherGroupBox</value>
   </data>
-  <data name="&gt;&gt;BugsnagCheckBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AutoAddCheckBox.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="DownloadListsButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="DownloadListsButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="DownloadListsButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 43</value>
-  </data>
-  <data name="DownloadListsButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>411, 23</value>
-  </data>
-  <data name="DownloadListsButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="DownloadListsButton.Text" xml:space="preserve">
-    <value>Download Updated File Lists</value>
-  </data>
-  <data name="&gt;&gt;DownloadListsButton.Name" xml:space="preserve">
-    <value>DownloadListsButton</value>
-  </data>
-  <data name="&gt;&gt;DownloadListsButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DownloadListsButton.Parent" xml:space="preserve">
-    <value>OtherGroupBox</value>
-  </data>
-  <data name="&gt;&gt;DownloadListsButton.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="OtherGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 63</value>
+    <value>6, 237</value>
   </data>
   <data name="OtherGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 72</value>
+    <value>464, 45</value>
   </data>
   <data name="OtherGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="OtherGroupBox.Text" xml:space="preserve">
-    <value>Other</value>
+    <value>Other Options</value>
   </data>
   <data name="&gt;&gt;OtherGroupBox.Name" xml:space="preserve">
     <value>OtherGroupBox</value>
@@ -199,907 +265,613 @@
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;OtherGroupBox.Parent" xml:space="preserve">
-    <value>GeneralTabPage</value>
+    <value>DuplicatorTabPage</value>
   </data>
   <data name="&gt;&gt;OtherGroupBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="LanguageGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="DuplicationProgressBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="DuplicationProgressBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 305</value>
+  </data>
+  <data name="DuplicationProgressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 23</value>
+  </data>
+  <data name="DuplicationProgressBar.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;DuplicationProgressBar.Name" xml:space="preserve">
+    <value>DuplicationProgressBar</value>
+  </data>
+  <data name="&gt;&gt;DuplicationProgressBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DuplicationProgressBar.Parent" xml:space="preserve">
+    <value>DuplicatorTabPage</value>
+  </data>
+  <data name="&gt;&gt;DuplicationProgressBar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GameGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="LanguageComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="GameComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="LanguageComboBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="GameComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 19</value>
   </data>
-  <data name="LanguageComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>411, 21</value>
+  <data name="GameComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>450, 21</value>
   </data>
-  <data name="LanguageComboBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="GameComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;LanguageComboBox.Name" xml:space="preserve">
-    <value>LanguageComboBox</value>
+  <data name="&gt;&gt;GameComboBox.Name" xml:space="preserve">
+    <value>GameComboBox</value>
   </data>
-  <data name="&gt;&gt;LanguageComboBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;GameComboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LanguageComboBox.Parent" xml:space="preserve">
-    <value>LanguageGroupBox</value>
+  <data name="&gt;&gt;GameComboBox.Parent" xml:space="preserve">
+    <value>GameGroupBox</value>
   </data>
-  <data name="&gt;&gt;LanguageComboBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;GameComboBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="LanguageGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
+  <data name="GameGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 6</value>
   </data>
-  <data name="LanguageGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 51</value>
+  <data name="GameGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>462, 52</value>
   </data>
-  <data name="LanguageGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="GameGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
-  <data name="LanguageGroupBox.Text" xml:space="preserve">
-    <value>Language</value>
+  <data name="GameGroupBox.Text" xml:space="preserve">
+    <value>Game</value>
   </data>
-  <data name="&gt;&gt;LanguageGroupBox.Name" xml:space="preserve">
-    <value>LanguageGroupBox</value>
+  <data name="&gt;&gt;GameGroupBox.Name" xml:space="preserve">
+    <value>GameGroupBox</value>
   </data>
-  <data name="&gt;&gt;LanguageGroupBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;GameGroupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LanguageGroupBox.Parent" xml:space="preserve">
-    <value>GeneralTabPage</value>
+  <data name="&gt;&gt;GameGroupBox.Parent" xml:space="preserve">
+    <value>DuplicatorTabPage</value>
   </data>
-  <data name="&gt;&gt;LanguageGroupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;GameGroupBox.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="GeneralTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="GeneralTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="GeneralTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 143</value>
-  </data>
-  <data name="GeneralTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="GeneralTabPage.Text" xml:space="preserve">
-    <value>General</value>
-  </data>
-  <data name="&gt;&gt;GeneralTabPage.Name" xml:space="preserve">
-    <value>GeneralTabPage</value>
-  </data>
-  <data name="&gt;&gt;GeneralTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GeneralTabPage.Parent" xml:space="preserve">
-    <value>ConfigTabControl</value>
-  </data>
-  <data name="&gt;&gt;GeneralTabPage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RDR2LauncherGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="LinkTypeGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="RDR2LauncherSaveButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="RDR2LauncherSaveButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="RDR2LauncherSaveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 19</value>
-  </data>
-  <data name="RDR2LauncherSaveButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="RDR2LauncherSaveButton.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="RDR2LauncherSaveButton.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="&gt;&gt;RDR2LauncherSaveButton.Name" xml:space="preserve">
-    <value>RDR2LauncherSaveButton</value>
-  </data>
-  <data name="&gt;&gt;RDR2LauncherSaveButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RDR2LauncherSaveButton.Parent" xml:space="preserve">
-    <value>RDR2LauncherGroupBox</value>
-  </data>
-  <data name="&gt;&gt;RDR2LauncherSaveButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RDR2IDTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="HardRadioButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="RDR2IDTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>168, 20</value>
+  <data name="HardRadioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="RDR2IDTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 20</value>
-  </data>
-  <data name="RDR2IDTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;RDR2IDTextBox.Name" xml:space="preserve">
-    <value>RDR2IDTextBox</value>
-  </data>
-  <data name="&gt;&gt;RDR2IDTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RDR2IDTextBox.Parent" xml:space="preserve">
-    <value>RDR2LauncherGroupBox</value>
-  </data>
-  <data name="&gt;&gt;RDR2IDTextBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RDR2LauncherComboBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="HardRadioButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 19</value>
   </data>
-  <data name="RDR2LauncherComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 21</value>
+  <data name="HardRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 17</value>
   </data>
-  <data name="RDR2LauncherComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;RDR2LauncherComboBox.Name" xml:space="preserve">
-    <value>RDR2LauncherComboBox</value>
-  </data>
-  <data name="&gt;&gt;RDR2LauncherComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RDR2LauncherComboBox.Parent" xml:space="preserve">
-    <value>RDR2LauncherGroupBox</value>
-  </data>
-  <data name="&gt;&gt;RDR2LauncherComboBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RDR2LauncherGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 87</value>
-  </data>
-  <data name="RDR2LauncherGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 50</value>
-  </data>
-  <data name="RDR2LauncherGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="RDR2LauncherGroupBox.Text" xml:space="preserve">
-    <value>Launcher</value>
-  </data>
-  <data name="&gt;&gt;RDR2LauncherGroupBox.Name" xml:space="preserve">
-    <value>RDR2LauncherGroupBox</value>
-  </data>
-  <data name="&gt;&gt;RDR2LauncherGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RDR2LauncherGroupBox.Parent" xml:space="preserve">
-    <value>RDR2TabPage</value>
-  </data>
-  <data name="&gt;&gt;RDR2LauncherGroupBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RDR2LocationGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="RDR2LocationSaveButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="RDR2LocationSaveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>168, 45</value>
-  </data>
-  <data name="RDR2LocationSaveButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="RDR2LocationSaveButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="RDR2LocationSaveButton.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="&gt;&gt;RDR2LocationSaveButton.Name" xml:space="preserve">
-    <value>RDR2LocationSaveButton</value>
-  </data>
-  <data name="&gt;&gt;RDR2LocationSaveButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RDR2LocationSaveButton.Parent" xml:space="preserve">
-    <value>RDR2LocationGroupBox</value>
-  </data>
-  <data name="&gt;&gt;RDR2LocationSaveButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RDR2DetectButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="RDR2DetectButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 45</value>
-  </data>
-  <data name="RDR2DetectButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="RDR2DetectButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="RDR2DetectButton.Text" xml:space="preserve">
-    <value>Detect</value>
-  </data>
-  <data name="&gt;&gt;RDR2DetectButton.Name" xml:space="preserve">
-    <value>RDR2DetectButton</value>
-  </data>
-  <data name="&gt;&gt;RDR2DetectButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RDR2DetectButton.Parent" xml:space="preserve">
-    <value>RDR2LocationGroupBox</value>
-  </data>
-  <data name="&gt;&gt;RDR2DetectButton.ZOrder" xml:space="preserve">
+  <data name="HardRadioButton.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="RDR2SelectButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="HardRadioButton.Text" xml:space="preserve">
+    <value>Hard Link for Files and Symbolic Links for Folders (All Game Versions)</value>
   </data>
-  <data name="RDR2SelectButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 45</value>
+  <data name="&gt;&gt;HardRadioButton.Name" xml:space="preserve">
+    <value>HardRadioButton</value>
   </data>
-  <data name="RDR2SelectButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+  <data name="&gt;&gt;HardRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="RDR2SelectButton.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;HardRadioButton.Parent" xml:space="preserve">
+    <value>LinkTypeGroupBox</value>
   </data>
-  <data name="RDR2SelectButton.Text" xml:space="preserve">
-    <value>Select</value>
-  </data>
-  <data name="&gt;&gt;RDR2SelectButton.Name" xml:space="preserve">
-    <value>RDR2SelectButton</value>
-  </data>
-  <data name="&gt;&gt;RDR2SelectButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RDR2SelectButton.Parent" xml:space="preserve">
-    <value>RDR2LocationGroupBox</value>
-  </data>
-  <data name="&gt;&gt;RDR2SelectButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RDR2LocationTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="RDR2LocationTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 19</value>
-  </data>
-  <data name="RDR2LocationTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>411, 20</value>
-  </data>
-  <data name="RDR2LocationTextBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;HardRadioButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;RDR2LocationTextBox.Name" xml:space="preserve">
-    <value>RDR2LocationTextBox</value>
+  <data name="SymbolicRadioButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="&gt;&gt;RDR2LocationTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="SymbolicRadioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;RDR2LocationTextBox.Parent" xml:space="preserve">
-    <value>RDR2LocationGroupBox</value>
+  <data name="SymbolicRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 42</value>
   </data>
-  <data name="&gt;&gt;RDR2LocationTextBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="SymbolicRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>422, 17</value>
   </data>
-  <data name="RDR2LocationGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
+  <data name="SymbolicRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="RDR2LocationGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 75</value>
+  <data name="SymbolicRadioButton.Text" xml:space="preserve">
+    <value>Symbolic Links for Files and Folders (Steam and pre Rockstar Games Launcher only)</value>
   </data>
-  <data name="RDR2LocationGroupBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;SymbolicRadioButton.Name" xml:space="preserve">
+    <value>SymbolicRadioButton</value>
+  </data>
+  <data name="&gt;&gt;SymbolicRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SymbolicRadioButton.Parent" xml:space="preserve">
+    <value>LinkTypeGroupBox</value>
+  </data>
+  <data name="&gt;&gt;SymbolicRadioButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LinkTypeGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 166</value>
+  </data>
+  <data name="LinkTypeGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 65</value>
+  </data>
+  <data name="LinkTypeGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="RDR2LocationGroupBox.Text" xml:space="preserve">
-    <value>Location</value>
+  <data name="LinkTypeGroupBox.Text" xml:space="preserve">
+    <value>Link Type</value>
   </data>
-  <data name="&gt;&gt;RDR2LocationGroupBox.Name" xml:space="preserve">
-    <value>RDR2LocationGroupBox</value>
+  <data name="&gt;&gt;LinkTypeGroupBox.Name" xml:space="preserve">
+    <value>LinkTypeGroupBox</value>
   </data>
-  <data name="&gt;&gt;RDR2LocationGroupBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;LinkTypeGroupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;RDR2LocationGroupBox.Parent" xml:space="preserve">
-    <value>RDR2TabPage</value>
+  <data name="&gt;&gt;LinkTypeGroupBox.Parent" xml:space="preserve">
+    <value>DuplicatorTabPage</value>
   </data>
-  <data name="&gt;&gt;RDR2LocationGroupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;LinkTypeGroupBox.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="RDR2TabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+  <data name="DuplicateButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
   </data>
-  <data name="RDR2TabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="DuplicateButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 334</value>
   </data>
-  <data name="RDR2TabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 143</value>
+  <data name="DuplicateButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 23</value>
   </data>
-  <data name="RDR2TabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="DuplicateButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="RDR2TabPage.Text" xml:space="preserve">
-    <value>RDR2</value>
+  <data name="DuplicateButton.Text" xml:space="preserve">
+    <value>Duplicate Game Folder</value>
   </data>
-  <data name="&gt;&gt;RDR2TabPage.Name" xml:space="preserve">
-    <value>RDR2TabPage</value>
+  <data name="&gt;&gt;DuplicateButton.Name" xml:space="preserve">
+    <value>DuplicateButton</value>
   </data>
-  <data name="&gt;&gt;RDR2TabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;DuplicateButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;RDR2TabPage.Parent" xml:space="preserve">
-    <value>ConfigTabControl</value>
+  <data name="&gt;&gt;DuplicateButton.Parent" xml:space="preserve">
+    <value>DuplicatorTabPage</value>
   </data>
-  <data name="&gt;&gt;RDR2TabPage.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;DuplicateButton.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
-  <data name="GTAVLauncherGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="OriginGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="GTAVLauncherSaveButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="OriginSelectButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="GTAVLauncherSaveButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="OriginSelectButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>383, 17</value>
   </data>
-  <data name="GTAVLauncherSaveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 19</value>
-  </data>
-  <data name="GTAVLauncherSaveButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="OriginSelectButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="GTAVLauncherSaveButton.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="GTAVLauncherSaveButton.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="&gt;&gt;GTAVLauncherSaveButton.Name" xml:space="preserve">
-    <value>GTAVLauncherSaveButton</value>
-  </data>
-  <data name="&gt;&gt;GTAVLauncherSaveButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GTAVLauncherSaveButton.Parent" xml:space="preserve">
-    <value>GTAVLauncherGroupBox</value>
-  </data>
-  <data name="&gt;&gt;GTAVLauncherSaveButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="GTAVIDTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="GTAVIDTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>168, 20</value>
-  </data>
-  <data name="GTAVIDTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 20</value>
-  </data>
-  <data name="GTAVIDTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;GTAVIDTextBox.Name" xml:space="preserve">
-    <value>GTAVIDTextBox</value>
-  </data>
-  <data name="&gt;&gt;GTAVIDTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GTAVIDTextBox.Parent" xml:space="preserve">
-    <value>GTAVLauncherGroupBox</value>
-  </data>
-  <data name="&gt;&gt;GTAVIDTextBox.ZOrder" xml:space="preserve">
+  <data name="OriginSelectButton.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="GTAVLauncherComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 19</value>
-  </data>
-  <data name="GTAVLauncherComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 21</value>
-  </data>
-  <data name="GTAVLauncherComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;GTAVLauncherComboBox.Name" xml:space="preserve">
-    <value>GTAVLauncherComboBox</value>
-  </data>
-  <data name="&gt;&gt;GTAVLauncherComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GTAVLauncherComboBox.Parent" xml:space="preserve">
-    <value>GTAVLauncherGroupBox</value>
-  </data>
-  <data name="&gt;&gt;GTAVLauncherComboBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="GTAVLauncherGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 87</value>
-  </data>
-  <data name="GTAVLauncherGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 50</value>
-  </data>
-  <data name="GTAVLauncherGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="GTAVLauncherGroupBox.Text" xml:space="preserve">
-    <value>Launcher</value>
-  </data>
-  <data name="&gt;&gt;GTAVLauncherGroupBox.Name" xml:space="preserve">
-    <value>GTAVLauncherGroupBox</value>
-  </data>
-  <data name="&gt;&gt;GTAVLauncherGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GTAVLauncherGroupBox.Parent" xml:space="preserve">
-    <value>GTAVTabPage</value>
-  </data>
-  <data name="&gt;&gt;GTAVLauncherGroupBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="GTAVLocationGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="GTAVSaveButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="GTAVSaveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>168, 45</value>
-  </data>
-  <data name="GTAVSaveButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="GTAVSaveButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="GTAVSaveButton.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="&gt;&gt;GTAVSaveButton.Name" xml:space="preserve">
-    <value>GTAVSaveButton</value>
-  </data>
-  <data name="&gt;&gt;GTAVSaveButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GTAVSaveButton.Parent" xml:space="preserve">
-    <value>GTAVLocationGroupBox</value>
-  </data>
-  <data name="&gt;&gt;GTAVSaveButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="GTAVDetectButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="GTAVDetectButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 45</value>
-  </data>
-  <data name="GTAVDetectButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="GTAVDetectButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="GTAVDetectButton.Text" xml:space="preserve">
-    <value>Detect</value>
-  </data>
-  <data name="&gt;&gt;GTAVDetectButton.Name" xml:space="preserve">
-    <value>GTAVDetectButton</value>
-  </data>
-  <data name="&gt;&gt;GTAVDetectButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GTAVDetectButton.Parent" xml:space="preserve">
-    <value>GTAVLocationGroupBox</value>
-  </data>
-  <data name="&gt;&gt;GTAVDetectButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="GTAVSelectButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="GTAVSelectButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 45</value>
-  </data>
-  <data name="GTAVSelectButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="GTAVSelectButton.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="GTAVSelectButton.Text" xml:space="preserve">
+  <data name="OriginSelectButton.Text" xml:space="preserve">
     <value>Select</value>
   </data>
-  <data name="&gt;&gt;GTAVSelectButton.Name" xml:space="preserve">
-    <value>GTAVSelectButton</value>
+  <data name="&gt;&gt;OriginSelectButton.Name" xml:space="preserve">
+    <value>OriginSelectButton</value>
   </data>
-  <data name="&gt;&gt;GTAVSelectButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;OriginSelectButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GTAVSelectButton.Parent" xml:space="preserve">
-    <value>GTAVLocationGroupBox</value>
+  <data name="&gt;&gt;OriginSelectButton.Parent" xml:space="preserve">
+    <value>OriginGroupBox</value>
   </data>
-  <data name="&gt;&gt;GTAVSelectButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="GTAVLocationTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="GTAVLocationTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 19</value>
-  </data>
-  <data name="GTAVLocationTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>411, 20</value>
-  </data>
-  <data name="GTAVLocationTextBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;OriginSelectButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;GTAVLocationTextBox.Name" xml:space="preserve">
-    <value>GTAVLocationTextBox</value>
-  </data>
-  <data name="&gt;&gt;GTAVLocationTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GTAVLocationTextBox.Parent" xml:space="preserve">
-    <value>GTAVLocationGroupBox</value>
-  </data>
-  <data name="&gt;&gt;GTAVLocationTextBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="GTAVLocationGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
-  </data>
-  <data name="GTAVLocationGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 75</value>
-  </data>
-  <data name="GTAVLocationGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="GTAVLocationGroupBox.Text" xml:space="preserve">
-    <value>Location</value>
-  </data>
-  <data name="&gt;&gt;GTAVLocationGroupBox.Name" xml:space="preserve">
-    <value>GTAVLocationGroupBox</value>
-  </data>
-  <data name="&gt;&gt;GTAVLocationGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GTAVLocationGroupBox.Parent" xml:space="preserve">
-    <value>GTAVTabPage</value>
-  </data>
-  <data name="&gt;&gt;GTAVLocationGroupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="GTAVTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="GTAVTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="GTAVTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 143</value>
-  </data>
-  <data name="GTAVTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="GTAVTabPage.Text" xml:space="preserve">
-    <value>GTA V</value>
-  </data>
-  <data name="&gt;&gt;GTAVTabPage.Name" xml:space="preserve">
-    <value>GTAVTabPage</value>
-  </data>
-  <data name="&gt;&gt;GTAVTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GTAVTabPage.Parent" xml:space="preserve">
-    <value>ConfigTabControl</value>
-  </data>
-  <data name="&gt;&gt;GTAVTabPage.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="GTAIVLauncherGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="OriginTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="GTAIVLauncherSaveButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="OriginTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="OriginTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>371, 20</value>
+  </data>
+  <data name="OriginTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;OriginTextBox.Name" xml:space="preserve">
+    <value>OriginTextBox</value>
+  </data>
+  <data name="&gt;&gt;OriginTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OriginTextBox.Parent" xml:space="preserve">
+    <value>OriginGroupBox</value>
+  </data>
+  <data name="&gt;&gt;OriginTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="OriginGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 64</value>
+  </data>
+  <data name="OriginGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 45</value>
+  </data>
+  <data name="OriginGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="OriginGroupBox.Text" xml:space="preserve">
+    <value>Origin</value>
+  </data>
+  <data name="&gt;&gt;OriginGroupBox.Name" xml:space="preserve">
+    <value>OriginGroupBox</value>
+  </data>
+  <data name="&gt;&gt;OriginGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OriginGroupBox.Parent" xml:space="preserve">
+    <value>DuplicatorTabPage</value>
+  </data>
+  <data name="&gt;&gt;OriginGroupBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="DestinationGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="DestinationSelectButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="GTAIVLauncherSaveButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="DestinationSelectButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>383, 17</value>
   </data>
-  <data name="GTAIVLauncherSaveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 19</value>
-  </data>
-  <data name="GTAIVLauncherSaveButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="DestinationSelectButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="GTAIVLauncherSaveButton.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="GTAIVLauncherSaveButton.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="&gt;&gt;GTAIVLauncherSaveButton.Name" xml:space="preserve">
-    <value>GTAIVLauncherSaveButton</value>
-  </data>
-  <data name="&gt;&gt;GTAIVLauncherSaveButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GTAIVLauncherSaveButton.Parent" xml:space="preserve">
-    <value>GTAIVLauncherGroupBox</value>
-  </data>
-  <data name="&gt;&gt;GTAIVLauncherSaveButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="GTAIVIDTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="GTAIVIDTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>168, 20</value>
-  </data>
-  <data name="GTAIVIDTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 20</value>
-  </data>
-  <data name="GTAIVIDTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;GTAIVIDTextBox.Name" xml:space="preserve">
-    <value>GTAIVIDTextBox</value>
-  </data>
-  <data name="&gt;&gt;GTAIVIDTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GTAIVIDTextBox.Parent" xml:space="preserve">
-    <value>GTAIVLauncherGroupBox</value>
-  </data>
-  <data name="&gt;&gt;GTAIVIDTextBox.ZOrder" xml:space="preserve">
+  <data name="DestinationSelectButton.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="GTAIVLauncherComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 19</value>
-  </data>
-  <data name="GTAIVLauncherComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 21</value>
-  </data>
-  <data name="GTAIVLauncherComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;GTAIVLauncherComboBox.Name" xml:space="preserve">
-    <value>GTAIVLauncherComboBox</value>
-  </data>
-  <data name="&gt;&gt;GTAIVLauncherComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GTAIVLauncherComboBox.Parent" xml:space="preserve">
-    <value>GTAIVLauncherGroupBox</value>
-  </data>
-  <data name="&gt;&gt;GTAIVLauncherComboBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="GTAIVLauncherGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 87</value>
-  </data>
-  <data name="GTAIVLauncherGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 50</value>
-  </data>
-  <data name="GTAIVLauncherGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="GTAIVLauncherGroupBox.Text" xml:space="preserve">
-    <value>Launcher</value>
-  </data>
-  <data name="&gt;&gt;GTAIVLauncherGroupBox.Name" xml:space="preserve">
-    <value>GTAIVLauncherGroupBox</value>
-  </data>
-  <data name="&gt;&gt;GTAIVLauncherGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GTAIVLauncherGroupBox.Parent" xml:space="preserve">
-    <value>GTAIVTabPage</value>
-  </data>
-  <data name="&gt;&gt;GTAIVLauncherGroupBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="GTAIVLocationGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="GTAIVSaveButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="GTAIVSaveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>168, 45</value>
-  </data>
-  <data name="GTAIVSaveButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="GTAIVSaveButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="GTAIVSaveButton.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="&gt;&gt;GTAIVSaveButton.Name" xml:space="preserve">
-    <value>GTAIVSaveButton</value>
-  </data>
-  <data name="&gt;&gt;GTAIVSaveButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GTAIVSaveButton.Parent" xml:space="preserve">
-    <value>GTAIVLocationGroupBox</value>
-  </data>
-  <data name="&gt;&gt;GTAIVSaveButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="GTAIVDetectButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="GTAIVDetectButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 45</value>
-  </data>
-  <data name="GTAIVDetectButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="GTAIVDetectButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="GTAIVDetectButton.Text" xml:space="preserve">
-    <value>Detect</value>
-  </data>
-  <data name="&gt;&gt;GTAIVDetectButton.Name" xml:space="preserve">
-    <value>GTAIVDetectButton</value>
-  </data>
-  <data name="&gt;&gt;GTAIVDetectButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GTAIVDetectButton.Parent" xml:space="preserve">
-    <value>GTAIVLocationGroupBox</value>
-  </data>
-  <data name="&gt;&gt;GTAIVDetectButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="GTAIVSelectButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="GTAIVSelectButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 45</value>
-  </data>
-  <data name="GTAIVSelectButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="GTAIVSelectButton.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="GTAIVSelectButton.Text" xml:space="preserve">
+  <data name="DestinationSelectButton.Text" xml:space="preserve">
     <value>Select</value>
   </data>
-  <data name="&gt;&gt;GTAIVSelectButton.Name" xml:space="preserve">
-    <value>GTAIVSelectButton</value>
+  <data name="&gt;&gt;DestinationSelectButton.Name" xml:space="preserve">
+    <value>DestinationSelectButton</value>
   </data>
-  <data name="&gt;&gt;GTAIVSelectButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;DestinationSelectButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GTAIVSelectButton.Parent" xml:space="preserve">
-    <value>GTAIVLocationGroupBox</value>
+  <data name="&gt;&gt;DestinationSelectButton.Parent" xml:space="preserve">
+    <value>DestinationGroupBox</value>
   </data>
-  <data name="&gt;&gt;GTAIVSelectButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="GTAIVLocationTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="GTAIVLocationTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 19</value>
-  </data>
-  <data name="GTAIVLocationTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>411, 20</value>
-  </data>
-  <data name="GTAIVLocationTextBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;DestinationSelectButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;GTAIVLocationTextBox.Name" xml:space="preserve">
-    <value>GTAIVLocationTextBox</value>
+  <data name="DestinationTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="&gt;&gt;GTAIVLocationTextBox.Type" xml:space="preserve">
+  <data name="DestinationTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="DestinationTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>371, 20</value>
+  </data>
+  <data name="DestinationTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;DestinationTextBox.Name" xml:space="preserve">
+    <value>DestinationTextBox</value>
+  </data>
+  <data name="&gt;&gt;DestinationTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GTAIVLocationTextBox.Parent" xml:space="preserve">
-    <value>GTAIVLocationGroupBox</value>
+  <data name="&gt;&gt;DestinationTextBox.Parent" xml:space="preserve">
+    <value>DestinationGroupBox</value>
   </data>
-  <data name="&gt;&gt;GTAIVLocationTextBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="GTAIVLocationGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
-  </data>
-  <data name="GTAIVLocationGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 75</value>
-  </data>
-  <data name="GTAIVLocationGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="GTAIVLocationGroupBox.Text" xml:space="preserve">
-    <value>Location</value>
-  </data>
-  <data name="&gt;&gt;GTAIVLocationGroupBox.Name" xml:space="preserve">
-    <value>GTAIVLocationGroupBox</value>
-  </data>
-  <data name="&gt;&gt;GTAIVLocationGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GTAIVLocationGroupBox.Parent" xml:space="preserve">
-    <value>GTAIVTabPage</value>
-  </data>
-  <data name="&gt;&gt;GTAIVLocationGroupBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;DestinationTextBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="GTAIVTabPage.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="DestinationGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 115</value>
+  </data>
+  <data name="DestinationGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 45</value>
+  </data>
+  <data name="DestinationGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="DestinationGroupBox.Text" xml:space="preserve">
+    <value>Destination</value>
+  </data>
+  <data name="&gt;&gt;DestinationGroupBox.Name" xml:space="preserve">
+    <value>DestinationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;DestinationGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DestinationGroupBox.Parent" xml:space="preserve">
+    <value>DuplicatorTabPage</value>
+  </data>
+  <data name="&gt;&gt;DestinationGroupBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="DuplicatorTabPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
-  <data name="GTAIVTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="DuplicatorTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="GTAIVTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 143</value>
+  <data name="DuplicatorTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>476, 363</value>
   </data>
-  <data name="GTAIVTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="DuplicatorTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="GTAIVTabPage.Text" xml:space="preserve">
-    <value>GTA IV</value>
+  <data name="DuplicatorTabPage.Text" xml:space="preserve">
+    <value>Duplicator Tool</value>
   </data>
-  <data name="&gt;&gt;GTAIVTabPage.Name" xml:space="preserve">
-    <value>GTAIVTabPage</value>
+  <data name="&gt;&gt;DuplicatorTabPage.Name" xml:space="preserve">
+    <value>DuplicatorTabPage</value>
   </data>
-  <data name="&gt;&gt;GTAIVTabPage.Type" xml:space="preserve">
+  <data name="&gt;&gt;DuplicatorTabPage.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GTAIVTabPage.Parent" xml:space="preserve">
-    <value>ConfigTabControl</value>
+  <data name="&gt;&gt;DuplicatorTabPage.Parent" xml:space="preserve">
+    <value>GeneralTabControl</value>
   </data>
-  <data name="&gt;&gt;GTAIVTabPage.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;DuplicatorTabPage.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="ConfigTabControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="LogTextBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="ConfigTabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="LogTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
-  <data name="ConfigTabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>443, 169</value>
+  <data name="LogTextBox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="ConfigTabControl.TabIndex" type="System.Int32, mscorlib">
+  <data name="LogTextBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="LogTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>470, 357</value>
+  </data>
+  <data name="LogTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;ConfigTabControl.Name" xml:space="preserve">
-    <value>ConfigTabControl</value>
+  <data name="&gt;&gt;LogTextBox.Name" xml:space="preserve">
+    <value>LogTextBox</value>
   </data>
-  <data name="&gt;&gt;ConfigTabControl.Type" xml:space="preserve">
+  <data name="&gt;&gt;LogTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LogTextBox.Parent" xml:space="preserve">
+    <value>LogTabPage</value>
+  </data>
+  <data name="&gt;&gt;LogTextBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LogTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="LogTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="LogTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>476, 363</value>
+  </data>
+  <data name="LogTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="LogTabPage.Text" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="&gt;&gt;LogTabPage.Name" xml:space="preserve">
+    <value>LogTabPage</value>
+  </data>
+  <data name="&gt;&gt;LogTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LogTabPage.Parent" xml:space="preserve">
+    <value>GeneralTabControl</value>
+  </data>
+  <data name="&gt;&gt;LogTabPage.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="LicensesRichTextBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="LicensesRichTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="LicensesRichTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>470, 357</value>
+  </data>
+  <data name="LicensesRichTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LicensesRichTextBox.Text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="&gt;&gt;LicensesRichTextBox.Name" xml:space="preserve">
+    <value>LicensesRichTextBox</value>
+  </data>
+  <data name="&gt;&gt;LicensesRichTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LicensesRichTextBox.Parent" xml:space="preserve">
+    <value>LicensesTabPage</value>
+  </data>
+  <data name="&gt;&gt;LicensesRichTextBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LicensesTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="LicensesTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="LicensesTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>476, 363</value>
+  </data>
+  <data name="LicensesTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="LicensesTabPage.Text" xml:space="preserve">
+    <value>Licenses</value>
+  </data>
+  <data name="&gt;&gt;LicensesTabPage.Name" xml:space="preserve">
+    <value>LicensesTabPage</value>
+  </data>
+  <data name="&gt;&gt;LicensesTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LicensesTabPage.Parent" xml:space="preserve">
+    <value>GeneralTabControl</value>
+  </data>
+  <data name="&gt;&gt;LicensesTabPage.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="GeneralTabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 37</value>
+  </data>
+  <data name="GeneralTabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>484, 389</value>
+  </data>
+  <data name="GeneralTabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GeneralTabControl.Name" xml:space="preserve">
+    <value>GeneralTabControl</value>
+  </data>
+  <data name="&gt;&gt;GeneralTabControl.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ConfigTabControl.Parent" xml:space="preserve">
+  <data name="&gt;&gt;GeneralTabControl.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;ConfigTabControl.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;GeneralTabControl.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <metadata name="FolderBrowser.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="TopMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>146, 17</value>
+  </metadata>
+  <data name="LaunchToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 33</value>
+  </data>
+  <data name="LaunchToolStripMenuItem.Text" xml:space="preserve">
+    <value>Launch</value>
+  </data>
+  <data name="AddToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 33</value>
+  </data>
+  <data name="AddToolStripMenuItem.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="RemoveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 33</value>
+  </data>
+  <data name="RemoveToolStripMenuItem.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="RefreshToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 33</value>
+  </data>
+  <data name="RefreshToolStripMenuItem.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="SettingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 33</value>
+  </data>
+  <data name="SettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="TopMenuStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="TopMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>484, 37</value>
+  </data>
+  <data name="TopMenuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;TopMenuStrip.Name" xml:space="preserve">
+    <value>TopMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;TopMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TopMenuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TopMenuStrip.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="LogStatusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>275, 17</value>
+  </metadata>
+  <data name="LogToolStripStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 17</value>
+  </data>
+  <data name="LogStatusStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 429</value>
+  </data>
+  <data name="LogStatusStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>484, 22</value>
+  </data>
+  <data name="LogStatusStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="LogStatusStrip.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;LogStatusStrip.Name" xml:space="preserve">
+    <value>LogStatusStrip</value>
+  </data>
+  <data name="&gt;&gt;LogStatusStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LogStatusStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LogStatusStrip.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>61</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>443, 169</value>
+    <value>484, 451</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1589,11 +1361,44 @@
         AAAAAAAAAAAAAA==
 </value>
   </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>500, 490</value>
+  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>PatchMyPath Configuration</value>
+    <value>PatchMyPath</value>
+  </data>
+  <data name="&gt;&gt;StartAsToolStripMenuItem.Name" xml:space="preserve">
+    <value>StartAsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;StartAsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ExecutableToolStripMenuItem.Name" xml:space="preserve">
+    <value>ExecutableToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;ExecutableToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RGLToolStripMenuItem.Name" xml:space="preserve">
+    <value>RGLToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;RGLToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SteamToolStripMenuItem.Name" xml:space="preserve">
+    <value>SteamToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;SteamToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EGLToolStripMenuItem.Name" xml:space="preserve">
+    <value>EGLToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;EGLToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;FolderBrowser.Name" xml:space="preserve">
     <value>FolderBrowser</value>
@@ -1601,8 +1406,44 @@
   <data name="&gt;&gt;FolderBrowser.Type" xml:space="preserve">
     <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;LaunchToolStripMenuItem.Name" xml:space="preserve">
+    <value>LaunchToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;LaunchToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddToolStripMenuItem.Name" xml:space="preserve">
+    <value>AddToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;AddToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RemoveToolStripMenuItem.Name" xml:space="preserve">
+    <value>RemoveToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;RemoveToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RefreshToolStripMenuItem.Name" xml:space="preserve">
+    <value>RefreshToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;RefreshToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SettingsToolStripMenuItem.Name" xml:space="preserve">
+    <value>SettingsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;SettingsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LogToolStripStatusLabel.Name" xml:space="preserve">
+    <value>LogToolStripStatusLabel</value>
+  </data>
+  <data name="&gt;&gt;LogToolStripStatusLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormConfig</value>
+    <value>FormHome</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
