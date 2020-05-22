@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="Add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Clear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Clear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConfigCreatedLog" xml:space="preserve">
+    <value>Configuration file not found, a new one was generated</value>
+  </data>
+  <data name="ConfigInvalid" xml:space="preserve">
+    <value>We tried to load the configuration file but is invalid.
+Do you want to create a new configuration file?
+Press No if you want to manually check the file.
+
+({0})</value>
+  </data>
+  <data name="ConfigInvalidLog" xml:space="preserve">
+    <value>Configuration is invalid, user prevented the creation of a new file</value>
+  </data>
+  <data name="ConfigInvalidTitle" xml:space="preserve">
+    <value>Invalid Configuration</value>
+  </data>
+  <data name="ConfigLoadingLog" xml:space="preserve">
+    <value>Attempting to load the configuration...</value>
+  </data>
+  <data name="ConfigNotParsedLog" xml:space="preserve">
+    <value>Unable to parse configuration: {0}</value>
+  </data>
+  <data name="DuplicatorCompleted" xml:space="preserve">
+    <value>The install has been duplicated successfully!</value>
+  </data>
+  <data name="DuplicatorCompletedLog" xml:space="preserve">
+    <value>Duplication from {0} to {1} completed</value>
+  </data>
+  <data name="DuplicatorCompletedTitle" xml:space="preserve">
+    <value>Duplication Finished!</value>
+  </data>
+  <data name="DuplicatorCopiedLog" xml:space="preserve">
+    <value>File {0} was copied to {1}</value>
+  </data>
+  <data name="DuplicatorCreatingDirectoryLog" xml:space="preserve">
+    <value>Destination {0} does not exists, creating...</value>
+  </data>
+  <data name="DuplicatorDirectoryDeletedLog" xml:space="preserve">
+    <value>Game directory {0} was deleted</value>
+  </data>
+  <data name="DuplicatorFileDeletedLog" xml:space="preserve">
+    <value>Game file {0} was deleted</value>
+  </data>
+  <data name="DuplicatorHardLog" xml:space="preserve">
+    <value>File hard link was created from {0} to {1}</value>
+  </data>
+  <data name="DuplicatorHasFiles" xml:space="preserve">
+    <value>The Destination folder contains files and/or folders.
+Existing game files will be removed and replaced with links. Installed modifications will not be touched.
+
+Do you want to continue?</value>
+  </data>
+  <data name="DuplicatorHasFilesLog" xml:space="preserve">
+    <value>Folder {0} contains files, asking user if wants to continue...</value>
+  </data>
+  <data name="DuplicatorHasFilesTitle" xml:space="preserve">
+    <value>Destination Contains Files and/or Folders</value>
+  </data>
+  <data name="DuplicatorNativeError" xml:space="preserve">
+    <value>Error: {0}
+The process has been stopped.</value>
+  </data>
+  <data name="DuplicatorNativeErrorTitle" xml:space="preserve">
+    <value>Error while creating Symbolic/Hard Link</value>
+  </data>
+  <data name="DuplicatorNoGame" xml:space="preserve">
+    <value>There is no game selected.
+Please select the type of game at the top and try again.</value>
+  </data>
+  <data name="DuplicatorNoGameLog" xml:space="preserve">
+    <value>User attempted to use the duplicator, but no game was selected</value>
+  </data>
+  <data name="DuplicatorNoGameTitle" xml:space="preserve">
+    <value>No Game Selected</value>
+  </data>
+  <data name="DuplicatorNoPath" xml:space="preserve">
+    <value>Looks like one of the folders has not been selected.
+Please check that there is an Origin and Destination folder selected and try again.</value>
+  </data>
+  <data name="DuplicatorNoPathLog" xml:space="preserve">
+    <value>User attempted to use the duplicator, but one of the folders is not selected</value>
+  </data>
+  <data name="DuplicatorNoPathTitle" xml:space="preserve">
+    <value>Directory not Selected</value>
+  </data>
+  <data name="DuplicatorOptionalMissingLog" xml:space="preserve">
+    <value>{0} {1} does not exists but is marked as optional, skipping...</value>
+  </data>
+  <data name="DuplicatorOriginMissing" xml:space="preserve">
+    <value>The Origin folder does not exists!
+Please ensure that the selected folder is present and try again.</value>
+  </data>
+  <data name="DuplicatorOriginMissingLog" xml:space="preserve">
+    <value>Folder {0} can't be used for duplication: Does not exists</value>
+  </data>
+  <data name="DuplicatorOriginMissingTitle" xml:space="preserve">
+    <value>Origin Folder is Missing</value>
+  </data>
+  <data name="DuplicatorRequiredMissing" xml:space="preserve">
+    <value>The {0} {1} does not exists and is required!
+The process has been stopped!</value>
+  </data>
+  <data name="DuplicatorRequiredMissingLog" xml:space="preserve">
+    <value>{0} {1} does not exists and is required, duplication process stopped</value>
+  </data>
+  <data name="DuplicatorRequiredMissingTitle" xml:space="preserve">
+    <value>Unable to find required {0}</value>
+  </data>
+  <data name="DuplicatorStoppedLog" xml:space="preserve">
+    <value>User stopped the duplication process</value>
+  </data>
+  <data name="DuplicatorSymbolicLog" xml:space="preserve">
+    <value>{0} symbolic link was created from {1} to {2}</value>
+  </data>
+  <data name="FormCreatingLog" xml:space="preserve">
+    <value>Creating a new instance of the Home Form</value>
+  </data>
+  <data name="FormInitEndLog" xml:space="preserve">
+    <value>Finished initialization of the Home Form</value>
+  </data>
+  <data name="FormInstallAddedLog" xml:space="preserve">
+    <value>Install {0} was added</value>
+  </data>
+  <data name="FormInstallRemovedLog" xml:space="preserve">
+    <value>Install {0} was removed</value>
+  </data>
+  <data name="FormLaunchingLog" xml:space="preserve">
+    <value>Launching {0}</value>
+  </data>
+  <data name="FormRefreshedLog" xml:space="preserve">
+    <value>The list of installs has been refreshed</value>
+  </data>
+  <data name="FormSettingsLoadLog" xml:space="preserve">
+    <value>Settings loaded from Configuration into UI Controls</value>
+  </data>
+  <data name="GameGTAIV" xml:space="preserve">
+    <value>Grand Theft Auto IV</value>
+  </data>
+  <data name="GameGTAV" xml:space="preserve">
+    <value>Grand Theft Auto V</value>
+  </data>
+  <data name="GameRDR2" xml:space="preserve">
+    <value>Red Dead Redemption 2</value>
+  </data>
+  <data name="InstallInvalid" xml:space="preserve">
+    <value>The game executables could not be found.
+Please make sure that the files are present and try again.</value>
+  </data>
+  <data name="InstallInvalidLog" xml:space="preserve">
+    <value>User attempted to launch {0} but the executables are missing</value>
+  </data>
+  <data name="InstallInvalidTitle" xml:space="preserve">
+    <value>Executables Missing</value>
+  </data>
+  <data name="InstallNoExecutable" xml:space="preserve">
+    <value>No game install could be found on the specified folder.
+Please make sure one of the supported games exists on the install folder and try again.</value>
+  </data>
+  <data name="InstallNoExecutableLog" xml:space="preserve">
+    <value>User attempted to launch {0} but no game install could be detected</value>
+  </data>
+  <data name="InstallNoExecutableTitle" xml:space="preserve">
+    <value>No Game Detected</value>
+  </data>
+  <data name="InstallTampered" xml:space="preserve">
+    <value>The game executables have been tampered.
+Please make sure that they have not been modified and try again.</value>
+  </data>
+  <data name="InstallTamperedLog" xml:space="preserve">
+    <value>User attempted to launch {0} but the executables are tampered</value>
+  </data>
+  <data name="InstallTamperedTitle" xml:space="preserve">
+    <value>Executables Tampered</value>
+  </data>
+  <data name="InstallWrongGame" xml:space="preserve">
+    <value>You have not configured the location of {0}!
+Please check the configuration and make sure that this game has an installation folder set and try again.</value>
+  </data>
+  <data name="InstallWrongGameLog" xml:space="preserve">
+    <value>Game {0} has no installation folder set</value>
+  </data>
+  <data name="InstallWrongGameTitle" xml:space="preserve">
+    <value>Missing installation folder</value>
+  </data>
+  <data name="Licenses" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Licenses.rtf;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Play" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SettingsAccessDenied" xml:space="preserve">
+    <value>Access denied when trying to move {0}. Restart the application as administrator and try again.</value>
+  </data>
+  <data name="SettingsAccessDeniedLog" xml:space="preserve">
+    <value>Access denied to folder {0}</value>
+  </data>
+  <data name="SettingsAccessDeniedTitle" xml:space="preserve">
+    <value>Access denied</value>
+  </data>
+  <data name="SettingsApplications" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SettingsApplications.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SettingsInvalidID" xml:space="preserve">
+    <value>"{0}" is not a valid number or is too big to be processed (max value is {1}).</value>
+  </data>
+  <data name="SettingsLanguageChanged" xml:space="preserve">
+    <value>The change will take effect the next time the application is started</value>
+  </data>
+  <data name="SettingsLanguageChangedTitle" xml:space="preserve">
+    <value>Setting Changed</value>
+  </data>
+  <data name="SettingsOtherDownload" xml:space="preserve">
+    <value>We will download up to date File Lists from the project's GitHub Page.
+
+Continue?</value>
+  </data>
+  <data name="SettingsOtherDownloadTitle" xml:space="preserve">
+    <value>Download Updated File Lists</value>
+  </data>
+  <data name="SettingsPathFoundLog" xml:space="preserve">
+    <value>{0} was found at {1}</value>
+  </data>
+  <data name="SettingsPathNotFound" xml:space="preserve">
+    <value>We were unable to detect the original location.
+Please make sure that the game was installed from RGL, Steam or EGL and try again.</value>
+  </data>
+  <data name="SettingsPathNotFoundTitle" xml:space="preserve">
+    <value>Unable to find location</value>
+  </data>
+  <data name="SettingsPathRename" xml:space="preserve">
+    <value>Looks like this is the original game folder.
+Do you want to rename it? (To prevent the game from being deleted/overwritten)</value>
+  </data>
+  <data name="SettingsPathRenameLog" xml:space="preserve">
+    <value>{0} is being renamed to {1} for saving</value>
+  </data>
+  <data name="SettingsPathRenameTitle" xml:space="preserve">
+    <value>Original Folder Detected</value>
+  </data>
+  <data name="SettingsPathSetLog" xml:space="preserve">
+    <value>{0} location set to {1}</value>
+  </data>
+  <data name="SettingsPathUninstall" xml:space="preserve">
+    <value>Found the Vanilla Location on the Uninstall Information!</value>
+  </data>
+  <data name="SettingsPathUninstallTitle" xml:space="preserve">
+    <value>Install Location Found</value>
+  </data>
+  <data name="SettingsPathWarehouse" xml:space="preserve">
+    <value>Found the Vanilla Location on the Legacy Rockstar Warehouse Information!</value>
+  </data>
+  <data name="SettingsPathWarehouseTitle" xml:space="preserve">
+    <value>Install Location Found</value>
+  </data>
+  <data name="StartingGTAVSteamLog" xml:space="preserve">
+    <value>Starting GTA V from {0} with Steam</value>
+  </data>
+  <data name="StartingGTAVVanillaLog" xml:space="preserve">
+    <value>Starting Vanilla GTA V from {0}</value>
+  </data>
+  <data name="StartingLauncherBypassLog" xml:space="preserve">
+    <value>Starting GTA V from {0} with the main executable and LauncherBypass</value>
+  </data>
+  <data name="StartingRDR2SteamLog" xml:space="preserve">
+    <value>Starting RDR2 from {0} with Steam</value>
+  </data>
+  <data name="StartingRDR2VanillaLog" xml:space="preserve">
+    <value>Starting Vanila RDR2 from {0}</value>
+  </data>
+  <data name="StartingRedHookLog" xml:space="preserve">
+    <value>Starting RedHook2 from {0}</value>
+  </data>
+  <data name="StartingRPHLog" xml:space="preserve">
+    <value>Starting GTA V from {0} with RagePluginHook</value>
+  </data>
+  <data name="StartingScriptHookLog" xml:space="preserve">
+    <value>Starting RDR2 from {0} with ScriptHook</value>
+  </data>
+  <data name="SymbolicLinkError" xml:space="preserve">
+    <value>An error has ocurred:
+{0}</value>
+  </data>
+  <data name="SymbolicLinkErrorLog" xml:space="preserve">
+    <value>Error while creating symbolic link from {0} to {1}: {2}</value>
+  </data>
+  <data name="SymbolicLinkErrorTitle" xml:space="preserve">
+    <value>Unable to create Symbolic Link</value>
+  </data>
+  <data name="BugsnagConsent" xml:space="preserve">
+    <value>Do you want to enable Bugsnag for reporting bugs?
+
+You can read the Privacy policy on https://justalemon.ml/Privacy_policy</value>
+  </data>
+  <data name="BugsnagConsentTitle" xml:space="preserve">
+    <value>Bugsnag</value>
+  </data>
+</root>
