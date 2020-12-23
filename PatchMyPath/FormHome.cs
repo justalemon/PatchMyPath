@@ -296,7 +296,7 @@ namespace PatchMyPath
                     if (Directory.Exists(path))
                     {
                         Logger.Info(Resources.DuplicatorDirectoryDeletedLog, path);
-                        Directory.Delete(path);
+                        Directory.Delete(path, true);
                         continue;
                     }
                 }
