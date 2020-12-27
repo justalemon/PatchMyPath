@@ -3,12 +3,12 @@ using System.ComponentModel;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
 
-namespace PatchMyPath
+namespace PatchMyPath.Tools
 {
     /// <summary>
     /// A set of checks to ensure the integrity of game installs.
     /// </summary>
-    public static class Checks
+    public static class Signatures
     {
         /// <summary>
         /// The hashes of the certificates used by Rockstar to sign the game files.
@@ -55,7 +55,7 @@ namespace PatchMyPath
         /// </summary>
         /// <param name="file">The file to check.</param>
         /// <returns>true if the file exists and has a valid signature, false otherwise.</returns>
-        public static bool IsFileSignedByRockstar(string file)
+        public static bool IsSignedByRockstar(string file)
         {
             // If the file does not exists, return
             if (!File.Exists(file))

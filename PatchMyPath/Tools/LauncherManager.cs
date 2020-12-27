@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading;
 
-namespace PatchMyPath
+namespace PatchMyPath.Tools
 {
     public enum LauncherOperationResult
     {
@@ -17,7 +17,7 @@ namespace PatchMyPath
     /// <summary>
     /// Tools for terminating the launchers.
     /// </summary>
-    public static class Launchers
+    public static class LauncherManager
     {
         private static readonly Dictionary<LauncherType, string> keys = new Dictionary<LauncherType, string>
         {

@@ -1,5 +1,6 @@
 ﻿using NLog;
 using PatchMyPath.Properties;
+using PatchMyPath.Tools;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
@@ -103,11 +104,11 @@ namespace PatchMyPath.Config
                 switch (Game)
                 {
                     case Game.RedDeadRedemption2:
-                        return Checks.IsFileSignedByRockstar(Path.Combine(GamePath, "RDR2.exe"));
+                        return Signatures.IsSignedByRockstar(Path.Combine(GamePath, "RDR2.exe"));
                     case Game.GrandTheftAutoIV:
-                        return Checks.IsFileSignedByRockstar(Path.Combine(GamePath, "GTAIV.exe")) || Checks.IsFileSignedByRockstar(Path.Combine(GamePath, "gta4Browser.exe"));
+                        return Signatures.IsSignedByRockstar(Path.Combine(GamePath, "GTAIV.exe")) || Signatures.IsSignedByRockstar(Path.Combine(GamePath, "gta4Browser.exe"));
                     case Game.GrandTheftAutoV:
-                        return Checks.IsFileSignedByRockstar(Path.Combine(GamePath, "GTA5.exe"));
+                        return Signatures.IsSignedByRockstar(Path.Combine(GamePath, "GTA5.exe"));
                     default:
                         return false;
                 }
@@ -170,10 +171,10 @@ namespace PatchMyPath.Config
             // Terminate the game launcher if required
             if (Program.Config.CloseLaunchers)
             {
-                Launchers.Stop(launcher);
+                LauncherManager.Stop(launcher);
                 if ((game == Game.GrandTheftAutoIV || game == Game.GrandTheftAutoV || game == Game.RedDeadRedemption2) && launcher != LauncherType.RockstarGamesLauncher)
                 {
-                    Launchers.Stop(LauncherType.RockstarGamesLauncher);
+                    LauncherManager.Stop(LauncherType.RockstarGamesLauncher);
                 }
             }
 
