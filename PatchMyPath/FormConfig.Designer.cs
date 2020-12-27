@@ -32,6 +32,7 @@
             this.ConfigTabControl = new System.Windows.Forms.TabControl();
             this.GeneralTabPage = new System.Windows.Forms.TabPage();
             this.OtherGroupBox = new System.Windows.Forms.GroupBox();
+            this.BugsnagCheckBox = new System.Windows.Forms.CheckBox();
             this.DownloadListsButton = new System.Windows.Forms.Button();
             this.LanguageGroupBox = new System.Windows.Forms.GroupBox();
             this.LanguageComboBox = new System.Windows.Forms.ComboBox();
@@ -66,7 +67,7 @@
             this.GTAIVSelectButton = new System.Windows.Forms.Button();
             this.GTAIVLocationTextBox = new System.Windows.Forms.TextBox();
             this.FolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
-            this.BugsnagCheckBox = new System.Windows.Forms.CheckBox();
+            this.CloseLaunchers = new System.Windows.Forms.CheckBox();
             this.ConfigTabControl.SuspendLayout();
             this.GeneralTabPage.SuspendLayout();
             this.OtherGroupBox.SuspendLayout();
@@ -95,6 +96,7 @@
             // GeneralTabPage
             // 
             this.GeneralTabPage.Controls.Add(this.OtherGroupBox);
+            this.GeneralTabPage.Controls.Add(this.DownloadListsButton);
             this.GeneralTabPage.Controls.Add(this.LanguageGroupBox);
             resources.ApplyResources(this.GeneralTabPage, "GeneralTabPage");
             this.GeneralTabPage.Name = "GeneralTabPage";
@@ -103,10 +105,17 @@
             // OtherGroupBox
             // 
             resources.ApplyResources(this.OtherGroupBox, "OtherGroupBox");
+            this.OtherGroupBox.Controls.Add(this.CloseLaunchers);
             this.OtherGroupBox.Controls.Add(this.BugsnagCheckBox);
-            this.OtherGroupBox.Controls.Add(this.DownloadListsButton);
             this.OtherGroupBox.Name = "OtherGroupBox";
             this.OtherGroupBox.TabStop = false;
+            // 
+            // BugsnagCheckBox
+            // 
+            resources.ApplyResources(this.BugsnagCheckBox, "BugsnagCheckBox");
+            this.BugsnagCheckBox.Name = "BugsnagCheckBox";
+            this.BugsnagCheckBox.UseVisualStyleBackColor = true;
+            this.BugsnagCheckBox.CheckedChanged += new System.EventHandler(this.BugsnagCheckBox_CheckedChanged);
             // 
             // DownloadListsButton
             // 
@@ -349,12 +358,12 @@
             resources.ApplyResources(this.GTAIVLocationTextBox, "GTAIVLocationTextBox");
             this.GTAIVLocationTextBox.Name = "GTAIVLocationTextBox";
             // 
-            // BugsnagCheckBox
+            // CloseLaunchers
             // 
-            resources.ApplyResources(this.BugsnagCheckBox, "BugsnagCheckBox");
-            this.BugsnagCheckBox.Name = "BugsnagCheckBox";
-            this.BugsnagCheckBox.UseVisualStyleBackColor = true;
-            this.BugsnagCheckBox.CheckedChanged += new System.EventHandler(this.BugsnagCheckBox_CheckedChanged);
+            resources.ApplyResources(this.CloseLaunchers, "CloseLaunchers");
+            this.CloseLaunchers.Name = "CloseLaunchers";
+            this.CloseLaunchers.UseVisualStyleBackColor = true;
+            this.CloseLaunchers.CheckedChanged += new System.EventHandler(this.CloseLaunchers_CheckedChanged);
             // 
             // FormConfig
             // 
@@ -428,5 +437,6 @@
         private System.Windows.Forms.Button DownloadListsButton;
         private System.Windows.Forms.FolderBrowserDialog FolderBrowser;
         private System.Windows.Forms.CheckBox BugsnagCheckBox;
+        private System.Windows.Forms.CheckBox CloseLaunchers;
     }
 }

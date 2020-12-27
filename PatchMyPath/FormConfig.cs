@@ -56,6 +56,7 @@ namespace PatchMyPath
             GTAVLauncherComboBox.SelectedIndex = (int)Program.Config.Launchers.GTAVUse;
             GTAIVLauncherComboBox.SelectedIndex = (int)Program.Config.Launchers.GTAIVUse;
             // And the Bugsnag toggle
+            CloseLaunchers.Checked = Program.Config.CloseLaunchers;
             BugsnagCheckBox.Checked = Program.Config.Bugsnag;
 
             // Finally, log that we have finished the population of settings
@@ -333,7 +334,6 @@ namespace PatchMyPath
 
         private void RDR2LauncherSaveButton_Click(object sender, EventArgs e)
         {
-
             // Handle the requirements of specific launchers
             switch ((LauncherType)RDR2LauncherComboBox.SelectedIndex)
             {
@@ -417,6 +417,17 @@ namespace PatchMyPath
 
         #region Other
 
+        private void CloseLaunchers_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!Visible)
+            {
+                return;
+            }
+
+            Program.Config.CloseLaunchers = CloseLaunchers.Checked;
+            Program.Config.Save();
+        }
+
         private void BugsnagCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (!Visible)
@@ -428,6 +439,10 @@ namespace PatchMyPath
             Program.Config.Save();
             MessageBox.Show(Resources.SettingsLanguageChanged, Resources.SettingsLanguageChangedTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        #endregion
+
+        #region Tools
 
         private void DownloadListsButton_Click(object sender, EventArgs e)
         {

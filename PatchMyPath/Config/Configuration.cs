@@ -43,6 +43,11 @@ namespace PatchMyPath.Config
         [JsonProperty("add_after_dupe")]
         public bool AddAfterDupe { get; set; } = true;
         /// <summary>
+        /// If the game launchers should be closed before changing the game's path.
+        /// </summary>
+        [JsonProperty("close_launchers")]
+        public bool CloseLaunchers { get; set; } = true;
+        /// <summary>
         /// The settings for the usage of Steam for launching the game.
         /// </summary>
         [Obsolete("Use Configuration.Launchers instead.")]
@@ -52,7 +57,7 @@ namespace PatchMyPath.Config
         /// The settings for using specific launchers to start the games.
         /// </summary>
         [JsonProperty("launchers")]
-        public Launchers Launchers { get; set; } = new Launchers();
+        public LaunchersConfig Launchers { get; set; } = new LaunchersConfig();
         /// <summary>
         /// The destination folder for the game files.
         /// </summary>

@@ -1,6 +1,5 @@
 ﻿using NLog;
 using PatchMyPath.Properties;
-using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
@@ -166,6 +165,16 @@ namespace PatchMyPath.Config
                 Logger.Error(Resources.InstallWrongGameLog, game, (int)game);
                 MessageBox.Show(string.Format(Resources.InstallWrongGame, game.ToString().SpaceOnUpperCase()), Resources.InstallWrongGameTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+
+            // Terminate the game launcher if required
+            if (Program.Config.CloseLaunchers)
+            {
+                Launchers.Stop(launcher);
+                if ((game == Game.GrandTheftAutoIV || game == Game.GrandTheftAutoV || game == Game.RedDeadRedemption2) && launcher != LauncherType.RockstarGamesLauncher)
+                {
+                    Launchers.Stop(LauncherType.RockstarGamesLauncher);
+                }
             }
 
             // Now, destroy the original game folder if is present

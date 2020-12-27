@@ -5,7 +5,7 @@ namespace PatchMyPath.Config
     /// <summary>
     /// THe configuration for using specific game launchers with RDR2 and GTA V.
     /// </summary>
-    public class Launchers
+    public class LaunchersConfig
     {
         /// <summary>
         /// The type of Launcher that Red Dead Redemption 2 should use.
