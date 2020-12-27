@@ -63,7 +63,6 @@ namespace PatchMyPath
         {
             // Get the game and launcher of the install
             Game game = install.Game;
-            LauncherType launcher = Program.Config.Launchers.GetLauncher(game);
 
             // If the install has been tampered, notify the user and return
             if (!install.IsLegal)
@@ -99,10 +98,10 @@ namespace PatchMyPath
             // Terminate the game launcher if required
             if (Program.Config.CloseLaunchers)
             {
-                Invoke(new Action(() => CurrentOperation.Text = "Stopping " + launcher.ToString().SpaceOnUpperCase()));
-                LauncherManager.Stop(launcher);
+                Invoke(new Action(() => CurrentOperation.Text = "Stopping " + type.ToString().SpaceOnUpperCase()));
+                LauncherManager.Stop(type);
 
-                if ((game == Game.GrandTheftAutoIV || game == Game.GrandTheftAutoV || game == Game.RedDeadRedemption2) && launcher != LauncherType.RockstarGamesLauncher)
+                if ((game == Game.GrandTheftAutoIV || game == Game.GrandTheftAutoV || game == Game.RedDeadRedemption2) && type != LauncherType.RockstarGamesLauncher)
                 {
                     Invoke(new Action(() => CurrentOperation.Text = "Stopping " + LauncherType.RockstarGamesLauncher.ToString().SpaceOnUpperCase()));
                     LauncherManager.Stop(LauncherType.RockstarGamesLauncher);
@@ -157,7 +156,7 @@ namespace PatchMyPath
             }
 
             // If none of the previous options are needed, launch the game like normal
-            switch (launcher)
+            switch (type)
             {
                 // For Steam, use the Network Protocol
                 case LauncherType.Steam:
