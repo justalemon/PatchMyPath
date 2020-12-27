@@ -57,15 +57,7 @@ namespace PatchMyPath.Config
                 switch (Game)
                 {
                     case Game.RedDeadRedemption2:
-                        if (File.Exists(Path.Combine(GamePath, "RedHook2", "Loader.exe")))
-                        {
-                            return Launch.RedHook2;
-                        }
-                        else if (File.Exists(Path.Combine(GamePath, "ScriptHook", "rdr2d.exe")))
-                        {
-                            return Launch.ScriptHook;
-                        }
-                        else if (File.Exists(Path.Combine(GamePath, "RDR2.exe")))
+                        if (File.Exists(Path.Combine(GamePath, "RDR2.exe")))
                         {
                             return Launch.Normal;
                         }
