@@ -29,7 +29,7 @@ namespace PatchMyPath.Tools
         {
             { LauncherType.EpicGamesStore, "EpicGamesLauncher" },
             { LauncherType.Steam, "Steam" },
-            { LauncherType.RockstarGamesLauncher, "LauncherPatcher" },
+            { LauncherType.RockstarGamesLauncher, "Launcher" },  // This can go horribly very quickly
         };
 
         /// <summary>
@@ -142,6 +142,10 @@ namespace PatchMyPath.Tools
             {
                 case LauncherType.Steam:
                     Process.Start(GetExecutablePath(LauncherType.Steam), "-shutdown");
+                    break;
+                case LauncherType.RockstarGamesLauncher:
+                    Process.Start("taskkill", $"/F /T /IM LauncherPatcher.exe");
+                    Process.Start("taskkill", $"/F /T /PID {processes[0].Id}");
                     break;
                 default:
                     Process.Start("taskkill", $"/F /T /PID {processes[0].Id}");
