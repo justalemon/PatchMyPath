@@ -23,14 +23,6 @@ namespace PatchMyPath
         /// Launch the game from RAGEPluginHook.exe if present.
         /// </summary>
         RagePluginHook = 2,
-        /// <summary>
-        /// Launch the game from RedHook2\Loader.exe if present.
-        /// </summary>
-        RedHook2 = 3,
-        /// <summary>
-        /// Launch the game from ScriptHook\rdr2d.exe if present.
-        /// </summary>
-        ScriptHook = 4,
     }
 
     /// <summary>

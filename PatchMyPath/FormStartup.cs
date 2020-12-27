@@ -126,17 +126,11 @@ namespace PatchMyPath
                 MessageBox.Show(string.Format(Resources.SymbolicLinkError, er.Message), Resources.SymbolicLinkErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
             // TIME TO LAUNCH THE GAME!
 
-            // If the user wants ScriptHook for Red Dead Redemption 2, launch it as-it and let it do the heavy work
-            if (launch == Launch.ScriptHook)
-            {
-                logger.Info(Resources.StartingScriptHookLog, install.GamePath);
-                Process.Start(Path.Combine(Program.Config.Destination.RDR2, "ScriptHook", "rdr2d.exe"));
-                return;
-            }
             // For Rage Plugin Hook, launch the executable and let it do it's job
-            else if (launch == Launch.RagePluginHook)
+            if (launch == Launch.RagePluginHook)
             {
                 logger.Info(Resources.StartingRPHLog, install.GamePath);
                 using (Process rph = new Process())
@@ -175,13 +169,6 @@ namespace PatchMyPath
                 case LauncherType.RockstarGamesLauncher:
                     install.StartExecutable(game);
                     break;
-            }
-
-            // If the user wants RedHook2, launch it after the game
-            if (launch == Launch.RedHook2)
-            {
-                logger.Info(Resources.StartingRedHookLog, install.GamePath);
-                Process.Start(Path.Combine(Program.Config.Destination.RDR2, "RedHook2", "Loader.exe"));
             }
         }
 
