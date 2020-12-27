@@ -103,11 +103,8 @@ namespace PatchMyPath
                 return;
             }
 
-            // Cast the install, start it
-            Install install = (Install)InstallsListBox.SelectedItem;
-            install.Start();
-            // And log that we are launching it
-            Logger.Info(Resources.FormLaunchingLog, install.GamePath);
+            // Cast the install, and start it
+            FormStartup.Start((Install)InstallsListBox.SelectedItem);
         }
 
         private void AddToolStripMenuItem_Click(object sender, EventArgs e)
@@ -165,7 +162,7 @@ namespace PatchMyPath
         {
             if (InstallsListBox.SelectedItem is Install install)
             {
-                install.Start(Launch.Normal, LauncherType.Executable);
+                FormStartup.Start(install, Launch.Normal, LauncherType.Executable);
             }
         }
 
@@ -173,7 +170,7 @@ namespace PatchMyPath
         {
             if (InstallsListBox.SelectedItem is Install install)
             {
-                install.Start(Launch.Normal, LauncherType.RockstarGamesLauncher);
+                FormStartup.Start(install, Launch.Normal, LauncherType.RockstarGamesLauncher);
             }
         }
 
@@ -181,7 +178,7 @@ namespace PatchMyPath
         {
             if (InstallsListBox.SelectedItem is Install install)
             {
-                install.Start(Launch.Normal, LauncherType.Steam);
+                FormStartup.Start(install, Launch.Normal, LauncherType.Steam);
             }
         }
 
@@ -189,7 +186,7 @@ namespace PatchMyPath
         {
             if (InstallsListBox.SelectedItem is Install install)
             {
-                install.Start(Launch.Normal, LauncherType.EpicGamesStore);
+                FormStartup.Start(install, Launch.Normal, LauncherType.EpicGamesStore);
             }
         }
 
