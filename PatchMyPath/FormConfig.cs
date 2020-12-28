@@ -38,6 +38,7 @@ namespace PatchMyPath
                 RDR2LauncherComboBox.Items.Add(name);
                 GTAVLauncherComboBox.Items.Add(name);
                 GTAIVLauncherComboBox.Items.Add(name);
+                GTASALauncherComboBox.Items.Add(name);
             }
 
             // Add the supported languages into the ComboBox
@@ -52,9 +53,11 @@ namespace PatchMyPath
             RDR2LocationTextBox.Text = Program.Config.Destination.RDR2;
             GTAVLocationTextBox.Text = Program.Config.Destination.GTAV;
             GTAIVLocationTextBox.Text = Program.Config.Destination.GTAIV;
+            GTASALocationTextBox.Text = Program.Config.Destination.GTASA;
             RDR2LauncherComboBox.SelectedIndex = (int)Program.Config.Launchers.RDR2Use;
             GTAVLauncherComboBox.SelectedIndex = (int)Program.Config.Launchers.GTAVUse;
             GTAIVLauncherComboBox.SelectedIndex = (int)Program.Config.Launchers.GTAIVUse;
+            GTASALauncherComboBox.SelectedIndex = (int)Program.Config.Launchers.GTASAUse;
             // And the Bugsnag toggle
             CloseLaunchers.Checked = Program.Config.CloseLaunchers;
             BugsnagCheckBox.Checked = Program.Config.Bugsnag;
@@ -117,6 +120,14 @@ namespace PatchMyPath
             if (FolderBrowser.ShowDialog() == DialogResult.OK)
             {
                 GTAIVLocationTextBox.Text = FolderBrowser.SelectedPath;
+            }
+        }
+
+        private void GTASASelectButton_Click(object sender, EventArgs e)
+        {
+            if (FolderBrowser.ShowDialog() == DialogResult.OK)
+            {
+                GTASALocationTextBox.Text = FolderBrowser.SelectedPath;
             }
         }
 
@@ -264,6 +275,16 @@ namespace PatchMyPath
             }
         }
 
+        private void GTASASaveButton_Click(object sender, EventArgs e)
+        {
+            if (EnsureCorrectFolder(GTASALocationTextBox.Text, out string provided))
+            {
+                Logger.Info(Resources.SettingsPathSetLog, Resources.GameGTASA, provided);
+                Program.Config.Destination.GTASA = provided;
+                Program.Config.Save();
+            }
+        }
+
         #endregion
 
         #region Launcher Selector
@@ -324,6 +345,26 @@ namespace PatchMyPath
                 case LauncherType.EpicGamesStore:
                     GTAIVIDTextBox.Text = Program.Config.Launchers.GTAIVEpicID;
                     GTAIVIDTextBox.Enabled = true;
+                    break;
+            }
+        }
+
+        private void GTASALauncherComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch ((LauncherType)GTASALauncherComboBox.SelectedIndex)
+            {
+                case LauncherType.Executable:
+                case LauncherType.RockstarGamesLauncher:
+                    GTASAIDTextBox.Text = string.Empty;
+                    GTASAIDTextBox.Enabled = false;
+                    break;
+                case LauncherType.Steam:
+                    GTASAIDTextBox.Text = Program.Config.Launchers.GTASASteamID.ToString();
+                    GTASAIDTextBox.Enabled = true;
+                    break;
+                case LauncherType.EpicGamesStore:
+                    GTASAIDTextBox.Text = Program.Config.Launchers.GTASAEpicID;
+                    GTASAIDTextBox.Enabled = true;
                     break;
             }
         }
@@ -410,6 +451,33 @@ namespace PatchMyPath
 
             // Finally, save the selected launcher type
             Program.Config.Launchers.GTAIVUse = (LauncherType)GTAIVLauncherComboBox.SelectedIndex;
+            Program.Config.Save();
+        }
+
+        private void GTASALauncherSaveButton_Click(object sender, EventArgs e)
+        {
+            // Handle the requirements of specific launchers
+            switch ((LauncherType)GTASALauncherComboBox.SelectedIndex)
+            {
+                // For Steam, parse the appid
+                case LauncherType.Steam:
+                    {
+                        if (!ulong.TryParse(GTASAIDTextBox.Text, out ulong output))
+                        {
+                            MessageBox.Show(string.Format(Resources.SettingsInvalidID, GTASAIDTextBox.Text, ulong.MaxValue));
+                            return;
+                        }
+                        Program.Config.Launchers.GTASASteamID = output;
+                        break;
+                    }
+                // For EGS, the ID is a random string so just save it
+                case LauncherType.EpicGamesStore:
+                    Program.Config.Launchers.GTASAEpicID = GTASAIDTextBox.Text;
+                    break;
+            }
+
+            // Finally, save the selected launcher type
+            Program.Config.Launchers.GTASAUse = (LauncherType)GTASALauncherComboBox.SelectedIndex;
             Program.Config.Save();
         }
 

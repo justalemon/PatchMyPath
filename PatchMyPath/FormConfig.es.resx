@@ -177,4 +177,19 @@
   <data name="GTAIVLauncherSaveButton.Text" xml:space="preserve">
     <value>Guardar</value>
   </data>
+  <data name="GTASADetectButton.Text" xml:space="preserve">
+    <value>Detectar</value>
+  </data>
+  <data name="GTASALauncherSaveButton.Text" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="GTASALocationGroupBox.Text" xml:space="preserve">
+    <value>Ubicacion</value>
+  </data>
+  <data name="GTASASaveButton.Text" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="GTASASelectButton.Text" xml:space="preserve">
+    <value>Seleccionar</value>
+  </data>
 </root>

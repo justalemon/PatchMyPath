@@ -56,6 +56,22 @@ namespace PatchMyPath.Config
         public string GTAIVEpicID { get; set; } = "";
 
         /// <summary>
+        /// The type of Launcher that Grand Theft Auto San Andreas should use.
+        /// </summary>
+        [JsonProperty("gtasa_use")]
+        public LauncherType GTASAUse { get; set; } = LauncherType.Executable;
+        /// <summary>
+        /// The Steam appid that will be used to launch Grand Theft Auto San Andreas.
+        /// </summary>
+        [JsonProperty("gtasa_steam_id")]
+        public ulong GTASASteamID { get; set; } = 12120;
+        /// <summary>
+        /// The EGS Identifier to use for launching Grand Theft Auto San Andreas.
+        /// </summary>
+        [JsonProperty("gtasa_epic_id")]
+        public string GTASAEpicID { get; set; } = "";
+
+        /// <summary>
         /// Gets the launcher used by a specific game.
         /// </summary>
         public LauncherType GetLauncher(Game game)
@@ -68,6 +84,8 @@ namespace PatchMyPath.Config
                     return GTAIVUse;
                 case Game.GrandTheftAutoV:
                     return GTAVUse;
+                case Game.GrandTheftAutoSanAndreas:
+                    return GTASAUse;
                 default:
                     return (LauncherType)(-1);
             }
@@ -85,6 +103,8 @@ namespace PatchMyPath.Config
                     return GTAIVSteamID;
                 case Game.GrandTheftAutoV:
                     return GTAVSteamID;
+                case Game.GrandTheftAutoSanAndreas:
+                    return GTASASteamID;
                 default:
                     return 0u;
             }
@@ -102,6 +122,8 @@ namespace PatchMyPath.Config
                     return GTAIVEpicID;
                 case Game.GrandTheftAutoV:
                     return GTAVEpicID;
+                case Game.GrandTheftAutoSanAndreas:
+                    return GTASAEpicID;
                 default:
                     return null;
             }

@@ -117,15 +117,459 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;OtherGroupBox.Name" xml:space="preserve">
+    <value>OtherGroupBox</value>
+  </data>
+  <data name="&gt;&gt;OtherGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OtherGroupBox.Parent" xml:space="preserve">
+    <value>GeneralTabPage</value>
+  </data>
+  <data name="&gt;&gt;OtherGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;DownloadListsButton.Name" xml:space="preserve">
+    <value>DownloadListsButton</value>
+  </data>
+  <data name="&gt;&gt;DownloadListsButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DownloadListsButton.Parent" xml:space="preserve">
+    <value>GeneralTabPage</value>
+  </data>
+  <data name="&gt;&gt;DownloadListsButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;LanguageGroupBox.Name" xml:space="preserve">
+    <value>LanguageGroupBox</value>
+  </data>
+  <data name="&gt;&gt;LanguageGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LanguageGroupBox.Parent" xml:space="preserve">
+    <value>GeneralTabPage</value>
+  </data>
+  <data name="&gt;&gt;LanguageGroupBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="GeneralTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GeneralTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="GeneralTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>435, 167</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GeneralTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GeneralTabPage.Text" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="&gt;&gt;GeneralTabPage.Name" xml:space="preserve">
+    <value>GeneralTabPage</value>
+  </data>
+  <data name="&gt;&gt;GeneralTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GeneralTabPage.Parent" xml:space="preserve">
+    <value>ConfigTabControl</value>
+  </data>
+  <data name="&gt;&gt;GeneralTabPage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RDR2LauncherGroupBox.Name" xml:space="preserve">
+    <value>RDR2LauncherGroupBox</value>
+  </data>
+  <data name="&gt;&gt;RDR2LauncherGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RDR2LauncherGroupBox.Parent" xml:space="preserve">
+    <value>RDR2TabPage</value>
+  </data>
+  <data name="&gt;&gt;RDR2LauncherGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RDR2LocationGroupBox.Name" xml:space="preserve">
+    <value>RDR2LocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;RDR2LocationGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RDR2LocationGroupBox.Parent" xml:space="preserve">
+    <value>RDR2TabPage</value>
+  </data>
+  <data name="&gt;&gt;RDR2LocationGroupBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RDR2TabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="RDR2TabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="RDR2TabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>435, 167</value>
+  </data>
+  <data name="RDR2TabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="RDR2TabPage.Text" xml:space="preserve">
+    <value>RDR2</value>
+  </data>
+  <data name="&gt;&gt;RDR2TabPage.Name" xml:space="preserve">
+    <value>RDR2TabPage</value>
+  </data>
+  <data name="&gt;&gt;RDR2TabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RDR2TabPage.Parent" xml:space="preserve">
+    <value>ConfigTabControl</value>
+  </data>
+  <data name="&gt;&gt;RDR2TabPage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GTAVLauncherGroupBox.Name" xml:space="preserve">
+    <value>GTAVLauncherGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAVLauncherGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAVLauncherGroupBox.Parent" xml:space="preserve">
+    <value>GTAVTabPage</value>
+  </data>
+  <data name="&gt;&gt;GTAVLauncherGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GTAVLocationGroupBox.Name" xml:space="preserve">
+    <value>GTAVLocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAVLocationGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAVLocationGroupBox.Parent" xml:space="preserve">
+    <value>GTAVTabPage</value>
+  </data>
+  <data name="&gt;&gt;GTAVLocationGroupBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GTAVTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="GTAVTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="GTAVTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>435, 167</value>
+  </data>
+  <data name="GTAVTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="GTAVTabPage.Text" xml:space="preserve">
+    <value>GTA V</value>
+  </data>
+  <data name="&gt;&gt;GTAVTabPage.Name" xml:space="preserve">
+    <value>GTAVTabPage</value>
+  </data>
+  <data name="&gt;&gt;GTAVTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAVTabPage.Parent" xml:space="preserve">
+    <value>ConfigTabControl</value>
+  </data>
+  <data name="&gt;&gt;GTAVTabPage.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLauncherGroupBox.Name" xml:space="preserve">
+    <value>GTAIVLauncherGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLauncherGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLauncherGroupBox.Parent" xml:space="preserve">
+    <value>GTAIVTabPage</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLauncherGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLocationGroupBox.Name" xml:space="preserve">
+    <value>GTAIVLocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLocationGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLocationGroupBox.Parent" xml:space="preserve">
+    <value>GTAIVTabPage</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLocationGroupBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GTAIVTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="GTAIVTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="GTAIVTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>435, 167</value>
+  </data>
+  <data name="GTAIVTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="GTAIVTabPage.Text" xml:space="preserve">
+    <value>GTA IV</value>
+  </data>
+  <data name="&gt;&gt;GTAIVTabPage.Name" xml:space="preserve">
+    <value>GTAIVTabPage</value>
+  </data>
+  <data name="&gt;&gt;GTAIVTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAIVTabPage.Parent" xml:space="preserve">
+    <value>ConfigTabControl</value>
+  </data>
+  <data name="&gt;&gt;GTAIVTabPage.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="GTASALauncherGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="GTASALauncherSaveButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="GTASALauncherSaveButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="GTASALauncherSaveButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 19</value>
+  </data>
+  <data name="GTASALauncherSaveButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="GTASALauncherSaveButton.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="GTASALauncherSaveButton.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;GTASALauncherSaveButton.Name" xml:space="preserve">
+    <value>GTASALauncherSaveButton</value>
+  </data>
+  <data name="&gt;&gt;GTASALauncherSaveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTASALauncherSaveButton.Parent" xml:space="preserve">
+    <value>GTASALauncherGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTASALauncherSaveButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GTASAIDTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="GTASAIDTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>168, 20</value>
+  </data>
+  <data name="GTASAIDTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 20</value>
+  </data>
+  <data name="GTASAIDTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;GTASAIDTextBox.Name" xml:space="preserve">
+    <value>GTASAIDTextBox</value>
+  </data>
+  <data name="&gt;&gt;GTASAIDTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTASAIDTextBox.Parent" xml:space="preserve">
+    <value>GTASALauncherGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTASAIDTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GTASALauncherComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="GTASALauncherComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 21</value>
+  </data>
+  <data name="GTASALauncherComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;GTASALauncherComboBox.Name" xml:space="preserve">
+    <value>GTASALauncherComboBox</value>
+  </data>
+  <data name="&gt;&gt;GTASALauncherComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTASALauncherComboBox.Parent" xml:space="preserve">
+    <value>GTASALauncherGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTASALauncherComboBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="GTASALauncherGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 87</value>
+  </data>
+  <data name="GTASALauncherGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 50</value>
+  </data>
+  <data name="GTASALauncherGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="GTASALauncherGroupBox.Text" xml:space="preserve">
+    <value>Launcher</value>
+  </data>
+  <data name="&gt;&gt;GTASALauncherGroupBox.Name" xml:space="preserve">
+    <value>GTASALauncherGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTASALauncherGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTASALauncherGroupBox.Parent" xml:space="preserve">
+    <value>GTASATabPage</value>
+  </data>
+  <data name="&gt;&gt;GTASALauncherGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GTASALocationGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;GTASASaveButton.Name" xml:space="preserve">
+    <value>GTASASaveButton</value>
+  </data>
+  <data name="&gt;&gt;GTASASaveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTASASaveButton.Parent" xml:space="preserve">
+    <value>GTASALocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTASASaveButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GTASADetectButton.Name" xml:space="preserve">
+    <value>GTASADetectButton</value>
+  </data>
+  <data name="&gt;&gt;GTASADetectButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTASADetectButton.Parent" xml:space="preserve">
+    <value>GTASALocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTASADetectButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GTASASelectButton.Name" xml:space="preserve">
+    <value>GTASASelectButton</value>
+  </data>
+  <data name="&gt;&gt;GTASASelectButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTASASelectButton.Parent" xml:space="preserve">
+    <value>GTASALocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTASASelectButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;GTASALocationTextBox.Name" xml:space="preserve">
+    <value>GTASALocationTextBox</value>
+  </data>
+  <data name="&gt;&gt;GTASALocationTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTASALocationTextBox.Parent" xml:space="preserve">
+    <value>GTASALocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTASALocationTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="GTASALocationGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="GTASALocationGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 75</value>
+  </data>
+  <data name="GTASALocationGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="GTASALocationGroupBox.Text" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="&gt;&gt;GTASALocationGroupBox.Name" xml:space="preserve">
+    <value>GTASALocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTASALocationGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTASALocationGroupBox.Parent" xml:space="preserve">
+    <value>GTASATabPage</value>
+  </data>
+  <data name="&gt;&gt;GTASALocationGroupBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GTASATabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="GTASATabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="GTASATabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>435, 167</value>
+  </data>
+  <data name="GTASATabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="GTASATabPage.Text" xml:space="preserve">
+    <value>GTA SA</value>
+  </data>
+  <data name="&gt;&gt;GTASATabPage.Name" xml:space="preserve">
+    <value>GTASATabPage</value>
+  </data>
+  <data name="&gt;&gt;GTASATabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTASATabPage.Parent" xml:space="preserve">
+    <value>ConfigTabControl</value>
+  </data>
+  <data name="&gt;&gt;GTASATabPage.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ConfigTabControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ConfigTabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ConfigTabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>443, 193</value>
+  </data>
+  <data name="ConfigTabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ConfigTabControl.Name" xml:space="preserve">
+    <value>ConfigTabControl</value>
+  </data>
+  <data name="&gt;&gt;ConfigTabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ConfigTabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ConfigTabControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="OtherGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="CloseLaunchers.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="CloseLaunchers.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 19</value>
   </data>
@@ -234,18 +678,6 @@
   <data name="LanguageGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="LanguageComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="LanguageComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 19</value>
-  </data>
-  <data name="LanguageComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>411, 21</value>
-  </data>
-  <data name="LanguageComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;LanguageComboBox.Name" xml:space="preserve">
     <value>LanguageComboBox</value>
   </data>
@@ -282,35 +714,92 @@
   <data name="&gt;&gt;LanguageGroupBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="GeneralTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+  <data name="LanguageComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="GeneralTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="LanguageComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
   </data>
-  <data name="GeneralTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 167</value>
+  <data name="LanguageComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>411, 21</value>
   </data>
-  <data name="GeneralTabPage.TabIndex" type="System.Int32, mscorlib">
+  <data name="LanguageComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="GeneralTabPage.Text" xml:space="preserve">
-    <value>General</value>
+  <data name="&gt;&gt;LanguageComboBox.Name" xml:space="preserve">
+    <value>LanguageComboBox</value>
   </data>
-  <data name="&gt;&gt;GeneralTabPage.Name" xml:space="preserve">
-    <value>GeneralTabPage</value>
+  <data name="&gt;&gt;LanguageComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GeneralTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;LanguageComboBox.Parent" xml:space="preserve">
+    <value>LanguageGroupBox</value>
   </data>
-  <data name="&gt;&gt;GeneralTabPage.Parent" xml:space="preserve">
-    <value>ConfigTabControl</value>
-  </data>
-  <data name="&gt;&gt;GeneralTabPage.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;LanguageComboBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="RDR2LauncherGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;RDR2LauncherSaveButton.Name" xml:space="preserve">
+    <value>RDR2LauncherSaveButton</value>
+  </data>
+  <data name="&gt;&gt;RDR2LauncherSaveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RDR2LauncherSaveButton.Parent" xml:space="preserve">
+    <value>RDR2LauncherGroupBox</value>
+  </data>
+  <data name="&gt;&gt;RDR2LauncherSaveButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RDR2IDTextBox.Name" xml:space="preserve">
+    <value>RDR2IDTextBox</value>
+  </data>
+  <data name="&gt;&gt;RDR2IDTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RDR2IDTextBox.Parent" xml:space="preserve">
+    <value>RDR2LauncherGroupBox</value>
+  </data>
+  <data name="&gt;&gt;RDR2IDTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RDR2LauncherComboBox.Name" xml:space="preserve">
+    <value>RDR2LauncherComboBox</value>
+  </data>
+  <data name="&gt;&gt;RDR2LauncherComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RDR2LauncherComboBox.Parent" xml:space="preserve">
+    <value>RDR2LauncherGroupBox</value>
+  </data>
+  <data name="&gt;&gt;RDR2LauncherComboBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RDR2LauncherGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 87</value>
+  </data>
+  <data name="RDR2LauncherGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 50</value>
+  </data>
+  <data name="RDR2LauncherGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="RDR2LauncherGroupBox.Text" xml:space="preserve">
+    <value>Launcher</value>
+  </data>
+  <data name="&gt;&gt;RDR2LauncherGroupBox.Name" xml:space="preserve">
+    <value>RDR2LauncherGroupBox</value>
+  </data>
+  <data name="&gt;&gt;RDR2LauncherGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RDR2LauncherGroupBox.Parent" xml:space="preserve">
+    <value>RDR2TabPage</value>
+  </data>
+  <data name="&gt;&gt;RDR2LauncherGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="RDR2LauncherSaveButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -387,32 +876,80 @@
   <data name="&gt;&gt;RDR2LauncherComboBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="RDR2LauncherGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 87</value>
-  </data>
-  <data name="RDR2LauncherGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 50</value>
-  </data>
-  <data name="RDR2LauncherGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="RDR2LauncherGroupBox.Text" xml:space="preserve">
-    <value>Launcher</value>
-  </data>
-  <data name="&gt;&gt;RDR2LauncherGroupBox.Name" xml:space="preserve">
-    <value>RDR2LauncherGroupBox</value>
-  </data>
-  <data name="&gt;&gt;RDR2LauncherGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RDR2LauncherGroupBox.Parent" xml:space="preserve">
-    <value>RDR2TabPage</value>
-  </data>
-  <data name="&gt;&gt;RDR2LauncherGroupBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="RDR2LocationGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;RDR2LocationSaveButton.Name" xml:space="preserve">
+    <value>RDR2LocationSaveButton</value>
+  </data>
+  <data name="&gt;&gt;RDR2LocationSaveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RDR2LocationSaveButton.Parent" xml:space="preserve">
+    <value>RDR2LocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;RDR2LocationSaveButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RDR2DetectButton.Name" xml:space="preserve">
+    <value>RDR2DetectButton</value>
+  </data>
+  <data name="&gt;&gt;RDR2DetectButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RDR2DetectButton.Parent" xml:space="preserve">
+    <value>RDR2LocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;RDR2DetectButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RDR2SelectButton.Name" xml:space="preserve">
+    <value>RDR2SelectButton</value>
+  </data>
+  <data name="&gt;&gt;RDR2SelectButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RDR2SelectButton.Parent" xml:space="preserve">
+    <value>RDR2LocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;RDR2SelectButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;RDR2LocationTextBox.Name" xml:space="preserve">
+    <value>RDR2LocationTextBox</value>
+  </data>
+  <data name="&gt;&gt;RDR2LocationTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RDR2LocationTextBox.Parent" xml:space="preserve">
+    <value>RDR2LocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;RDR2LocationTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RDR2LocationGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="RDR2LocationGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 75</value>
+  </data>
+  <data name="RDR2LocationGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="RDR2LocationGroupBox.Text" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="&gt;&gt;RDR2LocationGroupBox.Name" xml:space="preserve">
+    <value>RDR2LocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;RDR2LocationGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RDR2LocationGroupBox.Parent" xml:space="preserve">
+    <value>RDR2TabPage</value>
+  </data>
+  <data name="&gt;&gt;RDR2LocationGroupBox.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="RDR2LocationSaveButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -519,59 +1056,68 @@
   <data name="&gt;&gt;RDR2LocationTextBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="RDR2LocationGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
-  </data>
-  <data name="RDR2LocationGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 75</value>
-  </data>
-  <data name="RDR2LocationGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="RDR2LocationGroupBox.Text" xml:space="preserve">
-    <value>Location</value>
-  </data>
-  <data name="&gt;&gt;RDR2LocationGroupBox.Name" xml:space="preserve">
-    <value>RDR2LocationGroupBox</value>
-  </data>
-  <data name="&gt;&gt;RDR2LocationGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RDR2LocationGroupBox.Parent" xml:space="preserve">
-    <value>RDR2TabPage</value>
-  </data>
-  <data name="&gt;&gt;RDR2LocationGroupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RDR2TabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="RDR2TabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="RDR2TabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 167</value>
-  </data>
-  <data name="RDR2TabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="RDR2TabPage.Text" xml:space="preserve">
-    <value>RDR2</value>
-  </data>
-  <data name="&gt;&gt;RDR2TabPage.Name" xml:space="preserve">
-    <value>RDR2TabPage</value>
-  </data>
-  <data name="&gt;&gt;RDR2TabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RDR2TabPage.Parent" xml:space="preserve">
-    <value>ConfigTabControl</value>
-  </data>
-  <data name="&gt;&gt;RDR2TabPage.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="GTAVLauncherGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;GTAVLauncherSaveButton.Name" xml:space="preserve">
+    <value>GTAVLauncherSaveButton</value>
+  </data>
+  <data name="&gt;&gt;GTAVLauncherSaveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAVLauncherSaveButton.Parent" xml:space="preserve">
+    <value>GTAVLauncherGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAVLauncherSaveButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GTAVIDTextBox.Name" xml:space="preserve">
+    <value>GTAVIDTextBox</value>
+  </data>
+  <data name="&gt;&gt;GTAVIDTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAVIDTextBox.Parent" xml:space="preserve">
+    <value>GTAVLauncherGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAVIDTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GTAVLauncherComboBox.Name" xml:space="preserve">
+    <value>GTAVLauncherComboBox</value>
+  </data>
+  <data name="&gt;&gt;GTAVLauncherComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAVLauncherComboBox.Parent" xml:space="preserve">
+    <value>GTAVLauncherGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAVLauncherComboBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="GTAVLauncherGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 87</value>
+  </data>
+  <data name="GTAVLauncherGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 50</value>
+  </data>
+  <data name="GTAVLauncherGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="GTAVLauncherGroupBox.Text" xml:space="preserve">
+    <value>Launcher</value>
+  </data>
+  <data name="&gt;&gt;GTAVLauncherGroupBox.Name" xml:space="preserve">
+    <value>GTAVLauncherGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAVLauncherGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAVLauncherGroupBox.Parent" xml:space="preserve">
+    <value>GTAVTabPage</value>
+  </data>
+  <data name="&gt;&gt;GTAVLauncherGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="GTAVLauncherSaveButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -648,32 +1194,80 @@
   <data name="&gt;&gt;GTAVLauncherComboBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="GTAVLauncherGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 87</value>
-  </data>
-  <data name="GTAVLauncherGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 50</value>
-  </data>
-  <data name="GTAVLauncherGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="GTAVLauncherGroupBox.Text" xml:space="preserve">
-    <value>Launcher</value>
-  </data>
-  <data name="&gt;&gt;GTAVLauncherGroupBox.Name" xml:space="preserve">
-    <value>GTAVLauncherGroupBox</value>
-  </data>
-  <data name="&gt;&gt;GTAVLauncherGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GTAVLauncherGroupBox.Parent" xml:space="preserve">
-    <value>GTAVTabPage</value>
-  </data>
-  <data name="&gt;&gt;GTAVLauncherGroupBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="GTAVLocationGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;GTAVSaveButton.Name" xml:space="preserve">
+    <value>GTAVSaveButton</value>
+  </data>
+  <data name="&gt;&gt;GTAVSaveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAVSaveButton.Parent" xml:space="preserve">
+    <value>GTAVLocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAVSaveButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GTAVDetectButton.Name" xml:space="preserve">
+    <value>GTAVDetectButton</value>
+  </data>
+  <data name="&gt;&gt;GTAVDetectButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAVDetectButton.Parent" xml:space="preserve">
+    <value>GTAVLocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAVDetectButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GTAVSelectButton.Name" xml:space="preserve">
+    <value>GTAVSelectButton</value>
+  </data>
+  <data name="&gt;&gt;GTAVSelectButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAVSelectButton.Parent" xml:space="preserve">
+    <value>GTAVLocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAVSelectButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;GTAVLocationTextBox.Name" xml:space="preserve">
+    <value>GTAVLocationTextBox</value>
+  </data>
+  <data name="&gt;&gt;GTAVLocationTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAVLocationTextBox.Parent" xml:space="preserve">
+    <value>GTAVLocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAVLocationTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="GTAVLocationGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="GTAVLocationGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 75</value>
+  </data>
+  <data name="GTAVLocationGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="GTAVLocationGroupBox.Text" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="&gt;&gt;GTAVLocationGroupBox.Name" xml:space="preserve">
+    <value>GTAVLocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAVLocationGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAVLocationGroupBox.Parent" xml:space="preserve">
+    <value>GTAVTabPage</value>
+  </data>
+  <data name="&gt;&gt;GTAVLocationGroupBox.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="GTAVSaveButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -780,59 +1374,68 @@
   <data name="&gt;&gt;GTAVLocationTextBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="GTAVLocationGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
-  </data>
-  <data name="GTAVLocationGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 75</value>
-  </data>
-  <data name="GTAVLocationGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="GTAVLocationGroupBox.Text" xml:space="preserve">
-    <value>Location</value>
-  </data>
-  <data name="&gt;&gt;GTAVLocationGroupBox.Name" xml:space="preserve">
-    <value>GTAVLocationGroupBox</value>
-  </data>
-  <data name="&gt;&gt;GTAVLocationGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GTAVLocationGroupBox.Parent" xml:space="preserve">
-    <value>GTAVTabPage</value>
-  </data>
-  <data name="&gt;&gt;GTAVLocationGroupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="GTAVTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="GTAVTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="GTAVTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 167</value>
-  </data>
-  <data name="GTAVTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="GTAVTabPage.Text" xml:space="preserve">
-    <value>GTA V</value>
-  </data>
-  <data name="&gt;&gt;GTAVTabPage.Name" xml:space="preserve">
-    <value>GTAVTabPage</value>
-  </data>
-  <data name="&gt;&gt;GTAVTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GTAVTabPage.Parent" xml:space="preserve">
-    <value>ConfigTabControl</value>
-  </data>
-  <data name="&gt;&gt;GTAVTabPage.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="GTAIVLauncherGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLauncherSaveButton.Name" xml:space="preserve">
+    <value>GTAIVLauncherSaveButton</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLauncherSaveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLauncherSaveButton.Parent" xml:space="preserve">
+    <value>GTAIVLauncherGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLauncherSaveButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GTAIVIDTextBox.Name" xml:space="preserve">
+    <value>GTAIVIDTextBox</value>
+  </data>
+  <data name="&gt;&gt;GTAIVIDTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAIVIDTextBox.Parent" xml:space="preserve">
+    <value>GTAIVLauncherGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAIVIDTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLauncherComboBox.Name" xml:space="preserve">
+    <value>GTAIVLauncherComboBox</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLauncherComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLauncherComboBox.Parent" xml:space="preserve">
+    <value>GTAIVLauncherGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLauncherComboBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="GTAIVLauncherGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 87</value>
+  </data>
+  <data name="GTAIVLauncherGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 50</value>
+  </data>
+  <data name="GTAIVLauncherGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="GTAIVLauncherGroupBox.Text" xml:space="preserve">
+    <value>Launcher</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLauncherGroupBox.Name" xml:space="preserve">
+    <value>GTAIVLauncherGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLauncherGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLauncherGroupBox.Parent" xml:space="preserve">
+    <value>GTAIVTabPage</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLauncherGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="GTAIVLauncherSaveButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -909,32 +1512,80 @@
   <data name="&gt;&gt;GTAIVLauncherComboBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="GTAIVLauncherGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 87</value>
-  </data>
-  <data name="GTAIVLauncherGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 50</value>
-  </data>
-  <data name="GTAIVLauncherGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="GTAIVLauncherGroupBox.Text" xml:space="preserve">
-    <value>Launcher</value>
-  </data>
-  <data name="&gt;&gt;GTAIVLauncherGroupBox.Name" xml:space="preserve">
-    <value>GTAIVLauncherGroupBox</value>
-  </data>
-  <data name="&gt;&gt;GTAIVLauncherGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GTAIVLauncherGroupBox.Parent" xml:space="preserve">
-    <value>GTAIVTabPage</value>
-  </data>
-  <data name="&gt;&gt;GTAIVLauncherGroupBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="GTAIVLocationGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;GTAIVSaveButton.Name" xml:space="preserve">
+    <value>GTAIVSaveButton</value>
+  </data>
+  <data name="&gt;&gt;GTAIVSaveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAIVSaveButton.Parent" xml:space="preserve">
+    <value>GTAIVLocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAIVSaveButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GTAIVDetectButton.Name" xml:space="preserve">
+    <value>GTAIVDetectButton</value>
+  </data>
+  <data name="&gt;&gt;GTAIVDetectButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAIVDetectButton.Parent" xml:space="preserve">
+    <value>GTAIVLocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAIVDetectButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GTAIVSelectButton.Name" xml:space="preserve">
+    <value>GTAIVSelectButton</value>
+  </data>
+  <data name="&gt;&gt;GTAIVSelectButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAIVSelectButton.Parent" xml:space="preserve">
+    <value>GTAIVLocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAIVSelectButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLocationTextBox.Name" xml:space="preserve">
+    <value>GTAIVLocationTextBox</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLocationTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLocationTextBox.Parent" xml:space="preserve">
+    <value>GTAIVLocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLocationTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="GTAIVLocationGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="GTAIVLocationGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 75</value>
+  </data>
+  <data name="GTAIVLocationGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="GTAIVLocationGroupBox.Text" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLocationGroupBox.Name" xml:space="preserve">
+    <value>GTAIVLocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLocationGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLocationGroupBox.Parent" xml:space="preserve">
+    <value>GTAIVTabPage</value>
+  </data>
+  <data name="&gt;&gt;GTAIVLocationGroupBox.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="GTAIVSaveButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1041,80 +1692,113 @@
   <data name="&gt;&gt;GTAIVLocationTextBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="GTAIVLocationGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
+  <data name="GTASASaveButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="GTAIVLocationGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 75</value>
+  <data name="GTASASaveButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>168, 45</value>
   </data>
-  <data name="GTAIVLocationGroupBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="GTASASaveButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="GTASASaveButton.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="GTAIVLocationGroupBox.Text" xml:space="preserve">
-    <value>Location</value>
+  <data name="GTASASaveButton.Text" xml:space="preserve">
+    <value>Save</value>
   </data>
-  <data name="&gt;&gt;GTAIVLocationGroupBox.Name" xml:space="preserve">
-    <value>GTAIVLocationGroupBox</value>
+  <data name="&gt;&gt;GTASASaveButton.Name" xml:space="preserve">
+    <value>GTASASaveButton</value>
   </data>
-  <data name="&gt;&gt;GTAIVLocationGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;GTASASaveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GTAIVLocationGroupBox.Parent" xml:space="preserve">
-    <value>GTAIVTabPage</value>
+  <data name="&gt;&gt;GTASASaveButton.Parent" xml:space="preserve">
+    <value>GTASALocationGroupBox</value>
   </data>
-  <data name="&gt;&gt;GTAIVLocationGroupBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;GTASASaveButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GTASADetectButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GTASADetectButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="GTASADetectButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>87, 45</value>
+  </data>
+  <data name="GTASADetectButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="GTASADetectButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="GTASADetectButton.Text" xml:space="preserve">
+    <value>Detect</value>
+  </data>
+  <data name="&gt;&gt;GTASADetectButton.Name" xml:space="preserve">
+    <value>GTASADetectButton</value>
+  </data>
+  <data name="&gt;&gt;GTASADetectButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GTASADetectButton.Parent" xml:space="preserve">
+    <value>GTASALocationGroupBox</value>
+  </data>
+  <data name="&gt;&gt;GTASADetectButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="GTAIVTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+  <data name="GTASASelectButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="GTAIVTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="GTASASelectButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 45</value>
   </data>
-  <data name="GTAIVTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 167</value>
+  <data name="GTASASelectButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
   </data>
-  <data name="GTAIVTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="GTASASelectButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="GTAIVTabPage.Text" xml:space="preserve">
-    <value>GTA IV</value>
+  <data name="GTASASelectButton.Text" xml:space="preserve">
+    <value>Select</value>
   </data>
-  <data name="&gt;&gt;GTAIVTabPage.Name" xml:space="preserve">
-    <value>GTAIVTabPage</value>
+  <data name="&gt;&gt;GTASASelectButton.Name" xml:space="preserve">
+    <value>GTASASelectButton</value>
   </data>
-  <data name="&gt;&gt;GTAIVTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;GTASASelectButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GTAIVTabPage.Parent" xml:space="preserve">
-    <value>ConfigTabControl</value>
+  <data name="&gt;&gt;GTASASelectButton.Parent" xml:space="preserve">
+    <value>GTASALocationGroupBox</value>
   </data>
-  <data name="&gt;&gt;GTAIVTabPage.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;GTASASelectButton.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="ConfigTabControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="GTASALocationTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="ConfigTabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="GTASALocationTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
   </data>
-  <data name="ConfigTabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>443, 193</value>
+  <data name="GTASALocationTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>411, 20</value>
   </data>
-  <data name="ConfigTabControl.TabIndex" type="System.Int32, mscorlib">
+  <data name="GTASALocationTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;ConfigTabControl.Name" xml:space="preserve">
-    <value>ConfigTabControl</value>
+  <data name="&gt;&gt;GTASALocationTextBox.Name" xml:space="preserve">
+    <value>GTASALocationTextBox</value>
   </data>
-  <data name="&gt;&gt;ConfigTabControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;GTASALocationTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ConfigTabControl.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;GTASALocationTextBox.Parent" xml:space="preserve">
+    <value>GTASALocationGroupBox</value>
   </data>
-  <data name="&gt;&gt;ConfigTabControl.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;GTASALocationTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <metadata name="FolderBrowser.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -1615,9 +2299,6 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAA==
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

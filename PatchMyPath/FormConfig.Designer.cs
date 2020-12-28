@@ -32,6 +32,7 @@
             this.ConfigTabControl = new System.Windows.Forms.TabControl();
             this.GeneralTabPage = new System.Windows.Forms.TabPage();
             this.OtherGroupBox = new System.Windows.Forms.GroupBox();
+            this.CloseLaunchers = new System.Windows.Forms.CheckBox();
             this.BugsnagCheckBox = new System.Windows.Forms.CheckBox();
             this.DownloadListsButton = new System.Windows.Forms.Button();
             this.LanguageGroupBox = new System.Windows.Forms.GroupBox();
@@ -66,8 +67,17 @@
             this.GTAIVDetectButton = new System.Windows.Forms.Button();
             this.GTAIVSelectButton = new System.Windows.Forms.Button();
             this.GTAIVLocationTextBox = new System.Windows.Forms.TextBox();
+            this.GTASATabPage = new System.Windows.Forms.TabPage();
+            this.GTASALauncherGroupBox = new System.Windows.Forms.GroupBox();
+            this.GTASALauncherSaveButton = new System.Windows.Forms.Button();
+            this.GTASAIDTextBox = new System.Windows.Forms.TextBox();
+            this.GTASALauncherComboBox = new System.Windows.Forms.ComboBox();
+            this.GTASALocationGroupBox = new System.Windows.Forms.GroupBox();
+            this.GTASASaveButton = new System.Windows.Forms.Button();
+            this.GTASADetectButton = new System.Windows.Forms.Button();
+            this.GTASASelectButton = new System.Windows.Forms.Button();
+            this.GTASALocationTextBox = new System.Windows.Forms.TextBox();
             this.FolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
-            this.CloseLaunchers = new System.Windows.Forms.CheckBox();
             this.ConfigTabControl.SuspendLayout();
             this.GeneralTabPage.SuspendLayout();
             this.OtherGroupBox.SuspendLayout();
@@ -81,6 +91,9 @@
             this.GTAIVTabPage.SuspendLayout();
             this.GTAIVLauncherGroupBox.SuspendLayout();
             this.GTAIVLocationGroupBox.SuspendLayout();
+            this.GTASATabPage.SuspendLayout();
+            this.GTASALauncherGroupBox.SuspendLayout();
+            this.GTASALocationGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // ConfigTabControl
@@ -89,6 +102,7 @@
             this.ConfigTabControl.Controls.Add(this.RDR2TabPage);
             this.ConfigTabControl.Controls.Add(this.GTAVTabPage);
             this.ConfigTabControl.Controls.Add(this.GTAIVTabPage);
+            this.ConfigTabControl.Controls.Add(this.GTASATabPage);
             resources.ApplyResources(this.ConfigTabControl, "ConfigTabControl");
             this.ConfigTabControl.Name = "ConfigTabControl";
             this.ConfigTabControl.SelectedIndex = 0;
@@ -109,6 +123,13 @@
             this.OtherGroupBox.Controls.Add(this.BugsnagCheckBox);
             this.OtherGroupBox.Name = "OtherGroupBox";
             this.OtherGroupBox.TabStop = false;
+            // 
+            // CloseLaunchers
+            // 
+            resources.ApplyResources(this.CloseLaunchers, "CloseLaunchers");
+            this.CloseLaunchers.Name = "CloseLaunchers";
+            this.CloseLaunchers.UseVisualStyleBackColor = true;
+            this.CloseLaunchers.CheckedChanged += new System.EventHandler(this.CloseLaunchers_CheckedChanged);
             // 
             // BugsnagCheckBox
             // 
@@ -358,12 +379,77 @@
             resources.ApplyResources(this.GTAIVLocationTextBox, "GTAIVLocationTextBox");
             this.GTAIVLocationTextBox.Name = "GTAIVLocationTextBox";
             // 
-            // CloseLaunchers
+            // GTASATabPage
             // 
-            resources.ApplyResources(this.CloseLaunchers, "CloseLaunchers");
-            this.CloseLaunchers.Name = "CloseLaunchers";
-            this.CloseLaunchers.UseVisualStyleBackColor = true;
-            this.CloseLaunchers.CheckedChanged += new System.EventHandler(this.CloseLaunchers_CheckedChanged);
+            this.GTASATabPage.Controls.Add(this.GTASALauncherGroupBox);
+            this.GTASATabPage.Controls.Add(this.GTASALocationGroupBox);
+            resources.ApplyResources(this.GTASATabPage, "GTASATabPage");
+            this.GTASATabPage.Name = "GTASATabPage";
+            this.GTASATabPage.UseVisualStyleBackColor = true;
+            // 
+            // GTASALauncherGroupBox
+            // 
+            resources.ApplyResources(this.GTASALauncherGroupBox, "GTASALauncherGroupBox");
+            this.GTASALauncherGroupBox.Controls.Add(this.GTASALauncherSaveButton);
+            this.GTASALauncherGroupBox.Controls.Add(this.GTASAIDTextBox);
+            this.GTASALauncherGroupBox.Controls.Add(this.GTASALauncherComboBox);
+            this.GTASALauncherGroupBox.Name = "GTASALauncherGroupBox";
+            this.GTASALauncherGroupBox.TabStop = false;
+            // 
+            // GTASALauncherSaveButton
+            // 
+            resources.ApplyResources(this.GTASALauncherSaveButton, "GTASALauncherSaveButton");
+            this.GTASALauncherSaveButton.Name = "GTASALauncherSaveButton";
+            this.GTASALauncherSaveButton.UseVisualStyleBackColor = true;
+            this.GTASALauncherSaveButton.Click += new System.EventHandler(this.GTASALauncherSaveButton_Click);
+            // 
+            // GTASAIDTextBox
+            // 
+            resources.ApplyResources(this.GTASAIDTextBox, "GTASAIDTextBox");
+            this.GTASAIDTextBox.Name = "GTASAIDTextBox";
+            // 
+            // GTASALauncherComboBox
+            // 
+            this.GTASALauncherComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GTASALauncherComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.GTASALauncherComboBox, "GTASALauncherComboBox");
+            this.GTASALauncherComboBox.Name = "GTASALauncherComboBox";
+            this.GTASALauncherComboBox.SelectedIndexChanged += new System.EventHandler(this.GTASALauncherComboBox_SelectedIndexChanged);
+            // 
+            // GTASALocationGroupBox
+            // 
+            resources.ApplyResources(this.GTASALocationGroupBox, "GTASALocationGroupBox");
+            this.GTASALocationGroupBox.Controls.Add(this.GTASASaveButton);
+            this.GTASALocationGroupBox.Controls.Add(this.GTASADetectButton);
+            this.GTASALocationGroupBox.Controls.Add(this.GTASASelectButton);
+            this.GTASALocationGroupBox.Controls.Add(this.GTASALocationTextBox);
+            this.GTASALocationGroupBox.Name = "GTASALocationGroupBox";
+            this.GTASALocationGroupBox.TabStop = false;
+            // 
+            // GTASASaveButton
+            // 
+            resources.ApplyResources(this.GTASASaveButton, "GTASASaveButton");
+            this.GTASASaveButton.Name = "GTASASaveButton";
+            this.GTASASaveButton.UseVisualStyleBackColor = true;
+            this.GTASASaveButton.Click += new System.EventHandler(this.GTASASaveButton_Click);
+            // 
+            // GTASADetectButton
+            // 
+            resources.ApplyResources(this.GTASADetectButton, "GTASADetectButton");
+            this.GTASADetectButton.Name = "GTASADetectButton";
+            this.GTASADetectButton.UseVisualStyleBackColor = true;
+            // 
+            // GTASASelectButton
+            // 
+            resources.ApplyResources(this.GTASASelectButton, "GTASASelectButton");
+            this.GTASASelectButton.Name = "GTASASelectButton";
+            this.GTASASelectButton.UseVisualStyleBackColor = true;
+            this.GTASASelectButton.Click += new System.EventHandler(this.GTASASelectButton_Click);
+            // 
+            // GTASALocationTextBox
+            // 
+            resources.ApplyResources(this.GTASALocationTextBox, "GTASALocationTextBox");
+            this.GTASALocationTextBox.Name = "GTASALocationTextBox";
             // 
             // FormConfig
             // 
@@ -393,6 +479,11 @@
             this.GTAIVLauncherGroupBox.PerformLayout();
             this.GTAIVLocationGroupBox.ResumeLayout(false);
             this.GTAIVLocationGroupBox.PerformLayout();
+            this.GTASATabPage.ResumeLayout(false);
+            this.GTASALauncherGroupBox.ResumeLayout(false);
+            this.GTASALauncherGroupBox.PerformLayout();
+            this.GTASALocationGroupBox.ResumeLayout(false);
+            this.GTASALocationGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -438,5 +529,15 @@
         private System.Windows.Forms.FolderBrowserDialog FolderBrowser;
         private System.Windows.Forms.CheckBox BugsnagCheckBox;
         private System.Windows.Forms.CheckBox CloseLaunchers;
+        private System.Windows.Forms.TabPage GTASATabPage;
+        private System.Windows.Forms.GroupBox GTASALocationGroupBox;
+        private System.Windows.Forms.Button GTASASaveButton;
+        private System.Windows.Forms.Button GTASADetectButton;
+        private System.Windows.Forms.Button GTASASelectButton;
+        private System.Windows.Forms.TextBox GTASALocationTextBox;
+        private System.Windows.Forms.GroupBox GTASALauncherGroupBox;
+        private System.Windows.Forms.Button GTASALauncherSaveButton;
+        private System.Windows.Forms.TextBox GTASAIDTextBox;
+        private System.Windows.Forms.ComboBox GTASALauncherComboBox;
     }
 }

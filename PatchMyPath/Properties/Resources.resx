@@ -423,4 +423,7 @@ You can read the Privacy policy on https://justalemon.ml/Privacy_policy</value>
   <data name="BugsnagConsentTitle" xml:space="preserve">
     <value>Bugsnag</value>
   </data>
+  <data name="GameGTASA" xml:space="preserve">
+    <value>Grand Theft Auto San Andreas</value>
+  </data>
 </root>

@@ -41,6 +41,10 @@ namespace PatchMyPath.Config
                 {
                     return Game.GrandTheftAutoV;
                 }
+                else if (File.Exists(Path.Combine(GamePath, "gta_sa.exe")) || File.Exists(Path.Combine(GamePath, "gta-sa.exe")))
+                {
+                    return Game.GrandTheftAutoSanAndreas;
+                }
                 else
                 {
                     return Game.Invalid;
@@ -82,6 +86,12 @@ namespace PatchMyPath.Config
                             return Launch.Normal;
                         }
                         break;
+                    case Game.GrandTheftAutoSanAndreas:
+                        if (File.Exists(Path.Combine(GamePath, "gta_sa.exe")) || File.Exists(Path.Combine(GamePath, "gta-sa.exe")))
+                        {
+                            return Launch.Normal;
+                        }
+                        break;
                 }
                 return Launch.Invalid;
             }
@@ -101,6 +111,8 @@ namespace PatchMyPath.Config
                         return Signatures.IsSignedByRockstar(Path.Combine(GamePath, "GTAIV.exe")) || Signatures.IsSignedByRockstar(Path.Combine(GamePath, "gta4Browser.exe"));
                     case Game.GrandTheftAutoV:
                         return Signatures.IsSignedByRockstar(Path.Combine(GamePath, "GTA5.exe"));
+                    case Game.GrandTheftAutoSanAndreas:
+                        return true;  // HOODLUM's crack is required on Steam and RGL after downgrades
                     default:
                         return false;
                 }
@@ -146,6 +158,19 @@ namespace PatchMyPath.Config
                     else if (File.Exists(Path.Combine(Program.Config.Destination.GTAV, "PlayGTAV.exe")))
                     {
                         Process.Start(Path.Combine(Program.Config.Destination.GTAV, "PlayGTAV.exe"));
+                    }
+                    return;
+                // For GTA San Andreas, use gta_sa.exe (1.0/1.1) or gta-sa.exe (2.0/Steam/RGL)
+                // Some downgraded copies leave both executables, if that is the case the 1.0/1.1 files takes precedence
+                case Game.GrandTheftAutoSanAndreas:
+
+                    if (File.Exists(Path.Combine(Program.Config.Destination.GTAV, "gta_sa.exe")))
+                    {
+                        Process.Start(Path.Combine(Program.Config.Destination.GTAV, "gta_sa.exe"));
+                    }
+                    else if (File.Exists(Path.Combine(Program.Config.Destination.GTAV, "gta-sa.exe")))
+                    {
+                        Process.Start(Path.Combine(Program.Config.Destination.GTAV, "gta-sa.exe"));
                     }
                     return;
             }

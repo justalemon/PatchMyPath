@@ -46,6 +46,10 @@ namespace PatchMyPath
         /// Grand Theft Auto V.
         /// </summary>
         GrandTheftAutoV = 2,
+        /// <summary>
+        /// Grand Theft Auto San Andreas.
+        /// </summary>
+        GrandTheftAutoSanAndreas = 3,
     }
 
     /// <summary>

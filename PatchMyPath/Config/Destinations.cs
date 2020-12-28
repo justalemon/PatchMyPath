@@ -22,6 +22,11 @@ namespace PatchMyPath.Config
         /// </summary>
         [JsonProperty("gtaiv", NullValueHandling = NullValueHandling.Ignore)]
         public string GTAIV { get; set; } = "";
+        /// <summary>
+        /// The location where Grand Theft Auto San Andreas should be located.
+        /// </summary>
+        [JsonProperty("gtasa", NullValueHandling = NullValueHandling.Ignore)]
+        public string GTASA { get; set; } = "";
 
         /// <summary>
         /// Gets the target directory for a game.
@@ -36,6 +41,8 @@ namespace PatchMyPath.Config
                     return GTAV;
                 case Game.GrandTheftAutoIV:
                     return GTAIV;
+                case Game.GrandTheftAutoSanAndreas:
+                    return GTASA;
                 default:
                     return null;
             }
