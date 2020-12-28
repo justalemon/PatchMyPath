@@ -192,4 +192,10 @@
   <data name="GTASASelectButton.Text" xml:space="preserve">
     <value>Seleccionar</value>
   </data>
+  <data name="BugsnagCheckBox.Text" xml:space="preserve">
+    <value>Permitir reportes de errores a Bugsnag</value>
+  </data>
+  <data name="CloseLaunchers.Text" xml:space="preserve">
+    <value>Cierra los lanzadores de juegos (Steam, EGS y RGL) al cambiar las ubicacionnes</value>
+  </data>
 </root>
