@@ -95,39 +95,44 @@ namespace PatchMyPath
                 return;
             }
 
-            // Terminate the game launcher if required
-            if (Program.Config.CloseLaunchers)
+            // Don't manipulate the path or launcher if we have the correct path set up already
+            if (Path.GetFullPath(Links.GetRealPath(directory)) != Path.GetFullPath(install.GamePath))
             {
-                Invoke(new Action(() => CurrentOperation.Text = "Stopping " + type.ToString().SpaceOnUpperCase()));
-                LauncherManager.Stop(type);
-
-                if ((game == Game.GrandTheftAutoIV || game == Game.GrandTheftAutoV || game == Game.RedDeadRedemption2) && type != LauncherType.RockstarGamesLauncher)
+                // Terminate the game launcher if required
+                if (Program.Config.CloseLaunchers)
                 {
-                    Invoke(new Action(() => CurrentOperation.Text = "Stopping " + LauncherType.RockstarGamesLauncher.ToString().SpaceOnUpperCase()));
-                    LauncherManager.Stop(LauncherType.RockstarGamesLauncher);
+                    Invoke(new Action(() => CurrentOperation.Text = "Stopping " + type.ToString().SpaceOnUpperCase()));
+                    LauncherManager.Stop(type);
+
+                    if ((game == Game.GrandTheftAutoIV || game == Game.GrandTheftAutoV || game == Game.RedDeadRedemption2) && type != LauncherType.RockstarGamesLauncher)
+                    {
+                        Invoke(new Action(() => CurrentOperation.Text = "Stopping " + LauncherType.RockstarGamesLauncher.ToString().SpaceOnUpperCase()));
+                        LauncherManager.Stop(LauncherType.RockstarGamesLauncher);
+                    }
+                }
+
+                // Now, destroy the original game folder if is present
+                if (Directory.Exists(directory))
+                {
+                    Directory.Delete(directory);
+                }
+
+                // Try to create the symbolic link
+                try
+                {
+                    Links.CreateSymbolicLink(directory, install.GamePath, 3); // 3 means Directory (0x1) and Unprivileged/Dev Mode (0x2)
+                }
+                // If we failed, print the respective error message and return
+                catch (Win32Exception er)
+                {
+                    logger.Error(Resources.SymbolicLinkErrorLog, directory, install.GamePath);
+                    MessageBox.Show(string.Format(Resources.SymbolicLinkError, er.Message), Resources.SymbolicLinkErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
             }
 
-            // Now, destroy the original game folder if is present
-            if (Directory.Exists(directory))
-            {
-                Directory.Delete(directory);
-            }
-
-            // Try to create the symbolic link
-            try
-            {
-                Links.CreateSymbolicLink(directory, install.GamePath, 3); // 3 means Directory (0x1) and Unprivileged/Dev Mode (0x2)
-            }
-            // If we failed, print the respective error message and return
-            catch (Win32Exception er)
-            {
-                logger.Error(Resources.SymbolicLinkErrorLog, directory, install.GamePath);
-                MessageBox.Show(string.Format(Resources.SymbolicLinkError, er.Message), Resources.SymbolicLinkErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
             // TIME TO LAUNCH THE GAME!
+            Invoke(new Action(() => CurrentOperation.Text = "Launching " + game.ToString().SpaceOnUpperCase()));
 
             // For Rage Plugin Hook, launch the executable and let it do it's job
             if (launch == Launch.RagePluginHook)
