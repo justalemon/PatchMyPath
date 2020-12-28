@@ -4,6 +4,7 @@ using PatchMyPath.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -187,6 +188,17 @@ namespace PatchMyPath
             if (InstallsListBox.SelectedItem is Install install)
             {
                 FormStartup.Start(install, Launch.Normal, LauncherType.EpicGamesStore);
+            }
+        }
+
+        private void OpenFileExplorer_Click(object sender, EventArgs e)
+        {
+            if (InstallsListBox.SelectedItem is Install install)
+            {
+                if (Directory.Exists(install.GamePath))
+                {
+                    Process.Start(install.GamePath);
+                }
             }
         }
 

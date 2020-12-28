@@ -68,6 +68,7 @@ namespace PatchMyPath
             this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LogStatusStrip = new System.Windows.Forms.StatusStrip();
             this.LogToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.OpenFileExplorer = new System.Windows.Forms.ToolStripMenuItem();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.InstallContextMenuStrip.SuspendLayout();
@@ -111,7 +112,8 @@ namespace PatchMyPath
             // InstallContextMenuStrip
             // 
             this.InstallContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.StartAsToolStripMenuItem});
+            this.StartAsToolStripMenuItem,
+            this.OpenFileExplorer});
             this.InstallContextMenuStrip.Name = "ContextMenuStrip";
             resources.ApplyResources(this.InstallContextMenuStrip, "InstallContextMenuStrip");
             this.InstallContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.InstallContextMenuStrip_Opening);
@@ -364,6 +366,12 @@ namespace PatchMyPath
             this.LogToolStripStatusLabel.Name = "LogToolStripStatusLabel";
             resources.ApplyResources(this.LogToolStripStatusLabel, "LogToolStripStatusLabel");
             // 
+            // OpenFileExplorer
+            // 
+            this.OpenFileExplorer.Name = "OpenFileExplorer";
+            resources.ApplyResources(this.OpenFileExplorer, "OpenFileExplorer");
+            this.OpenFileExplorer.Click += new System.EventHandler(this.OpenFileExplorer_Click);
+            // 
             // FormHome
             // 
             resources.ApplyResources(this, "$this");
@@ -440,6 +448,7 @@ namespace PatchMyPath
         private System.Windows.Forms.ToolStripMenuItem RGLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SteamToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem EGLToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem OpenFileExplorer;
     }
 }
 
