@@ -96,7 +96,7 @@ namespace PatchMyPath
             }
 
             // Don't manipulate the path or launcher if we have the correct path set up already
-            if (Path.GetFullPath(Links.GetRealPath(directory)) != Path.GetFullPath(install.GamePath))
+            if (!Directory.Exists(directory) || Path.GetFullPath(Links.GetRealPath(directory)) != Path.GetFullPath(install.GamePath))
             {
                 // Terminate the game launcher if required
                 if (Program.Config.CloseLaunchers)
