@@ -1,4 +1,4 @@
-# PatchMyPath<br>[![AppVeyor][appveyor-img]][appveyor-url] [![Discord][discord-img]][discord-url]
+# PatchMyPath<br>[![AppVeyor][appveyor-img]][appveyor-url] [![Patreon][patreon-img]][patreon-url] [![PayPal][paypal-img]][paypal-url] [![Discord][discord-img]][discord-url]
 
 PatchMyPath is a free and open source Windows application for managing multiple Grand Theft Auto San Andreas/IV/V and Red Dead Redemption 2 installations. It allows you to quickly switch between them, so you can have separate folders for playing the online modes and single player with mods. PatchMyPath is compatible with all game versions and stores (Rockstar Warehouse, Rockstar Games Launcher, Steam and Epic Games Launcher).
 
@@ -23,5 +23,9 @@ For detailed information, please check the [wiki](https://github.com/justalemon/
 
 [appveyor-img]: https://img.shields.io/appveyor/build/justalemon/patchmypath?label=appveyor
 [appveyor-url]: https://ci.appveyor.com/project/justalemon/patchmypath
+[patreon-img]: https://img.shields.io/badge/support-patreon-FF424D.svg
+[patreon-url]: https://www.patreon.com/lemonchan
+[paypal-img]: https://img.shields.io/badge/support-paypal-0079C1.svg
+[paypal-url]: https://paypal.me/justalemon
 [discord-img]: https://img.shields.io/badge/discord-join-7289DA.svg
 [discord-url]: https://discord.gg/Cf6sspj
