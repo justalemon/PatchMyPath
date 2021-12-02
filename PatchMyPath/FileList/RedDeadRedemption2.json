@@ -9,6 +9,8 @@
     "amd_ags_x64.dll": 1,
     "bink2w64.dll": 1,
     "dxilconv7.dll": 1,
+    "EOSSDK-Win64-Shipping.dll": 5,
+    "nvngx_dlss.dll": 5,
     "oo2core_5_win64.dll": 1,
     "vulkan-1.dll": 5,
     "index.bin": 5,
@@ -32,5 +34,9 @@
     "shaders_x64.rpf": 1,
     "textures_0.rpf": 1,
     "textures_1.rpf": 1,
-    "update.rpf": 5
+    "update.rpf": 5,
+    "update_1.rpf": 5,
+    "update_2.rpf": 5,
+    "update_3.rpf": 5,
+    "update_4.rpf": 5
 }
