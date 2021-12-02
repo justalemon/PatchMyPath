@@ -1,10 +1,8 @@
 ﻿using NLog;
 using PatchMyPath.Properties;
 using PatchMyPath.Tools;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
-using System.Windows.Forms;
 
 namespace PatchMyPath.Config
 {
@@ -13,10 +11,14 @@ namespace PatchMyPath.Config
     /// </summary>
     public class Install
     {
-        /// <summary>
-        /// The logger for the current class.
-        /// </summary>
+        #region Fields
+
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
+
+        #endregion
+
+        #region Properties
+
         /// <summary>
         /// The path of the new game install.
         /// </summary>
@@ -119,10 +121,18 @@ namespace PatchMyPath.Config
             }
         }
 
+        #endregion
+
+        #region Constructors
+
         public Install(string path)
         {
             GamePath = Path.GetFullPath(path);
         }
+
+        #endregion
+
+        #region Functions
 
         /// <summary>
         /// Starts the executable for the specified game.
@@ -175,7 +185,9 @@ namespace PatchMyPath.Config
                     return;
             }
         }
-
+        /// <inheritdoc/>>
         public override string ToString() => $"{GamePath} [{Game.ToString().SpaceOnUpperCase()}] [{Type}]";
+
+        #endregion
     }
 }
