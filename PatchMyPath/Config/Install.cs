@@ -121,7 +121,7 @@ namespace PatchMyPath.Config
 
         public Install(string path)
         {
-            GamePath = path;
+            GamePath = Path.GetFullPath(path);
         }
 
         /// <summary>
