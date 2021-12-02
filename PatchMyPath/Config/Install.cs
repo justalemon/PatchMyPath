@@ -187,6 +187,29 @@ namespace PatchMyPath.Config
         }
         /// <inheritdoc/>>
         public override string ToString() => $"{GamePath} [{Game.ToString().SpaceOnUpperCase()}] [{Type}]";
+        /// <inheritdoc/>
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
+        /// <inheritdoc/>
+        public override int GetHashCode()
+        {
+            return GamePath.GetHashCode();
+        }
+
+        #endregion
+
+        #region Operators
+
+        public static bool operator ==(Install left, Install right)
+        {
+            return left.GamePath == right.GamePath;
+        }
+        public static bool operator !=(Install left, Install right)
+        {
+            return left.GamePath != right.GamePath;
+        }
 
         #endregion
     }
