@@ -172,7 +172,7 @@ namespace PatchMyPath
                 // For everything else, use the executable directly
                 case LauncherType.Executable:
                 case LauncherType.RockstarGamesLauncher:
-                    install.StartExecutable(game);
+                    Process.Start(install.Executable);
                     break;
             }
         }

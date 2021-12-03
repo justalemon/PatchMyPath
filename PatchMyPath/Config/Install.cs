@@ -121,6 +121,53 @@ namespace PatchMyPath.Config
                 }
             }
         }
+        /// <summary>
+        /// The executable used to start the game.
+        /// </summary>
+        public string Executable
+        {
+            get
+            {
+                switch (Game)
+                {
+                    case Game.RedDeadRedemption2:
+                        return Path.Combine(Program.Config.Destination.RDR2, "RDR2.exe");
+                    case Game.GrandTheftAutoIV:
+                        if (File.Exists(Path.Combine(Program.Config.Destination.GTAV, "PlayGTAIV.exe")))
+                        {
+                            return Path.Combine(Program.Config.Destination.GTAV, "PlayGTAIV.exe");
+                        }
+                        else if (File.Exists(Path.Combine(Program.Config.Destination.GTAV, "LaunchGTAIV.exe")))
+                        {
+                            return Path.Combine(Program.Config.Destination.GTAV, "LaunchGTAIV.exe");
+                        }
+                        break;
+                    case Game.GrandTheftAutoV:
+
+                        if (File.Exists(Path.Combine(Program.Config.Destination.GTAV, "GTAVLauncher.exe")))
+                        {
+                            return Path.Combine(Program.Config.Destination.GTAV, "GTAVLauncher.exe");
+                        }
+                        else if (File.Exists(Path.Combine(Program.Config.Destination.GTAV, "PlayGTAV.exe")))
+                        {
+                            return Path.Combine(Program.Config.Destination.GTAV, "PlayGTAV.exe");
+                        }
+                        break;
+                    case Game.GrandTheftAutoSanAndreas:
+                        if (File.Exists(Path.Combine(Program.Config.Destination.GTAV, "gta_sa.exe")))
+                        {
+                            return Path.Combine(Program.Config.Destination.GTAV, "gta_sa.exe");
+                        }
+                        else if (File.Exists(Path.Combine(Program.Config.Destination.GTAV, "gta-sa.exe")))
+                        {
+                            return Path.Combine(Program.Config.Destination.GTAV, "gta-sa.exe");
+                        }
+                        break;
+                }
+
+                return null;
+            }
+        }
 
         #endregion
 
@@ -135,57 +182,6 @@ namespace PatchMyPath.Config
 
         #region Functions
 
-        /// <summary>
-        /// Starts the executable for the specified game.
-        /// </summary>
-        /// <param name="game">The game to launch.</param>
-        public void StartExecutable(Game game)
-        {
-            switch (game)
-            {
-                // For RDR2, just use RDR2.exe
-                case Game.RedDeadRedemption2:
-                    Logger.Info(Resources.StartingRDR2VanillaLog, GamePath);
-                    Process.Start(Path.Combine(Program.Config.Destination.RDR2, "RDR2.exe"));
-                    break;
-                // For GTA IV, use PlayGTAIV.exe (Steam re-release) or LaunchGTAIV.exe (retail and Patch 7 on Steam)
-                case Game.GrandTheftAutoIV:
-                    if (File.Exists(Path.Combine(Program.Config.Destination.GTAV, "PlayGTAIV.exe")))
-                    {
-                        Process.Start(Path.Combine(Program.Config.Destination.GTAV, "PlayGTAIV.exe"));
-                    }
-                    else if (File.Exists(Path.Combine(Program.Config.Destination.GTAV, "LaunchGTAIV.exe")))
-                    {
-                        Process.Start(Path.Combine(Program.Config.Destination.GTAV, "LaunchGTAIV.exe"));
-                    }
-                    break;
-                // For GTA V, use GTAVLauncher.exe (R* Warehouse/Launcher) or PlayGTAV.exe (Steam and EGL)
-                case Game.GrandTheftAutoV:
-
-                    if (File.Exists(Path.Combine(Program.Config.Destination.GTAV, "GTAVLauncher.exe")))
-                    {
-                        Process.Start(Path.Combine(Program.Config.Destination.GTAV, "GTAVLauncher.exe"));
-                    }
-                    else if (File.Exists(Path.Combine(Program.Config.Destination.GTAV, "PlayGTAV.exe")))
-                    {
-                        Process.Start(Path.Combine(Program.Config.Destination.GTAV, "PlayGTAV.exe"));
-                    }
-                    return;
-                // For GTA San Andreas, use gta_sa.exe (1.0/1.1) or gta-sa.exe (2.0/Steam/RGL)
-                // Some downgraded copies leave both executables, if that is the case the 1.0/1.1 files takes precedence
-                case Game.GrandTheftAutoSanAndreas:
-
-                    if (File.Exists(Path.Combine(Program.Config.Destination.GTAV, "gta_sa.exe")))
-                    {
-                        Process.Start(Path.Combine(Program.Config.Destination.GTAV, "gta_sa.exe"));
-                    }
-                    else if (File.Exists(Path.Combine(Program.Config.Destination.GTAV, "gta-sa.exe")))
-                    {
-                        Process.Start(Path.Combine(Program.Config.Destination.GTAV, "gta-sa.exe"));
-                    }
-                    return;
-            }
-        }
         /// <inheritdoc/>>
         public override string ToString() => $"{GamePath} [{Game.ToString().SpaceOnUpperCase()}] [{Type}]";
         /// <inheritdoc/>
