@@ -21,6 +21,7 @@
     <PackageReference Include="NLog" Version="4.7.12" />
     <PackageReference Include="RestSharp" Version="106.13.0" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System.Windows.Forms" />
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
