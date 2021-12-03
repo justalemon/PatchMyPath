@@ -438,4 +438,16 @@ You can read the Privacy policy on https://justalemon.ml/Privacy_policy</value>
   <data name="CLIDirectoryNotAddedTitle" xml:space="preserve">
     <value>Directory not Added</value>
   </data>
+  <data name="CLIInvalid" xml:space="preserve">
+    <value>The installation "{0}" does not appear to contain a valid supported game.</value>
+  </data>
+  <data name="CLIInvalidTitle" xml:space="preserve">
+    <value>Invalid Installation</value>
+  </data>
+  <data name="CLINotLegal" xml:space="preserve">
+    <value>Installation "{0}" has been tampered. Please check the integrity of the files and try again.</value>
+  </data>
+  <data name="CLINotLegalTitle" xml:space="preserve">
+    <value>Tampered Installation</value>
+  </data>
 </root>

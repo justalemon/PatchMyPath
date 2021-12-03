@@ -137,6 +137,42 @@ namespace PatchMyPath.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The installation &quot;{0}&quot; does not appear to contain a valid supported game..
+        /// </summary>
+        internal static string CLIInvalid {
+            get {
+                return ResourceManager.GetString("CLIInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid Installation.
+        /// </summary>
+        internal static string CLIInvalidTitle {
+            get {
+                return ResourceManager.GetString("CLIInvalidTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Installation &quot;{0}&quot; has been tampered. Please check the integrity of the files and try again..
+        /// </summary>
+        internal static string CLINotLegal {
+            get {
+                return ResourceManager.GetString("CLINotLegal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tampered Installation.
+        /// </summary>
+        internal static string CLINotLegalTitle {
+            get {
+                return ResourceManager.GetString("CLINotLegalTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Configuration file not found, a new one was generated.
         /// </summary>
         internal static string ConfigCreatedLog {

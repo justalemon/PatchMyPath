@@ -81,6 +81,18 @@ namespace PatchMyPath
                     return 3;
                 }
 
+                if (!install.IsLegal)
+                {
+                    MessageBox.Show(string.Format(Resources.CLINotLegal, parameters.Launch), Resources.CLINotLegalTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return 4;
+                }
+
+                if (install.Type == Launch.Invalid)
+                {
+                    MessageBox.Show(string.Format(Resources.CLIInvalid, parameters.Launch), Resources.CLIInvalidTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return 5;
+                }
+
                 FormStartup.Start(install);
 
                 return 0;
