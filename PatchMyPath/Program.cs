@@ -81,7 +81,7 @@ namespace PatchMyPath
                     return 3;
                 }
 
-                install.StartExecutable(install.Game);
+                FormStartup.Start(install);
 
                 return 0;
             }
