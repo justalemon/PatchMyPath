@@ -1,6 +1,7 @@
 ﻿using NLog;
 using PatchMyPath.Properties;
 using PatchMyPath.Tools;
+using System;
 using System.Diagnostics;
 using System.IO;
 
@@ -9,7 +10,7 @@ namespace PatchMyPath.Config
     /// <summary>
     /// Specifies the information for launching a GTA V install.
     /// </summary>
-    public class Install
+    public class Install : IEquatable<Install>
     {
         #region Fields
 
@@ -197,6 +198,8 @@ namespace PatchMyPath.Config
         {
             return GamePath.GetHashCode();
         }
+        /// <inheritdoc/>
+        public bool Equals(Install other) => other == this;
 
         #endregion
 
