@@ -19,7 +19,7 @@ namespace PatchMyPath.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -97,6 +97,42 @@ namespace PatchMyPath.Properties {
             get {
                 object obj = ResourceManager.GetObject("Clear", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Directory &quot;{0}&quot; does not exists!.
+        /// </summary>
+        internal static string CLIDirectoryMissing {
+            get {
+                return ResourceManager.GetString("CLIDirectoryMissing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Directory Missing.
+        /// </summary>
+        internal static string CLIDirectoryMissingTitle {
+            get {
+                return ResourceManager.GetString("CLIDirectoryMissingTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Directory &quot;{0}&quot; is not part of the installs.\n\nPlease open the app as normal and the install, or use the --add CLI parameter..
+        /// </summary>
+        internal static string CLIDirectoryNotAdded {
+            get {
+                return ResourceManager.GetString("CLIDirectoryNotAdded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Directory not Added.
+        /// </summary>
+        internal static string CLIDirectoryNotAddedTitle {
+            get {
+                return ResourceManager.GetString("CLIDirectoryNotAddedTitle", resourceCulture);
             }
         }
         

@@ -1,12 +1,15 @@
 ﻿using Bugsnag;
+using CommandLine;
 using Lemon.NLog.WinForms;
 using NLog;
 using NLog.Config;
 using NLog.Targets;
+using PatchMyPath.Config;
 using PatchMyPath.Properties;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 using Configuration = PatchMyPath.Config.Configuration;
@@ -48,55 +51,78 @@ namespace PatchMyPath
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        public static int Main()
+        public static int Main(string[] args)
         {
-            // Enable the visual styles
+            // Check for valid command line parameters and start a specific install if needed
+            ParserResult<LaunchParameters> parserResult = Parser.Default.ParseArguments<LaunchParameters>(args);
+
+            if (parserResult.Tag == ParserResultType.Parsed)
+            {
+                LaunchParameters parameters = null;
+                parserResult.WithParsed(x => parameters = x);
+
+                if (!Directory.Exists(parameters.Launch))
+                {
+                    MessageBox.Show(string.Format(Resources.CLIDirectoryMissing, parameters.Launch), Resources.CLIDirectoryMissingTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return 2;
+                }
+
+                Install install = new Install(parameters.Launch);
+
+                if (parameters.Add && !Config.GameInstalls.Contains(install))
+                {
+                    Config.GameInstalls.Add(install);
+                    Config.Save();
+                }
+
+                if (!Config.GameInstalls.Contains(install))
+                {
+                    MessageBox.Show(string.Format(Resources.CLIDirectoryNotAdded, parameters.Launch), Resources.CLIDirectoryNotAddedTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return 3;
+                }
+
+                install.StartExecutable(install.Game);
+
+                return 0;
+            }
+
+            // If there are none, just run the app
             Application.EnableVisualStyles();
-            // Disable the compatible text rendering
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Set the culture to the one from the config
             Thread.CurrentThread.CurrentUICulture = Config.Language;
 
-            // If this is the first time that the program has been launched
             if (Config.FirstLaunch)
             {
                 // Ask for consent to use Bugsnag (you know, GDPR)
                 DialogResult result = MessageBox.Show(Resources.BugsnagConsent, Resources.BugsnagConsentTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                // And save the answer
                 Config.Bugsnag = result == DialogResult.Yes;
 
-                // Once we are done, save the configuration
                 Config.FirstLaunch = false;
                 Config.Save();
             }
 
-            // If Bugsnag is enabled, create the client and save it if we need it
             if (Config.Bugsnag)
             {
                 Bugsnag = new Client(new Bugsnag.Configuration("05841a867334bebcf5e3a9898c5a5191"));
             }
 
-            // Log that we are creating a new instance of the form
             Logger.Trace(Resources.FormCreatingLog);
-            // Create the forms
+
             HomeForm = new FormHome();
             ConfigForm = new FormConfig();
-            // Log that we have loaded everything
+
             Logger.Debug(Resources.FormInitEndLog);
 
-            // Create a new NLog configuration
             LoggingConfiguration config = new LoggingConfiguration();
-            // Add the rules for the targets
+
             config.AddRule(LogLevel.Debug, LogLevel.Fatal, new FileTarget() { FileName = "PatchMyPath.log", MaxArchiveFiles = 5, ArchiveOldFileOnStartup = true });
             config.AddRule(LogLevel.Info, LogLevel.Fatal, new TextBoxTarget(HomeForm.LogTextBox) { Layout = "[${date}] [${level}] ${message}" });
             config.AddRule(LogLevel.Info, LogLevel.Fatal, new ToolStripStatusLabelTarget(HomeForm.LogToolStripStatusLabel) { Layout = "${message}" });
-            // And apply the configuration
+
             LogManager.Configuration = config;
 
-            // And run the application with the form
             Application.Run(HomeForm);
-            // Finally, return a status code of zero
             return 0;
         }
     }

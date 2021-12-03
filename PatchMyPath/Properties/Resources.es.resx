@@ -266,4 +266,13 @@ Por favor asegurate de que el juego fue instalado desde RGL, Steam o EGL e inten
 
 Puedes leer la Politica de privacidad en https://justalemon.ml/Privacy_policy</value>
   </data>
+  <data name="CLIDirectoryMissing" xml:space="preserve">
+    <value>Carpeta "{0}" no existe!</value>
+  </data>
+  <data name="CLIDirectoryMissingTitle" xml:space="preserve">
+    <value>Carpeta no existe</value>
+  </data>
+  <data name="CLIDirectoryNotAdded" xml:space="preserve">
+    <value>Carpeta "{0}" no es parte de las instalaciones.\n\nAbre la aplicacion normalmente y añade la instalacion, o use el argumento --add en la linea de comandos.</value>
+  </data>
 </root>

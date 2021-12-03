@@ -426,4 +426,16 @@ You can read the Privacy policy on https://justalemon.ml/Privacy_policy</value>
   <data name="GameGTASA" xml:space="preserve">
     <value>Grand Theft Auto San Andreas</value>
   </data>
+  <data name="CLIDirectoryMissing" xml:space="preserve">
+    <value>Directory "{0}" does not exists!</value>
+  </data>
+  <data name="CLIDirectoryMissingTitle" xml:space="preserve">
+    <value>Directory Missing</value>
+  </data>
+  <data name="CLIDirectoryNotAdded" xml:space="preserve">
+    <value>Directory "{0}" is not part of the installs.\n\nPlease open the app as normal and the install, or use the --add CLI parameter.</value>
+  </data>
+  <data name="CLIDirectoryNotAddedTitle" xml:space="preserve">
+    <value>Directory not Added</value>
+  </data>
 </root>
