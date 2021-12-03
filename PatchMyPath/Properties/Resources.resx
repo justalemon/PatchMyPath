@@ -450,4 +450,10 @@ You can read the Privacy policy on https://justalemon.ml/Privacy_policy</value>
   <data name="CLINotLegalTitle" xml:space="preserve">
     <value>Tampered Installation</value>
   </data>
+  <data name="ShortcutCreate" xml:space="preserve">
+    <value>Enter the desired name of the shortcut</value>
+  </data>
+  <data name="ShortcutCreateTitle" xml:space="preserve">
+    <value>Enter Shortcut Name</value>
+  </data>
 </root>

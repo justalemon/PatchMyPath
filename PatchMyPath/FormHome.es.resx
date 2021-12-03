@@ -174,4 +174,7 @@
   <data name="SettingsToolStripMenuItem.Text" xml:space="preserve">
     <value>Configuracion</value>
   </data>
+  <data name="AddShortcut.Text" xml:space="preserve">
+    <value>Añadir Acceso Directo en el Escritorio</value>
+  </data>
 </root>

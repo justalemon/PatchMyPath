@@ -150,19 +150,25 @@
     <value>Epic Games Store</value>
   </data>
   <data name="StartAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 22</value>
+    <value>206, 22</value>
   </data>
   <data name="StartAsToolStripMenuItem.Text" xml:space="preserve">
     <value>Start with</value>
   </data>
   <data name="OpenFileExplorer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 22</value>
+    <value>206, 22</value>
   </data>
   <data name="OpenFileExplorer.Text" xml:space="preserve">
     <value>Open on File Explorer</value>
   </data>
+  <data name="AddShortcut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 22</value>
+  </data>
+  <data name="AddShortcut.Text" xml:space="preserve">
+    <value>Add shortcut on Desktop</value>
+  </data>
   <data name="InstallContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 70</value>
+    <value>207, 92</value>
   </data>
   <data name="&gt;&gt;InstallContextMenuStrip.Name" xml:space="preserve">
     <value>InstallContextMenuStrip</value>
@@ -1406,6 +1412,12 @@
   <data name="&gt;&gt;EGLToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;OpenFileExplorer.Name" xml:space="preserve">
+    <value>OpenFileExplorer</value>
+  </data>
+  <data name="&gt;&gt;OpenFileExplorer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;FolderBrowser.Name" xml:space="preserve">
     <value>FolderBrowser</value>
   </data>
@@ -1448,10 +1460,10 @@
   <data name="&gt;&gt;LogToolStripStatusLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;OpenFileExplorer.Name" xml:space="preserve">
-    <value>OpenFileExplorer</value>
+  <data name="&gt;&gt;AddShortcut.Name" xml:space="preserve">
+    <value>AddShortcut</value>
   </data>
-  <data name="&gt;&gt;OpenFileExplorer.Type" xml:space="preserve">
+  <data name="&gt;&gt;AddShortcut.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

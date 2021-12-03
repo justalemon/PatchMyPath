@@ -287,4 +287,10 @@ Puedes leer la Politica de privacidad en https://justalemon.ml/Privacy_policy</v
   <data name="CLINotLegalTitle" xml:space="preserve">
     <value>Instalación Manipulada</value>
   </data>
+  <data name="ShortcutCreate" xml:space="preserve">
+    <value>Introduzca el nombre deseado para el acceso directo</value>
+  </data>
+  <data name="ShortcutCreateTitle" xml:space="preserve">
+    <value>Nombre del Acceso Directo</value>
+  </data>
 </root>

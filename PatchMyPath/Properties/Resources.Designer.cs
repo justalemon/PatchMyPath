@@ -922,6 +922,24 @@ namespace PatchMyPath.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enter the desired name of the shortcut.
+        /// </summary>
+        internal static string ShortcutCreate {
+            get {
+                return ResourceManager.GetString("ShortcutCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter Shortcut Name.
+        /// </summary>
+        internal static string ShortcutCreateTitle {
+            get {
+                return ResourceManager.GetString("ShortcutCreateTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Starting GTA V from {0} with Steam.
         /// </summary>
         internal static string StartingGTAVSteamLog {

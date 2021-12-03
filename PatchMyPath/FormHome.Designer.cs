@@ -39,6 +39,7 @@ namespace PatchMyPath
             this.RGLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SteamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EGLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.OpenFileExplorer = new System.Windows.Forms.ToolStripMenuItem();
             this.DuplicatorTabPage = new System.Windows.Forms.TabPage();
             this.OtherGroupBox = new System.Windows.Forms.GroupBox();
             this.AutoAddCheckBox = new System.Windows.Forms.CheckBox();
@@ -68,7 +69,7 @@ namespace PatchMyPath
             this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LogStatusStrip = new System.Windows.Forms.StatusStrip();
             this.LogToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.OpenFileExplorer = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddShortcut = new System.Windows.Forms.ToolStripMenuItem();
             this.GeneralTabControl.SuspendLayout();
             this.InstallsTabPage.SuspendLayout();
             this.InstallContextMenuStrip.SuspendLayout();
@@ -113,7 +114,8 @@ namespace PatchMyPath
             // 
             this.InstallContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.StartAsToolStripMenuItem,
-            this.OpenFileExplorer});
+            this.OpenFileExplorer,
+            this.AddShortcut});
             this.InstallContextMenuStrip.Name = "ContextMenuStrip";
             resources.ApplyResources(this.InstallContextMenuStrip, "InstallContextMenuStrip");
             this.InstallContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.InstallContextMenuStrip_Opening);
@@ -151,6 +153,12 @@ namespace PatchMyPath
             this.EGLToolStripMenuItem.Name = "EGLToolStripMenuItem";
             resources.ApplyResources(this.EGLToolStripMenuItem, "EGLToolStripMenuItem");
             this.EGLToolStripMenuItem.Click += new System.EventHandler(this.EGLToolStripMenuItem_Click);
+            // 
+            // OpenFileExplorer
+            // 
+            this.OpenFileExplorer.Name = "OpenFileExplorer";
+            resources.ApplyResources(this.OpenFileExplorer, "OpenFileExplorer");
+            this.OpenFileExplorer.Click += new System.EventHandler(this.OpenFileExplorer_Click);
             // 
             // DuplicatorTabPage
             // 
@@ -366,11 +374,11 @@ namespace PatchMyPath
             this.LogToolStripStatusLabel.Name = "LogToolStripStatusLabel";
             resources.ApplyResources(this.LogToolStripStatusLabel, "LogToolStripStatusLabel");
             // 
-            // OpenFileExplorer
+            // AddShortcut
             // 
-            this.OpenFileExplorer.Name = "OpenFileExplorer";
-            resources.ApplyResources(this.OpenFileExplorer, "OpenFileExplorer");
-            this.OpenFileExplorer.Click += new System.EventHandler(this.OpenFileExplorer_Click);
+            this.AddShortcut.Name = "AddShortcut";
+            resources.ApplyResources(this.AddShortcut, "AddShortcut");
+            this.AddShortcut.Click += new System.EventHandler(this.AddShortcut_Click);
             // 
             // FormHome
             // 
@@ -449,6 +457,7 @@ namespace PatchMyPath
         private System.Windows.Forms.ToolStripMenuItem SteamToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem EGLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem OpenFileExplorer;
+        private System.Windows.Forms.ToolStripMenuItem AddShortcut;
     }
 }
 
