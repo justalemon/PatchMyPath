@@ -147,7 +147,7 @@ namespace PatchMyPath
                 return;
             }
             // For alloc8or's Launcher Bypass for pre-RGL copies, just use GTA5.exe
-            else if (launch == Launch.LauncherBypass)
+            else if (launch == Launch.LauncherBypass && (type == LauncherType.RockstarGamesLauncher || type == LauncherType.Executable))
             {
                 logger.Info(Resources.StartingLauncherBypassLog, install.GamePath);
                 Process.Start(Path.Combine(Program.Config.Destination.GTAV, "GTA5.exe"));
