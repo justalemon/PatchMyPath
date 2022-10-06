@@ -1,4 +1,3 @@
-using IWshRuntimeLibrary;
 using Microsoft.VisualBasic;
 using NLog;
 using PatchMyPath.Config;
@@ -9,9 +8,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
 using System.Windows.Forms;
-using File = System.IO.File;
 
 namespace PatchMyPath
 {
@@ -223,15 +220,7 @@ namespace PatchMyPath
                 }
 
                 string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), $"{input}.lnk");
-
-                WshShell shell = new WshShell();
-
-                IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(path);
-                shortcut.TargetPath = Application.ExecutablePath;
-                shortcut.IconLocation = $"{install.Executable},0";
-                shortcut.Arguments = $"--launch \"{install.GamePath}\"";
-                shortcut.WorkingDirectory = Path.GetDirectoryName(Application.ExecutablePath);
-                shortcut.Save();
+                Shortcuts.Create(path, install);
             }
         }
 
