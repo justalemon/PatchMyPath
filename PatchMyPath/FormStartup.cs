@@ -104,7 +104,7 @@ namespace PatchMyPath
                     Invoke(new Action(() => CurrentOperation.Text = "Stopping " + type.ToString().SpaceOnUpperCase()));
                     LauncherManager.Stop(type);
 
-                    if ((game == Game.GrandTheftAutoIV || game == Game.GrandTheftAutoV || game == Game.RedDeadRedemption2) && type != LauncherType.RockstarGamesLauncher)
+                    if (type != LauncherType.Executable)
                     {
                         Invoke(new Action(() => CurrentOperation.Text = "Stopping " + LauncherType.RockstarGamesLauncher.ToString().SpaceOnUpperCase()));
                         LauncherManager.Stop(LauncherType.RockstarGamesLauncher);
@@ -158,6 +158,7 @@ namespace PatchMyPath
             switch (type)
             {
                 // For Steam, use the Network Protocol
+                // NOTE: Terminating the Rockstar Launcher is required due to a bug in RGL
                 case LauncherType.Steam:
                     ulong steam = Program.Config.Launchers.GetSteamAppID(game);
                     logger.Info(Resources.StartingRDR2SteamLog, install.GamePath);
