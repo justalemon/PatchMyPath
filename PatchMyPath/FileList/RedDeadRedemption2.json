@@ -12,7 +12,7 @@
     "EOSSDK-Win64-Shipping.dll": 5,
     "ffx_fsr2_api_dx12_x64.dll": 5,
     "ffx_fsr2_api_vk_x64.dll": 5,
-    "ffx_fsr2_api_64.dll": 5,
+    "ffx_fsr2_api_x64.dll": 5,
     "NvLowLatencyVk.dll": 5,
     "nvngx_dlss.dll": 5,
     "oo2core_5_win64.dll": 1,
