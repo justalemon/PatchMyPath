@@ -47,7 +47,15 @@ namespace PatchMyPath.Tools
             // Valid from: Thursday, February 6, 2020 8:00:00 PM
             // Valid to: Friday, February 17, 2023 8:00:00 AM
             // Thumbprint/Hash: 0ebf58d74ccabca4fce1ab83adba62b40dfc014a
-            "0EBF58D74CCABCA4FCE1AB83ADBA62B40DFC014A"
+            "0EBF58D74CCABCA4FCE1AB83ADBA62B40DFC014A",
+            // Issued to: Rockstar Games, Inc.
+            // Issues by: DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1
+            // Serial number: 0d88c08f566d2b1f0c194db1f8cac9a9
+            // Algorithm: sha256RSA
+            // Valid from: Tuesday, January 17, 2023 8:00:00 PM
+            // Valid to: Tuesday, January 20, 2026 7:59:59 PM
+            // Thumbprint/Hash: 565932392989b3616f2968e1b1d6f974561b1f32
+            "565932392989B3616F2968E1B1D6F974561B1F32"
         };
 
         /// <summary>
